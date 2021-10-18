@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Navigation | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3 show">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4 show">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation" class="active"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <h1 id="navigation">Navigation</h1>
+<p>This tutorial gives a high level overview of how Fuse's main navigation system works, using classes like <code>Router</code>, <code>Navigator</code> and <code>PageControl</code>.</p>
+<h2 id="complete-app-example">Complete app example</h2>
+<p>This example app show how to use the navigation system in Fuse:</p>
+<ul>
+<li><a href="https://github.com/fuse-open/fuse-samples/tree/master/Samples/cattr">Cattr - A basic multi-view app example in Fuse.</a></li>
+</ul>
+<h2 id="creating-pages">Creating pages</h2>
+<p>When designing a multi-page app, it is recommended to define each page in its own UX file as an <code>ux:Class</code>, like this:</p>
+<p><code>LoginPage.ux</code></p>
+<pre><code class="language-xml">	&lt;Page ux:Class=&quot;LoginPage&quot;&gt;
+		&lt;Router ux:Dependency=&quot;router&quot; /&gt;
+		&lt;JavaScript File=&quot;LoginPage.js&quot; /&gt;
+		...
+	&lt;/Page&gt;
+</code></pre>
+<p><code>SettingsPage.ux</code></p>
+<pre><code class="language-xml">	&lt;Page ux:Class=&quot;SettingsPage&quot;&gt;
+		&lt;Router ux:Dependency=&quot;router&quot; /&gt;
+		&lt;JavaScript File=&quot;SettingsPage.js&quot; /&gt;
+		...
+	&lt;/Page&gt;
+</code></pre>
+<p>And so on, for each page.</p>
+<p>Notice how each page can have its own <code>&lt;JavaScript&gt;</code> tag to handle internal logic for that page.</p>
+<p>Most pages will need access to the app's <code>Router</code>, so we declare that as an <code>ux:Dependency=&quot;router&quot;</code>. This means the JavaScript on that page can access that router.
+If our page has other dependencies, we can declare them the same way.</p>
+<h2 id="assembling-the-app">Assembling the <code>App</code></h2>
+<p>The basic structure of your main UX file should be something like this:</p>
+<pre><code class="language-xml">	&lt;App&gt;
+		&lt;Router ux:Name=&quot;router&quot; /&gt;
+		&lt;Navigator DefaultPath=&quot;login&quot;&gt;
+			&lt;LoginPage ux:Template=&quot;login&quot; router=&quot;router&quot; /&gt;
+			&lt;HomePage ux:Template=&quot;home&quot; router=&quot;router&quot; /&gt;
+			&lt;SettingsPage ux:Template=&quot;settings&quot; router=&quot;router&quot; /&gt;
+			&lt;UserProfilePage ux:Template=&quot;user&quot; router=&quot;router&quot; /&gt;
+		&lt;/Navigator&gt;
+	&lt;/App&gt;
+</code></pre>
+<p>The <code>ux:Template</code> attribute indicates that this is not a real object instance, but rather a template that can be instantiated on demand. The <code>Navigator</code> will take care of instantiating as many instances of each template as needed, and recycle instances when they are not needed anymore.</p>
+<p>The <code>DefaultPath</code> specifies what templates should be instantiated by default when the app starts up and no route is set yet.</p>
+<p>Notice how we inject the dependencies just like properties. It is good practice to keep names of dependencies lowercase, like names. This allows you to extract components without renaming your objects, and makes it easy to spot the difference between a dependency and a property.</p>
+<p>Note that all dependencies <em>must</em> be specified, otherwise you'll get a compile time error.</p>
+<blockquote>
+<p>The pages do not need to be descendants of the <a href="../fuse/controls/page.html">Page</a> class. Any visual object, such as a <a href="../fuse/controls/panel.html">Panel</a> can be used.</p>
+</blockquote>
+<h2 id="navigating-around-flat-navigation">Navigating around (flat navigation)</h2>
+<p>In the above example, the <code>login</code> template (<code>LoginPage</code> class) will be our starting page.</p>
+<p>Let's give the <code>LoginPage</code> a button:</p>
+<pre><code class="language-xml">	&lt;Button Text=&quot;Login&quot; Clicked=&quot;{loginClicked}&quot; /&gt;
+</code></pre>
+<p>Hook its <code>Clicked</code> event up to this function in <code>LoginPage.js</code>:</p>
+<pre><code class="language-js">	function loginClicked() {
+		// TODO: validate login credentials
+
+		router.goto(&quot;home&quot;);
+	}
+</code></pre>
+<p>This will do what you expect, the navigator will animate the login screen out, and bam! We're on the <code>home</code> page.</p>
+<blockquote>
+<p>Remember to add <code>loginClicked</code> to your <code>module.exports</code>.</p>
+</blockquote>
+<h2 id="hierarchical-navigation">Hierarchical navigation</h2>
+<p>Hierarchical navigation is navigating to (&quot;pushing&quot;) a temporary page, and then later &quot;popping&quot; (going back) to wherever you came from, either using an on-screen button, or the device's physical back-button.</p>
+<p>Let's say a button is supposed to open the <code>settings</code> page, and then the back-button should take us back to wherever we came from:</p>
+<pre><code class="language-js">	router.push(&quot;settings&quot;);
+</code></pre>
+<p>Easy, right? Now the back button on Android will take us back.</p>
+<blockquote>
+<p>In local preview, use Cmd/Ctrl+B to emulate the back button.
+On iOS, hold 3 fingers for 1 second to bring up a menu where we can emulate the back button.</p>
+</blockquote>
+<p>We can also trigger a go-back from JavaScript:</p>
+<pre><code class="language-js">	router.goBack();
+</code></pre>
+<p>We can use <code>push()</code> multiple times to navigate &quot;deeper&quot;. Then you have to tap the back button multiple times to get all the way back out.</p>
+<p>We can use <code>goto()</code> while inside a deep stack of pushed pages to discard the stack and simply go to that page. Using the back button after that will not take you back.</p>
+<h2 id="passing-parameters-to-pages">Passing parameters to pages</h2>
+<p>Sometimes you want to use the same page template, but open it with different parameters.</p>
+<p>For example, our <code>user</code> page could really benefit from knowing the ID of the user to display the profile for.</p>
+<p>This is easy by passing argument objects to the router:</p>
+<pre><code class="language-js">	router.push(&quot;user&quot;, { userId: id });
+</code></pre>
+<p>This will temporarily open a new instance of our <code>user</code> template, with the provided object as parameter.</p>
+<p>In <code>UserPage.js</code> we can read the parameter using the <a href="../fusejs/observable.html">Observable</a> <code>Parameter</code>, which lets you react to changes to the parameters:</p>
+<pre><code class="language-js">	var userId = this.Parameter.map(function(param) {
+		return param.userId;
+	});
+	
+	module.exports = {
+		userId: userId
+	};
+</code></pre>
+<p>Make a note of the fact that <code>this.Parameter</code> is an <a href="../fusejs/observable.html">Observable</a>, which means that its value is not necessarily available when the module is being evaluated.
+Make sure you either expose it using an observable operator (like in the example above), or add a handler to it using the <code>onValueChanged</code> function:</p>
+<pre><code class="language-js">this.Parameter.onValueChanged(module, function(param) {
+	//At this point we know then new parameter value.
+	
+	//module is used to connect the lifetime of the
+	//subscription to the lifetime of the module
+});
+</code></pre>
+<p>Note that <code>this</code> in the root scope of <code>UserPage.js</code> refers to the current instance of the <code>UserPage</code> class.</p>
+<blockquote>
+<p>Be aware that in JavaScript, the meaning of the <code>this</code> keyword varies with function scope. Make sure you grab the reference to the right instance in the root of your module.</p>
+</blockquote>
+<p>Note that the same <code>UserPage</code> instance may be reused by the <code>Navigator</code> to display different users over time. <code>Parameter</code> will only be updated when you need to display a new user.</p>
+<h2 id="multi-level-navigation">Multi-level navigation</h2>
+<p>Sometimes, it is not enough to just have one level of navigation. Our <code>home</code> screen, for example, may contain multiple pages within itself.</p>
+<p>No worries, the <code>Router</code> can deal with this just as easily. Say that our <code>HomePage.ux</code> looks something like this:</p>
+<pre><code class="language-xml">	&lt;Page ux:Class=&quot;HomePage&quot;&gt;
+		&lt;Router ux:Dependency=&quot;router&quot; /&gt;
+		&lt;JavaScript File=&quot;HomePage.js&quot; /&gt;
+		&lt;PageControl&gt;
+			&lt;SocialFeedPage ux:Name=&quot;socialfeed&quot; /&gt;
+			&lt;DirectChatsPage ux:Name=&quot;chats&quot; /&gt;
+			&lt;PinnedMessagesPage ux:Name=&quot;pinned&quot; /&gt;
+			&lt;RecentNotificationsPage ux:Name=&quot;recent&quot; /&gt;
+		&lt;/PageControl&gt;
+	&lt;/Page&gt;
+</code></pre>
+<blockquote>
+<p>Note: PageControl expects to get live page objects, not templates. PageControl keeps all pages alive and only one instance of each, to e.g. allow swipe navigation between them.</p>
+</blockquote>
+<p>Both <code>Navigator</code> and <code>PageControl</code> are so-called <em>router outlets</em>. This means they participate in routing. When using <code>.goto()</code> or <code>.push()</code>, we can provide a multi-level route, with parameters for each level.</p>
+<p>For example, our login-screen might want to send us directly to the <code>RecentNotificationsPage</code> instead of <code>SocialFeedPage</code>. That's done like this:</p>
+<pre><code class="language-js">	router.goto(&quot;home&quot;, {}, &quot;recent&quot;, { scrollOffset: 300 });
+</code></pre>
+<p>And that's all! First the <code>Navigator</code> will get you to the <code>home</code> template, and then the <code>PageControl</code> within that template will go to the <code>recent</code> page. This is a <em>path</em>, and can also be specified relatively, as we will see below. This can be compared to the path of an URL, which would look like this: <code>home/recent?scrollOffset=300</code></p>
+<p>The <code>home</code> template in this case does not take any parameters, so we pass it an empty object (<code>{}</code>).</p>
+<p>Meanwhile, the <code>recent</code> template will get the parameter <code>{ scrollOffset: 300 }</code> object to its <code>Parameter</code> <a href="../fusejs/observable.html">Observable</a>, as an example of how we can pass parameters to pages.</p>
+<h3 id="relative-navigation">Relative navigation</h3>
+<p>A neat trick to making custom pages independent of a large navigation tree, is to navigate relative to the closest <a href="../fuse/controls/navigator.html">Navigator</a> object, instead of the whole tree. This is done using the <code>gotoRelative</code> and <code>pushRelative</code> functions.</p>
+<p>These two functions behave in the same way as their other variants(<code>goto</code>, and <code>push</code>), except that they expect a <code>Navigator</code> or <code>PageControl</code> as the first argument. Any path specified after this will be relative to the provided <a href="../fuse/controls/navigator.html">Navigator</a>/<a href="../fuse/controls/pagecontrol.html">PageControl</a>.</p>
+<pre><code class="language-xml">	&lt;JavaScript&gt;
+		module.exports.toSub1 = function() {
+			router.pushRelative(secondNav, &quot;option1&quot;);
+		}
+	&lt;/JavaScript&gt;
+	&lt;Navigator ux:Name=&quot;secondNav&quot; DefaultTemplate=&quot;optionList&quot;&gt;
+		&lt;Panel ux:Template=&quot;optionList&quot;&gt;
+			&lt;Button Margin=&quot;10&quot; Text=&quot;Subpage 1&quot; Clicked=&quot;{toSub1}&quot; /&gt;
+		&lt;/Panel&gt;
+		&lt;Panel Color=&quot;#FAA&quot; ux:Template=&quot;option1&quot; /&gt;
+	&lt;/Navigator&gt;
+</code></pre>
+<h2 id="custom-animations-transitions">Custom animations/transitions</h2>
+<p>Note that by default <code>Page</code> objects have a built-in default <code>Transition=&quot;Default&quot;</code>, which means the containing control defines a meaningful default transition. For example, <code>PageControl</code> by default makes pages slide horizontally to enter and exit, while
+in <code>Navigator</code> enter sliding in from the left, and exit shrinking and fading out into the background.</p>
+<p>If you want to customize the transtion, you probably want to disable the default transition first:</p>
+<pre><code class="language-xml">	&lt;Page ux:Class=&quot;SettingsPage&quot; Transition=&quot;None&quot;&gt;
+</code></pre>
+<p>If you don't specify <code>Transition=&quot;None&quot;</code>, your custom animation will be &quot;on top of&quot;/&quot;in addition to&quot; the default transition.</p>
+<p>The <code>Navigator</code> works with the standard navigation animation system in Fuse. This means that page transitions are defined by the following triggers:</p>
+<ul>
+<li><code>EnteringAnimation</code> - played backwards for the entering page (the page becoming the active page)</li>
+<li><code>ExitingAnimation</code> - played forwards for pages replaced by a <code>push</code></li>
+<li><code>RemovingAnimation</code> - played forwards for pages removed because of a <code>goto</code></li>
+</ul>
+<p>When you <code>goBack()</code>, the opposite happens`:</p>
+<ul>
+<li><code>EnteringAnimation</code> - played forwards for the page being removed by a <code>goBack</code></li>
+<li><code>ExitingAnimation</code> - played backwards for the page being restored bt a <code>goBack</code></li>
+</ul>
+<p>This system can be a bit tricky to wrap your head around, but it is actually necessary to allow you to fully customize all the four different cases.</p>
+<p>For example:</p>
+<pre><code class="language-xml">	&lt;Page ux:Class=&quot;SettingsPage&quot; Transition=&quot;None&quot;&gt;
+		&lt;EnteringAnimation&gt;
+			&lt;Move X=&quot;1&quot; RelativeTo=&quot;Size&quot; Duration=&quot;0.4&quot; Easing=&quot;BackOut&quot; /&gt;
+		&lt;/EnteringAnimation&gt;
+		&lt;ExitingAnimation&gt;
+			&lt;Move Y=&quot;1&quot; RelativeTo=&quot;Size&quot; Duration=&quot;0.4&quot; Easing=&quot;CubicIn&quot; /&gt;
+		&lt;/ExitingAnimation&gt;
+		...
+	&lt;/Page&gt;
+</code></pre>
+<p>This will make your settings page fly in from the left, and exit by falling out the bottom of your screen. Feel free
+to spice it up by adding <code>&lt;Change this.Opacity=&quot;0&quot; Duration=&quot;0.3&quot; ../&gt;</code>, scaling, rotation or whatever you feel like.</p>
+<p>If you have a lot of pages and want them to share the transition code, we can make a common base class:</p>
+<pre><code class="language-xml">	&lt;Page ux:Class=&quot;FancyTransitionPage&quot; Transition=&quot;None&quot;&gt;
+		&lt;EnteringAnimation&gt;
+			&lt;Move X=&quot;1&quot; RelativeTo=&quot;Size&quot; Duration=&quot;0.4&quot; Easing=&quot;BackOut&quot; /&gt;
+		&lt;/EnteringAnimation&gt;
+		&lt;ExitingAnimation&gt;
+			&lt;Move Y=&quot;1&quot; RelativeTo=&quot;Size&quot; Duration=&quot;0.4&quot; Easing=&quot;CubicIn&quot; /&gt;
+		&lt;/ExitingAnimation&gt;
+	&lt;/Page&gt;
+</code></pre>
+<p>And then use that as base class for your pages:</p>
+<pre><code class="language-xml">	&lt;FancyTransitionPage ux:Class=&quot;SettingsPage&quot;&gt;
+		...
+	&lt;/FancyTransitionPage&gt;
+</code></pre>
+<p>Other navigation-based triggers such as <code>ActivatingAnimation</code>, <code>WhileActive</code> etc. also works as expected in both <code>PageControl</code> and <code>Navigator</code>.</p>
+<h2 id="and-done">And done!</h2>
+<p>That's it, you now have an elegant, scalable model for navigation and structuring your app.</p>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>

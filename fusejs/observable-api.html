@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Observable API | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3 show">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4 show">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api" class="active"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <h1 id="observable-api">Observable API</h1>
+<h4 id="observable-value">Observable value</h4>
+<p>If the observable holds exactly one value, we can get or set that value using the <code>.value</code> property:</p>
+<pre><code class="language-js">	var someString = Observable(&quot;foobar&quot;);
+	console.log(someString.value); // prints &quot;foobar&quot;
+	someString.value = &quot;barfoo&quot;; // sets the value, notifies subscribers.
+</code></pre>
+<p>When the <code>.value</code> property is set, all subscribers are notified.</p>
+<ul>
+<li>Empty observables will have <code>.value === undefined</code> and <code>.length === 0</code>.</li>
+</ul>
+<h4 id="observable-lists">Observable lists</h4>
+<p>If we want to use the observable as a list of values, we manipulate it using methods like <code>.add(item)</code> and <code>.remove(item)</code>.
+We can also query the number of values in the list through the <code>.length</code> property:</p>
+<pre><code class="language-js">	var friends = Observable(&quot;Jake&quot;, &quot;Jane&quot;, &quot;Joe&quot;);
+	console.log(friends.length); // prints 3
+
+	friends.add(&quot;Gina&quot;);
+	console.log(friends.length); // prints 4
+</code></pre>
+<p>See the full list of members to see what's possible with observable lists.</p>
+<h4 id="data-types-with-observables">Data types with Observables</h4>
+<p>Observables can be used to supply all the basic types; number, string, boolean, as well as vector types. Number, string and boolean are created using their usual JavaScript literals:</p>
+<pre><code class="language-js">var obsNumber = Observable(10.5);
+var obsString = Observable(&quot;hello&quot;);
+var obsBool = Observable(true);
+</code></pre>
+<p>For data-bindings requiring vector types (e.g. colors), we can use JavaScript arrays:</p>
+<pre><code class="language-js">var obsRedColor = Observable([1,0,0,1]);
+var obsWhiteAndBlack = Observable([1,1,1,1], [0,0,0,1]);
+</code></pre>
+<h4 id="observable-functions">Observable functions</h4>
+<p>When an <code>Observable</code> is initialized with a function as its only argument, the <code>.value</code>
+of the observable is computed by evaluating the function.</p>
+<p>Reactive dependencies are automatically generated with all other observables touched while
+evaluating the function.</p>
+<p>Example:</p>
+<pre><code class="language-js">	var firstName = Observable(&quot;John&quot;);
+	var lastName = Observable(&quot;Doe&quot;);
+
+	var fullName = Observable(function() {
+		return firstName.value + &quot; &quot; + lastName.value;
+	})
+</code></pre>
+<p>If the <code>firstName</code> or <code>lastName</code> changes, the <code>fullName</code> will now update automatically.</p>
+<p>Yes, it's magic.</p>
+<h3 id="state-observables-and-derived-observables">State Observables and derived Observables</h3>
+<p>When working with Observables, it is important to understand the difference between <strong>state Observables</strong> and <strong>derived Observables</strong>. In short, a state Observable is an Observable that is explicitly <em>made by you</em>, while a derived Observable is returned by other APIs, such as <a href="../fusejs/observable-api.html#reactive-operators">reactive operators</a>.</p>
+<pre><code class="language-js">	var stateObs = Observable(&quot;foo&quot;); // stateObs is a state Observable
+	var derivedObs = stateObs.map(function(val) { // derivedObs is a derived Observable
+		return &quot;derived: &quot; + val;
+	});
+</code></pre>
+<p>The main difference between the two is that the data in state Observables is available synchronously. It is not necessary to add a subscriber for the data to be available, and we can access it directly:</p>
+<pre><code class="language-js">	var list = Observable(1,2,3,4,5);
+	list.forEach(function(i) {
+		console.log(i); // loops through the list, prints 1, then 2, 3, 4, 5
+	});
+</code></pre>
+<p>The data in derived Observables is not available synchronously, so we cannot use a synchronous approach like shown in the example above. Instead, we use <a href="../fusejs/observable-api.html#reactive-operators">reactive operators</a> (such as <code>.map()</code>) to react when data eventually becomes available:</p>
+<pre><code class="language-js">	var list = Observable(1,2,3,4,5);
+	var asyncList = list.map(function(i) {
+		return i * i;
+	});
+</code></pre>
+<p>In the example above, the <code>asyncList</code> derived Observable will eventually contain the squared values for the numbers in <code>list</code> state Observable. Note that we cannot iterate over <code>asyncList</code> with a <code>forEach()</code> statement here, because the data in <code>asyncList</code> is populated asynchronously, and only when there is a subscriber added to it. Later in this article, you'll find more details on <a href="../fusejs/observable-api.html#subscribing-to-updates">subscribing to updates</a>.</p>
+<p><a href="../fusejs/observable-api.html#reactive-operators">Reactive operators</a> are just one example of APIs that return derived Observables.
+A very common use case are properties of <code>ux:Class</code> defined using the <a href="../ux-markup/properties.html#using-properties-in-javascript">ux:Property attribute</a>, which are automatically available in JavaScript as derived Observables. Another frequent use case is the Navigation-related <code>this.Parameter</code> which we encounter when <a href="../navigation/navigation.html#passing-parameters-to-pages">passing parameters to pages</a>. Just like with <code>ux:Property</code>, <code>this.Parameter</code> also is an implicit derived Observable, the value of which we can only access using <a href="../fusejs/observable-api.html#reactive-operators">reactive operators</a>.</p>
+<h3 id="synchronous-operators">Synchronous operators</h3>
+<p>The following is a list of operators that are only appropriate to be used on state Observables, as explained <a href="../fusejs/observable-api.html#state-observables-and-derived-observables">in the section above</a>. If needed, some of them could be used on derived Observables too, but only from within <a href="../fusejs/observable-api.html#observable-functions">Observable functions</a>.</p>
+<h4 id="value">value</h4>
+<p>Gets or sets the current value of the <a href="../fusejs/observable.html">Observable</a>.</p>
+<p>The <code>value</code> property acts as a shorthand for <code>getAt(0)</code> and <code>replaceAt(0)</code>.
+It is most often used with single value Observables, although this is not a requirement.</p>
+<pre><code class="language-js">	if (isSomethingEnabled.value) {
+		doSomething();
+	}
+	isSomethingEnabled.value = false;
+</code></pre>
+<h4 id="toarray">toArray()</h4>
+<p>Returns a shallow copy of the Observables internal values array.</p>
+<pre><code class="language-js">	var obs = Observable(1,2,3);
+	var obsArray = obs.toArray(); //obsArray == [1,2,3]
+</code></pre>
+<h3 id="list-operators">List operators</h3>
+<h4 id="add-value">add(value)</h4>
+<p>Adds <code>value</code> to the observable list of values.</p>
+<pre><code class="language-js">	var colors = Observable(&quot;Red&quot;, &quot;Green&quot;);
+	colors.add(&quot;Blue&quot;);
+</code></pre>
+<h4 id="addall-items">addAll(items)</h4>
+<p>Appends the array <code>items</code> to the end of the observable.</p>
+<pre><code class="language-js">	var val = new Observable(1, 2, 3);
+
+	val.addAll([4, 5, 6]);
+	
+	//val = Observable(1, 2, 3, 4, 5, 6);
+</code></pre>
+<h4 id="clear">clear()</h4>
+<p>Removes all values from the <a href="../fusejs/observable.html">Observable</a>.</p>
+<pre><code class="language-js">	var colors = Observable(&quot;Red&quot;, &quot;Green&quot;);
+	colors.clear();
+</code></pre>
+<h4 id="contains-value">contains(value)</h4>
+<p>Returns true if <code>value</code> exists in the <code>var</code>.</p>
+<pre><code class="language-js">	Observable seasons = Observable(&quot;Summer&quot;, &quot;Fall&quot;, &quot;Winter&quot;, &quot;Spring&quot;);
+	var winterExists = seasons.contains(&quot;Winter&quot;); // true
+</code></pre>
+<h4 id="foreach-func-item">forEach(func(item))</h4>
+<p>Invokes <code>func</code> on every value in the <a href="../fusejs/observable.html">Observable</a>.</p>
+<pre><code class="language-js">	var numbers = Observable(10, 2, 50, 3);
+	numbers.forEach(function(number) {
+		console.log(number + &quot; is a nice number!&quot;);
+	});
+</code></pre>
+<h4 id="foreach-func-item-index">forEach(func(item,index))</h4>
+<p>Invokes <code>func</code> on every value in the <a href="../fusejs/observable.html">Observable</a>.</p>
+<pre><code class="language-js">	var numbers = Observable(10, 2, 50, 3);
+	numbers.forEach(function(number, index) {
+		console.log(number + &quot; has the index: &quot; + index);
+	});
+</code></pre>
+<p>If <code>func</code> accepts two arguments, the second argument is the index of that item in the <a href="../fusejs/observable.html">Observable</a>.</p>
+<h4 id="getat-index">getAt(index)</h4>
+<p>Returns the value at the given <code>index</code></p>
+<pre><code class="language-js">	var seasons = Observable(&quot;Summer&quot;, &quot;Fall&quot;, &quot;Winter&quot;, &quot;Spring&quot;);
+	console.log(seasons.getAt(2)); //output: &quot;Winter&quot;
+</code></pre>
+<h4 id="identity">identity()</h4>
+<p>Equivalent to calling <code>map</code> with the identity function, aka <code>map(function(x) { return x; })</code>.</p>
+<p>Useful in cases where two-way databinding is necessary, but we don't want to clobber the original <code>Observable</code>'s data.</p>
+<pre><code class="language-js">	var originalData = Observable(&quot;This is my original data&quot;);
+	var nonClobberedData = originalData.identity(); // Safe for two-way databinding
+</code></pre>
+<h4 id="indexof-value">indexOf(value)</h4>
+<p>Returns the index of the first occurrence of <code>value</code>.</p>
+<pre><code class="language-js">	var seasons = Observable(&quot;Summer&quot;, &quot;Fall&quot;, &quot;Winter&quot;, &quot;Spring&quot;);
+	var index = seasons.indexOf(&quot;Winter&quot;); // 2
+</code></pre>
+<h4 id="insertall-index-array">insertAll(index, array)</h4>
+<p>Inserts the contents of <code>array</code> at the specified <code>index</code>.</p>
+<pre><code class="language-js">	var clouds = Observable(&quot;Cirrus&quot;, &quot;Alto&quot;, &quot;Stratus&quot;);
+	clouds.insertAll(1, [&quot;Cumulus&quot;, &quot;Mammatus&quot;]);
+	
+	//clouds = Observable(&quot;Cirrus&quot;, &quot;Cumulus&quot;, &quot;Mammatus&quot;, &quot;Alto&quot;, &quot;Stratus&quot;);
+</code></pre>
+<h4 id="insertat-index-value">insertAt(index, value)</h4>
+<p>Inserts <code>value</code> at the specified <code>index</code>.</p>
+<pre><code class="language-js">	var words = Observable(&quot;foo&quot;, &quot;bar&quot;);
+	words.insertAt(1, &quot;baz&quot;);
+	
+	console.log(words); // Observable(&quot;foo&quot;, &quot;baz&quot;, &quot;bar&quot;)
+</code></pre>
+<h4 id="-length">.length</h4>
+<p>Returns the number of values in the <a href="../fusejs/observable.html">Observable</a></p>
+<pre><code class="language-js">	var fruits = Observable(&quot;Orange&quot;, &quot;Apple&quot;, &quot;Pear&quot;);
+	console.log(fruits.length); //output: 3
+</code></pre>
+<h4 id="refreshall-newvalues-comparefunc-updatefunc-mapfunc">refreshAll(newValues, compareFunc, updateFunc, mapFunc)</h4>
+<p>Updates all items in the <a href="../fusejs/observable.html">Observable</a> with the values from <code>newValues</code>.
+<code>compareFunc</code> is used to determine whether two items are equal. <code>updateFunc</code> is used to update an existing item with new values when a match is found by <code>compareFunc</code>.
+<code>mapFunc</code> is called whenever a new item is found and allows it to be mapped to a new object.</p>
+<pre><code class="language-js">	var items = Observable(
+		{id: 1, text: &quot;one&quot; },
+		{id: 2, text: &quot;two&quot; },
+		{id: 3, text: &quot;tres&quot; }
+	);
+	
+	var newItems = [
+		{id: 3, text: &quot;three&quot; },
+		{id: 4, text: &quot;four&quot; },
+		{id: 5, text: &quot;five&quot; }
+	];
+	
+	items.refreshAll(newItems,
+		//Compare on ID
+		function(oldItem, newItem){
+			return oldItem.id == newItem.id;
+		},
+		// Update text
+		function(oldItem, newItem){
+			oldItem.text.value = newItem.text;
+		},
+		// Map to object with an observable version of text
+		function(newItem){
+			return {
+				id: newItem.id,
+				text: Observable(newItem.text)
+			};
+		}
+	);
+</code></pre>
+<h4 id="remove-value">remove(value)</h4>
+<p>Removes the first occurrence of <code>value</code> from the observable list of values.</p>
+<pre><code class="language-js">	var shapes = Observable(&quot;Round&quot;, &quot;Square&quot;, &quot;Rectangular&quot;);
+	shapes.remove(&quot;Rectangular&quot;);
+</code></pre>
+<h4 id="removeat-index">removeAt(index)</h4>
+<p>Remove the value at the given <code>index</code>.</p>
+<pre><code class="language-js">	var shapes = Observable(&quot;Round&quot;, &quot;Square&quot;, &quot;Rectangular&quot;);
+	shapes.removeAt(2);
+</code></pre>
+<h4 id="removerange-start-count">removeRange(start, count)</h4>
+<p>Removes <code>count</code> items, starting from <code>start</code>.</p>
+<pre><code class="language-js">	var letters = Observable(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;);
+	letters.removeRange(1, 2);
+	//letters = Observable(&quot;a&quot;, &quot;d&quot;);
+</code></pre>
+<h4 id="removewhere-func">removeWhere(func)</h4>
+<p>Removes all values for which <code>func</code> is true.</p>
+<pre><code class="language-js">	var hotPlaces = Observable(
+		{name: &quot;Oslo&quot;, temperature: 30},
+		{name: &quot;New York&quot;, temperature: 24},
+		{name: &quot;California&quot;, temperature: 27},
+		{name: &quot;Sydney&quot;, temperature: 10}
+	).removeWhere(function(place){
+		return place.temperature &lt; 20;
+	}); //Removes Sydney from the list
+</code></pre>
+<h4 id="replaceall-array">replaceAll(array)</h4>
+<p>Replaces the Observables values with values from the <code>array</code>.</p>
+<pre><code class="language-js">	var colors = Observable(&quot;Red&quot;, &quot;Green&quot;, &quot;Blue&quot;);
+	colors.replaceAll([&quot;Orange&quot;, &quot;Cyan&quot;, &quot;Pink&quot;]);
+</code></pre>
+<h4 id="replaceat-index-value">replaceAt(index, value)</h4>
+<p>Replaces the value at <code>index</code> with <code>value</code>.</p>
+<pre><code class="language-js">	var ingredients = Observable(&quot;sugar&quot;, &quot;milk&quot;, &quot;potato&quot;);
+	ingredients.replaceAt(2, &quot;flour&quot;); //Replaces &quot;potato&quot; with &quot;flour&quot;
+</code></pre>
+<h4 id="tryremove-value">tryRemove(value)</h4>
+<p>Tries to remove the first occurrence of <code>value</code> from the observable list of values.
+Returns true if successful, and false otherwise.</p>
+<pre><code class="language-js">	var shapes = Observable(&quot;Round&quot;, &quot;Square&quot;, &quot;Rectangular&quot;);
+	if(shapes.tryRemove(&quot;Rectangular&quot;)) {
+		console.log(&quot;success&quot;);
+	}
+</code></pre>
+<h3 id="reactive-operators">Reactive operators</h3>
+<p>FuseJS comes with set of reactive operators that return derived Observables from other Observables. This means that if the original
+<code>Observable</code> changes, any <code>Observable</code> that is created as a result of applying a reactive operator will also change automatically. These operators can be used on both state Observables and derived Observables, as explained <a href="../fusejs/observable-api.html#state-observables-and-derived-observables">earlier in this article</a>.</p>
+<p>Most operators are one-way: a change in the derived Observable will not change the source observable (in fact we should not modify the derived Observable in this case). The <code>...TwoWay</code> functions create a two-way binding: a change in the derived Observable will change the source observable.</p>
+<p><em>Be aware that many of the operators work with objects, as well as values. If you modify the properties of an object in the derived Observable you might be updating the source as well, since they are the same object. It's also possible that your source contains a list of <code>Observable</code> objects, in which case changes to them will propagate as normal from that <code>Observable</code>. One-way/Two-way refers only to which directions changes in the high level observable, made by the operator, are propagated.</em></p>
+<h4 id="any-filter">any(filter)</h4>
+<p>Returns a new <a href="../fusejs/observable.html">Observable</a> containing a boolean representing whether or not the observable it is called on contains any entries that match the <code>filter</code>.</p>
+<pre><code class="language-js">	var vehicles = Observable(
+		{type: &quot;car&quot;, name: &quot;SuperSpeeder 2000&quot;},
+		{type: &quot;car&quot;, name: &quot;Initial Dash 2k00&quot;},
+		{type: &quot;boat&quot;, name: &quot;Floaty McFloatface&quot;}
+	);
+	
+	var hasBoats = vehicles.any({type: &quot;boat&quot;}); //true
+	var hasAircraft = vehicles.any({type: &quot;aircraft&quot;}); //false
+	var hasCar = veichles.any(function(x) { return x.type === &quot;car&quot;; }) //true
+</code></pre>
+<h4 id="combine-obs-func">combine([obs, ...], func)</h4>
+<p>Invokes <code>func</code> every time the current observable or any of the <code>obs</code> observables (collectively &quot;the dependencies&quot;) change.</p>
+<p>The arguments will hold the current <code>.value</code> of each of the dependencies, with <code>this.value</code> as the first argument, followed by the value of each successive observable in order.</p>
+<pre><code class="language-js">	var foo = Observable(1);
+	var boo = Observable(2);
+	var moo = Observable(3);
+
+	var res = foo.combine(boo, moo, function(f, b, m) {
+		// f holds the current .value of foo
+		// b holds the current .value of boo
+		// m holds the current .value of moo
+
+		return f+b+m; // the resulting observable will yield the value 6
+	})
+</code></pre>
+<p>If the <code>func</code> provided to <code>combine</code> returns a value, that value will replace the <code>.value</code> of the resulting observable. If the function returns nothing (<code>undefined</code>),
+the <code>func</code> is expected to take care of updating the resulting observable by modifying the <code>this</code> parameter in the <code>func</code>.</p>
+<p>Note that <code>combine</code> fires on every change, even if no value is available for each of the dependencies. To avoid that, see <code>combineLatest</code>.</p>
+<p>Note that <code>combine</code> only provides the first value (<code>.value</code>) of each of the dependencies, even if some of these are arrays. To get all the values in each
+of the dependencies that, see <code>.combineArrays</code>.</p>
+<h3 id="combinelatest-obs-func">combineLatest([obs, ...], func)</h3>
+<p>Same as <code>combine</code>, but does not fire <code>func</code> until at least one value is available (<code>.length &gt; 0</code>) for all of the dependencies.</p>
+<h3 id="combinearrays-obs-func">combineArrays([obs, ...], func)</h3>
+<p>Same as <code>combine</code>, but provides an array for each dependency with all the values of each of the observable instead of just the first value of each observable.</p>
+<pre><code class="language-js">	var foo = Observable(1);
+	var boo = Observable(&quot;a&quot;, &quot;b&quot;, c);
+	var moo = Observable(3);
+
+	var res = foo.combineArrays(boo, moo, function(f, b, m) {
+		// f holds [1]
+		// b holds [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+		// m holds [3]
+
+		return [f[0], m[0], b.length]; // the resulting observable will hold the values (1, 3, 3)
+	})
+</code></pre>
+<p>If the <code>func</code> provided to <code>combineArrays</code> returns an array, the elements from the array will replace all elements in the resulting observable. If the function returns nothing (<code>undefined</code>),
+the <code>func</code> is expected to take care of updating the resulting observable by modifying the <code>this</code> parameter in the <code>func</code>.</p>
+<h4 id="count">count()</h4>
+<p>Returns the number of values in the <a href="../fusejs/observable.html">Observable</a> as an observable number. Whenever an item is added or removed from the <a href="../fusejs/observable.html">Observable</a>, the <code>count</code> changes.</p>
+<pre><code class="language-js">	books = Observable(
+		&quot;UX and you&quot;,
+		&quot;Observing the observer&quot;,
+		&quot;Documenting the documenter&quot;
+	);
+	
+	numBooks = books.count(); //result: 3
+</code></pre>
+<h4 id="count-condition">count(condition)</h4>
+<p>If <code>condition</code> is a function, it returns an observable number of values for which <code>condition</code> is true. If <code>condition</code> is an object, it returns an observable containing the amount of values whom properties equal properties in <code>condition</code>.</p>
+<pre><code class="language-js">	var tasks = Observable(
+		{ title: &quot;Learn Fuse&quot;, isDone: true },
+		{ title: &quot;Learn about Observables&quot;, isDone: true },
+		{ title: &quot;Make awesome app&quot;, isDone: false }
+	);
+	var tasksDone = tasks.count(function(x){
+		return x.isDone;
+	}); // 2
+	var tasksDone = tasks.count({isDone: true}); //2
+</code></pre>
+<h4 id="expand-func">expand(func)</h4>
+<p>When an <a href="../fusejs/observable.html">Observable</a> contains only a single array, expand will return an <a href="../fusejs/observable.html">Observable</a> containing the values from that array.</p>
+<pre><code class="language-js">Observable([1,2,3]).expand() -&gt; Observable(1,2,3)
+</code></pre>
+<h4 id="filter-condition">filter(condition)</h4>
+<p>Returns an observable that will only propagate values that pass the given <code>condition</code>, otherwise it retains its previous value.</p>
+<p>This method only considers the first (single) value of an observable.</p>
+<!-- TODO: Make example -->
+<h4 id="first">first()</h4>
+<p>Returns a new <a href="../fusejs/observable.html">Observable</a> containing the value of the first entry in the observable it is called on.</p>
+<pre><code class="language-js">	var values = Observable(1, 2, 3);
+	var firstEntry = values.first(); //Observable(1)
+</code></pre>
+<h4 id="flatmap-func-item">flatMap(func(item))</h4>
+<p>Calls <code>func</code> for every item in the <a href="../fusejs/observable.html">Observable</a>, then merges the items of all the <code>func</code> calls into one <a href="../fusejs/observable.html">Observable</a> array.</p>
+<pre><code class="language-js">	var numbers = Observable(
+		[1, 2, 3],
+		[4, 5, 6]
+	);
+	var counts = numbers.flatMap(function(item) {
+		return [item, item+1];
+	});
+	//counts == Observable([1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7])
+</code></pre>
+<h4 id="inner">inner()</h4>
+<p>Returns a new Observable that reflects the inner value when two Observables are nested (the <code>.value</code> of the Observable is an Observable).
+If the Observable it is called on is <em>not</em> nested then <code>.inner()</code> simply reflects its value.</p>
+<p>If the current Observable is not nested, the returned observable reflects the value of the current observable.</p>
+<pre><code class="language-js">	var foo = Observable(Observable(4))
+	var bar = foo.inner(); // bar.value = 4
+	foo.value.value = 9;   // bar.value = 9
+	foo.value = 3;         // bar.value = 3
+</code></pre>
+<p>This is particularly useful when dealing with Observables passed via <code>ux:Property</code>.</p>
+<h4 id="innertwoway">innerTwoWay()</h4>
+<p>A version of <code>inner()</code> that creates a two-way binding with the output. Values modified in the returned <a href="../fusejs/observable.html">Observable</a> will update the value in the source observable.</p>
+<pre><code class="language-js">	var outerObs = Observable(Observable(&quot;John&quot;));
+	var innerObs = outerObs.innerTwoWay();
+	innerObs.value = &quot;Jake&quot;; // outerObs.value.value = &quot;Jake&quot;
+</code></pre>
+<p><code>.innerTwoWay()</code> works on both single-value Observables and on Observable lists.</p>
+<pre><code class="language-js">	var outerObs = Observable(Observable(&quot;1&quot;,&quot;3&quot;,&quot;5&quot;));
+	var innerObs = outerObs.innerTwoWay();
+	innerObs.removeAt(0); // outerObs.value.toArray() = [&quot;3&quot;,&quot;5&quot;]
+</code></pre>
+<h4 id="last">last()</h4>
+<p>Returns a new <a href="../fusejs/observable.html">Observable</a> containing the value of the last entry in the observable it is called on.</p>
+<pre><code class="language-js">	var values = Observable(1, 2, 3);
+	var lastEntry = values.last(); //Observable(3)
+</code></pre>
+<h4 id="map-func-item">map(func(item)))</h4>
+<p>Invokes <code>func</code> on every value in the <a href="../fusejs/observable.html">Observable</a> returning a new <a href="../fusejs/observable.html">Observable</a> with the results.</p>
+<pre><code class="language-js">	var numbers = Observable(1, 4, 9);
+	var roots = numbers.map(function(number) {
+		return Math.sqrt(number);
+	});
+</code></pre>
+<p>The values of <code>roots</code> becomes the square root of the numbers in <code>numbers</code>. The values in <code>numbers</code> remain unchanged.</p>
+<h4 id="map-func-item-index">map(func(item, index)))</h4>
+<p>Invokes <code>func</code> on every value in the <a href="../fusejs/observable.html">Observable</a> returning a new <a href="../fusejs/observable.html">Observable</a> with the results.</p>
+<pre><code class="language-js">	var numbers = Observable(&quot;this&quot;, &quot;item&quot;, &quot;is&quot;);
+	var roots = numbers.map(function(item, index) {
+		return item + &quot; has the index nr: &quot; + index;
+	});
+</code></pre>
+<p>When Observable.map is used with a function which takes two arguments, the second argument is the index of that item in the <a href="../fusejs/observable.html">Observable</a>.</p>
+<h4 id="maptwoway-mapfunc-sourcevalue-unmapfunc-partvalue-sourcevalue">mapTwoWay(mapFunc(sourceValue), unmapFunc(partValue,sourceValue))</h4>
+<p>A version of map that creates a two-way binding with the output. Values modified in the returned <a href="../fusejs/observable.html">Observable</a> will update the value in the source observable.</p>
+<p><code>mapFunc(sourceValue)</code> converts a value from source observable: it returns the mapped value for the output.</p>
+<p><code>unmapFunc(partValue, sourceValue)</code> converts a value form the output back to the form for the input. The current  <code>sourceValue</code> is provided in case the output was only a partial value.</p>
+<p>Here is an example for  simple mapping to convert radians to degrees and back (this example does not need the <code>sourceValue</code>):</p>
+<pre><code class="language-js">	var angles = Observable(0, Math.PI, 2*Math.PI)
+	exports.angleDegrees = angles.mapTwoWay( function(value) {
+		return value * 180 / Math.PI 
+	}, function( value, sourceValue ) {
+		return value * Math.PI / 180 
+	})
+</code></pre>
+<p>Here is an example the returns a field in an object and recreates the full object in the <code>umapFunc</code>. If this is all you're doing then use <code>pickTwoWay</code> instead, which does exactly this (in this example it would be <code>users.pickTwoWay(&quot;name&quot;)</code>.</p>
+<pre><code class="language-js">	var users = Observable(
+		{ id: &quot;tom&quot;, name: &quot;Tommy&quot; },
+		{ id: &quot;sal&quot;, name: &quot;Sally&quot; }
+	)
+	
+	exports.names = users.mapTwoWay( function(user) {
+		return user.name
+	}, function( name, sourceUser ) {
+		sourceUser.name = name
+		return sourceUser
+	})
+</code></pre>
+<h4 id="not">not()</h4>
+<p>Returns an <a href="../fusejs/observable.html">Observable</a> that has the inverse value of the <a href="../fusejs/observable.html">Observable</a> you are calling it on. If the <a href="../fusejs/observable.html">Observable</a> is <code>true</code>, the returned one will be <code>false</code>, and vice versa.</p>
+<pre><code class="language-js">	falseValue = Observable(false);
+	trueValue = falseValue.not();
+</code></pre>
+<h4 id="pick-index">pick(index)</h4>
+<p>Returns a new <a href="../fusejs/observable.html">Observable</a> containing the item at the index, or named property, <code>index</code> of every entry in the observable it is called on.</p>
+<pre><code class="language-js">	var values = Observable([1, 2], [3, 4], [5, 6]);
+	var picked_values = values.pick(1); //Observable(2, 4, 6);
+</code></pre>
+<h4 id="picktwoway-index">pickTwoWay(index)</h4>
+<p>Like <code>pick</code>, but creates a two-way relationship. Modifications to the output map will update the value in the source map.</p>
+<h4 id="slice-begin-end">slice([begin[, end]])</h4>
+<p>Returns a new observable that reflects a slice of the current observable.</p>
+<p>See the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">documentation for <code>Array.slice()</code></a> for explaination
+of the arguments to this function.</p>
+<pre><code class="language-js">	var foo = Observable(1,2,3,4);
+	var bar = foo.slice(1,2) // bar = Observable[2, 3]
+</code></pre>
+<p>Hints:</p>
+<ul>
+<li>To observe the <em>first</em> element of an observable, use <code>.slice(0, 1)</code>.</li>
+<li>To observe the <em>last</em> element of an observable, use <code>.slice(-1)</code>.</li>
+</ul>
+<h4 id="where-condition">where(condition)</h4>
+<p><code>condition</code> can be either a function or an object.
+If <code>condition</code> is a function, it will return a new <a href="../fusejs/observable.html">Observable</a> with only the values for which <code>condition</code> returns true.
+However, if <code>condition</code> is an object, it will return a new <a href="../fusejs/observable.html">Observable</a> with only the values where parameters match parameters in <code>condition</code>, checked using strict equality (<code>===</code>).</p>
+<p>The new <a href="../fusejs/observable.html">Observable</a> observes the old <a href="../fusejs/observable.html">Observable</a>, and will therefore update whenever a value changes in the original observable.</p>
+<pre><code class="language-js">	fruits = Observable(
+		{ name: &quot;Apple&quot; , color: &quot;red&quot;    },
+		{ name: &quot;Lemon&quot; , color: &quot;yellow&quot; },
+		{ name: &quot;Pear&quot;  , color: &quot;green&quot;  },
+		{ name: &quot;Banana&quot;, color: &quot;yellow&quot; });
+
+	goodFruits = fruits.where({color: &quot;yellow&quot;});
+	
+	goodFruits = fruits.where(function(e){
+		return e.color === &quot;yellow&quot;;
+	});
+</code></pre>
+<blockquote>
+<p>Note! You used to be able to return an Observable function with the .where operator in order to make the condition itself observable.
+This is no longer allowed. The best practice for achieving the same effect is to instead use <a href="#flatmap-func-item">flatMap()</a>.</p>
+</blockquote>
+<p>In order to filter a list based on an observable condition you use a combination of <code>.flatMap</code> and <code>.where</code>.</p>
+<pre><code class="language-js">	var items = conditionObservable.flatMap(function(v) {
+		return itemsObservable.where(function(x) { return v != x; });
+	});
+</code></pre>
+<p>We use <code>.flatMap()</code> instead of <code>.map()</code> here because we return observables from the mapping function.</p>
+<blockquote>
+<p>Note! The above approach is fast, but has one caveat: it does not conserve the items order in the observable in the case where the observable condition changes. This means that the <code>items</code> Observable effectively gets cleared and filled from scratch. There is a second pattern for observing a condition with <code>.where</code> which does not have this problem, but it can potentially be quite slow on large lists. It is included here for completeness:</p>
+</blockquote>
+<pre><code class="language-js">var filteredItems = conditionObservable.flatMap(function(cond){
+	return items.where(function(item){
+		return cond.value;
+	});
+});
+</code></pre>
+<p>Take a look <a href="https://github.com/fuse-open/fuse-samples/tree/master/Samples/FilterOnObservableCondition">here</a> for a complete sample.</p>
+<p>This lets you create an Observable which pushes changes whenever the condition or the data changes.</p>
+<h3 id="subscribing-to-updates">Subscribing to updates</h3>
+<h4 id="onvaluechanged-module-func">onValueChanged(module,func)</h4>
+<p>To manually react to changes in a single value <a href="../fusejs/observable.html">Observable</a>, we can use the <code>onValueChanged</code> method. It automatically creates a subscription for us and ties its lifetime to that of <code>module</code>.
+<code>func</code> will be called whenever the single value <a href="../fusejs/observable.html">Observable</a> changes.</p>
+<pre><code class="language-js">	someObservable.onValueChanged(module, function(x) {
+		console.log(&quot;We got a new value: &quot; + x);
+	});
+</code></pre>
+<h4 id="addsubscriber-func">addSubscriber(func)</h4>
+<p>Lets you manually create a subscription for an <a href="../fusejs/observable.html">Observable</a>. Note that you have to manually remove the subscription using <code>removeSubscriber</code> at the appropriate time. For that reason, you should almost always prefer using <code>onValueChanged</code> unless you are implementing a custom observable operator.</p>
+<h4 id="removesubscriber-func">removeSubscriber(func)</h4>
+<p>When you are done consuming the values from the Observable it is important to clean it up by removing the subscription. If we forget to do this we risk accumulating memory garbage over time. This is only needed if you manually created a subscription using <code>addSubscriber</code>. Remember that <code>onValueChanged</code> handles this cleanup automatically for us.</p>
+<pre><code class="language-js">	username.removeSubscriber(usernameLogger);
+</code></pre>
+<h3 id="-subscribe-module">.subscribe(module)</h3>
+<p>When you only need to use an <a href="../fusejs/observable.html">Observable</a> in JavaScript and data-binding to it from UX isn't desired, you can use <code>.subscribe(module)</code> to create a subscription that is tied to the lifetime of a module. This is similar to <code>onValueChanged</code>, except we don't have the possibility to specify a callback function.</p>
+<pre><code class="language-js">	someObservable.subscribe(module);
+</code></pre>
+<h3 id="asynchronous-data-fetching-with-observables">Asynchronous data fetching with Observables</h3>
+<p>There are cases where you need to asynchronously request some data in response to the value of an <code>Observable</code> changing, and get the result as another Observable.
+We can achieve this in an elegant way using a combination of <code>map()</code> and <code>inner()</code>.</p>
+<p>In the below example, we <a href="#map-func-item">map</a> over each item (just one in this case) of our input Observable, returning an Observable which will be updated to contain our fetched data when it becomes available.
+This will result in an Observable of an Observable of our future data – <em>almost</em> what we want.
+We therefore use <a href="#inner">inner()</a> to &quot;unwrap&quot; the inner Observable in place of the outer one, and voila!
+We end up with an Observable that will be updated with our asynchronously fetched data whenever the input changes.</p>
+<pre><code class="language-js">	var inputUrl = Observable(&quot;https://example.com/&quot;);
+	
+	var output = inputUrl.map(function(url) {
+	    var resultObservable = Observable(&quot;Placeholder value&quot;);
+	    
+	    fetch(url)
+	        .then(function(response) { return response.text(); })
+	        .then(function(result) {
+	            resultObservable.value = result;
+	        });
+	    
+	    return resultObservable;
+	}).inner();
+</code></pre>
+<h3 id="failures">Failures</h3>
+<p>An Observables may be in a failed state. This means that it cannot provide a value, and that it's current value has been cleared. Observables are marked as failed when their ultimate provider, such as a network request, is unable to provide a value.</p>
+<p>The failed status is cleared as soon as a new value is written to the observable (this includes a call to <code>clear</code>).</p>
+<h4 id="failed-message">failed(message)</h4>
+<p>Marks the Observable as failed. The <code>message</code> should be a string giving some textual information about what has failed.</p>
+<h4 id="getfailure">getFailure()</h4>
+<p>Returns the current failure message. This will be <code>undefined</code> if the Observable is not in a failed state.</p>
+<h4 id="isfailed-obs">isFailed([obs, ...])</h4>
+<p>Returns a new Observable containg a boolean value that is <code>true</code> if the source observable is failed.</p>
+<p>You may provide any number of additional Observables as arguments. The boolean value will be <code>true</code> whenever any of these observables, including the source object, is failed.</p>
+<h4 id="failedmap-failedmapfunc-notfailedmapfunc">failedMap(failedMapFunc [, notFailedMapFunc ])</h4>
+<p>Returns a new Observable that maps a failed state to a new value.</p>
+<p>If the source observable fails then <code>failedMapFunc(message)</code> will be called. The return value will be used as the value of the output Observable.</p>
+<p>If the source observable is not failed, or recovers from a failed state, then <code>notFailedMapFunc()</code> will be called. The return value will be used as the value of the output Observable. If this function is not provided, or it returns <code>undefined</code>, then the output Observable will be cleared.</p>
+<h4 id="onfailed-module-onfailedcallback-onfailedresolvedcallback">onFailed(module, onFailedCallback [, onFailedResolvedCallback])</h4>
+<p>To imperatively react to a failure state we can use the <code>onFailed</code> function. It automatically creates a subscription for us and ties its lifetime to that of <code>module</code>.</p>
+<p><code>onFailedCallback(message)</code> will be called whenver the Observable fails. The <code>message</code> is the one provided to the <code>failed</code> function.</p>
+<p><code>onFailedResolvedCallback</code> will be called whenver the Observable has its failed status reset.</p>
+<p>When you called <code>onFailed</code> one of the two functions, depending on the current state, will be called.</p>
+<h3 id="other">Other</h3>
+<!-- TODO: write doc for depend, I don't know what this do [karsten]
+#### $(Observable.depend:depend())
+-->
+<h4 id="tostring">toString()</h4>
+<p>Returns a string representation of an observable and its contents.</p>
+<pre><code class="language-js">	var testObservable = Observable(1, &quot;two&quot;, &quot;3&quot;);
+	testObservable.toString(); // &quot;(observable) 1,two,3&quot;
+</code></pre>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>

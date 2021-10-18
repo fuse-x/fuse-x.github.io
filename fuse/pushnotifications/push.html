@@ -1,0 +1,1611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FuseJS/Push Module (JS) | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3 show">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4 show">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push" class="active"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <header class="page-header">
+<h2 id="section-introduction">
+FuseJS/Push Module (JS)
+</h2>
+<form class="advanced-toggle">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="showAdvancedCheckbox">
+<label class="form-check-label" for="showAdvancedCheckbox">
+Show advanced things
+</label>
+</div>
+</form>
+</header>
+<section class="section-jump">
+<ul class="nav nav-pills">
+<li class="nav-item"><a class="nav-link disabled" href="#">Jump to:</a></li>
+<li class="nav-item"><a class="nav-link" href="#section-table-of-contents">Table of Contents</a></li>
+</ul>
+</section>
+<p>Handles push notification from messaging services.</p>
+<p>This module currently supports APNS (Apple Push Notification Service) and GCM (Google Cloud Messaging).</p>
+<p>Fuse provides support for push-notifications from Firebase Cloud Messaging (FCM) and Apple' Push Notification Service (APNS).</p>
+<p>We have opted for a lightweight consistent interface across iOS and Android which we can easily expand as needed.</p>
+<blockquote>
+<p>We are very interested in comments &amp; requests you have on what we have so far so do drop by the forums and let us know.</p>
+</blockquote>
+<h4 id="setting-up-the-client-side">Setting up the client side</h4>
+<h5 id="step-1">Step 1.</h5>
+<p>Include the Fuse push notification library by adding the following to your <code>.unoproj</code> file</p>
+<pre><code class="language-json">    &quot;Packages&quot;: [
+        ...
+        &quot;Fuse.PushNotifications&quot;,
+        ...
+    ],
+</code></pre>
+<h5 id="step-2-only-for-android">Step 2. (Only for Android)</h5>
+<p>Google notifications require a little extra info.</p>
+<p>Add the following to you <code>.unoproj</code></p>
+<pre><code class="language-json">    &quot;Android&quot;: {
+        ...
+        &quot;GooglePlay&quot;: {
+            &quot;SenderID&quot;: &quot;111781901112&quot;
+        }
+        ...
+    },
+</code></pre>
+<p>The <code>SenderID</code> is the sender ID from the <a href="https://console.firebase.google.com">Firebase Console</a>.
+If you don't yet have a project set up please see the <a href="#android-setup">Android setup</a> section later in this document.</p>
+<h4 id="how-this-behaves-in-your-app">How this behaves in your app</h4>
+<p>Referencing <code>Fuse.PushNotifications</code> will do the the following:</p>
+<h5 id="both-platforms">Both Platforms</h5>
+<ul>
+<li>You get a callback telling you if the registration succeeded or failed.</li>
+<li>The succeeded callback will contain your unique registration id (also called a token in iOS docs)</li>
+<li>All future received push notifications will fire a callback containing the JSON of the notification.</li>
+</ul>
+<p>All three callbacks mentioned are available in JavaScript and Uno.</p>
+<h5 id="android-specific">Android specific</h5>
+<ul>
+<li>Your SenderID is added to the project's <code>Manifest.xml</code> file along with some other plumbing</li>
+<li>When your app starts the app registers with the <code>GCM</code> service.</li>
+</ul>
+<h5 id="ios-specific">iOS specific</h5>
+<ul>
+<li>When your app starts it registers with APNS. As all access is controlled through Apple's certificate system there is no extra info to provide (we will mention server side a bit later)</li>
+</ul>
+<p>If you wish to disable auto-registration you can place the following in your unoproj file:</p>
+<pre><code class="language-json">    &quot;iOS&quot;: {
+        &quot;PushNotifications&quot;: {
+            &quot;RegisterOnLaunch&quot;: false
+        }
+    },
+</code></pre>
+<p>You must then register for push notifications by calling <code>register()</code> from JS. This option is useful as when the notifications are registered the OS may ask the user for permission to use push notifications and this may be undesirable on launch.</p>
+<h4 id="using-the-api-from-javascript">Using the API from JavaScript</h4>
+<p>Integrating with notifications from JavaScript is simple. Here is an example that just logs when the callbacks fire:</p>
+<pre><code class="language-xml">    &lt;JavaScript&gt;
+        var push = require(&quot;FuseJS/Push&quot;);
+
+        push.on(&quot;registrationSucceeded&quot;, function(regID) {
+            console.log(&quot;Reg Succeeded: &quot; + regID);
+        });
+
+        push.on(&quot;error&quot;, function(reason) {
+            console.log(&quot;Reg Failed: &quot; + reason);
+        });
+
+        push.on(&quot;receivedMessage&quot;, function(payload) {
+            console.log(&quot;Recieved Push Notification: &quot; + payload);
+        });
+    &lt;/JavaScript&gt;
+</code></pre>
+<p>Here we're using the <a href="../../fusejs/eventemitter.html">EventEmitter</a> <code>on</code> method to register our functions with the different events.
+In a real app we should send our <code>registration ID</code> to our server when <code>registrationSucceeded</code> is triggered.</p>
+<h4 id="server-side">Server Side</h4>
+<p>When we have our client all set up and ready to go we move on to the backend. For this we are required to jump through the hoops provided by Apple and Google.</p>
+<p>See below for the following guides on how to do this for specific platforms:</p>
+<ul>
+<li><a href="#ios-setup">iOS Setup</a></li>
+<li><a href="#android-setup">Android Setup</a></li>
+</ul>
+<h4 id="the-notification">The Notification</h4>
+<p>We support push notifications in JSON format. When a notification arrives one of two things will happen:</p>
+<ul>
+<li>If our app has focus, the callback is called right away with the full JSON payload</li>
+<li>If our app doesn't have focus, (and our JSON contains the correct data) we will add a system notification to the notification bar (called the Notification Center in iOS). When the user clicks the notification in the drop down then our app is launched and the notification is delivered.</li>
+</ul>
+<p>Apple and Google's APIs define how the data in the payload is used to populate the system notification, however we have normalized it a little.</p>
+<p>For iOS we'll just include an <code>aps</code> entry in the notification's JSON, like so:</p>
+<pre><code class="language-json">    'aps': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server'
+        }
+    },
+</code></pre>
+<p>And 'title' and 'body' will be used as the title and body of the system notification.</p>
+<p>For Android we can use exactly the same <code>'aps'</code> entry or the alternatively the following:</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server'
+        }
+    },
+</code></pre>
+<p>The <code>notification</code> entry is the standard Google way of doing this but we felt that it wouldn't hurt to support the Apple way too.</p>
+<blockquote>
+<p>The current implementation only guarantees the <code>title</code> and <code>body</code> entries will work. We also always use your app's icon as the notification icon. This is an area we will extend as Fuse matures. If you have specific requests, be sure to let us know!</p>
+</blockquote>
+<h4 id="message-size-limits">Message size limits</h4>
+<p>Google and Apple has different limits on the size of push notifications.</p>
+<ul>
+<li>Google limits to 4096 bytes</li>
+<li>Apple limits to 2048 bytes on iOS 8 and up but only 256 bytes on all earlier versions</li>
+</ul>
+<h4 id="additional-android-push-notification-features">Additional Android Push Notification Features</h4>
+<p>Since Android 8+ (Oreo or API 26), it is mandatory to define and assign a channel to every notification.</p>
+<p>We have defined a default channel (named &quot;App&quot;) to be assigned to notifications if they aren't already assigned a channel, so you don't need to define one but if you do want to customise it, read on.</p>
+<p>NB! Once a channel is created, you CANNOT change its properties later.</p>
+<p>Apart from the Notification Channel feature discussed above, here is a list of the other android features implemented thus far:</p>
+<ul>
+<li>Notification Sound</li>
+<li>Notification Color</li>
+<li>Notification Priority</li>
+<li>Notification Category</li>
+<li>Notification Lockscreen Visibility</li>
+</ul>
+<p>Android 8+</p>
+<ul>
+<li>Notification Channel</li>
+<li>Nofitication Channel Group</li>
+<li>Notification Channel Importance</li>
+<li>Notification Channel Lockscreen Visibility</li>
+<li>Notification Channel Light Color</li>
+<li>Notification Channel Sound</li>
+<li>Notification Channel Vibration</li>
+<li>Notification Channel Show Badge</li>
+<li>Notification Badge Number</li>
+<li>Notification Badge Icon Type</li>
+</ul>
+<p>We'll show you how to implement them here in fuse but read more about each feature <a href="https://developer.android.com/guide/topics/ui/notifiers/notifications">here</a>.</p>
+<h6 id="notification-sound-value-default">Notification Sound - Value - default</h6>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'sound': 'default'
+        }
+    },
+</code></pre>
+<h6 id="notification-color-values-rrggbb-aarrggbb">Notification Color - Values - #RRGGBB | #AARRGGBB</h6>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'color': '#8811FF'
+        }
+    },
+</code></pre>
+<h6 id="notification-priority-values-high-low-max-min">Notification Priority - Values - high | low | max | min</h6>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationPriority': 'high'
+        }
+    },
+</code></pre>
+<h6 id="notification-category-values-alarm-reminder-event-call-message-email-promo-recommendation-social-error-progress-service-status-system-transport">Notification Category - Values - alarm | reminder | event | call | message | email | promo | recommendation | social | error | progress | service | status | system | transport</h6>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationCategory': 'social'
+        }
+    },
+</code></pre>
+<h6 id="notification-lockscreen-visibility-values-public-secret-private">Notification Lockscreen Visibility - Values - public | secret | private</h6>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationLockscreenVisibility': 'secret'
+        }
+    },
+</code></pre>
+<h6 id="notification-channel">Notification Channel</h6>
+<p>Notification Channel and a Notification Channel Group:</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationChannelGroupId': 'sports',
+            'notificationChannelGroupName': 'Sports',
+            'notificationChannelId': 'sports_football_highlights',
+            'notificationChannelName': 'Football Highlights',
+            'notificationChannelDescription': 'Video commentary once a week'
+        }
+    },
+</code></pre>
+<p>Notification Channel Importance - Values - urgent | high | medium | low | none</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationChannelGroupId': 'sports',
+            'notificationChannelGroupName': 'Sports',
+            'notificationChannelId': 'sports_basketball_highlights',
+            'notificationChannelName': 'Basketball Highlights',
+            'notificationChannelDescription': 'Video commentary once a week',
+            'notificationChannelImportance': 'urgent',
+
+        }
+    },
+</code></pre>
+<p>Notification Channel Lockscreen Visibility - Values - public | secret | private</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationChannelLockscreenVisibility': 'private'
+        }
+    },
+</code></pre>
+<p>Notification Channel Light Color - Values - #RRGGBB</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationChannelLightColor': '#1188FF'
+        }
+    },
+</code></pre>
+<p>Notification Channel Sound - Values - true | false</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationChannelIsSoundOn': 'true'
+        }
+    },
+</code></pre>
+<p>Notification Channel Vibration - Values - true | false</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationChannelIsVibrationOn': 'true'
+        }
+    },
+</code></pre>
+<p>Notification Channel Show Badge - Values - true | false</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationChannelIsShowBadgeOn': 'true'
+        }
+    },
+</code></pre>
+<h6 id="notification-badge">Notification Badge</h6>
+<p>Notification Channel Badge Number</p>
+<pre><code class="language-json">   'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationBadgeNumber': '23'
+        }
+    },
+</code></pre>
+<p>Notification Channel Badge Icon Type - Values - none | small | large</p>
+<pre><code class="language-json">    'notification': {
+        alert: {
+            'title': 'Well would ya look at that!',
+            'body': 'Hello from the server',
+            'notificationBadgeIconType': 'small'
+        }
+    },
+</code></pre>
+<h6 id="notification-uno-project-configurations">Notification Uno Project Configurations</h6>
+<p>The following notification settings can be set via the <code>.unoproj</code> settings:</p>
+<pre><code class="language-json">    &quot;Android&quot;: {
+        ...
+        &quot;Notification&quot;: {
+            &quot;DefaultChannelGroupId&quot;: &quot;default_group&quot;,
+            &quot;DefaultChannelGroupName&quot;: &quot;Categories&quot;,
+            &quot;DefaultChannelId&quot;: &quot;default_channel&quot;,
+            &quot;DefaultChannelName&quot;: &quot;App&quot;,
+            &quot;DefaultChannelDescription&quot;: &quot;&quot;,
+            &quot;DefaultChannelImportance&quot;: &quot;high&quot;,
+            &quot;DefaultChannelLightColor&quot;: &quot;#FF2C37&quot;,
+            &quot;NotificationChannelLockscreenVisibility&quot;: &quot;secret&quot;,
+            &quot;NotificationChannelIsSoundOn&quot;: true,
+            &quot;NotificationChannelIsShowBadgeOn&quot;: true,
+            &quot;NotificationChannelIsVibrationOn&quot;: true
+        }
+        ...
+    },
+</code></pre>
+<p>Note: notification payload settings will always override the notification settings from <code>.unoproj</code>.
+NB! Once a channel is created, you CANNOT change its properties later.</p>
+<h4 id="remarks">Remarks</h4>
+<p>This module is an <a href="../../fusejs/eventemitter.html">EventEmitter</a>, so the methods from <a href="../../fusejs/eventemitter.html">EventEmitter</a> can be used to listen to events.</p>
+<p>You need to add a reference to <code>Fuse.PushNotifications</code> in your project file to use this feature.</p>
+<h4 id="android-setup">Android setup</h4>
+<p>This section covers how to set up Firebase Push Notifications to the point that you can send test messages to a Fuse App from the Firebase console.</p>
+<h5 id="registering-the-sender-id">Registering the Sender ID</h5>
+<ul>
+<li>Open the <a href="https://console.firebase.google.com">Firebase Console</a></li>
+<li>Select your project or create one if you haven't already</li>
+<li>Click the little cogwheel button at the top of the sidebar, and press &quot;Project settings&quot;</li>
+<li>Navigate to the &quot;Cloud Messaging&quot; tab</li>
+<li>Copy the &quot;Sender ID&quot; into your <code>.unoproj</code> like this:</li>
+</ul>
+<pre><code class="language-json">		&quot;Android&quot;: {
+			&quot;GooglePlay&quot;: {
+				&quot;SenderID&quot;: &quot;&lt;Sender ID goes here&gt;&quot;
+			}
+		}
+</code></pre>
+<h5 id="registering-the-android-app">Registering the Android app</h5>
+<p>To enable Firebase Cloud Messaging, you need to register an Android app with your Firebase project.
+If you haven't already registered an Android app, follow these steps:</p>
+<ul>
+<li>From the settings page, click the button to add a new Android app to the project</li>
+<li>A dialog will pop up, prompting you for a package name (the other fields are optional).
+By default, this will be <code>com.apps.&lt;yourappnameinlowercase&gt;</code>.
+However, it is recommended to set your own:</li>
+</ul>
+<pre><code class="language-json">		&quot;Android&quot;: {
+			&quot;Package&quot;: &quot;com.mycompany.myapp&quot;,
+		}
+</code></pre>
+<ul>
+<li>After adding the Android app, you will be prompted to download a <code>google-services.json</code> file. Download and copy it to the root of your project.</li>
+<li>Add the following file to tell fuse to copy google-services.json to your android app folder:</li>
+</ul>
+<p>Android.uxl</p>
+<pre><code class="language-xml">&lt;Extensions Backend=&quot;CPlusPlus&quot; Condition=&quot;Android&quot;&gt;
+    &lt;CopyFile Condition=&quot;Android&quot; Name=&quot;google-services.json&quot; TargetName=&quot;app/google-services.json&quot; /&gt;
+&lt;/Extensions&gt;
+</code></pre>
+<h5 id="sending-notifications">Sending notifications</h5>
+<p>After rebuilding your project with the new settings, you should be ready to send and receive push notifications.</p>
+<blockquote>
+<p><strong>Note:</strong> Fuse currently only supports <code>data</code> type messages. See <a href="https://firebase.google.com/docs/cloud-messaging/concept-options#data_messages">here for details on messages types</a> &amp; <a href="https://forums.fusetools.com/t/push-notificacions-with-google-firebase-notifications/2910/16">this forum post</a> for more information on how we will fix this in future.
+Sadly this means you currently can't use the Firebase Console to send test notifications (they will appear in the notification bar but will fail to reach JS).
+See the example below for an example of how to send messages to a Fuse app.</p>
+</blockquote>
+<p>When your app starts, the <code>registrationSucceeded</code> event will be triggered and you will be given the <code>regID</code>
+This, along with your FCM Server key, are the details that is needed to send that app a notification.</p>
+<p>Your server key can be found under the &quot;Cloud Messaging&quot; tab of the Project Settings page (where you obtained your Sender ID).</p>
+<p>Here some example Fuse code for sending your app a notification.</p>
+<pre><code class="language-xml">    &lt;JavaScript&gt;
+        var API_ACCESS_KEY = '----HARDCODED API KEY----';
+        var regID = '----HARDCODED REG ID FROM THE APP YOU ARE SENDING TO----';
+
+        module.exports.send = function() {
+            fetch('https://android.googleapis.com/gcm/send', {
+                method: 'post',
+                headers: {
+                    'Authorization': 'key=' + API_ACCESS_KEY,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    registration_ids: [regID],
+                    data: {
+                        notification: {
+                            alert: {
+                                title: 'Well would ya look at that!',
+                                body: 'Hello from some other app'
+                            }
+                        },
+                        payload: 'anything you like'
+                    }
+                })
+            }).then(function(response) {
+                console.log(JSON.stringify(response));
+            }, function(error) {
+                console.log(error);
+            });
+        }
+    &lt;/JavaScript&gt;
+</code></pre>
+<p>Whilst hardcoding the RegID is clearly not a good idea, it serves the purpose for this simple test.</p>
+<h4 id="ios-setup">iOS setup</h4>
+<p>This section covers how to set up a iOS Push Notifications to the point that you can send messages to a Fuse App.</p>
+<h5 id="certifying-your-app-for-acs">Certifying your app for ACS</h5>
+<p>To do this you need an SSL certificate for your app.</p>
+<ul>
+<li>Go to the <a href="https://developer.apple.com/account/overview.action">Apple Dev Center</a></li>
+<li>Go to the Certificates Section for iOS apps</li>
+<li>In the link bar on the left, under the <code>Identifiers</code> section click <code>App IDs</code></li>
+<li>Click the <code>+</code> icon in the top right to create a new App ID</li>
+<li>Fill in the details, you cant use push notification with a <code>Wildcard App ID</code> so pick <code>Explicit App ID</code> and check in XCode for the app's <code>Bundle ID</code></li>
+<li>Under <code>App Services</code> enable Push notifications (and anything else you need)</li>
+<li>Click <code>Continue</code> and confirm the certificate choice you made.</li>
+</ul>
+<h5 id="syncing-xcode">Syncing XCode</h5>
+<p>Your app is now authenticated for Push notifications. Be sure to resync your profiles in XCode before re-building your app.
+To do this:</p>
+<ul>
+<li>Open XCode</li>
+<li>In the menu-bar choose <code>XCode</code>-&gt;<code>Preferences</code></li>
+<li>In the Preferences window view the <code>Accounts</code> tab</li>
+<li>In the <code>Accounts</code> tab click <code>View Details</code> for the relevant Apple ID</li>
+<li>Click the small refresh button in the bottom left of the <code>View Details</code> window</li>
+</ul>
+<h5 id="sending-push-notifications-to-ios-from-osx">Sending Push Notifications to iOS from OSX</h5>
+<p>For simple testing you may find that setting up a server is a bit of an overkill. To this end we recommend <a href="https://github.com/noodlewerk/NWPusher">NWPusher</a>. Download the binary <a href="https://github.com/noodlewerk/NWPusher/releases/tag/0.6.3">here</a> and then follow the following sections from the README</p>
+<ul>
+<li><code>Getting started</code></li>
+<li><code>Certificate</code></li>
+<li>Instead of reading the <code>Device Token</code> section simply add the example from above to your UX file</li>
+<li>Finally, follow the <code>Push from OS X</code> Section</li>
+</ul>
+<p>Done, you should now be pushing notifications from OSX to iOS.</p>
+
+<section class="type-location">
+<h3 id="section-location">Location</h3>
+<dl>
+<dt>Namespace</dt>
+<dd>
+<a href="../../fuse/pushnotifications.html">
+Fuse.PushNotifications
+</a>
+</dd>
+<dt>Package</dt>
+<dd>Fuse.PushNotifications 2.0.0</dd>
+</dl>
+</section>
+<section class="table-of-contents">
+<input class="advance-items" type="checkbox"><span class="advance-items-label">Show Uno properties and methods</span>
+<h3 id="section-table-of-contents">
+Interface of Push
+</h3>
+<section class="table-of-contents-section has-advanced-items">
+<article class="table-of-contents-item">
+<span class="table-of-contents-item-type table-of-contents-item-type-jsmethod fa fa-square-o" title="JsMethod"></span>
+<h5 id="clearallnotifications-js">
+<a href="../../fuse/pushnotifications/push/clearallnotifications_bbef95e2.html">
+clearAllNotifications()
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-js">js</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Cancels all previously shown notifications.</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item">
+<span class="table-of-contents-item-type table-of-contents-item-type-jsmethod fa fa-square-o" title="JsMethod"></span>
+<h5 id="clearbadgenumber-js">
+<a href="../../fuse/pushnotifications/push/clearbadgenumber_bbef95e2.html">
+clearBadgeNumber()
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-js">js</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Clears the badge number shown on the iOS home screen. <a class="table-of-contents-item-has-more" title="There is more information available for this entry" href="../../fuse/pushnotifications/push/clearbadgenumber_bbef95e2.html"><i class="fa fa-ellipsis-h"></i></a></p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item">
+<span class="table-of-contents-item-type table-of-contents-item-type-jsmethod fa fa-square-o" title="JsMethod"></span>
+<h5 id="isregisteredforremotenotifications-js">
+<a href="../../fuse/pushnotifications/push/isregisteredforremotenotifications_bbef95e2.html">
+isRegisteredForRemoteNotifications()
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-js">js</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Gets whether or not the user has enabled remote notifications</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item">
+<span class="table-of-contents-item-type table-of-contents-item-type-jsevent fa fa-bolt" title="JsEvent"></span>
+<h5 id="receivedmessage-js">
+<a href="../../fuse/pushnotifications/push/onreceivednotification_d14fa8cc.html">
+receivedMessage
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-js">js</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Triggered when your app receives a notification.</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item">
+<span class="table-of-contents-item-type table-of-contents-item-type-jsevent fa fa-bolt" title="JsEvent"></span>
+<h5 id="error-js">
+<a href="../../fuse/pushnotifications/push/onregistrationfailed_4c3ac72d.html">
+error
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-js">js</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Called if your app fails to register with the backend.</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item">
+<span class="table-of-contents-item-type table-of-contents-item-type-jsevent fa fa-bolt" title="JsEvent"></span>
+<h5 id="registrationsucceeded-js">
+<a href="../../fuse/pushnotifications/push/onregistrationsucceeded_4c3ac72d.html">
+registrationSucceeded
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-js">js</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Triggered when your app registers with the APNS or GCM backend.</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-constructor fa fa-check" title="Constructor"></span>
+<h5 id="push-constructor-uno">
+<a href="../../fuse/pushnotifications/push/_ctor.html">
+Push Constructor
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item">
+<span class="table-of-contents-item-type table-of-contents-item-type-jsmethod fa fa-square-o" title="JsMethod"></span>
+<h5 id="register-js">
+<a href="../../fuse/pushnotifications/push/register_bbef95e2.html">
+register()
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-js">js</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Registers the app with APNS. Only neccesary if APNS.RegisterOnLaunch was
+set to false in the unoproj file.</p>
+
+</div>
+</article>
+
+</section>
+<section class="table-of-contents-section has-advanced-items only-advanced-items inherited">
+<h4 id="section-table-of-contents-inherited-from-fuse-scripting-nativeeventemittermodule">
+Inherited from
+<a href="../../fuse/scripting/nativeeventemittermodule.html">
+NativeEventEmitterModule
+</a>
+</h4>
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="emit-object-uno">
+<a href="../../fuse/scripting/nativeeventemittermodule/emit_95a738ba.html">
+Emit(object[])
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Call <code>emit</code> with the given arguments on the underlying JS EventEmitter. <a class="table-of-contents-item-has-more" title="There is more information available for this entry" href="../../fuse/scripting/nativeeventemittermodule/emit_95a738ba.html"><i class="fa fa-ellipsis-h"></i></a></p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="emiterror-string-uno">
+<a href="../../fuse/scripting/nativeeventemittermodule/emiterror_968f99a6.html">
+EmitError(string)
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Call <code>emit(&quot;error&quot;, reason)</code> on the underlying JS EventEmitter.</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="emiterrorobject-string-uno">
+<a href="../../fuse/scripting/nativeeventemittermodule/emiterrorobject_968f99a6.html">
+EmitErrorObject(string)
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Call <code>emit(&quot;error&quot;, new Error(reason))</code> on the underlying JS EventEmitter.</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="emitfactory-func-lt-context-object-gt-context-uno">
+<a href="../../fuse/scripting/nativeeventemittermodule/emitfactory_77c0158b.html">
+EmitFactory(Func&lt;Context, object[]&gt; (Context))
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Call <code>emit</code> on the underlying JS EventEmitter with factory-generated arguments. <a class="table-of-contents-item-has-more" title="There is more information available for this entry" href="../../fuse/scripting/nativeeventemittermodule/emitfactory_77c0158b.html"><i class="fa fa-ellipsis-h"></i></a></p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="emitfactory-lt-t-gt-func-lt-context-t-object-gt-context-t-t-uno">
+<a href="../../fuse/scripting/nativeeventemittermodule/emitfactory_1_964a64f9.html">
+EmitFactory&lt;T&gt;(Func&lt;Context, T, object[]&gt; (Context, T), T)
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Call <code>emit</code> on the underlying JS EventEmitter with factory-generated arguments. <a class="table-of-contents-item-has-more" title="There is more information available for this entry" href="../../fuse/scripting/nativeeventemittermodule/emitfactory_1_964a64f9.html"><i class="fa fa-ellipsis-h"></i></a></p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="on-object-callback-context-object-uno">
+<a href="../../fuse/scripting/nativeeventemittermodule/on_a22edd7d.html">
+On(object, Callback (Context, object[]))
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Connect a <a href="../../fuse/triggers/actions/callback.html">Callback</a> to an event. <a class="table-of-contents-item-has-more" title="There is more information available for this entry" href="../../fuse/scripting/nativeeventemittermodule/on_a22edd7d.html"><i class="fa fa-ellipsis-h"></i></a></p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="on-object-nativeevent-uno">
+<a href="../../fuse/scripting/nativeeventemittermodule/on_d9bc62ce.html">
+On(object, NativeEvent)
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Connect a NativeEvent to an event. <a class="table-of-contents-item-has-more" title="There is more information available for this entry" href="../../fuse/scripting/nativeeventemittermodule/on_d9bc62ce.html"><i class="fa fa-ellipsis-h"></i></a></p>
+
+</div>
+</article>
+
+</section>
+<section class="table-of-contents-section has-advanced-items only-advanced-items inherited">
+<h4 id="section-table-of-contents-inherited-from-fuse-scripting-nativemodule">
+Inherited from
+<a href="../../fuse/scripting/nativemodule.html">
+NativeModule
+</a>
+</h4>
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="addmember-nativemember-uno">
+<a href="../../fuse/scripting/nativemodule/addmember_645dc1d4.html">
+AddMember(NativeMember)
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-uxevent fa fa-bolt" title="UxEvent"></span>
+<h5 id="reset-eventhandler-object-eventargs-ux">
+<a href="../../fuse/scripting/nativemodule/reset.html">
+Reset
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/eventhandler.html">
+EventHandler (object, EventArgs)
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-ux">ux</span>
+</h5>
+</article>
+
+</section>
+<section class="table-of-contents-section has-advanced-items only-advanced-items inherited">
+<h4 id="section-table-of-contents-inherited-from-fuse-scripting-module">
+Inherited from
+<a href="../../fuse/scripting/module.html">
+Module
+</a>
+</h4>
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="dispose-uno">
+<a href="../../fuse/scripting/module/dispose.html">
+Dispose
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="evaluate-context-moduleresult-uno">
+<a href="../../fuse/scripting/module/evaluate_0c699bd3.html">
+Evaluate(Context, ModuleResult)
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="evaluate-context-string-moduleresult-uno">
+<a href="../../fuse/scripting/module/evaluate_8fde98fd.html">
+Evaluate(Context, string)
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../fuse/scripting/moduleresult.html">
+ModuleResult
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-uxevent fa fa-bolt" title="UxEvent"></span>
+<h5 id="evaluated-eventhandler-object-eventargs-ux">
+<a href="../../fuse/scripting/module/evaluated.html">
+Evaluated
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/eventhandler.html">
+EventHandler (object, EventArgs)
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-ux">ux</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="evaluateexports-context-string-object-uno">
+<a href="../../fuse/scripting/module/evaluateexports_8fde98fd.html">
+EvaluateExports(Context, string)
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/object.html">
+object
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="getfile-filesource-uno">
+<a href="../../fuse/scripting/module/getfile.html">
+GetFile
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/ux/filesource.html">
+FileSource
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>Returns the file source that will be watched by the Context for changes in Fuse preview.
+Override in subclasses and return correct file source to support live updates
+in Fuse preview.</p>
+
+</div>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-property fa fa-wrench" title="Property"></span>
+<h5 id="isevaluated-bool-uno">
+<a href="../../fuse/scripting/module/isevaluated.html">
+IsEvaluated
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/bool.html">
+bool
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+</section>
+<section class="table-of-contents-section has-advanced-items only-advanced-items inherited">
+<h4 id="section-table-of-contents-inherited-from-uno-object">
+Inherited from
+<a href="../../uno/object.html">
+object
+</a>
+</h4>
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="equals-object-bool-uno">
+<a href="../../uno/object/equals_a09c80e3.html">
+Equals(object)
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/bool.html">
+bool
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="gethashcode-int-uno">
+<a href="../../uno/object/gethashcode.html">
+GetHashCode
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/int.html">
+int
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="gettype-type-uno">
+<a href="../../uno/object/gettype.html">
+GetType
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/type.html">
+Type
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-method fa fa-square-o" title="Method"></span>
+<h5 id="tostring-string-uno">
+<a href="../../uno/object/tostring.html">
+ToString
+</a>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/string.html">
+string
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+</section>
+<section class="table-of-contents-section has-advanced-items only-advanced-items attached">
+<h4 id="section-table-of-contents-attached-ux-attributes">Attached UX Attributes</h4>
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-attacheduxproperty fa fa-wrench" title="AttachedUxProperty"></span>
+<h5 id="globalkey-attached-by-resource-string-ux">
+<a href="../../uno/ux/resource/setglobalkey_4c3ac72d.html">
+GlobalKey
+</a>
+<span class="table-of-contents-item-inline-attached-by">
+(attached by <a href="../../uno/ux/resource.html">Resource</a>)
+</span>
+<span class="table-of-contents-item-inline-returns"> : 
+<a href="../../uno/string.html">
+string
+</a>
+</span>
+<span class="table-of-contents-item-language table-of-contents-item-language-ux">ux</span>
+</h5>
+<div class="table-of-contents-item-brief">
+<p>The <code>ux:Global</code> attribute creates a global resource that is accessible everywhere in UX markup. <a class="table-of-contents-item-has-more" title="There is more information available for this entry" href="../../uno/ux/resource/setglobalkey_4c3ac72d.html"><i class="fa fa-ellipsis-h"></i></a></p>
+
+</div>
+</article>
+
+</section>
+</section>
+<section class="interfaces">
+<section class="table-of-contents">
+<section class="table-of-contents-section has-advanced-items only-advanced-items">
+<h4 id="section-table-of-contents-implemented-interfaces">Implemented Interfaces</h4>
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-interface fa fa-file-o" title="Interface"></span>
+<h5 id="imoduleprovider-uno">
+<a href="../../fuse/scripting/imoduleprovider.html">
+IModuleProvider
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+<article class="table-of-contents-item is-advanced">
+<span class="table-of-contents-item-type table-of-contents-item-type-interface fa fa-file-o" title="Interface"></span>
+<h5 id="idisposable-uno">
+<a href="../../uno/idisposable.html">
+IDisposable
+</a>
+<span class="table-of-contents-item-language table-of-contents-item-language-uno">uno</span>
+</h5>
+</article>
+
+</section>
+</section>
+</section>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>

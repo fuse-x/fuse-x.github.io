@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Facebook login using the Facebook SDK through foreign code | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login" class="active"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <h1 id="facebook-login-using-the-facebook-sdk-through-foreign-code">Facebook login using the Facebook SDK through foreign code</h1>
+<p>Fuse's foreign code feature allows you to integrate native code with Uno code.
+We currently support Java on Android and Objective-C on iOS.  This example
+shows how to use this feature to integrate the Facebook SDK with Fuse to get
+Facebook's login functionality.</p>
+<p>This example is meant to be a free-standing introduction to foreign code, but
+it might be useful to consult <a href="../native-interop/foreign-code.html">the technical documentation</a>
+which for example explains the marshalling between Uno types and native types
+in more detail. This guide also assumes some fluency in Uno, our C# dialect. See
+<a href="../uno/uno-lang.html">the Uno language reference</a> for more information about Uno.</p>
+<h2 id="android">Android</h2>
+<p>We'll be following the <a href="https://developers.facebook.com/docs/facebook-login/android">Facebook login Android guide</a> closely, so
+if you want to follow along in your own code you should make sure that you have
+gone through their prerequisites.  We'll use the <code>LoginManager</code> class to
+initiate login by pressing a Fuse button.</p>
+<h3 id="triggering-and-responding-to-login">Triggering and responding to login</h3>
+<p>The main login functionality is implemented in an Uno method with the following
+signature:</p>
+<pre><code class="language-csharp">public void Login(Action&lt;AccessToken&gt; onSuccess, Action onCancelled, Action&lt;string&gt; onError)
+</code></pre>
+<p>This method is contained in the <code>FacebookLogin</code> class and accepts actions that will
+be invoked depending on the outcome of the login.</p>
+<p>To be able to write the method body in Java we add the
+<code>[Foreign(Language.Java)]</code> attribute to it and use <code>@{</code> and <code>@}</code> in place of
+normal braces. The special braces tell Uno to not parse the code as normal Uno
+code, and the attribute tells the compiler what language the code is actually
+written in (Java in this case). We can only use this version of the method on
+Android, so we use <code>extern(Android)</code> to only compile it when targeting Android.</p>
+<pre><code class="language-csharp">[Foreign(Language.Java)]
+public extern(Android) void Login(Action&lt;AccessToken&gt; onSuccess, Action onCancelled, Action&lt;string&gt; onError)
+@{
+@}
+</code></pre>
+<p>The <code>AccessToken</code> class, used as the argument to the <code>onSuccess</code> action, is a
+thin wrapper around a Java object:</p>
+<pre><code class="language-csharp">public class AccessToken
+{
+	extern(Android) Java.Object _token;
+
+	public extern(Android) AccessToken(Java.Object token)
+	{
+		_token = token;
+	}
+}
+</code></pre>
+<p>The Uno class <code>Java.Object</code> provides a way to hold on to a Java <code>Object</code> on the
+Uno side, making it possible to store and pass around results obtained from
+Java code in Uno.</p>
+<p>Note: The <code>AccessToken</code> class is not strictly necessary here, but serves as
+documentation on the type of the Java object that we're expecting. It could also
+serve as the basis for an implementation providing a way to get at the info
+contained in the access token.</p>
+<p>We will also be using a piece of state stored in the surrounding Uno object
+(<code>FacebookLogin</code>). This state is a <code>Java.Object _callbackmanager</code> containing a
+<code>CallbackManager</code> from the Facebook SDK. We will show how this state is
+initialised in the next section.</p>
+<p>We are now ready to implement the body of the <code>Login</code> method in Java.</p>
+<p>To start with, we use a macro  to get the <code>callbackManager</code> from the <code>_this</code> object:</p>
+<pre><code class="language-csharp">@{
+	CallbackManager callbackManager = (CallbackManager)@{FacebookLogin:Of(_this)._callbackManager:Get()};
+	...
+@}
+</code></pre>
+<p>The <code>_this</code> object in foreign code corresponds to the Uno object that the
+method is defined in (assuming it's not a static method).  In words, the macro
+(the <code>@{...}</code> part) says something like &quot;get the _callbackManager field of
+_this, which is an Uno object of type <code>FacebookLogin</code>&quot; (see <a href="../native-interop/foreign-code.html">the foreign code
+documentation</a> for more details). <code>Java.Object</code>s in Uno are
+converted into plain Java <code>Object</code>s on the Java side, so we cast it to
+<code>CallbackManager</code>, the type that we know that it has.</p>
+<p>Next, we register our callbacks with the Facebook <code>LoginManager</code>:</p>
+<pre><code class="language-csharp">LoginManager.getInstance().registerCallback(callbackManager,
+	new FacebookCallback&lt;LoginResult&gt;()
+	{
+		@Override
+		public void onSuccess(LoginResult loginResult)
+		{
+			AccessToken accessToken = loginResult.getAccessToken();
+			Object unoAccessToken = @{AccessToken(Java.Object):New(accessToken)};
+			onSuccess.run(unoAccessToken);
+		}
+
+		@Override
+		public void onCancel()
+		{
+			onCancelled.run();
+		}
+
+		@Override
+		public void onError(FacebookException exception)
+		{
+			onError.run(exception.toString());
+		}
+	}
+);
+</code></pre>
+<p>In the <code>onSuccess</code> method, we first get the <code>AccessToken</code> from the
+<code>LoginResult</code>, and then create an <code>Uno</code> <code>AccessToken</code> (the class that we
+defined above), <code>unoAccessToken</code>, from it using the UXL <code>:New</code> macro, which
+results in an <code>UnoObject</code>. We get an <code>UnoObject</code> for Uno object when we are
+working on the Java side. <code>UnoObject</code> is somewhat like the opposite of
+<code>Java.Object</code> in Uno: it is a way to hold on to and pass around Uno objects in
+Java.</p>
+<p>There is special support for passing delegates to Foreign methods. If the
+delegate is an Uno <code>Action</code>, it is automatically converted to a runnable in
+Java. If the delegate has parameters or returns a value, it's converted to a
+custom class with a <code>run</code> method that matches the signature of the delegate,
+only with the arguments and return types converted to their Java equivalent. So
+in the <code>onSuccess</code> method, we simply call the <code>onSuccess</code> delegate by using the
+<code>run</code> method, passing it the <code>unoAccessToken</code> that we just created.</p>
+<p>We handle the <code>onCancel</code> and <code>onError</code> cases similarly. Note that the Java
+<code>String</code> used as an argument to <code>onError.run</code> is automatically converted to an
+Uno <code>string</code> when the function is invoked.</p>
+<h3 id="setup">Setup</h3>
+<h4 id="initialization">Initialization</h4>
+<p>The Facebook documentation instructs us to perform calls at various stages in
+the lifecycle of our app. The lifecycle of Fuse applications is not handled
+exactly the same way as it is in normal Android apps, so we can't do this
+exactly like in Facebook's documentation.</p>
+<p>First, we hook our <code>FacebookLogin</code> class up to get callbacks when the relevant
+events are triggered. This is achieved by using the <code>Lifecycle</code> class in
+<code>Fuse.Platform</code>.  In the constructor of <code>FacebookLogin</code>, we do:</p>
+<pre><code class="language-csharp">public FacebookLogin()
+{
+	Lifecycle.Started += Started;
+	Lifecycle.EnteringInteractive += OnEnteringInteractive;
+	Lifecycle.ExitedInteractive += OnExitedInteractive;
+}
+</code></pre>
+<p>Our implemententation of <code>Started</code> looks like this:</p>
+<pre><code class="language-csharp">[Foreign(Language.Java)]
+extern(Android) void Started(ApplicationState state)
+@{
+	FacebookSdk.sdkInitialize(Activity.getRootActivity());
+	final CallbackManager callbackManager = CallbackManager.Factory.create();
+	@{FacebookLogin:Of(_this)._callbackManager:Set(callbackManager)};
+	Activity.subscribeToResults(new Activity.ResultListener()
+	{
+		@Override
+		public boolean onResult(int requestCode, int resultCode, Intent data)
+		{
+			return callbackManager.onActivityResult(requestCode, resultCode, data);
+		}
+	});
+@}
+</code></pre>
+<p>On the first line we use <code>Activity.getRootActivity()</code> to get the Activity of
+the application. This method comes from a Fuse-specific class called
+<code>com.fuse.Activity</code>. Next, we create a <code>CallbackManager</code> (from the Facebook
+SDK), and use a UXL macro to save its value in the <code>_this</code> object for later
+use. We can't directly override the <code>onActivityResult</code> method in Fuse as the
+Facebook SDK documentation says, but there is a hook, again in
+<code>com.fuse.Activity</code>, that we can add a listener to to get those callbacks. This
+is what the <code>subscribeToResults</code> call does.</p>
+<h4 id="imports-and-gradle-dependencies">Imports and Gradle dependencies</h4>
+<p>The foreign Java code in an Uno class all gets compiled to the same file.  If
+the Java code needs imports, which it does in this case, we can use the
+<code>ForeignInclude</code> attribute on that class to add it to the generated Java file.
+For our <code>FacebookLogin</code> class, it looks like this:</p>
+<pre><code class="language-csharp">[ForeignInclude(Language.Java, &quot;android.content.Intent&quot;)]
+[ForeignInclude(Language.Java, &quot;com.facebook.*&quot;)]
+[ForeignInclude(Language.Java, &quot;com.facebook.appevents.AppEventsLogger&quot;)]
+[ForeignInclude(Language.Java, &quot;com.facebook.login.*&quot;)]
+[ForeignInclude(Language.Java, &quot;com.fuse.Activity&quot;)]
+[ForeignInclude(Language.Java, &quot;com.fusefacebook.ActivityResultListener&quot;)]
+public class FacebookLogin
+{
+...
+}
+</code></pre>
+<p>We additionally need to add the Facebook SDK itself. Uno supports the Gradle
+build system on Android, provided we build with the <code>-DGRADLE</code> flag, and
+generates a Gradle build file each time the app is built. We can instruct the
+compiler to add items to the <code>dependencies</code> and <code>repositories</code> sections by
+adding the following attributes to the class:</p>
+<pre><code class="language-csharp">[Require(&quot;Gradle.Dependency&quot;,&quot;compile('com.facebook.android:facebook-android-sdk:4.8.+') { exclude module: 'support-v4' }&quot;)]
+[Require(&quot;Gradle.Repository&quot;,&quot;mavenCentral()&quot;)]
+</code></pre>
+<h3 id="changing-the-android-manifest">Changing the Android manifest</h3>
+<p>The Facebook SDK requires some changes to the <code>AndroidManifest.xml</code> file. This
+is another file that Uno generates when we build the app. We can get changes
+added to it in a way similar to how we added the Gradle dependencies. This time
+the changes are a bit too big to comfortably add as an attribute, so we will be
+using an <code>.uxl</code> file to to specify them, which looks like this:</p>
+<pre><code class="language-xml">&lt;Extensions Backend=&quot;CPlusPlus&quot;&gt;
+  &lt;Set Facebook.AppID=&quot;YOUR-FACEBOOK-APP-ID&quot; /&gt;
+  &lt;Require Condition=&quot;Android&quot; Android.ResStrings.Declaration&gt;
+    &lt;![CDATA[
+      &lt;string name=&quot;FACEBOOK_APP_ID&quot;&gt;@(Facebook.AppID)&lt;/string&gt;
+    ]]&gt;
+  &lt;/Require&gt;
+  &lt;Require Condition=&quot;Android&quot; AndroidManifest.ApplicationElement&gt;
+    &lt;![CDATA[
+      &lt;meta-data android:name=&quot;com.facebook.sdk.ApplicationId&quot; android:value=&quot;@string/FACEBOOK_APP_ID&quot; /&gt;
+      &lt;activity android:name=&quot;com.facebook.FacebookActivity&quot;
+              android:configChanges=
+                     &quot;keyboard|keyboardHidden|screenLayout|screenSize|orientation&quot;
+              android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar&quot;
+              android:label=&quot;com.uno.test&quot; /&gt;
+    ]]&gt;
+  &lt;/Require&gt;
+&lt;/Extensions&gt;
+</code></pre>
+<p>This first line creates a variable with our Facebook application ID, which we
+refer to later with <code>@(Facebook.AppID)</code>.</p>
+<p>We also <code>Require</code> a few elements, which basically means that we inform the
+Uno compiler about things that we want to add in specific places in the
+generated build files. For example, the <code>AndroidManifest.ApplicationElement</code>
+element allows you to add a child to the application element of the
+<code>AndroidManifest.xml</code>.
+For more information about these kinds of settings, see
+the <a href="../native-interop/build-settings.html">build settings</a> documentation.</p>
+<h2 id="ios">iOS</h2>
+<p>We'll be following the <a href="https://developers.facebook.com/docs/facebook-login/ios">Facebook login iOS
+guide</a> closely, so,
+again, if you want to follow along in your own code, make sure that you have
+gone through their prerequisites. Here we will be using an <code>FBSDKLoginManager</code>
+to initiate login by pressing a Fuse button.</p>
+<h3 id="triggering-and-responding-to-login">Triggering and responding to login</h3>
+<p>We use the same hooks as for our Android implementation to get lifecycle
+events.  The iOS implementation is a little bit easier, because we do not need
+to store any state in the surrounding Uno object.</p>
+<p>The login method is implemented using foreign Objective-C as follows:</p>
+<pre><code class="language-csharp">[Foreign(Language.ObjC)]
+public extern(iOS) void Login(Action&lt;AccessToken&gt; onSuccess, Action onCancelled, Action&lt;string&gt; onError)
+@{
+	FBSDKLoginManager* login = [[FBSDKLoginManager alloc] init];
+	[login
+		logInWithReadPermissions: @[@&quot;public_profile&quot;]
+		fromViewController: [[[UIApplication sharedApplication] keyWindow] rootViewController]
+		handler: ^(FBSDKLoginManagerLoginResult* result, NSError* error)
+		{
+			if (error)
+			{
+				onError([error localizedDescription]);
+				return;
+			}
+			if (result.isCancelled)
+			{
+				onCancelled();
+				return;
+			}
+			id&lt;UnoObject&gt; unoAccessToken = @{AccessToken(ObjC.Object):New(result.token)};
+			onSuccess(unoAccessToken);
+		}
+	];
+@}
+</code></pre>
+<p>We first create an <code>FBSDKLoginManager</code> and initiate login using that, calling
+back to the given delegates as appropriate.</p>
+<p>Uno delegates passed to Objective-C are automatically converted to blocks with
+the corresponding signature, so they can be called like ordinary functions on
+the Objective-C side. The <code>string</code> argument to the <code>onError</code> callback is automatically
+converted from an <code>NSString*</code>, so we use <code>[error localizedDescription]</code> to get the
+error string in the case of an error and pass that to the callback.</p>
+<p>We again use the UXL <code>:New</code> macro to create an Uno <code>AccessToken</code> object used in
+the <code>onSuccess</code> callback. We can hold on to Uno objects in Objective-C using
+the type <code>id&lt;UnoObject&gt;</code>.</p>
+<h3 id="setup">Setup</h3>
+<h4 id="initialization">Initialization</h4>
+<p>The initialization on iOS is similar to that on Android, only using the
+Objective-C interface to the SDK.</p>
+<p>In the application <code>Started</code> hook, we do the following:</p>
+<pre><code class="language-csharp">[Foreign(Language.ObjC)]
+extern(iOS) void Started(ApplicationState state)
+@{
+	[[FBSDKApplicationDelegate sharedInstance]
+		application: [UIApplication sharedApplication]
+		didFinishLaunchingWithOptions: nil];
+@}
+</code></pre>
+<p>Similarly, we invoke <code>activateApp</code> when entering interactive:</p>
+<pre><code class="language-csharp">[Foreign(Language.ObjC)]
+static extern(iOS) void OnEnteringInteractive(ApplicationState state)
+@{
+	[FBSDKAppEvents activateApp];
+@}
+</code></pre>
+<p>On iOS we also need to pass received URIs to the Facebook SDK for it to know
+when a login is successful. We can hook onto such events using
+<code>Fuse.Platform.InterApp.ReceivedURI</code>, so we add to the constructor:</p>
+<pre><code class="language-csharp">public FacebookLogin()
+{
+	...
+	InterApp.ReceivedURI += OnReceivedUri;
+}
+</code></pre>
+<p>When we get a callback with an URI that starts with <code>fb</code>, we pass it on to
+Facebook:</p>
+<pre><code class="language-csharp">static void OnReceivedUri(string uri)
+{
+	if (uri.StartsWith(&quot;fb&quot;))
+	{
+		OpenFacebookURL(uri);
+	}
+}
+
+[Foreign(Language.ObjC)]
+static extern(iOS) void OpenFacebookURL(string url)
+@{
+	[[FBSDKApplicationDelegate sharedInstance]
+		application: [UIApplication sharedApplication]
+		openURL: [NSURL URLWithString:url]
+		sourceApplication: @&quot;com.apple.mobilesafari&quot;
+		annotation: nil];
+@}
+</code></pre>
+<h4 id="adding-the-framework-and-getting-the-imports-right">Adding the framework and getting the imports right</h4>
+<p>This assumes that you have downloaded and extracted the Facebook SDK for iOS in
+a folder called <code>FacebookSDKs-iOS</code> in the folder that the Uno project is
+in.</p>
+<p>Uno generates an Xcode project each time we build for iOS. To get the Facebook
+SDK framework added to the project, we add the following attributes to the Uno
+class:</p>
+<pre><code class="language-csharp">[Require(&quot;Xcode.FrameworkDirectory&quot;, &quot;@('FacebookSDKs-iOS':Path)&quot;)]
+[Require(&quot;Xcode.Framework&quot;, &quot;@('FacebookSDKs-iOS/FBSDKCoreKit.framework':Path)&quot;)]
+[Require(&quot;Xcode.Framework&quot;, &quot;@('FacebookSDKs-iOS/FBSDKLoginKit.framework':Path)&quot;)]
+public class FacebookLogin
+{
+...
+}
+</code></pre>
+<p>We use the <code>@('relative/path':Path)</code> syntax to specify a path relative to the
+current file. We do this since the default is to look for frameworks in the
+iPhone SDK system path (which only works for the frameworks that Apple bundle
+with the SDK). We also need to require the <code>Xcode.FrameworkDirectory</code> to
+ensure that Xcode looks for headers in that directory.</p>
+<p>(As a side note, it's also possible to embed frameworks by using
+<code>[Require(&quot;Xcode.EmbeddedFramework&quot;, &quot;...&quot;)]</code>.
+For more information about these kinds of settings, see
+the <a href="../native-interop/build-settings.html">build settings</a> documentation.)</p>
+<p>Next, we need to make sure that the file generated from our Uno class that uses
+the Facebook SDK in foreign code has the required includes. We can achieve that
+like this since we're using entities from <code>CoreKit</code> and <code>LoginKit</code>:</p>
+<pre><code class="language-csharp">[ForeignInclude(Language.ObjC, &quot;FBSDKCoreKit/FBSDKCoreKit.h&quot;)]
+[ForeignInclude(Language.ObjC, &quot;FBSDKLoginKit/FBSDKLoginKit.h&quot;)]
+</code></pre>
+<h4 id="plists">Plists</h4>
+<p>The Facebook SDK requires us to add some elements to our Xcode project's
+<code>plist</code> file.  Since that is generated on build, we do this in UXL, in the same
+file that we used to add elements to the AndroidManifest:</p>
+<pre><code class="language-xml">&lt;Require Condition=&quot;iOS&quot; Xcode.Plist.Element&gt;
+&lt;![CDATA[
+  &lt;key&gt;CFBundleURLTypes&lt;/key&gt;
+  &lt;array&gt;
+    &lt;dict&gt;
+      &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;
+      &lt;array&gt;
+        &lt;string&gt;fb@(Facebook.AppID)&lt;/string&gt;
+      &lt;/array&gt;
+    &lt;/dict&gt;
+  &lt;/array&gt;
+  &lt;key&gt;FacebookAppID&lt;/key&gt;
+  &lt;string&gt;@(Facebook.AppID)&lt;/string&gt;
+  &lt;key&gt;FacebookDisplayName&lt;/key&gt;
+  &lt;string&gt;Fuse Test App&lt;/string&gt;
+
+  &lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+  &lt;dict&gt;
+    &lt;key&gt;NSExceptionDomains&lt;/key&gt;
+    &lt;dict&gt;
+      &lt;key&gt;facebook.com&lt;/key&gt;
+      &lt;dict&gt;
+        &lt;key&gt;NSIncludesSubdomains&lt;/key&gt; &lt;true/&gt;
+        &lt;key&gt;NSThirdPartyExceptionRequiresForwardSecrecy&lt;/key&gt; &lt;false/&gt;
+      &lt;/dict&gt;
+      &lt;key&gt;fbcdn.net&lt;/key&gt;
+      &lt;dict&gt;
+        &lt;key&gt;NSIncludesSubdomains&lt;/key&gt; &lt;true/&gt;
+        &lt;key&gt;NSThirdPartyExceptionRequiresForwardSecrecy&lt;/key&gt;  &lt;false/&gt;
+      &lt;/dict&gt;
+      &lt;key&gt;akamaihd.net&lt;/key&gt;
+      &lt;dict&gt;
+        &lt;key&gt;NSIncludesSubdomains&lt;/key&gt; &lt;true/&gt;
+        &lt;key&gt;NSThirdPartyExceptionRequiresForwardSecrecy&lt;/key&gt; &lt;false/&gt;
+      &lt;/dict&gt;
+    &lt;/dict&gt;
+  &lt;/dict&gt;
+
+  &lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;
+  &lt;array&gt;
+    &lt;string&gt;fbauth2&lt;/string&gt;
+  &lt;/array&gt;
+  ]]&gt;
+&lt;/Require&gt;
+</code></pre>
+<h2 id="get-the-full-project">Get the full project</h2>
+<p>The full project which works on both iOS and Android can be downloaded <a href="https://github.com/fuse-open/fuse-samples/tree/feature-NativeFacebookLogin/Samples/NativeFacebookLogin">here</a>.</p>
+<p>The full project also hooks up the login functionality in a
+<a href="../native-interop/native-js-modules.html">NativeModule</a> such that the login
+function is available from JavaScript, returning a promise.</p>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Introduction | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend" class="active"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <h2 id="introduction">Introduction</h2>
+<p>In the <a href="navigation-and-routing.html">previous chapter</a>, we took at look at Fuse's <a href="../fuse/controls/navigator.html">Navigator</a> and <a href="../fuse/navigation/router.html">Router</a> classes and used them to tie our app's views together and send data between them. However, up until this point, our <code>EditHikePage</code> hasn't been able to actually make any lasting changes to our data model. For example, if we select a hike and make changes to it, then navigate to another hike, and navigate back, the changes we made will have been lost. This is because these changes are only made locally in <code>EditHikePage</code>'s view model, and never make their way back to our model.</p>
+<p>But now that we've got much more of our architecture figured out, it's time to start tackling this problem. We'll do so by implementing a <em>mock backend</em>, which is a module that will act like a real backend, but will just store some data locally in our running app instead of persisting it on the device's storage or in a database somewhere.</p>
+<p>Building a mock backend like this isn't strictly necessary when building an app with Fuse. We could just as well pick an existing backend solution, for example, and build our app against that directly. But because this tutorial is meant to be as general as possible, we want to present these concepts in a general, backend-agnostic way so we can focus on the core concepts rather than the details of a specific backend. This will be a good exercise to do at least once so that we can understand what to expect when hooking our app up to a real backend in the future, regardless of which backend solution is actually used.</p>
+<blockquote>
+<p>Note: once we've finished publishing this tutorial series, we'll be extending it with various &quot;tracks&quot; that will cover replacing our mock backend with integration with specific backend solutions, as well as many other cool things, so stay tuned for that!</p>
+</blockquote>
+<p>Additionally, we'll create a thin abstraction over the mock backend which our view models will interact with instead of using the mock backend directly. This way, if we change how our mock backend works or replace it with a real backend, none of our view models should have to change; we can just update our abstraction to interact with the new backend and still provide the same interface it did before. We can also take advantage of having this abstraction by filling in features our [mock] backend might not have, such as object caching.</p>
+<p>But before we start building anything, we need to consider what the <em>interface</em> to a typical backend might look like. So let's dive in and take a look!</p>
+<p>The final code for this chapter is available <a href="https://github.com/fuse-open/hikr/tree/chapter-5">here</a>.</p>
+<h2 id="typical-backend-interface">Typical backend interface</h2>
+<p>Backends can be quite complex and how they look/behave can vary a lot, but their most basic interfaces tend to be fairly similar across the board, especially if we're only after a few core features. For example, we can ignore things like initialization, signup, authentication, etc., as those parts will be highly backend-specific, and are features we're not concerned with in our basic app. For our simple app case, we really only need some simple data storage/retrieval and a way to update that data. With these features in mind, a simple backend interface might look something like this:</p>
+<pre><code class="language-js">// Returns an array of item objects
+function getItems() { ... }
+// Updates an item
+function updateItem(...) { ... }
+</code></pre>
+<p>Then, our app would use this interface in a very straightforward way:</p>
+<pre><code class="language-js">// Get the item objects from the backend
+var someItems = getItems();
+// Update one of the items in the backend
+updateItem(...);
+</code></pre>
+<p>This should be straightforward enough. However, we've ignored a very important detail that most (if not all) backends have to deal with: <em>distribution</em>. Our simple interface should work just fine if we already have the data locally, but what if the data is stored on a server somewhere else? We can't have our code just stalling, waiting for the backend server (or disk, etc) to respond with the data we asked for. It could take an indeterminate amount of time for our requests to get to the backend and for the backend to send data back. So, retrieving and updating the data should happen <em>asynchronously</em>. And, in JavaScript, when any asynchronous computations are involved, it's very likely you'll find a <code>Promise</code> or two nearby.</p>
+<p>To paraphrase <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN's article about <code>Promise</code>s</a>: &quot;A <code>Promise</code> represents a value which may be available now, or in the future, or never.&quot; This is a pretty basic explanation of what a <code>Promise</code> can do for us, but already from that description, we can see that this fits our use case of asynchronously communicating with our backend. With <code>Promise</code>s, our typical backend interface looks more like this:</p>
+<pre><code class="language-js">// Returns a Promise that represents an array of item objects
+function getItems() { ... }
+// Returns a Promise that will be fulfilled when the item is updated in the backend
+function updateItem(...) { ... }
+</code></pre>
+<p>From this, it doesn't look like our interface has really changed at all! Of course, actually <em>using</em> these functions (and implementing them in the case of our mock backend) is slightly different, but not by much. For example, the code that uses this interface could look something like this:</p>
+<pre><code class="language-js">// Get the item objects from the backend asynchronously
+var someItems = [];
+getItems()
+	.then(function(items) {
+		someItems = items;
+	})
+	.catch(function(error) {
+		console.log(&quot;Couldn't get items: &quot; + error);
+	});
+
+// Update one of the items in the backend asynchronously
+updateItem(...)
+	.catch(function(error) {
+		console.log(&quot;Couldn't update item: &quot; + error);
+	})
+</code></pre>
+<p>To properly use a <code>Promise</code>, we have to introduce some of our own asynchronous code. The simplest way to interact with a <code>Promise</code> is by calling two of the functions it provides: <code>then</code> and <code>catch</code>.</p>
+<p>By calling the <code>then</code> function, we can describe what will happen when the <code>Promise</code> is fulfilled. We do this by passing in another function that optionally accepts the value the <code>Promise</code> is fulfilled with; in this case, the items from the backend. This argument is optional, though. For example, in the case of our <code>updateItem</code> function, the <code>Promise</code> it returns isn't meant to yield a value when the update is complete. We only care about whether or not the <code>Promise</code> was actually completed, so the argument wouldn't be used in this case.</p>
+<p>By calling the <code>catch</code> function, we can describe what will happen if an error occured while trying to fulfill the <code>Promise</code>. In this case, we can pass in a function that accepts a description of what caused the failure. For example, a real backend might report an error if it can't connect to the backend server, or authentication failed. Error detection/handling is a complex topic, however, so for the sake of keeping things simple, we're going to skim over a lot of these details. But we'll still want to attach some simple error handlers to our <code>Promise</code>s so we have them if we hook up to a real backend later.</p>
+<p>There are many more features <code>Promise</code>s provide, and they're very useful. But this short description should clarify all we need to know to build and use our mock backend, as well as grok the interfaces of real backends later on.</p>
+<p>Now, some of you might have noticed something interesting, and that is how similar <code>Promise</code>s look to Fuse's <a href="../fusejs/observable.html">Observable</a>s that we've already been using. An <code>Observable</code> represents a value that can be changed and observed, which also fits for our asynchronous interface. Indeed, if we wanted, we could use <code>Observable</code>s instead of <code>Promise</code>s to mock our backend interface, as their semantics are quite similar. And, if you're building a backend that targets Fuse specifically, this is encouraged, as it makes integration with your backend trivial! However, since many backend solutions have been built to support more platforms than Fuse, it's highly likely that we'll be interacting with an interface that gives us <code>Promise</code>s instead, so we'll want to design our mock as if that were the case. Fortunately, because of the similarities between <code>Promise</code>s and <code>Observable</code>s, bridging the gap between the two is pretty straightforward, as we'll see later.</p>
+<blockquote>
+<p>Note: you can learn more about <code>Promise</code>s in <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise">this guide over at MDN</a>, and the <a href="https://promisesaplus.com/">A+ promise standard</a> which describes the flavor of <code>Promise</code>s that Fuse conforms to specifically.</p>
+</blockquote>
+<p>All in all, using <code>Promise</code>s, we've arrived at a fairly good approximation of what a typical JS-based backend interface will look like, so this is what we'll use to model our mock backend.</p>
+<h2 id="implementing-our-mock-backend">Implementing our mock backend</h2>
+<blockquote>
+<p>Note: Keep in mind that we'll be moving things around a bit in our project, so we won't be able to compile and/or preview for a while, but we'll be back up and running by the end of the chapter.</p>
+</blockquote>
+<p>Before we start implementing our mock backend, we'll want to talk about how we'll organize our JavaScript moving forward. Currently, we only have one standalone JS module in our project (besides our view models of course), and that's our <code>hikes.js</code> file. Since we'll be adding some more modules, we'll want to make sure we keep our project nice and organized. Similar to our <code>Pages</code> folder, where we placed all of our files pertaining to the different pages in our app, let's create a <code>Modules</code> folder at the root of our project where we'll place all of our standalone JS modules:</p>
+<pre><code class="language-s">.
+|- MainView.ux
+|- Modules
+|- Pages
+|  |- EditHikePage.js
+
+...
+</code></pre>
+<p>The next thing we'll do is make sure Fuse knows about our modules in this directory. Previously, when we added our <code>hikes.js</code> file to the project, we added a reference to it in our project file (<code>hikr.unoproj</code>) so it would be bundled with our app. Now that we've created our <code>Modules</code> folder, we'll replace that entry with one that will include every JavaScript file in the <code>Modules</code> directory as a bundle instead:</p>
+<pre><code class="language-json">...
+
+  &quot;Includes&quot;: [
+    &quot;*&quot;,
+    &quot;Modules/*.js:Bundle&quot;
+  ]
+}
+</code></pre>
+<p>Now we're ready to start implementing our mock backend. Since our old <code>hikes.js</code> file already contains all the data we'll need to present, we can use it as a starting point. First, we'll move the file into our <code>Modules</code> directory, and then we'll rename it to <code>Backend.js</code>.</p>
+<p>If we take a look at our new <code>Backend.js</code> file, it simply exports the <code>hikes</code> array as-is. But since this will be our mock backend, we'll want it to expose an interface similar to the one we discussed previously instead. This should look something like this:</p>
+<pre><code class="language-js">// Returns a Promise that represents an array of hike objects
+function getHikes() { ... }
+// Returns a Promise that will be fulfilled when the hike is updated in the backend
+function updateHike(...) { ... }
+</code></pre>
+<p>We'll create our <code>getHikes</code> function first. Below our <code>hikes</code> array, we'll start with an empty function:</p>
+<pre><code class="language-js">function getHikes() {
+}
+</code></pre>
+<p>If we wanted this function to return our <code>hikes</code> array, we could simply write something like this:</p>
+<pre><code class="language-js">function getHikes() {
+	return hikes;
+}
+</code></pre>
+<p>But instead, we want the function to return a <code>Promise</code> which will be fulfilled when our <code>hikes</code> are ready to simulate fetching them from a backend. So, our actual <code>getHikes</code> function will look something like this instead:</p>
+<pre><code class="language-js">function getHikes() {
+	return new Promise(function(resolve, reject) {
+		resolve(hikes);
+	});
+}
+</code></pre>
+<p>Now, instead of returning the <code>hikes</code> array, we create a <code>Promise</code> using <code>new Promise</code>. The <code>Promise</code> constructor takes in a function that will be called in order to fulfill or reject the promise. This function takes in two arguments: <code>resolve</code>, and <code>reject</code>. These arguments are actually functions themselves. <code>resolve</code> is a function that fulfills the <code>Promise</code> we're creating, and if we attached a handler to our <code>Promise</code> using its <code>then</code> function, that handler will be called. In our code, this is all our function needs to call in order to resolve our <code>Promise</code> with our <code>hikes</code> collection. The <code>reject</code> function can be called instead if an error occurs, and any handlers we attached to our <code>Promise</code> via <code>catch</code> will subsequently be called.</p>
+<p>We can also use JS' built-in <code>setTimeout</code> function to delay when this will actually be fulfilled by any number of milliseconds. <code>setTimeout</code> also takes two arguments. The first one is a function that will be called sometime in the future, and the second one is a number of milliseconds to delay before calling that function. For example, this code would resolve our <code>Promise</code> after half a second:</p>
+<pre><code class="language-js">function getHikes() {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			resolve(hikes);
+		}, 500);
+	});
+}
+</code></pre>
+<p>This code is very useful if we want to test how our app deals with having to wait for data coming from the backend. However, to keep things simple for ourselves during testing, let's use <code>0</code> for the delay instead:</p>
+<pre><code class="language-js">function getHikes() {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			resolve(hikes);
+		}, 0);
+	});
+}
+</code></pre>
+<p>Perfect, now we've got a nice <code>getHikes</code> function with a proper interface and some optional simulated delay!</p>
+<p>Now for our <code>updateHike</code> function. This is a function that will take in some information about a specific hike to update in our mock backend, and return a <code>Promise</code> that will be fulfilled when the update has completed. We'll start with an empty function:</p>
+<pre><code class="language-js">function updateHike() {
+}
+</code></pre>
+<p>Then, we'll add some arguments to identify and update a specific hike:</p>
+<pre><code class="language-js">function updateHike(id, name, location, distance, rating, comments) {
+}
+</code></pre>
+<p>In this case, we'll use the <code>id</code> argument to identify the hike we want to update, and the rest of the arguments will be used to overwrite all of the corresponding fields on that hike.</p>
+<p>Next, we'll use the <code>Promise</code> constructor and <code>setTimeout</code> just like in <code>getHikes</code> to return a <code>Promise</code> with an optional time delay:</p>
+<pre><code class="language-js">function updateHike(id, name, location, distance, rating, comments) {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+		}, 0);
+	});
+}
+</code></pre>
+<p>Looking good! Now, we'll add the code to actually identify the hike by its <code>id</code> and update its members. To keep things simple, we'll just do a simple linear search to find the hike we're looking for:</p>
+<pre><code class="language-js">function updateHike(id, name, location, distance, rating, comments) {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			for (var i = 0; i &lt; hikes.length; i++) {
+				var hike = hikes[i];
+				if (hike.id == id) {
+				}
+			}
+		}, 0);
+	});
+}
+</code></pre>
+<p>Once we've identified the hike, we'll update its data with our function's arguments and break out of the search loop:</p>
+<pre><code class="language-js">function updateHike(id, name, location, distance, rating, comments) {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			for (var i = 0; i &lt; hikes.length; i++) {
+				var hike = hikes[i];
+				if (hike.id == id) {
+					hike.name = name;
+					hike.location = location;
+					hike.distance = distance;
+					hike.rating = rating;
+					hike.comments = comments;
+					break;
+				}
+			}
+		}, 0);
+	});
+}
+</code></pre>
+<p>Almost done. Finally, we'll make sure we resolve the <code>Promise</code> after the hike object has been updated. Since the <code>Promise</code> we're creating won't return any data, we just call <code>resolve</code> without any parameters, like so:</p>
+<pre><code class="language-js">function updateHike(id, name, location, distance, rating, comments) {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			for (var i = 0; i &lt; hikes.length; i++) {
+				var hike = hikes[i];
+				if (hike.id == id) {
+					hike.name = name;
+					hike.location = location;
+					hike.distance = distance;
+					hike.rating = rating;
+					hike.comments = comments;
+					break;
+				}
+			}
+
+			resolve();
+		}, 0);
+	});
+}
+</code></pre>
+<p>And that about does it for our mock backend's interface. The last thing we'll do is make sure to export these functions instead of our <code>hikes</code> array, like so:</p>
+<pre><code class="language-js">module.exports = {
+	getHikes: getHikes,
+	updateHike: updateHike
+};
+</code></pre>
+<p>And with that, our mock backend is complete!</p>
+<h2 id="our-context-abstraction">Our <code>Context</code> abstraction</h2>
+<p>As I mentioned earler, we <em>could</em> have our view models interact with our mock backend directly. While there's technically nothing wrong with that, it tends to be beneficial to build a small abstraction layer over the backend that our view models interact with instead. This helps us provide a more consistent interface to our model, and also allows us to implement things like caching to help reduce the amount of bandwidth and battery our app uses. So, the next thing we'll do is build this abstraction, which we'll call the <code>Context</code>.</p>
+<p>To create our <code>Context</code> module, we'll start by making a new file in our <code>Modules</code> directory called <code>Context.js</code>:</p>
+<pre><code class="language-s">.
+|- MainView.ux
+|- Modules
+|  |- Backend.js
+|  |- Context.js
+|- Pages
+|  |- EditHikePage.js
+
+...
+</code></pre>
+<p>In this file, we'll import FuseJS' <code>Observable</code> module:</p>
+<pre><code class="language-js">var Observable = require(&quot;FuseJS/Observable&quot;);
+</code></pre>
+<p>And we'll also import our <code>Backend</code> module, like so:</p>
+<pre><code class="language-js">var Observable = require(&quot;FuseJS/Observable&quot;);
+var Backend = require(&quot;./Backend&quot;);
+</code></pre>
+<p>Notice how we imported the <code>Backend</code> module as <code>./Backend</code>. Normally, when importing JS modules that are bundled in our app, we use the <code>require</code> expression and specify a path relative to our project's root directory to resolve the module. However, we can use relative paths to resolve a module as well. In this case, that's exactly what we're doing - we know <code>Backend.js</code> is in our <code>Modules</code> directory, which is the same directory as our <code>Context.js</code> file. So, using <code>./Backend</code> works just fine.</p>
+<p>Now for the meat of our <code>Context</code> module. The <code>Context</code> should provide our view models with a simple interface that makes it easy for them to consume and modify our app's data. Since we know our views will eventually display data from our view models via data binding, the <code>Context</code> should ideally expose our data via one or more <a href="../fusejs/observable.html">Observable</a>s. So, we'll start with a simple <code>hikes</code> <code>Observable</code>:</p>
+<pre><code class="language-js">var hikes = Observable();
+</code></pre>
+<p>This <code>Observable</code> will be used by our view models to display all of the available hikes. When our app starts up, we'll populate this <code>Observable</code> using data from our backend, and as our app runs, this collection will essentially be a local mirror of the same collection in the backend. As we make changes, we'll update the contents of this collection so that our view models will get updated instantly. We'll also communicate with the backend, so it can update its information asynchronously.</p>
+<p>When our app starts up, we'll call the <code>Backend</code> module's <code>getHikes</code> function and use the <code>Promise</code> it returns to populate our <code>hikes</code> <code>Observable</code> with its initial data:</p>
+<pre><code class="language-js">var hikes = Observable();
+
+Backend.getHikes()
+	.then(function(newHikes) {
+		hikes.replaceAll(newHikes);
+	})
+	.catch(function(error) {
+		console.log(&quot;Couldn't get hikes: &quot; + error);
+	});
+</code></pre>
+<p>Notice how we use the <code>replaceAll</code> function on our <code>hikes</code> <code>Observable</code> to overwrite its contents with the contents of the array we get when our <code>Promise</code> is fulfilled. We've also attached a small error handler for good measure. This takes care of filling our <code>hikes</code> <code>Observable</code> with initial data from the backend on startup.</p>
+<p>Next, we'll need to provide a mechanism for our view models to update the data as well. Similar to our mock backend, we can provide an <code>updateHike</code> function that takes an <code>id</code> to identify the hike to be updated, and the data to update it with. This function will both update our local <code>hikes</code> <code>Observable</code> (using a similar search the backend used to keep things simple and consistent) and tell the backend to update its data as well:</p>
+<pre><code class="language-js">function updateHike(id, name, location, distance, rating, comments) {
+	for (var i = 0; i &lt; hikes.length; i++) {
+		var hike = hikes.getAt(i);
+		if (hike.id == id) {
+			hike.name = name;
+			hike.location = location;
+			hike.distance = distance;
+			hike.rating = rating;
+			hike.comments = comments;
+			hikes.replaceAt(i, hike);
+			break;
+		}
+	}
+	Backend.updateHike(id, name, location, distance, rating, comments)
+		.catch(function(error) {
+			console.log(&quot;Couldn't update hike: &quot; + id);
+		});
+}
+</code></pre>
+<p>Finally, we'll expose <code>hikes</code> and <code>updateHike</code> in our module's exports like so:</p>
+<pre><code class="language-js">module.exports = {
+	hikes: hikes,
+
+	updateHike: updateHike
+};
+</code></pre>
+<p>And with that, we've finished our <code>Context</code> module as well!</p>
+<h2 id="hooking-everything-up">Hooking everything up</h2>
+<p>Now that we've got our <code>Backend</code> and <code>Context</code> modules set up, it's time to refactor our view models to use these instead of the <code>hikes</code> module that we had before.</p>
+<p>We'll start by migrating the <code>HomePage</code>. Since this page only displayed the list of hikes from the old <code>hikes</code> module, this will be pretty straightforward. We'll only need to make a couple changes in <code>Pages/HomePage.js</code>. First off, if we take a look at <code>HomePage.js</code>, the very first line imports our old <code>hikes</code> module. Let's change it to import our <code>Context</code> module instead:</p>
+<pre><code class="language-js">var Context = require(&quot;Modules/Context&quot;);
+</code></pre>
+<p>The only other thing we have to do is change the reference to <code>hikes</code> in the module exports to reference <code>Context.hikes</code> instead:</p>
+<pre><code class="language-js">module.exports = {
+	hikes: Context.hikes,
+
+	goToHike: goToHike
+};
+</code></pre>
+<p>And that should cover our <code>HomePage</code>.</p>
+<p>Now for our <code>EditHikePage</code>. Because this page receives its hike data from the <a href="../fuse/navigation/router.html">Router</a>, this page won't need any changes to display this data. However, we <em>will</em> need to make some changes before we can actually edit the data. But to hook things up meaningfully, we'll want to set up the <code>Save</code> and <code>Cancel</code> buttons from our original design, rather than the temporary <code>Back</code> button we made in the <a href="navigation-and-routing.html">last chapter</a>:</p>
+<p><img src="../media/hikr/tutorial/app-flow.png" alt="Flow Diagram"></p>
+<p>We'll start with the <code>Save</code> button. This button will be almost identical to the <code>Back</code> button we made previously, except that it will also commit the changes made in the editor to our data model in addition to going back to the previous page. So, let's start by simply renaming the existing <code>Back</code> button to <code>Save</code>.</p>
+<p>First, in <code>Pages/EditHikePage.ux</code>, we'll change both the text of our button and its clicked handler:</p>
+<pre><code class="language-xml">	&lt;Text&gt;Comments:&lt;/Text&gt;
+	&lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+
+	&lt;Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<p>Next, in <code>Pages/EditHikePage.js</code>, we'll rename the <code>goBack</code> handler to <code>save</code>:</p>
+<pre><code class="language-js">function save() {
+	router.goBack();
+}
+</code></pre>
+<p>And we'll update its name in the module's exports as well:</p>
+<pre><code class="language-js">	rating: rating,
+	comments: comments,
+
+	save: save
+};
+</code></pre>
+<p>Finally, we'll make this button commit any edits we've made in the view. To do this, we'll call our <code>Context</code> module's <code>updateHike</code> function, passing in the <code>id</code> from our <code>hike</code> <a href="../fusejs/observable.html">Observable</a>'s <code>value</code> and the data contained in our view model's <code>Observable</code>s:</p>
+<pre><code class="language-js">function save() {
+	Context.updateHike(hike.value.id, name.value, location.value, distance.value, rating.value, comments.value);
+	router.goBack();
+}
+</code></pre>
+<p>Great! Now our <code>Save</code> button should be all hooked up. Now, let's implement the <code>Cancel</code> button as well. The <code>Cancel</code> button will be very similar to our <code>Save</code> button, except we'll have to cancel the changes we've made in the editor somehow. But before we worry about that detail, let's go ahead and make our <code>Cancel</code> button, along with a corresponding <code>cancel</code> handler for it.</p>
+<p>We'll first add the UX code for the button in <code>Pages/EditHikePage.ux</code> right beneath the code we just wrote for our <code>Save</code> button:</p>
+<pre><code class="language-xml">	&lt;Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
+	&lt;Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<p>Next, we'll add an empty <code>cancel</code> function and export it in <code>Pages/EditHikePage.js</code>:</p>
+<pre><code class="language-js">function cancel() {
+}
+
+...
+
+module.exports = {
+	...
+
+	cancel: cancel,
+	save: save
+};
+</code></pre>
+<p>Then, we'll make sure the <code>cancel</code> function will take us back to the previous page by calling <code>goBack</code> on our <code>Router</code> instance, just like our <code>save</code> handler:</p>
+<pre><code class="language-js">function cancel() {
+	router.goBack();
+}
+</code></pre>
+<p>Finally, before the handler navigates back to the previous page, we want to revert any changes we've made in the view model. There are a few ways we could do this, but one of the easiest is to take advantage of the fact that all of the backing <code>Observable</code>s in our view model are the result of <code>map</code>'s of our <code>EditHikePage</code>'s <code>hike</code> <code>Observable</code>. Because of this, if we're to &quot;refresh&quot; the value of this <code>Observable</code>, all of the editor values will be reset to their original values. This can be achieved by simply assigning the <code>hike</code> <code>Observable</code>'s value to itself, like so:</p>
+<pre><code class="language-js">function cancel() {
+	hike.value = hike.value;
+	router.goBack();
+}
+</code></pre>
+<p>Easy! Now, while this code makes sense to us now, it may not be immediately clear why we're doing this to someone who hasn't read the code (or us in the future if we've forgotten about this trick), so let's go ahead and add a comment to go with it:</p>
+<pre><code class="language-js">function cancel() {
+	// Refresh hike value to reset dependent Observables' values
+	hike.value = hike.value;
+	router.goBack();
+}
+</code></pre>
+<p>Perfect! Now everything should be hooked up. At this point, we can go ahead and save all of our different files. Once Fuse is finished reloading preview, we finally can try out our fully-functional views!</p>
+<h2 id="our-progress-so-far">Our progress so far</h2>
+<p>Finally, we've got basically all of the major functional pieces of our app in place and hooked up. Now we've got our various pages and modules working together in perfect harmony and fitted together with a nice, scalable architecture. It looks something like this:</p>
+<p><img src="../media/hikr/chapter-5/chapter-5.gif" alt="End of chapter result"></p>
+<p>And here's the code for the various files we modified in this chapter:</p>
+<p><code>Modules/Backend.js</code>:</p>
+<pre><code class="language-js">var hikes = [
+	{
+		id: 0,
+		name: &quot;Tricky Trails&quot;,
+		location: &quot;Lakebed, Utah&quot;,
+		distance: 10.4,
+		rating: 4,
+		comments: &quot;This hike was nice and hike-like. Glad I didn't bring a bike.&quot;
+	},
+	{
+		id: 1,
+		name: &quot;Mondo Mountains&quot;,
+		location: &quot;Black Hills, South Dakota&quot;,
+		distance: 20.86,
+		rating: 3,
+		comments: &quot;Not the best, but would probably do again. Note to self: don't forget the sandwiches next time.&quot;
+	},
+	{
+		id: 2,
+		name: &quot;Pesky Peaks&quot;,
+		location: &quot;Bergenhagen, Norway&quot;,
+		distance: 8.2,
+		rating: 5,
+		comments: &quot;Short but SO sweet!!&quot;
+	},
+	{
+		id: 3,
+		name: &quot;Rad Rivers&quot;,
+		location: &quot;Moriyama, Japan&quot;,
+		distance: 12.3,
+		rating: 4,
+		comments: &quot;Took my time with this one. Great view!&quot;
+	},
+	{
+		id: 4,
+		name: &quot;Dangerous Dirt&quot;,
+		location: &quot;Cactus, Arizona&quot;,
+		distance: 19.34,
+		rating: 2,
+		comments: &quot;Too long, too hot. Also that snakebite wasn't very fun.&quot;
+	}
+];
+
+function getHikes() {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			resolve(hikes);
+		}, 0);
+	});
+}
+
+function updateHike(id, name, location, distance, rating, comments) {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			for (var i = 0; i &lt; hikes.length; i++) {
+				var hike = hikes[i];
+				if (hike.id == id) {
+					hike.name = name;
+					hike.location = location;
+					hike.distance = distance;
+					hike.rating = rating;
+					hike.comments = comments;
+					break;
+				}
+			}
+
+			resolve();
+		}, 0);
+	});
+}
+
+module.exports = {
+	getHikes: getHikes,
+	updateHike: updateHike
+};
+</code></pre>
+<p><code>Modules/Context.js</code>:</p>
+<pre><code class="language-js">var Observable = require(&quot;FuseJS/Observable&quot;);
+var Backend = require(&quot;./Backend&quot;);
+
+var hikes = Observable();
+
+Backend.getHikes()
+	.then(function(newHikes) {
+		hikes.replaceAll(newHikes);
+	})
+	.catch(function(error) {
+		console.log(&quot;Couldn't get hikes: &quot; + error);
+	});
+
+function updateHike(id, name, location, distance, rating, comments) {
+	for (var i = 0; i &lt; hikes.length; i++) {
+		var hike = hikes.getAt(i);
+		if (hike.id == id) {
+			hike.name = name;
+			hike.location = location;
+			hike.distance = distance;
+			hike.rating = rating;
+			hike.comments = comments;
+			hikes.replaceAt(i, hike);
+			break;
+		}
+	}
+	Backend.updateHike(id, name, location, distance, rating, comments)
+		.catch(function(error) {
+			console.log(&quot;Couldn't update hike: &quot; + id);
+		});
+}
+
+module.exports = {
+	hikes: hikes,
+
+	updateHike: updateHike
+};
+</code></pre>
+<p><code>Pages/HomePage.js</code>:</p>
+<pre><code class="language-js">var Context = require(&quot;Modules/Context&quot;);
+
+function goToHike(arg) {
+	var hike = arg.data;
+	router.push(&quot;editHike&quot;, hike);
+}
+
+module.exports = {
+	hikes: Context.hikes,
+
+	goToHike: goToHike
+};
+</code></pre>
+<p><code>Pages/EditHikePage.ux</code>:</p>
+<pre><code class="language-xml">&lt;Page ux:Class=&quot;EditHikePage&quot;&gt;
+	&lt;Router ux:Dependency=&quot;router&quot; /&gt;
+	
+	&lt;JavaScript File=&quot;EditHikePage.js&quot; /&gt;
+
+	&lt;ScrollView&gt;
+		&lt;StackPanel&gt;
+			&lt;Text Value=&quot;{name}&quot; /&gt;
+
+			&lt;Text&gt;Name:&lt;/Text&gt;
+			&lt;TextBox Value=&quot;{name}&quot; /&gt;
+
+			&lt;Text&gt;Location:&lt;/Text&gt;
+			&lt;TextBox Value=&quot;{location}&quot; /&gt;
+
+			&lt;Text&gt;Distance (km):&lt;/Text&gt;
+			&lt;TextBox Value=&quot;{distance}&quot; InputHint=&quot;Decimal&quot; /&gt;
+
+			&lt;Text&gt;Rating:&lt;/Text&gt;
+			&lt;TextBox Value=&quot;{rating}&quot; InputHint=&quot;Integer&quot; /&gt;
+
+			&lt;Text&gt;Comments:&lt;/Text&gt;
+			&lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+
+			&lt;Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
+			&lt;Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
+		&lt;/StackPanel&gt;
+	&lt;/ScrollView&gt;
+&lt;/Page&gt;
+</code></pre>
+<p><code>Pages/EditHikePage.js</code>:</p>
+<pre><code class="language-js">var Context = require(&quot;Modules/Context&quot;);
+
+var hike = this.Parameter;
+
+var name = hike.map(function(x) { return x.name; });
+var location = hike.map(function(x) { return x.location; });
+var distance = hike.map(function(x) { return x.distance; });
+var rating = hike.map(function(x) { return x.rating; });
+var comments = hike.map(function(x) { return x.comments; });
+
+function cancel() {
+	// Refresh hike value to reset dependent Observables' values
+	hike.value = hike.value;
+	router.goBack();
+}
+
+function save() {
+	Context.updateHike(hike.value.id, name.value, location.value, distance.value, rating.value, comments.value);
+	router.goBack();
+}
+
+module.exports = {
+	name: name,
+	location: location,
+	distance: distance,
+	rating: rating,
+	comments: comments,
+
+	cancel: cancel,
+	save: save
+};
+</code></pre>
+<p><code>hikr.unoproj</code>:</p>
+<pre><code class="language-json">{
+  &quot;Packages&quot;: [
+    &quot;Fuse&quot;,
+    &quot;FuseJS&quot;
+  ],
+  &quot;Includes&quot;: [
+    &quot;*&quot;,
+    &quot;Modules/*.js:Bundle&quot;
+  ]
+}
+</code></pre>
+<h2 id="what-s-next">What's next</h2>
+<p>Now that all of the major parts of our app are in place, it's time to iteratively tweak the look and feel of our app to really make it pop. In the <a href="look-and-feel.html">next chapter</a>, we'll build various reusable components with a custom look/feel and sprinkle them all over our app to polish the app and make it look great. So <a href="look-and-feel.html">let's get to it</a>!</p>
+<p>The final code for this chapter is available <a href="https://github.com/fuse-open/hikr/tree/chapter-5">here</a>.</p>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>

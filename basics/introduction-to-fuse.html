@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Introduction to Fuse | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse" class="active"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <h1 id="introduction-to-fuse">Introduction to Fuse</h1>
+<p>This module will provide you with an introduction to the fundamentals of Fuse and is a good place to be if you're just getting started. While we don't assume any prior experience with programming, some familiarity with markup languages can be helpful.</p>
+<p>The goal of this module is to give you a good understanding of what makes up a Fuse app, and to gain some practical knowledge in the process.</p>
+<blockquote class="callout-info">
+<p>We will also cover how JavaScript fits in with Fuse, so some experience with JavaScript will be helpful in that section.</p>
+</blockquote>
+<h2 id="new-project">New project</h2>
+<p>We start off by creating a new project. If you followed the quickstart guide, feel free to skip to the next section.</p>
+<p>When you first open Fuse, you are presented with the Fuse dashboard. From here, you can start a new project using one of the provided templates, or open one of your previous ones. For this section, we want to create a new project using the &quot;Fuse project&quot; template. This gives us a good starting point for playing around with some of the core features of Fuse.</p>
+<p>After selecting the template, click &quot;create&quot;. Pick a name and location and then click &quot;create&quot; again. When Fuse is done building your project you will be presented with a preview viewport with a white, blank screen.</p>
+<p><img src="../media/intro_to_fuse/preview.png" alt="preview viewport"></p>
+<h3 id="fuse-projects">Fuse projects</h3>
+<p>Every Fuse app consists of at least two files:</p>
+<ul>
+<li>ProjectName.unoproj -- Contains information about the project, like which files to include, app icons, allowed screen orientations and <a href="../basics/uno-projects.html">much more</a>.</li>
+<li>MainView.ux -- The main UX file of our app. It is in UX files we do most of our work in Fuse. Anything from GUI layout to animations are put in these files.
+<ul>
+<li>New projects usually start off with a single UX file, but we can create as many as we want.</li>
+</ul>
+</li>
+</ul>
+<p>When we start the Fuse preview, it looks for a <code>.unoproj</code> file in the folder we're in. As long as this file exists, and we have a <code>.ux</code> file with an <code>App</code> tag (we'll cover UX markup next), we have a valid Fuse project.</p>
+<blockquote class="callout-info">
+<p>Why is it called .unoproj you might wonder? Fuse is built on top of a programming language called Uno. This means that when Fuse compiles your code, it is actually compiling an Uno project. Knowledge about Uno is <strong>not required</strong> in order to use Fuse, but for anyone who wants to dig deeper into the Fuse technology stack, more information can be found <a href="../native-interop/native-interop.html">here</a>.</p>
+</blockquote>
+<h4 id="ux-files">UX files</h4>
+<p>All UX file names end with the<code>.ux</code> file extension. UX is a markup language based on XML. It provides a powerful and expressive way of defining all visual aspects of our apps: GUI layout, animations, navigation structure, reusable components, input controls, and more.</p>
+<p>Our chosen project template gives us only one UX file to start with, called <code>MainView.ux</code>. To start building your app, open this file in your text editor of choice. You'll notice the file only contains two lines of code; a pair of opening and closing <code>App</code> tags.</p>
+<blockquote class="callout-info">
+<p>UX markup is explained in detail in the next section.</p>
+</blockquote>
+<pre><code class="language-xml">&lt;App&gt;
+&lt;/App&gt;
+</code></pre>
+<p>Any Fuse project must, and can only, have one pair of <code>App</code> tags, and everything between these tags is a part of your app.</p>
+<p>If you paste the following code into your MainView.ux file and save it, you'll notice the Fuse preview window updating with the text &quot;Hello, world!&quot; displayed in the top left corner. Don't worry too much about the code means, we will cover everything in the next section.</p>
+<pre><code class="language-xml">&lt;App&gt;
+	&lt;Text Value=&quot;Hello, world!&quot; /&gt;
+&lt;/App&gt;
+</code></pre>
+<h2 id="introduction-to-ux">Introduction to UX</h2>
+<p>As mentioned in the previous section, UX is the way we do most of our work in Fuse. It is where we define everything visual, as well as animations and navigation. In this section we'll introduce the basics of UX markup.</p>
+<blockquote class="callout-info">
+<p>If you're already familiar with XML, feel free to skip forward to the next sub chapter. The terminology is a bit different from regular XML though so it may be worth a look.</p>
+</blockquote>
+<h3 id="what-is-ux-for">What is UX for?</h3>
+<p>UX is used for anything and everything visual. You define your app layout, all animations, navigation, and even gesture recognition in UX.</p>
+<p><strong>Layout</strong> is the act of arranging various shapes and controls on the screen. Fuse layout engine lets us easily define reactive layouts, that automatically adapt to different screen sizes and aspect ratios.</p>
+<p><strong>Animation</strong> is the act of making things change over time. Fuse comes with a state of the art declarative animation system, which lets you animate absolutely anything you can think of. Any object can be moved, and any property can be changed.</p>
+<p>With <strong>navigation</strong> we define the structure of our app. Which pages exist, and how do we go from one page to the next. We can even define completely custom transitions in pure declarative UX.</p>
+<p>UX is also used to define reusable components. Custom input controls can be created using the <a href="../fuse/gestures/transformgesture.html">gesture</a> and <a href="../fuse/selection/selection.html">selection</a> APIs, and can easily be turned into reusable packages that can easily be shared between several app projects.</p>
+<h3 id="what-not-to-use-ux-for">What <strong>not</strong> to use UX for</h3>
+<p>UX is not used for fetching and transforming data. For that, we use JavaScript. While UX does have a powerful <a href="../ux-markup/expressions.html">expression language</a> built in, it is not a suitable scripting language. We also prefer to keep and mutate the app state in JavaScript.</p>
+<h3 id="getting-started-writing-ux">Getting started writing UX</h3>
+<p>In spoken languages there are many ways to say the same thing. In UX we write what we want in a specific way so that Fuse can easily work out precisely what we are saying. When we talk about the 'way we write things' in languages we are talking about the <code>syntax</code> of the language.</p>
+<h3 id="the-syntax-of-ux-the-way-we-write-ux">The syntax of UX (the way we write UX)</h3>
+<p>UX is made up of <em>objects</em>. What an <em>object</em> &quot;does&quot; or &quot;what it's for&quot; depends on it's name and where it is used.
+<em>Objects</em> can be written in two ways:</p>
+<ul>
+<li><code>&lt;Something /&gt;</code></li>
+<li><code>&lt;Something&gt; &lt;/Something&gt;</code></li>
+</ul>
+<p>Right now, all we have to know is that the second version is used when we want to put other <code>Object</code>s inside our <code>Something</code> <code>Object</code>. Phew, it's all a bit abstract right now but once we plow through a few more details we can start seeing this stuff in context.</p>
+<p>It is very common for people to talk about parts of the text in our UX so we need to know one extra thing: this is a tag <code>&lt;Name&gt;</code>. More precisely the tag is what we call the thing that starts with <code>&lt;</code> and ends with <code>&gt;</code>. It will contain <em>at least</em> a name, but often more.</p>
+<p>Up above we were showing two ways of writing an <em>object</em>:</p>
+<ul>
+<li><code>&lt;Something /&gt;</code></li>
+</ul>
+<p>This is an <em>object</em> that doesn't contain any other <em>objects</em>. When you see a tag ending in <code>/&gt;</code> then it's called a 'self closing tag'</p>
+<ul>
+<li><code>&lt;Something&gt; &lt;/Something&gt;</code></li>
+</ul>
+<p>Here we see that the <code>&lt;Something&gt;</code> tag doesn't end in <code>/&gt;</code> so it needs to be closed. That's why the second tag starts with <code>&lt;/</code>. It is saying that this is 'closing tag' for a <code>Something</code> tag above.</p>
+<blockquote class="callout-info">
+<p>Remember that even though example number two has 2 tags it is still one <em>object</em>. It's just one that can contain other <em>objects</em> as well.</p>
+</blockquote>
+<h4 id="using-this-knowledge">Using this knowledge</h4>
+<p>If you are anything like me, then at this point your head is swimming with all these terms that we don't have a use for yet, so lets look at some real UX.</p>
+<pre><code class="language-xml">&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+  &lt;Text Value=&quot;Hello Jim!&quot; &gt;&lt;/Text&gt;
+  &lt;Text Value=&quot;World&quot; /&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<p>With our newly acquired prowess in UX we can read the UX above as:</p>
+<blockquote>
+<p>We have a <code>StackPanel</code> <code>Object</code> which contains 2 <code>Text</code> <code>Object</code>s.</p>
+</blockquote>
+<p>We could also get super technical and point out some details:</p>
+<pre><code class="language-xml">       ____________________________________ Opening tag
+      /
+     v
+ &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+    &lt;Text Value=&quot;Hello&quot; /&gt; &lt;--------------- self closing tag 
+    &lt;Text Value=&quot;World&quot; /&gt;  &lt;--------------- self closing tag
+ &lt;/StackPanel&gt;
+       ^
+        \___________________________________ Closing tag
+</code></pre>
+<p>But you may be looking at those opening and self closing tags above and wondering why they have extra stuff in them. If you are then well spotted! Those are called <code>Properties</code>.</p>
+<p>If we have an apple in real life and you were asked about its properties, you might say &quot;it's round&quot; or &quot;it's ripe&quot; or something like that. Properties in this case gives us extra information about the nature of the apple. The exact same it true for Properties in UX.</p>
+<p>Let's look back at the example above:</p>
+<pre><code class="language-xml">&lt;Text Value=&quot;Hello Jim!&quot; /&gt;
+</code></pre>
+<p>The <code>Text</code> <em>object</em> is what we use to show text in our App and the <code>Value</code> Property tells Fuse you want the text to be &quot;Hello Jim&quot;.</p>
+<p>Just like how an apple and a truck have different properties in real life, different <em>objects</em> in UX have different properties too. To find what properties you can put on each <em>object</em> type, we have lots of <a href="../full-ux-class-reference.html">documentation</a> to help.</p>
+<p>One last note on properties: when we have an <em>object</em> with <em>opening</em> &amp; <em>closing</em> tags we only add the properties to the <em>opening</em> tag, so:</p>
+<pre><code class="language-xml">      / Only need properties on this one.
+     v
+ &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+ &lt;/StackPanel&gt;
+           ^
+		   We are not allowed to set properties here!
+</code></pre>
+<p>And given that we are talking about small details: <em>objects</em> that are inside other <em>objects</em> are called <em>children</em>. The <em>object</em> that contains them is called the <em>parent object</em>.</p>
+<p>Before we wrap up this part lets annotate our UX again with what we have learned</p>
+<pre><code class="language-xml">	   _______________ Opening tag (named StackPanel). Parent to two objects.
+	  /            ___________________ Has an Orientation Property
+	 /            /
+	v            v
+&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+   &lt;Text Value=&quot;Hello Jim!&quot; /&gt; &lt;----------- Child object / self closing tag / Has a Value Property
+   &lt;Text Value=&quot;World&quot; /&gt;  &lt;--------------- Another child / self closing tag / Has a Value Property
+&lt;/StackPanel&gt;
+	  ^
+	   \__________________ Closing tag
+</code></pre>
+<h3 id="classes">Classes</h3>
+<p>A class defines a <em>recipe</em> for an <em>object</em>. Fuse has lots of useful objects defined for you but very soon you will want to define your own.</p>
+<p>Luckily all we have to do is make something we like and then tell Fuse that this is a recipe for making <em>objects</em> just like it.</p>
+<p>For example, let's say we make a nice <code>Rectangle</code> with a <code>Text</code> object inside it:</p>
+<pre><code class="language-xml">&lt;Rectangle Color=&quot;#f0a&quot;&gt;
+	&lt;Text Value=&quot;Button&quot; Margin=&quot;10&quot; /&gt;
+&lt;/Rectangle&gt;
+</code></pre>
+<p>Later on we decide we want to use this in lots of places in our app. All we have to do to turn this into a <code>Class</code> (a recipe for objects) is use <code>ux:Class</code> and give it a name.</p>
+<pre><code class="language-xml">&lt;Rectangle ux:Class=&quot;TextRectangle&quot; Color=&quot;#f0a&quot;&gt;
+	&lt;Text Value=&quot;Button&quot; Margin=&quot;10&quot; /&gt;
+&lt;/Rectangle&gt;
+</code></pre>
+<p>And now we can use it just like any other object that came with Fuse!</p>
+<pre><code class="language-xml">&lt;TextRectangle /&gt;
+</code></pre>
+<blockquote class="callout-info">
+<p><em>Top tips:</em></p>
+<ul>
+<li>You may be wondering if the objects we have already seen (<code>StackPanel</code> &amp; <code>Text</code>) have classes too, and the answer is yes. The Objects you make are just as powerful as the ones that come with the product which is pretty cool.</li>
+<li>Even though <code>ux:Class</code> looks like a <code>Property</code> it is not one. If you see something that looks like a <code>Property</code> but which start with <code>ux:</code>, then it has special behavior. These special behaviors are explained in the documentation so don't worry about trying to memorize them all straight away.</li>
+</ul>
+</blockquote>
+<h2 id="introduction-to-layout">Introduction to Layout</h2>
+<p>As we mentioned in the previous section; layout is the act of sizing and positioning elements on the screen. Since our apps are expected to run on a ton of different screen sizes, with different aspect ratios and pixel densities, creating app layouts is not as simple in the real world as it is in a prototyping tool. Now, that doesn't necessarily make it harder, you just have to be aware of how to properly structure things in order to get the expected layout on your various devices.</p>
+<p>We do this in Fuse by grouping objects together using various different <code>Panel</code> types, each with their own layout behavior. Panels are in charge of positioning their children according to different predefined layout rules. In this section we'll cover the most important ones, and how they can be used together to easily create almost any app layout.</p>
+<p>Before we get started looking at the various layout types, there are a couple concepts you should be aware of.</p>
+<h3 id="available-space">Available space</h3>
+<p>Each panel is in charge of assigning a size and position to all of its children. Each object (not just panels) has a certain available space in which it must place its children. How this size is determined can vary depending on the panel type, but most often it is assigned by the panels parent object, in just the same way as the panel assigns a size to its own children. It is a recursive process, where the available space is shrunk (or sometimes just kept the same) in each layer.</p>
+<p><img src="../media/intro_to_fuse/available_space.png" alt="available space"></p>
+<h3 id="alignment">Alignment</h3>
+<p>All visual objects can also have an <code>Alignment</code>, which determines how an element should place itself in the case where it is smaller than its available space.</p>
+<p>The <code>Alignment</code> property can be set to one of the following values:</p>
+<ul>
+<li><code>Default</code> - Stretches the object in all directions,</li>
+<li><code>Left</code> - Aligns element to the left</li>
+<li><code>HorizontalCenter</code> - Centers element horizontally</li>
+<li><code>Right</code> - Aligns element to the right</li>
+<li><code>Top</code> - Aligns element to the top.</li>
+<li><code>VerticalCenter</code> - Centers element vertically.</li>
+<li><code>Bottom</code> - Aligns element to the bottom</li>
+<li><code>TopLeft</code> - Aligns element to the top left corner</li>
+<li><code>TopCenter</code> - Centers element horizontally and aligns it to the top</li>
+<li><code>TopRight</code> - Aligns element to the top right corner</li>
+<li><code>CenterLeft</code>  - Centers element vertically and aligns it to the left,</li>
+<li><code>Center</code> - Centers element both horizontally and vertically</li>
+<li><code>CenterRight</code> - Centers element vertically and aligns it to the right</li>
+<li><code>BottomLeft</code> - Aligns element to the bottom left corner</li>
+<li><code>BottomCenter</code> - Centers element horizontally and aligns it to the bottom</li>
+<li><code>BottomRight</code> - Aligns element to the bottom right corner</li>
+</ul>
+<p>The following figure shows how objects respond to a handful of the alignment options listed above.</p>
+<p><img src="../media/intro_to_fuse/alignment.png" alt="alignment"></p>
+<h3 id="layout-types">Layout types</h3>
+<p>Now it's time to learn about some layout types and how they can be combined to create almost any app layout you can think of. You'll be introduced to three layout types: <code>StackPanel</code>, <code>DockPanel</code> and <code>Grid</code>. Note however that these aren't the only layout types in Fuse. They are however by far the most commonly used ones, and cover most of the use-cases you'll run into. You'll see more of them listed in the outline of <a href="https://fuse-x.com/docs">the docs</a>.</p>
+<blockquote class="callout-info">
+<p>The various panels we introduce here are actually just normal panels with an associated <code>Layout</code> type. What we mean by this is that a <code>StackPanel</code> is actually just a <code>Panel</code> with a <code>StackLayout</code> attached to it. Some of the available layout types do not have these <code>Panel</code> wrappers, and so you have to add them to a normal <code>Panel</code> yourself in order to use them.</p>
+</blockquote>
+<p>Here is an example showing how you can use the <code>ColumnLayout</code> layout:</p>
+<pre><code class="language-xml">&lt;Panel&gt;
+	&lt;ColumnLayout /&gt;
+&lt;/Panel&gt;
+</code></pre>
+<h4 id="stackpanel">StackPanel</h4>
+<p>The <code>StackPanel</code> arranges its children in a line, either vertically or horizontally.</p>
+<pre><code class="language-xml">&lt;StackPanel ItemSpacing=&quot;10&quot;&gt;
+	&lt;Rectangle Color=&quot;Red&quot; Height=&quot;50&quot; /&gt;
+	&lt;Text Value=&quot;Some text&quot; /&gt;
+	&lt;Rectangle Color=&quot;Blue&quot; Height=&quot;50&quot; /&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<p>Notice that we've set the <code>Height</code> of each <code>Rectangle</code> to <code>50</code>. This is necessary because rectangles don't have any implicit size. Otherwise, because of the way the <code>StackPanel</code> sizes its children, they wouldn't get any height at all. This is not necessary for <code>Text</code> objects since they have an implicit height based on their value and font size.</p>
+<p><img src="../media/intro_to_fuse/stack_layout.png" alt="Stack layout"></p>
+<p>You can read about the details of <code>StackPanel</code> in its <a href="../fuse/controls/stackpanel.html">reference docs</a>.</p>
+<h4 id="dockpanel">DockPanel</h4>
+<p>The <code>DockPanel</code> allows us to subdivide the available space by &quot;docking&quot; each child to one of its four sides, one after the other.</p>
+<p><img src="../media/intro_to_fuse/dock_layout.png" alt="Dock layout"></p>
+<pre><code class="language-xml">&lt;DockPanel&gt;
+	&lt;Rectangle Dock=&quot;Left&quot; Width=&quot;100&quot; Color=&quot;Red&quot; /&gt;
+	&lt;Rectangle Dock=&quot;Top&quot; Height=&quot;100&quot; Color=&quot;Green&quot; /&gt;
+	&lt;Rectangle Dock=&quot;Right&quot; Width=&quot;100&quot; Color=&quot;Blue&quot; /&gt;
+	&lt;Rectangle Dock=&quot;Bottom&quot; Height=&quot;100&quot; Color=&quot;Teal&quot; /&gt;
+	&lt;Rectangle Color=&quot;Yellow&quot; /&gt;
+&lt;/DockPanel&gt;
+</code></pre>
+<p>Just as with the <code>StackPanel</code>, we must set the height and width of some of the children. When docking to the left or right, we must ensure that the object being docked has some width, either by assigning a width explicitly like we've done here, or by making sure the object has its own implicit width. If we don't specify the <code>Dock</code> property for a child, it is stretched to fill the remaining space of the <code>DockPanel</code>.</p>
+<p>Read all about the <code>DockPanel</code> <a href="../fuse/controls/dockpanel.html">here</a></p>
+<h4 id="grid">Grid</h4>
+<p><code>Grid</code> lets us divide the available space into a set of rows and columns, and use those to place its children.</p>
+<pre><code class="language-xml">&lt;Grid RowCount=&quot;2&quot; ColumnCount=&quot;3&quot;&gt;
+	&lt;Rectangle Color=&quot;Red&quot; /&gt;
+	&lt;Rectangle Color=&quot;Green&quot; /&gt;
+	&lt;Rectangle Color=&quot;Blue&quot; /&gt;
+	&lt;Rectangle Color=&quot;Yellow&quot; /&gt;
+	&lt;Rectangle Color=&quot;Orange&quot; /&gt;
+	&lt;Rectangle Color=&quot;Teal&quot; /&gt;
+&lt;/Grid&gt;
+</code></pre>
+<p><img src="../media/intro_to_fuse/grid_layout.png" alt="Grid layout"></p>
+<p>In the example above, we've created a <code>Grid</code> with two rows and three columns, where each row has the same height, and each column has the same width. Unlike with the <code>StackPanel</code> and <code>DockPanel</code>, objects placed by the <code>Grid</code> don't need an explicit or implicit size, since they don't themselves affect the size of the cells (unless we use <a href="../fuse/controls/grid.html#rows-and-columns-properties">automatically sized rows/columns</a>).</p>
+<p>We have many options when defining the rows and columns of a Grid. The RowCount and ColumnCount properties provide us with a convenient way of defining a number of equally sized rows and columns, but there are other, more configurable, ways of defining them as well. You can read about it <a href="../fuse/controls/grid.html">here</a>.</p>
+<h4 id="combining-layout-types-to-create-something-real">Combining layout types to create something real</h4>
+<p>Lets combine what we've learned so far to create something a bit more complex than just a single layout panel.</p>
+<pre><code class="language-xml">&lt;App Background=&quot;#ddd&quot;&gt;
+	&lt;DockPanel&gt;
+		&lt;Rectangle Dock=&quot;Top&quot; Color=&quot;#63b8ff&quot;&gt;
+			&lt;Text Value=&quot;My first app&quot; Alignment=&quot;Center&quot; Margin=&quot;20&quot; /&gt;
+		&lt;/Rectangle&gt;
+		&lt;Rectangle Color=&quot;White&quot; CornerRadius=&quot;5&quot; Alignment=&quot;Center&quot;&gt;
+			&lt;StackPanel Alignment=&quot;Center&quot; Margin=&quot;45&quot;&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;35&quot;&gt;This is&lt;/Text&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot;&gt;our&lt;/Text&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;25&quot;&gt;first&lt;/Text&gt;
+				&lt;Image Url=&quot;https://www.fusetools.com/assets/dist/images/logo-white-header.png&quot;
+					   Color=&quot;#333&quot;
+					   StretchMode=&quot;PixelPrecise&quot; /&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;30&quot;&gt;App&lt;/Text&gt;
+			&lt;/StackPanel&gt;
+		&lt;/Rectangle&gt;
+		&lt;Grid ColumnCount=&quot;3&quot; Dock=&quot;Bottom&quot; Height=&quot;60&quot; Color=&quot;White&quot;&gt;
+			&lt;Text Alignment=&quot;Center&quot; Value=&quot;Left&quot; /&gt;
+			&lt;Text Alignment=&quot;Center&quot; Value=&quot;Center&quot; /&gt;
+			&lt;Text Alignment=&quot;Center&quot; Value=&quot;Right&quot; /&gt;
+		&lt;/Grid&gt;
+	&lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p>The example above has three main parts. The outer most panel (right after the <code>App</code> object) is a <code>DockPanel</code>. Within this <code>DockPanel</code> we've placed three rectangles. Docked to the top, we've created an &quot;app bar&quot; with the title of our app and a blue/turquoise background. Docked to the bottom, we've made a dummy &quot;navigation bar&quot;, which is quite common to see in most apps with more than a single page. This navigation bar consists of a <code>Grid</code> with three columns and just one (by default) row. It automatically places its three <code>Text</code> objects (its child objects) into these columns. Finally, we've added a stack of <code>Text</code> objects with an image in the middle, pointing to the Fuse logo using the <code>Url</code> property. Their parent <code>StackPanel</code> is inside a <code>Rectangle</code> which has a white background and some <code>CornerRadius</code>, to make its corners curved.</p>
+<p>If you copy and paste this code into your <code>MainView.ux</code> and save the file, you'll notice how easy it is to get started creating realistic app layouts, with just a few lines of UX.</p>
+<h2 id="adding-some-business-logic-with-javascript">Adding some business logic with JavaScript</h2>
+<p>The easiest way to get started adding some JavaScript to our app is to add a <code>JavaScript</code> object. We can then write JavaScript directly inside it, like so:</p>
+<pre><code class="language-xml">&lt;JavaScript&gt;
+	var some = &quot;JavaScript code&quot;;
+&lt;/JavaScript&gt;
+</code></pre>
+<p>We can either write the code inline, like above, or keep it in its own file and reference it from UX:</p>
+<pre><code class="language-xml">&lt;JavaScript File=&quot;someJSFile.js&quot; /&gt;
+</code></pre>
+<p>In either case, the JavaScript object defines a <a href="http://requirejs.org/docs/commonjs.html">CommonJS</a> module. For our purposes, what this means is that there exists an object called <code>module</code>, through which we can export our variables to the outside world (our UX). By adding them to the <code>exports</code> member on the <code>module</code> object:</p>
+<pre><code class="language-xml">&lt;JavaScript&gt;
+	var myVariable = 1234;
+	module.exports = {
+		myVariable: myVariable
+	};
+&lt;/JavaScript&gt;
+</code></pre>
+<p><code>myVariable</code> is now available from UX. In order to use it however, we need to create a binding to it. This is very easily done by enclosing the name in curly braces: <code>{``name``}</code>. In our case, we can bind to <code>myVariable</code> like so: <code>{myVariable}</code>. The following example shows how we would bind the <code>Value</code> property of a <code>Text</code> object to the <code>myVariable</code> variable:</p>
+<pre><code class="language-xml">&lt;Text Value=&quot;{myVariable}&quot; /&gt;
+</code></pre>
+<p>Your can also bind events to functions:</p>
+<pre><code class="language-xml">&lt;JavaScript&gt;
+	function buttonClicked() {
+		console.log(&quot;A button was clicked&quot;);
+	}
+	module.exports = {
+		buttonClicked: buttonClicked
+	};
+&lt;/JavaScript&gt;
+&lt;Button Text=&quot;My button&quot; Clicked=&quot;{buttonClicked}&quot; /&gt;
+</code></pre>
+<h3 id="displaying-lists-of-data">Displaying lists of data</h3>
+<p>Most apps need to display lists of content, and for a lot of apps this is how most of its content is displayed. You can export arrays of data from JavaScript just as you export any other variable. You might wonder how we build a list using UX? The answer is the <code>Each</code> class.</p>
+<p><code>Each</code> is a class that can be used to replicate an object once per item in an array. <code>Each</code> has a property called <code>Items</code> which we can bind to an array. It will then replicate whatever children it has once per item in that array. The following example creates a stack of colored rectangles, each with their own text item.</p>
+<pre><code class="language-xml">&lt;JavaScript&gt;
+	var ourList = [
+		{ text: &quot;Welcome&quot;, color: &quot;#7FDBFF&quot; },
+		{ text: &quot;to&quot;, color: &quot;#01FF70&quot; },
+		{ text: &quot;Fuse&quot;, color: &quot;#FF4136&quot; },
+		{ text: &quot;!&quot;, color: &quot;#B10DC9&quot; },
+	];
+	module.exports = {
+		ourList: ourList
+	};
+&lt;/JavaScript&gt;
+&lt;StackPanel&gt;
+	&lt;Each Items=&quot;{ourList}&quot;&gt;
+		&lt;Rectangle Color=&quot;{color}&quot;&gt;
+			&lt;Text Value=&quot;{text}&quot; Margin=&quot;15,10&quot; /&gt;
+		&lt;/Rectangle&gt;
+	&lt;/Each&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<h3 id="responding-to-changes-in-the-data">Responding to changes in the data</h3>
+<p>In order to make our UI automatically update when we make changes to our data, we need a way to let it know that a something has happened. In Fuse, we do this through something called Observables. An Observable value is a value that can change over time. Other entities, like our UI, can subscribe to being notified of whenever one of these observable values have changed. To create an Observable value, we first have to get a hold of the <code>FuseJS/Observable</code> module:</p>
+<pre><code class="language-js">var Observable = require(&quot;FuseJS/Observable&quot;);
+</code></pre>
+<p>With the observable module at hand, we can very easily create an observable value like so:</p>
+<pre><code class="language-js">var observableValue = Observable(10);
+</code></pre>
+<p>and make changes to it through its <code>value</code> property:</p>
+<pre><code class="language-js">observableValue.value = 40;
+</code></pre>
+<p>if we data-bind to this variable, the UI will automatically update whenever we make changes to it.</p>
+<blockquote class="callout-info">
+<p>We do <strong>not</strong> use the <code>new</code> keyword when creating Observable values.</p>
+</blockquote>
+<h4 id="list-observables">List observables</h4>
+<p>Observables can also act as lists of observable values. We create an observable list in the exact same way as we create observable values:</p>
+<pre><code class="language-js">var observableList = Observable(1,2,3,4,5) //observable list with 5 values
+</code></pre>
+<p>We can then display this list in the exact same way as we did with the array, except we can now also add and remove items and have the UI automatically update.</p>
+<pre><code class="language-js">observableList.add(6);
+observableList.remove(5);
+observableList.removeAt(0);
+</code></pre>
+<p>Check out the <a href="../fusejs/observable-api.html">observable API reference</a> for a full list of cool stuff you can do with observables.</p>
+<h3 id="when-not-to-use-javascript">When not to use JavaScript</h3>
+<p>While JavaScript is an extremely useful language, we want to make sure we use it for suitable tasks. In Fuse, we rely on JavaScript when we need to manipulate our app state or communicate with the outside world. That means such things as fetching data from a REST API, communicating with a chat server over web sockets, or saving user preferences to disk.</p>
+<p>It is important to understand that all animations in Fuse are done purely in UX markup. Our animations can be parameterized by binding to JavaScript, but there is no event loop going on from the JavaScript side. All JavaScript happens on its own thread, asynchronously. Everything that is performance critical runs as close to the app UI as it can to keep animations fast and smooth.</p>
+<h2 id="working-with-components">Working with components</h2>
+<p>Componentization is a cornerstone of the Fuse workflow. Componentization is the act of splitting your UX into smaller reusable blocks, either as a means of styling, to reduce the need for repeating UX in several places, or just as a way of splitting our UX up into different files.</p>
+<p>Since componentization is such an important part of Fuse, we've spent a lot of our time and effort in making it both simple and powerful. As mentioned earlier in this module; all that is needed in order to turn a piece of UX into a reusable component, is to add the <code>ux:Class</code> attribute to it, at which point we call that piece of UX a <em>class definition</em>. Lets see how we can use this to clean up the code we wrote in the layout chapter:</p>
+<pre><code class="language-xml">&lt;App Background=&quot;#ddd&quot;&gt;
+	&lt;DockPanel&gt;
+
+		&lt;Rectangle Dock=&quot;Top&quot; Color=&quot;#63b8ff&quot;&gt;
+			&lt;Text Value=&quot;My first app&quot; Alignment=&quot;Center&quot; Margin=&quot;20&quot; /&gt;
+		&lt;/Rectangle&gt;
+
+		&lt;Rectangle Color=&quot;White&quot; CornerRadius=&quot;5&quot; Alignment=&quot;Center&quot;&gt;
+			&lt;StackPanel Alignment=&quot;Center&quot; Margin=&quot;45&quot;&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;35&quot;&gt;This is&lt;/Text&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot;&gt;our&lt;/Text&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;25&quot;&gt;first&lt;/Text&gt;
+				&lt;Image Url=&quot;https://www.fusetools.com/assets/dist/images/logo-white-header.png&quot;
+					   Color=&quot;#333&quot;
+					   StretchMode=&quot;PixelPrecise&quot; /&gt;
+				&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;30&quot;&gt;App&lt;/Text&gt;
+			&lt;/StackPanel&gt;
+		&lt;/Rectangle&gt;
+
+		&lt;Grid ColumnCount=&quot;3&quot; Dock=&quot;Bottom&quot; Height=&quot;60&quot; Color=&quot;White&quot;&gt;
+			&lt;Text Alignment=&quot;Center&quot; Value=&quot;Left&quot; /&gt;
+			&lt;Text Alignment=&quot;Center&quot; Value=&quot;Center&quot; /&gt;
+			&lt;Text Alignment=&quot;Center&quot; Value=&quot;Right&quot; /&gt;
+		&lt;/Grid&gt;
+
+	&lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p>This app screen has three logical components: the top bar, the bottom bar, and the card we've put in the center. Lets turn each into a component and put it in its own file:</p>
+<p><strong>AppBar.ux:</strong></p>
+<pre><code class="language-xml">&lt;Rectangle ux:Class=&quot;TopBar&quot; Color=&quot;#63b8ff&quot;&gt;
+	&lt;Text Value=&quot;My first app&quot; Alignment=&quot;Center&quot; Margin=&quot;20&quot; /&gt;
+&lt;/Rectangle&gt;
+</code></pre>
+<p><strong>TabBar.ux:</strong></p>
+<pre><code class="language-xml">&lt;Grid ux:Class=&quot;TabBar&quot; ColumnCount=&quot;3&quot; Height=&quot;60&quot; Color=&quot;White&quot;&gt;
+	&lt;Text Alignment=&quot;Center&quot; Value=&quot;Left&quot; /&gt;
+	&lt;Text Alignment=&quot;Center&quot; Value=&quot;Center&quot; /&gt;
+	&lt;Text Alignment=&quot;Center&quot; Value=&quot;Right&quot; /&gt;
+&lt;/Grid&gt;
+</code></pre>
+<p><strong>Card.ux:</strong></p>
+<pre><code class="language-xml">&lt;Rectangle ux:Class=&quot;Card&quot; Color=&quot;White&quot; CornerRadius=&quot;5&quot; &gt;
+	&lt;StackPanel Alignment=&quot;Center&quot; Margin=&quot;45&quot;&gt;
+		&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;35&quot;&gt;This is&lt;/Text&gt;
+		&lt;Text Alignment=&quot;HorizontalCenter&quot;&gt;our&lt;/Text&gt;
+		&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;25&quot;&gt;first&lt;/Text&gt;
+		&lt;Image Url=&quot;https://www.fusetools.com/assets/dist/images/logo-white-header.png&quot;
+			   Color=&quot;#333&quot;
+			   StretchMode=&quot;PixelPrecise&quot; /&gt;
+		&lt;Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;30&quot;&gt;App&lt;/Text&gt;
+	&lt;/StackPanel&gt;
+&lt;/Rectangle&gt;
+</code></pre>
+<p>and with these three components in place, we can simplify our <code>MainView.ux</code> into the following:</p>
+<pre><code class="language-xml">&lt;App Background=&quot;#ddd&quot;&gt;
+	&lt;DockPanel&gt;
+		&lt;TopBar Dock=&quot;Top&quot; /&gt;
+		&lt;Card Alignment=&quot;Center&quot; /&gt;
+		&lt;TabBr Dock=&quot;Bottom&quot; /&gt;
+	&lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p>Doesn't that look a lot cleaner? Note that we didn't make the <code>Dock</code> and <code>Alignment</code> properties a part of the class definitions. That is because the decision of how to align or dock an object belongs at the place the object is create, not where its class is defined. This is however just a convention - the app would work just as well with these properties set on the class definition, it would just have been the wrong place to make the decision about docking.</p>
+<h2 id="app-structure-and-testing">App structure and testing</h2>
+<p>In this section we want to give you a general idea of how we structure apps in Fuse. We will also cover how to get started writing unit tests.</p>
+<h3 id="structuring-an-app-for-scale">Structuring an app for scale</h3>
+<p>When just getting started with Fuse, it's ok to just put everything in one file. While we're just prototyping a single screen, this can even make it easier and faster to iterate. As our app grows however, we need to start thinking more about how to properly structure our app so that it doesn't become difficult to manage.</p>
+<p>We usually separate between three component types in Fuse apps. We therefore like to separate our UX files based on what type of component it contains, and group them in different folders:</p>
+<ul>
+<li>Components</li>
+<li>Pages</li>
+<li>Styles</li>
+</ul>
+<p>In your <em>Components</em> folder, you'll add your custom components, which are created specifically for this app, but which are not in themselves entire pages. Here might be a &quot;tab bar control&quot;, a custom &quot;switch&quot; or various list view items which should appear in more than just one list.</p>
+<p>The <em>Pages</em> folder contains all the pages of our app. Most, if not all, components in this folder will derive from the <code>Page</code> class. Although deriving from <code>Page</code> is usually not strictly necessary to be used in navigation, we consider it good practice, since it conveys both meaning and adds some additional properties which can be useful in the context of navigation.</p>
+<p><em>Styles</em> contain styled components, which are defined to give your app a consistent look. <code>Text</code> classes with specific font and font sizes as well as styled with the correct colors. You will also want to define sizes and margins which should be the same across your entire app.</p>
+<h3 id="testing">Testing</h3>
+<p>You can easily add unit tests for your Fuse projects using the <code>ux:Test</code> attribute:</p>
+<pre><code class="language-xml">&lt;Panel ux:Test=&quot;AUnitTest&quot;&gt;
+	&lt;JavaScript&gt;
+		throw new Error(&quot;This test fails&quot;)
+	&lt;/JavaScript&gt;
+&lt;/Panel&gt;
+&lt;Panel ux:Test=&quot;AnotherUnitTest&quot;&gt;
+	&lt;JavaScript&gt;
+		console.log(&quot;This test will pass&quot;);
+	&lt;/JavaScript&gt;
+&lt;/Panel&gt;
+</code></pre>
+<p>We can then run our tests using the following command from the terminal (on macOS) or command prompt (on Windows) while in your project directory:</p>
+<pre><code class="language-s">uno test ProjectName.unoproj
+</code></pre>
+<p>If a test throws an error, it will be regarded as failing. If nothing is thrown, the test passes. Pretty simple! Check out the <a href="../testing/testing.html">ux:Test documentation</a> for more details.</p>
+<blockquote class="callout-info">
+<p>The current implementation of unit tests in Fuse is quite rudimentary. You can expect the testing API to be expanded upon in the future.</p>
+</blockquote>
+<h2 id="animation-basics">Animation basics</h2>
+<p>Fuse comes with a declarative and extremely expressive animation system, which is both easy to learn and very fun to play with.</p>
+<p>There are two core concepts you need to grasp in order to create animations in Fuse: triggers and animators. In short, triggers are objects that respond to events or user input and which activate animators, while animators are in charge of transforming objects or changing their properties over time in response to being activated by triggers. A very nice thing about animators in Fuse, is that they always know how to undo themselves. This means that you never have to make sure you animate your objects back into place whenever a trigger is deactivated; this is taken care of by Fuse.</p>
+<p>An important thing to understand about animations in Fuse, is that they describe a &quot;deviation from a rest state&quot;. The rest state is the app as you describe it in UX, before any animation. If we for example are creating a button, we usually define the rest state of the button to be the &quot;unpressed&quot; state. We can then easily describe how the button should look when we press it using a <code>WhilePressed</code> trigger. The following example creates a custom button which is scaled down while it is pressed:</p>
+<pre><code class="language-xml">&lt;Rectangle ux:Class=&quot;AnimatedButton&quot;&gt;
+	&lt;Text Value=&quot;Press me&quot; /&gt;
+	&lt;WhilePressed&gt;
+		&lt;Scale Factor=&quot;0.8&quot; Duration=&quot;0.2&quot; /&gt;
+	&lt;/WhilePressed&gt;
+&lt;/Rectangle&gt;
+</code></pre>
+<p>Any visual object in Fuse is clickable, so animating in response to the user pressing is as simple as adding a <code>WhilePressed</code> trigger as a child. Following is a quick introduction to some of the most useful triggers and animators. For the complete list, checkout the <a href="../fuse/triggers/trigger.html">triggers</a> and <a href="../fuse/animations/animator.html">animators</a> ux references.</p>
+<h3 id="triggers">Triggers</h3>
+<ul>
+<li><code>WhilePressed</code> - active as long as your finger is on the object</li>
+<li><code>Clicked</code> - activates when you press and release the finger on the same object. Deactivates as soon as it is done activating.</li>
+<li><code>WhileTrue</code> - Can be toggled from UX, or data-bound to a boolean value in JavaScript.</li>
+<li><code>Adding-/RemovingAnimation</code> - Used to animate objects that are added or removed from the visual tree.</li>
+<li><code>LayoutAnimation</code> - Used to animate objects when they are assigned a new position or size by the layout engine.</li>
+<li><code>WhileActive</code> - Is active as long as it is in the currently active page (we briefly discuss navigation in the next section).</li>
+</ul>
+<h3 id="animators">Animators</h3>
+<ul>
+<li><code>Move</code> - Moves the object around</li>
+<li><code>Scale</code> - Scales objects. This scaling does not affect layout.</li>
+<li><code>Rotate</code> - Rotates an object. This is by default a 2D rotation, but Fuse can also do rotations in 3D.</li>
+<li><code>Change</code> - Change allows you to animate any property.</li>
+</ul>
+<hr>
+<p>In the following example, we've extended our button to have a more complete animation. We now change its color, scale, and shadow distance, to make it look more natural. We've also added some nice <code>Easing</code> curves to it.</p>
+<pre><code class="language-xml">&lt;Rectangle ux:Class=&quot;AnimatedButton&quot;&gt;
+	&lt;Shadow ux:Name=&quot;shadow&quot; Distance=&quot;7&quot; Angle=&quot;45&quot; /&gt;
+
+	&lt;Text Value=&quot;Press me&quot; Color=&quot;White&quot; Margin=&quot;18,14&quot; /&gt;
+
+	&lt;LinearGradient StartPoint=&quot;0,0&quot; EndPoint=&quot;1,0&quot;&gt;
+		&lt;GradientStop ux:Name=&quot;stop1&quot; Color=&quot;#23A1AD&quot; Offset=&quot;0&quot; /&gt;
+		&lt;GradientStop ux:Name=&quot;stop2&quot; Color=&quot;#28B892&quot; Offset=&quot;1&quot; /&gt;
+	&lt;/LinearGradient&gt;
+
+	&lt;WhilePressed&gt;
+		&lt;Change stop1.Color=&quot;#4EC4A7&quot; Duration=&quot;0.15&quot; /&gt;
+		&lt;Change stop2.Color=&quot;#43B4BD&quot; Duration=&quot;0.15&quot; /&gt;
+		&lt;Change shadow.Distance=&quot;4&quot; Duration=&quot;0.15&quot; Easing=&quot;CubicOut&quot; EasingBack=&quot;CubicIn&quot; /&gt;
+		&lt;Move Vector=&quot;-2,2,0&quot; Duration=&quot;0.15&quot; Easing=&quot;CubicOut&quot; EasingBack=&quot;CubicIn&quot; /&gt;
+		&lt;Scale Factor=&quot;0.95&quot; Duration=&quot;0.15&quot; Easing=&quot;CubicOut&quot; EasingBack=&quot;CubicIn&quot; /&gt;
+	&lt;/WhilePressed&gt;
+&lt;/Rectangle&gt;
+</code></pre>
+<h2 id="navigation-basics">Navigation basics</h2>
+<p>Most non-trivial apps consists of more than just one screen. When making multi-page apps, it is important to have a clear way of defining how one can move between pages. Fuse has its own hierarchical navigation system, based on the <code>Router</code> and <code>Navigator</code> classes. By using this system we automatically get the ability to keep track of navigation history, and make use of the hardware back button in the case of Android. Learning to use this system is however beyond the scope of this module, so if you're interested, take a look <a href="../navigation/navigation.html">here</a>.</p>
+<p>For the purpose of just getting started, lets take a look at a different navigation primitive in Fuse, called the <code>PageControl</code>. The <code>PageControl</code>, although more limited in its usage, is an extremely useful control. It allows us to swipe with our finger to navigate horizontally (by default) between as many pages as we want. Lets create an app with three pages, each with its own full screen color:</p>
+<pre><code class="language-xml">&lt;App&gt;
+	&lt;PageControl&gt;
+		&lt;Page Color=&quot;Red&quot; /&gt;
+		&lt;Page Color=&quot;Green&quot; /&gt;
+		&lt;Page Color=&quot;Blue&quot; /&gt;
+	&lt;/PageControl&gt;
+&lt;/App&gt;
+</code></pre>
+<p>It's that simple! Feel free to open up one of the pages and start adding some content to the pages. Just open the <code>Page</code> object and put whatever you want in between. You can also try moving the pages to their own files using the <code>ux:Class</code> attribute discussed earlier.</p>
+<pre><code class="language-xml">&lt;App&gt;
+	&lt;PageControl&gt;
+		&lt;Page Color=&quot;Red&quot;&gt;
+			&lt;Text Value=&quot;This is some content&quot; Alignment=&quot;Center&quot; FontSize=&quot;35&quot; /&gt;
+		&lt;/Page&gt;
+		&lt;Page Color=&quot;Green&quot;&gt;
+			&lt;AnimatedButton Alignment=&quot;Center&quot; /&gt;
+		&lt;/Page&gt;
+		&lt;Page Color=&quot;Blue&quot;&gt;
+			&lt;Rectangle CornerRadius=&quot;10&quot; Color=&quot;#f0f&quot; Width=&quot;100&quot; Height=&quot;100&quot; /&gt;
+		&lt;/Page&gt;
+	&lt;/PageControl&gt;
+&lt;/App&gt;
+</code></pre>
+<h2 id="what-is-uno">What is Uno?</h2>
+<p>We've mentioned the Uno programming language a couple times in this module, so we'll spend this last chapter setting the record straight about what Uno is, and how it might affect you.</p>
+<p>Uno is a programming language, quite similar to C#, which is the basis on which Fuse is built. Does this mean you need to learn Uno to create apps in Fuse? Absolutely not. The only case where you might need to use Uno, is if you're implementing a wrapper for some native library which has still not been covered by us or the community. While the Fuse components you use in UX markup are mostly implemented in Uno code, we have strived to make these APIs as expressive as possible, so that you can make whatever you can imagine in pure UX markup, and then rely on simple JavaScript for the business logic.</p>
+<p>That being said, Uno does have some very neat features, which, if you envision yourself as someone who might be interested in poking a bit deeper into the inner workings of Fuse, might be interested in. One of these features, and perhaps the most important one, is the ability to write Java and Objective-C directly in the language as <a href="../native-interop/foreign-code.html">foreign code blocks</a>. This makes interop with native libraries extremely convenient and easy to get started with. That's not to say you'll never run into any challenges when interacting with third party native libraries, but we are constantly working on imporoving language level interoperability provided by Uno.</p>
+<h2 id="what-s-next">What's next?</h2>
+<p>Congratulations on getting through the introduction to Fuse. We've covered a lot of the basics, but there is still a ton of things to learn. Going forward you have a few options.</p>
+<ul>
+<li>The <a href="../tutorial-models/tutorial.html">Hikr tutorial</a> goes through creating an app from scratch, covering everything from layout and animation, to navigation and app structure, while creating a real app prototype in the process.</li>
+<li>If you like just exploring by yourself and learning by example, you should check out our <a href="https://fuseopen.com/examples">examples page</a>, which contains a bunch of interesting layout and animation examples. For more code oriented (as well as visual) examples, checkout the open source github repo <a href="https://github.com/fuse-open/fuse-samples/">fuse-samples</a>.</li>
+</ul>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>

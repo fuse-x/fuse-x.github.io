@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FuseJS | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3 show">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs" class="active"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <h1 id="fusejs">FuseJS</h1>
+<blockquote class="callout-warn">
+<p>Although included in the most recent public Fuse release, the features outlined in this document are still considered experimental and not yet ready for production use. That being said, we encourage you to try it out for yourself. Feedback will always be welcome!</p>
+</blockquote>
+<p>FuseJS allows you to write your Fuse app logic in minimalistic, modern, testable and scaleable ECMAScript 6.</p>
+<blockquote>
+<p>Note: If you are curious about how FuseJS compares to existing JavaScript frameworks like Angular, Vue.js or React+Redux, see <a href="./comparing-to-other-frameworks.html">this article</a>.</p>
+</blockquote>
+<h2 id="hello-fusejs">Hello, FuseJS</h2>
+<p>Here's a simple Todo app implemented in FuseJS.</p>
+<blockquote>
+<p>Note: For a more complete code-example, see <a href="https://github.com/Duckers/FuseJS-TodoApp">this project</a>.</p>
+</blockquote>
+<p><code>TodoApp.js</code></p>
+<pre><code class="language-JS">class TodoItem {
+	constructor(description) {
+		this.description = description
+		this.isDone = false
+	}
+}
+
+export default class TodoApp {
+	constructor() {
+		this.todos = [ new TodoItem(&quot;Buy milk&quot;) ]
+		this.newTodo = &quot;&quot;
+	}
+
+	addTodo() {
+		this.todos.push(new TodoItem(this.newTodo))
+		this.newTodo = &quot;&quot;
+	}
+
+	get todosRemaining() {
+		return this.todos.filter(x =&gt; !x.isDone).length
+	}
+}
+</code></pre>
+<p>And here is a simple UX Markup view for this app:</p>
+<p><code>TodoApp.ux</code></p>
+<pre><code class="language-XML">&lt;App Model=&quot;TodoApp&quot;&gt;
+	&lt;StackPanel&gt;
+		&lt;Each Items=&quot;{todos}&quot;&gt;
+			&lt;DockPanel&gt;
+				&lt;Text&gt;{description}&lt;/Text&gt;
+				&lt;Switch Dock=&quot;Right&quot; Value=&quot;{isDone}&quot;&gt;
+			&lt;/DockPanel&gt;
+		&lt;/Each&gt;
+		&lt;Text&gt;You have {todosRemaining} things left to do&lt;/Text&gt;
+		&lt;TextBox Value=&quot;{newTodo}&quot; /&gt;
+		&lt;Button Text=&quot;Add new todo&quot; Clicked=&quot;{addTodo}&quot; /&gt;
+	&lt;/StackPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p>Finally make sure we include <code>TodoApp.js</code> (or all <code>**.js</code> files) as a <code>FuseJS</code> item in the project includes:</p>
+<p><code>Todo.unoproj</code></p>
+<pre><code class="language-JSON">{
+  &quot;Packages&quot;: [
+    &quot;Fuse&quot;,
+    &quot;FuseJS&quot;
+  ],
+  &quot;Includes&quot;: [
+    &quot;*&quot;,
+    &quot;**.js:FuseJS&quot;
+  ]
+}
+</code></pre>
+<p>That's the gist of it. The rest of this documents explains all the concepts in more detail.</p>
+<h2 id="app-models-state-container">App models  (state container)</h2>
+<p><em>Models</em> are simply plain ES6 classes composed into an object graph like in the above example.</p>
+<p>As a rule of thumb, all state that is specific to your app should live in a singular <em>state container</em>, or <em>app model</em>. The <code>TodoApp</code> class in the above example acts as a app model for the entire todo app.</p>
+<p>This has many benefits, most notably:</p>
+<ul>
+<li><strong>Single source of truth</strong>. The entire app state and event history can be inspected or serialized for debugging.</li>
+<li><strong>Separation of logic and view</strong>. The different model classes can be tested in isolation or combination without any hard ties to a view heirarchy.</li>
+</ul>
+<p>We specify what the app model is by setting the <code>Model</code> property on the <code>App</code> tag to point to the <code>FuseJS</code> module that exports the class.</p>
+<pre><code class="language-XML">&lt;App Model=&quot;TodoApp&quot;&gt;
+</code></pre>
+<p>This will look for <code>TodoApp.js</code> among the files included as <code>FuseJS</code> in the project, and instantiate the exported <code>default</code> class. The resulting object is added to the data context for the UX Markup subtree.</p>
+<h2 id="automatic-change-detection">Automatic change detection</h2>
+<p>FuseJS will automatically detect changes to your models and update the view (declared in UX Markup) accordingly. There is no need to use observables or send change notifications manually.</p>
+<p>In our above example, we do this:</p>
+<pre><code class="language-JS">addTodo() {
+	this.todos.push(new TodoItem(this.newTodo))
+	this.newTodo = &quot;&quot;
+}
+</code></pre>
+<p>What will happen is that FuseJS notices you called the <code>addTodo</code> method on this particular object, which will mark this particular object as <em>dirty</em> and schedule it for change detection later. When your JS code is idle, scheduled dirty objects are scanned for changes and the UI is notified about the changes since last scan.</p>
+<p>Things to note:</p>
+<ul>
+<li>Always use a method to manipulate a class instance's state. Writing directly to a field of another class instance will not trigger change detection on that object. Always consider fields private, unless it is a plain JSON structure.</li>
+<li>You can safely do batch changes without any unreasonable performance cost. Change detection will only happen <em>once</em>, when the call stack is clean (all your changes are done).</li>
+<li>Simple, individual list operations like <code>push</code>, <code>pop</code>, <code>splice</code> etc. will trigger the appropriate <code>Adding</code>/<code>RemovingAnimation</code> in UX Markup. Complex list changes, however, may not animate correctly. For such scenarios, consider using <a href="../fuse/reactive/instantiator/identitykey.html">Each.IdentityKey</a> or manipulating a <code>FuseJS/Observable</code> directly to achieve the desired changes.</li>
+</ul>
+<h3 id="what-about-async">What about async?</h3>
+<p>Doing changes in asynchronous callbacks is also (mostly) fine. FuseJS uses <a href="https://github.com/angular/zone.js">Zone.js</a> (borrowed from <a href="https://angular.io/">Angular</a>). FuseJS will note what object is expecting the callback and mark it as dirty when the callback happens.</p>
+<p>So this is perfectly fine; FuseJS will detect the changes to <code>this.items</code>:</p>
+<pre><code class="language-JS">fetchMore() {
+	fetch(some_url)
+		.then(data =&gt; data.json())
+		.then(newItems =&gt; { this.items = items.concat(newItems); })
+}
+</code></pre>
+<p>Please note that, while this works most of the time, Zone.js cannot intercept <em>every</em> imaginable async event.
+If you encounter a situation where the UI is not updating after assigning to a field from an asynchronous callback,
+you can move the assignment to its own method to force change detection.</p>
+<p><strong>Before:</strong></p>
+<pre><code class="language-js">getNewData() {
+	doSomethingAsync((result) =&gt; {
+		this.result = result;
+	});
+}
+</code></pre>
+<p><strong>After:</strong></p>
+<pre><code class="language-js">onGotResult(result) {
+	this.result = result;
+}
+
+getNewData() {
+	doSomethingAsync((result) =&gt; {
+		this.onGotResult(result);
+	});
+}
+</code></pre>
+<h2 id="derived-state">Derived state</h2>
+<p>You can add <em>derived state</em> to your models by using simple property <code>get</code>'ers:</p>
+<pre><code class="language-JS">get todosRemaining() {
+	return this.todos.filter(x =&gt; !x.isDone).length
+}
+</code></pre>
+<p>Derived state is not explicitly stored in the model, but computed on demand based on other state. If the change detector detects a change in the object's state, all derived state for that object, as well as any object that holds a reference to it, is recomputed for the UI.</p>
+<h2 id="two-way-data-binding">Two-way data binding</h2>
+<p>Note that <code>isDone</code> and <code>newTodo</code> in our above <code>TodoApp</code> example are bound to interactive UI controls (<code>Switch</code> and <code>TextBox</code> respectively).</p>
+<pre><code class="language-XML">&lt;Switch Dock=&quot;Right&quot; Value=&quot;{isDone}&quot;&gt;
+</code></pre>
+<p>By default, this creates a two-way data binding to the model. If the user manipulates the control, the model is updated, and vice versa. Derived properties are automatically re-calculated.</p>
+<p>You can disable two-way data binding by adding <code>Read</code> to the binding:</p>
+<pre><code class="language-XML">&lt;Switch Dock=&quot;Right&quot; Value=&quot;{Read isDone}&quot; &gt;
+</code></pre>
+<p>You also two-way-bind to <em>derived state</em> by adding a corresponding <code>set</code> method for your <code>get</code> methods:</p>
+<pre><code class="language-JS">get radians() {
+	return this.degrees / 180 * Math.PI
+}
+set radians(value) {
+	this.degrees = value / Math.PI * 180
+}
+</code></pre>
+<h2 id="splitting-into-files-and-folders">Splitting into files and folders</h2>
+<p>You can safely split your FuseJS code into as many files and folders you want, and use EcmaScript6 <code>import</code>/<code>export</code> syntax to stitch it back together. It is recommended to do so on a class-by-class basis, so each class can be tested in isolation.</p>
+<p><code>Model/TodoItem.js</code></p>
+<pre><code class="language-JS">export default class TodoItem {
+	constructor(description) {
+		this.description = description
+		this.isDone = false
+	}
+}
+</code></pre>
+<pre><code class="language-JS">import TodoItem from './TodoItem'
+
+export default class TodoList {
+	...
+</code></pre>
+<p><code>TodoApp.ux</code></p>
+<pre><code class="language-XML">&lt;App Model=&quot;Model/TodoList&quot;&gt;
+</code></pre>
+<p>A typical project structure may look like this:</p>
+<pre><code>Assets/
+	done.png
+Model/
+	TodoItem.js
+	ToodList.js
+Components/
+	MyComponent.js
+	MyComponent.ux
+Services/
+	NavigationService.js
+Pages/
+	TodoListPage.ux
+	TodoListPage.js
+TodoApp.ux
+Todo.unoproj
+</code></pre>
+<p>You can learn more about <em>pages</em>, <em>services</em> and <em>components</em> in the sections below.</p>
+<h2 id="app-navigation">App navigation</h2>
+<p>FuseJS greatly simplifies app navigation in Fuse (compared to using <code>Router</code>) by moving all the navigation state into the app model (state container). You can express any complex transition by simply manipulating the variables that represent the navigation state as you want.</p>
+<blockquote>
+<p>Although not needed or recommended, you <em>can</em> still use the <code>Router</code> in combination with FuseJS. Read more in the <code>Router</code> docs.</p>
+</blockquote>
+<h3 id="page-models">Page models</h3>
+<p>For each page, we create a class to hold the state for that page. We can inject any dependencies the page needs to the class constructor.</p>
+<p>As an example, let's create a new page class that can display details about a particular todo, and some relevant derived stats.</p>
+<p><code>Pages/TodoItemPage.js</code></p>
+<pre><code class="language-JS">export default class TodoItemPage {
+	constructor(todoItem, todoList) {
+		this.todoItem = todoItem
+		this.todoList = todoList
+	}
+
+	get label() {
+		return this.todoItem.description
+	}
+
+	get isDone() {
+		return this.todoItem.isDone
+	}
+
+	// Computes a list of other todos that needs doing 
+	// or is done (depending on what this one is)
+	get similarTodos() {
+		return this.todoList.filter(x =&gt; x.isDone === this.todoItem.isDone)
+	}
+}
+</code></pre>
+<h3 id="page-stacks-hierarchical-navigation">Page stacks (hierarchical navigation)</h3>
+<p>A common way to structure navigation in an app is as a <em>stack</em> of pages, where pages can be <em>pushed</em> (when we <em>go to</em> a page)  and <em>popped</em> (when we <em>go back</em>).</p>
+<p>In FuseJS we represent a page stack with a simple array. We initialize the array with the default page.</p>
+<p><code>TodoApp.js</code></p>
+<pre><code class="language-JS">import TodoList from 'Models/TodoList'
+import TodoListPage from 'Pages/TodoListPage'
+import TodoItemPage from 'Pages/TodoItemPage'
+
+export class TodoApp {
+	constructor() {
+		this.todoList = new TodoList()
+		this.pages = [ new TodoListPage(this.todoList) ]
+	}
+
+	gotoTodo(e) {
+		this.pages.push(new TodoItemPage(e.data, this.todoList))
+	}
+
+	goBack() {
+		this.pages.pop()
+	}
+}
+</code></pre>
+<p>By linking the <code>pages</code> array to a <code>Navigator</code>'s <code>Pages</code> property, we have a working navigation system:</p>
+<pre><code class="language-XML">&lt;App Model=&quot;TodoApp&quot;&gt;
+	&lt;Navigator Pages=&quot;{pages}&quot;&gt;
+		&lt;TodoListPage ux:Template=&quot;TodoListPage&quot; /&gt;
+		&lt;TodoItemPage ux:Template=&quot;TodoItemPage&quot; /&gt;
+	&lt;/Navigator&gt;
+&lt;/App&gt;
+</code></pre>
+<p>The appropriate <code>ux:Template</code> is chosen based on the name of the ES6 class.</p>
+<p>We can now create a corresponding view for <code>TodoItemPage.ux</code> that allows us to navigate &quot;deeper&quot; into related todos:</p>
+<p><code>Pages/TodoItemPage.ux</code></p>
+<pre><code class="language-XML">&lt;Page ux:Class=&quot;TodoItemPage&quot;&gt;
+	&lt;StackPanel&gt;
+		&lt;Text&gt;{label}&lt;/Text&gt;
+		&lt;Text&gt;{isDone ? 'This todo is done' : 'This todo needs doing'}&lt;Text&gt;
+		&lt;Button Text=&quot;Go back&quot; Clicked=&quot;{goBack}&quot; /&gt;
+		
+		&lt;Text Margin=&quot;0,20,0,0&quot;&gt;Other things that {isDone ? 'is done' : 'needs doing'}:&lt;/Text&gt;
+		&lt;Each Items=&quot;{similarTodos}&quot;&gt;
+			&lt;Button Clicked=&quot;{gotoTodo}&quot; Text=&quot;{description}&quot;&gt;
+		&lt;/Each&gt;
+	&lt;/StackPanel&gt;
+&lt;/Page&gt;
+</code></pre>
+<p>We can navigate back to the default state (or any other state) from anywhere by simply rewriting the <code>pages</code> array to something appropriate:</p>
+<pre><code class="language-JS">goHome() {
+	this.pages = [ new TodoListPage(this.todoList) ]
+}
+</code></pre>
+<h3 id="page-lists-linear-navigation">Page lists (linear navigation)</h3>
+<p>You can also navigate linearly among a set of pages by using a <code>PageControl</code> and a plain array of pages:</p>
+<pre><code class="language-JS">this.pages = [ new HomePage(), new ContactsPage(), new SettingsPage() ]
+</code></pre>
+<pre><code class="language-XML">&lt;PageControl Pages=&quot;{pages}&quot;&gt;
+	&lt;HomePage ux:Template=&quot;HomePage&quot; /&gt;
+	&lt;ContactsPage ux:Template=&quot;ContactsPage&quot; /&gt;
+	&lt;SettingsPage ux:Template=&quot;SettingsPage&quot; /&gt;
+&lt;/PageControl&gt;
+</code></pre>
+<h3 id="multi-level-navigation">Multi-level navigation</h3>
+<p>You can create multi-level navigation by using <code>pages</code>-arrays within pages and nest navigators and page controls arbitrarily.</p>
+<h2 id="component-models-advanced">Component models (advanced)</h2>
+<p>Ideally, all your components (<code>ux:Class</code>'es) should be stateless; pure UX markup and no JavaScript. The state is fed into the component from the state container through its UX properties. However, some complex components, like forms or advanced pickers, may require internal state.</p>
+<p>To create a component with internal state, you can simply set the <code>Model</code> property on any visual UX element:</p>
+<p><code>Components/MyCompontent.ux</code></p>
+<pre><code class="language-XML">&lt;StackPanel ux:Class=&quot;MyComponent&quot; Model=&quot;Components/MyComponent&quot;&gt;
+	...
+&lt;/StackPanel&gt;
+</code></pre>
+<p>This looks for <code>Components/MyComponent.js</code> and instantiates either the exported <code>default</code> class. Note that <code>Model</code> paths are <em>not</em> relative to the UX file.</p>
+<h3 id="accessing-the-view">Accessing the view</h3>
+<h4 id="modelargs">ModelArgs</h4>
+<p>Component models can take a comma-separated list of arguments from UX, using the <code>ModelArgs</code> property.
+These are passed on to your model's constructor.</p>
+<pre><code class="language-xml">&lt;Panel ux:Class=&quot;MyComponent&quot; Model=&quot;Components/MyComponent&quot; ModelArgs=&quot;router, scrollView&quot;&gt;
+	&lt;Router ux:Dependency=&quot;router&quot; /&gt;
+	&lt;ScrollView ux:ame=&quot;scrollView&quot; /&gt;
+&lt;/Panel&gt;
+</code></pre>
+<p>These are then available in your model class' constructor:</p>
+<pre><code class="language-js">export default class MyComponent {
+	constructor(router, scrollView) {
+		this.router = router;
+		this.scrollView = scrollView;
+	}
+}
+</code></pre>
+<blockquote class="callout-warn">
+<p><em>Warning:</em> The JavaScript module you specify using the <code>Model</code> attribute will be re-evaluated every time one of the <code>ModelArgs</code> change.</p>
+</blockquote>
+<h4 id="automatic-ux-property-binding">Automatic ux:Property binding</h4>
+<p>Inside component models, we can also access any user-defined <code>ux:Property</code> on our component.</p>
+<p>Say, for instance, that our component has a <code>Title</code> property:</p>
+<p><code>Components/MyComponent.ux</code></p>
+<pre><code class="language-xml">&lt;StackPanel ux:Class=&quot;MyComponent&quot; Model=&quot;Components/MyComponent&quot;&gt;
+	&lt;string ux:Property=&quot;Title&quot; /&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<p>To use this property inside our model class, we must first declare it in our constructor, thereby giving it a default value.</p>
+<blockquote>
+<p><strong>Note:</strong> Since Fuse runs JavaScript on a separate thread, the constructor can only assign a <em>default value</em> to the UX property. Its effective value will not be available until sometime after our constructor has been called.
+If we give the property a default value in UX, or one is explicitly set when instantiating the component, that value will be used instead of the value provided from JavaScript.</p>
+<p>Unfortunately, it is currently not possible to wait for the value of a UX property to be ready. This problem will be addressed in an upcoming release.</p>
+</blockquote>
+<p><code>Components/MyComponent.js</code></p>
+<pre><code class="language-js">export default class MyComponent {
+	constructor() {
+		this.Title = &quot;&quot;;
+	}
+}
+</code></pre>
+<p>We can now read and write to the <code>ux:Property</code> by accessing the corresponding field on our model:</p>
+<p><code>Components/MyComponent.js</code></p>
+<pre><code class="language-js">export class MyComponent {
+	constructor() {
+		this.Title = &quot;&quot;;
+	}
+
+	get label() {
+		return &quot;The title is: &quot; + this.Title
+	}
+
+	changeTitle() {
+		this.Title = &quot;Different title&quot;
+	}
+}
+</code></pre>
+<p><code>Components/MyComponent.ux</code></p>
+<pre><code class="language-xml">&lt;StackPanel ux:Class=&quot;MyComponent&quot; Model=&quot;Components/MyComponent&quot;&gt;
+	&lt;string ux:Property=&quot;Title&quot; /&gt;
+	&lt;Text Value=&quot;{label}&quot; /&gt;
+	&lt;Button Clicked=&quot;{changeTitle}&quot; /&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Responsive layout | fuse X</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+    <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <link rel="shortcut icon" href="https://fuse-x.com/favicon.ico?1602518038">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180445579-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180445579-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  </head>
+
+  <body data-spy="scroll" data-target="#toc" data-offset="73">
+
+    <div id="menu-wrapper">
+      <header class="site-header sticky-top" role="banner">
+        <iframe id="menu-iframe" src="https://fuse-x.com/index.php/docs/menu" scrolling="no"></iframe>
+      </header>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <div class="sticky">
+            <div class="sticky-search">
+              <form id="search">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+              </form>
+            </div>
+            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+	<li>
+		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
+	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+		<li>
+			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse Studio</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/feature-overview.html" data-menu="feature-overview"><span>Feature overview</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#tutorial" data-toggle="collapse"><span>Tutorial</span></a>
+		<ul id="tutorial" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/tutorial.html" data-menu="tutorial"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/edit-hike-view.html" data-menu="edit-hike-view"><span>Step 1: Edit Hike view</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/multiple-hikes.html" data-menu="multiple-hikes"><span>Step 2: Multiple hikes</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splitting-up-components.html" data-menu="splitting-up-components"><span>Step 3: Splitting up components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/navigation-and-routing.html" data-menu="navigation-and-routing"><span>Step 4: Navigation and routing</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/mock-backend.html" data-menu="mock-backend"><span>Step 5: Mocking our Backend</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/look-and-feel.html" data-menu="look-and-feel"><span>Step 6: Tweaking the look/feel</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/splash-screen.html" data-menu="splash-screen"><span>Step 7: Splash screen</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/tutorial-models/final-thoughts.html" data-menu="final-thoughts"><span>Step 8: Final thoughts</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#development" data-toggle="collapse"><span>Development</span></a>
+		<ul id="development" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+			<li>
+				<a href="#ux_markup" data-toggle="collapse"><span>UX Markup</span></a>
+			<ul id="ux_markup" class="list-unstyled outline-nav collapse outline-nav-level-3 show">
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/ux-markup.html" data-menu="ux-markup"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/componentization.html" data-menu="componentization"><span>Componentization</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/responsive-layout.html" data-menu="responsive-layout" class="active"><span>Responsive Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/layout/safe-layout.html" data-menu="safe-layout"><span>Safe Layout</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/declarative-animation.html" data-menu="declarative-animation"><span>Declarative animation</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse-for-designers.html" data-menu="fuse-for-designers"><span>Fuse for designers</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/structuring-app-resources.html" data-menu="structuring-app-resources"><span>Structuring app resources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/basics/preview-and-export.html" data-menu="preview-and-export"><span>Preview and export</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/literals.html" data-menu="literals"><span>Literals</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/expressions.html" data-menu="expressions"><span>Expressions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/names.html" data-menu="names"><span>Names (ux:Name)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/classes.html" data-menu="classes"><span>Classes (ux:Class)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/dependencies.html" data-menu="dependencies"><span>Dependencies (ux:Dependency)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/properties.html" data-menu="properties"><span>Properties (ux:Property)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/resources.html" data-menu="resources"><span>Resources (ux:Key)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/globals.html" data-menu="globals"><span>Globals (ux:Global)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/templates.html" data-menu="templates"><span>Templates (ux:Template)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/ux-markup/binding-and-auto-bind.html" data-menu="binding-and-auto-bind"><span>Binding (ux:Binding &amp; ux:AutoBind)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/testing/testing.html" data-menu="testing"><span>Testing (ux:Test)</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#components" data-toggle="collapse"><span>Built-in Components</span></a>
+			<ul id="components" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="#primitives" data-toggle="collapse"><span>Primitives</span></a>
+				<ul id="primitives" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/primitives/primitives.html" data-menu="primitives"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/text.html" data-menu="text"><span>Text</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/rectangle.html" data-menu="rectangle"><span>Rectangle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/circle.html" data-menu="circle"><span>Circle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/curve.html" data-menu="curve"><span>Curve</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/controls/curvepoint.html" data-menu="curvepoint"><span>CurvePoint</span></a>
+						</li>
+					</ul>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/path.html" data-menu="path"><span>Path</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/image.html" data-menu="image"><span>Image</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/video.html" data-menu="video"><span>Video</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/playsound.html" data-menu="playsound"><span>Sound</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#controls" data-toggle="collapse"><span>Controls</span></a>
+				<ul id="controls" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/control.html" data-menu="control"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/button.html" data-menu="button"><span>Button</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textinput.html" data-menu="textinput"><span>TextInput</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/textview.html" data-menu="textview"><span>TextView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/slider.html" data-menu="slider"><span>Slider</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/switch.html" data-menu="switch"><span>Switch</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/cameraviewbase.html" data-menu="cameraviewbase"><span>CameraView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/mapview.html" data-menu="mapview"><span>MapView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/webview.html" data-menu="webview"><span>WebView</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/nativeviewhost.html" data-menu="nativeviewhost"><span>NativeViewHost</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/graphicsview.html" data-menu="graphicsview"><span>GraphicsView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#layouts" data-toggle="collapse"><span>Layouts</span></a>
+				<ul id="layouts" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/layout/layout.html" data-menu="layout"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/elements/element.html" data-menu="element"><span>Element</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/panel.html" data-menu="panel"><span>Panel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/stackpanel.html" data-menu="stackpanel"><span>StackPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/dockpanel.html" data-menu="dockpanel"><span>DockPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/grid.html" data-menu="grid"><span>Grid</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/wrappanel.html" data-menu="wrappanel"><span>WrapPanel</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/columnlayout.html" data-menu="columnlayout"><span>ColumnLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/layouts/circlelayout.html" data-menu="circlelayout"><span>CircleLayout</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/scrollview.html" data-menu="scrollview"><span>ScrollView</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#navigation" data-toggle="collapse"><span>Navigation</span></a>
+				<ul id="navigation" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/navigation/navigation.html" data-menu="navigation"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/page.html" data-menu="page"><span>Page</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/pagecontrol.html" data-menu="pagecontrol"><span>PageControl</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/navigation/router.html" data-menu="router"><span>Router</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/controls/navigator.html" data-menu="navigator"><span>Navigator</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/triggers/transition.html" data-menu="transition"><span>Transitions</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#alive" data-toggle="collapse"><span>Alive UX Kit</span></a>
+				<ul id="alive" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/alive/alive.html" data-menu="alive"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive.html" data-menu="alive"><span>Components</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/alive/themes.html" data-menu="themes"><span>Themes</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#charting" data-toggle="collapse"><span>Charting</span></a>
+				<ul id="charting" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/charting/charting.html" data-menu="charting"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plot.html" data-menu="plot"><span>Plot</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/dataseries.html" data-menu="dataseries"><span>DataSeries</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotaxis.html" data-menu="plotaxis"><span>PlotAxis</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotdata.html" data-menu="plotdata"><span>PlotData</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotpoint.html" data-menu="plotpoint"><span>PlotPoint</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotbar.html" data-menu="plotbar"><span>PlotBar</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/charting/plotcurvepoint.html" data-menu="plotcurvepoint"><span>PlotCurvePoint</span></a>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#animation" data-toggle="collapse"><span>Triggers &amp; Animation</span></a>
+			<ul id="animation" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/trigger.html" data-menu="trigger"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/transform.html" data-menu="transform"><span>Transforms</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/gestures/transformgesture.html" data-menu="transformgesture"><span>Gestures</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/animations/animator.html" data-menu="animator"><span>Animators</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/timeline.html" data-menu="timeline"><span>Timeline</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/actions/triggeraction.html" data-menu="triggeraction"><span>Actions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/selection/selection.html" data-menu="selection"><span>Selection</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/stategroup.html" data-menu="stategroup"><span>StateGroups</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/controls/multilayoutpanel.html" data-menu="multilayoutpanel"><span>MultiLayoutPanel</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/triggers/busy.html" data-menu="busy"><span>Busy</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#effects" data-toggle="collapse"><span>Effects</span></a>
+			<ul id="effects" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/effects/effects.html" data-menu="effects"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/dropshadow.html" data-menu="dropshadow"><span>DropShadow</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/blur.html" data-menu="blur"><span>Blur</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/effects/halftone.html" data-menu="halftone"><span>Halftone</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#resources" data-toggle="collapse"><span>Resources</span></a>
+			<ul id="resources" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/uno/ux/resource.html" data-menu="resource"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/font.html" data-menu="font"><span>Fonts</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/resources/imagesource.html" data-menu="imagesource"><span>Image sources</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/bundle.html" data-menu="bundle"><span>Bundled files</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-import.html" data-menu="sketch-import"><span>Import from Sketch</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/sketch-symbol-import.html" data-menu="sketch-symbol-import"><span>Sketch symbols (Beta)</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/assets/iconfont-import.html" data-menu="iconfont-import"><span>Import icon fonts</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#scripting" data-toggle="collapse"><span>Scripting &amp; Data Binding</span></a>
+			<ul id="scripting" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/scripting.html" data-menu="scripting"><span>Introduction</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fuse/reactive/javascript.html" data-menu="javascript"><span>FuseJS</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/fusejs-beta/fusejs.html" data-menu="fusejs"><span>Model API</span></a>
+				</li>
+				<li>
+					<a href="#fusejs" data-toggle="collapse"><span>FuseJS (JavaScript) APIs</span></a>
+				<ul id="fusejs" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/polyfills.html" data-menu="polyfills"><span>Polyfills</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/eventemitter.html" data-menu="eventemitter"><span>EventEmitter</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/filesystem/filesystemmodule.html" data-menu="filesystemmodule"><span>FileSystem</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/storage/storagemodule.html" data-menu="storagemodule"><span>Storage</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/bundle.html" data-menu="bundle"><span>Bundle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/lifecycle.html" data-menu="lifecycle"><span>Lifecycle</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/interapp.html" data-menu="interapp"><span>InterApp</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/share/sharemodule.html" data-menu="sharemodule"><span>Share</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/http.html" data-menu="http"><span>HTTP</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/backend/rest-apis.html" data-menu="rest-apis"><span>Working with REST APIs</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/environment.html" data-menu="environment"><span>Environment</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/phone.html" data-menu="phone"><span>Phone</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/camera/camera.html" data-menu="camera"><span>Camera</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/cameraroll/cameraroll.html" data-menu="cameraroll"><span>CameraRoll</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/vibration/vibrationmodule.html" data-menu="vibrationmodule"><span>Vibration</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/geolocation/geolocation.html" data-menu="geolocation"><span>GeoLocation</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/pushnotifications/push.html" data-menu="push"><span>Push notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/localnotifications/localnotify.html" data-menu="localnotify"><span>Local notifications</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/sensor/sensormodule.html" data-menu="sensormodule"><span>Sensors</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/base64.html" data-menu="base64"><span>Base64</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/fusejs/timermodule.html" data-menu="timermodule"><span>Timer</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/imagetools/imagetools.html" data-menu="imagetools"><span>ImageTools</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/third-party-modules.html" data-menu="third-party-modules"><span>Third-party modules</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="#observable" data-toggle="collapse"><span>Observables API</span></a>
+				<ul id="observable" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable.html" data-menu="observable"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-api.html" data-menu="observable-api"><span>Full API reference</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fusejs/observable-patterns.html" data-menu="observable-patterns"><span>Patterns</span></a>
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/scripting/debugging.html" data-menu="debugging"><span>Debugging</span></a>
+				</li>
+				<li>
+					<a href="#databinding" data-toggle="collapse"><span>Data Binding</span></a>
+				<ul id="databinding" class="list-unstyled outline-nav collapse outline-nav-level-4">
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/databinding.html" data-menu="databinding"><span>Introduction</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/each.html" data-menu="each"><span>Each</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/with.html" data-menu="with"><span>With</span></a>
+					</li>
+					<li>
+						<a href="https://docs.fuse-x.com/fuse/reactive/match.html" data-menu="match"><span>Match</span></a>
+					<ul class="list-unstyled outline-nav collapse outline-nav-level-5">
+						<li>
+							<a href="https://docs.fuse-x.com/fuse/reactive/case.html" data-menu="case"><span>Case</span></a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#integration" data-toggle="collapse"><span>Platform Integration</span></a>
+		<ul id="integration" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/xcode-and-android-studio-integration/tutorial.html" data-menu="tutorial"><span>Add Fuse to existing App</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-interop.html" data-menu="native-interop"><span>Native interop (Uno)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-ux-components.html" data-menu="native-ux-components"><span>Native UX components</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/native-js-modules.html" data-menu="native-js-modules"><span>Native JS modules</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/foreign-code.html" data-menu="foreign-code"><span>Foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/using-third-party-sdks.html" data-menu="using-third-party-sdks"><span>Using 3rd party SDKs</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/facebook-login.html" data-menu="facebook-login"><span>Example Facebook login using foreign code</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/native-interop/build-settings.html" data-menu="build-settings"><span>Build settings</span></a>
+			</li>
+			<li>
+				<a href="#integration_android" data-toggle="collapse"><span>Android Specifics</span></a>
+			<ul id="integration_android" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/gradle-support.html" data-menu="gradle-support"><span>Gradle Support</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-permissions.html" data-menu="android-permissions"><span>Android permissions</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/unolibs/activity-utils.html" data-menu="activity-utils"><span>Activity utils</span></a>
+				</li>
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/android-start-activity.html" data-menu="android-start-activity"><span>Starting an Android Activity</span></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+				<a href="#integration_ios" data-toggle="collapse"><span>IOS Specifics</span></a>
+			<ul id="integration_ios" class="list-unstyled outline-nav collapse outline-nav-level-3">
+				<li>
+					<a href="https://docs.fuse-x.com/native-interop/ios-capabilities.html" data-menu="ios-capabilities"><span>iOS Capabilities</span></a>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#technical-corner" data-toggle="collapse"><span>Technical corner</span></a>
+		<ul id="technical-corner" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/technical-corner.html" data-menu="technical-corner"><span>Introduction</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/fuse-protocol.html" data-menu="fuse-protocol"><span>Fuse plugin API</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/preview-and-export/preview-details.html" data-menu="preview-details"><span>How preview works</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/technical-corner/uxl-handbook.html" data-menu="uxl-handbook"><span>UXL handbook</span></a>
+			</li>
+		</ul>
+		</li>
+		<li>
+			<a href="#references" data-toggle="collapse"><span>References</span></a>
+		<ul id="references" class="list-unstyled outline-nav collapse outline-nav-level-2">
+			<li>
+				<a href="https://docs.fuse-x.com/basics/uno-projects.html" data-menu="uno-projects"><span>Project Reference (.unoproj file)</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/full-ux-class-reference.html" data-menu="full-ux-class-reference"><span>Full UX Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/root-ns.html" data-menu="index"><span>Uno Class Reference</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/basics/faq.html" data-menu="faq"><span>FAQ</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/packages.html" data-menu="packages"><span>Community Packages</span></a>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+          </div>
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
+              <h2 id="responsive-layout">Responsive layout</h2>
+<p>When making apps for a wide range of mobile devices, we're facing a huge number of different screen sizes, pixel densities and aspect ratios. How do you make a fully responsive app that adapts to these constraints? Fuse solves the challenge by using a basic set of layout rules and triggers, which you should know and understand in order to be effective in Fuse.</p>
+<h3 id="units-of-measurement">Units of measurement</h3>
+<p>There are several units of measurement you can use to describe element dimensions. The default unit is points (<code>pt</code>). The advantage of using points is that an element with explicit dimensions appears the same size on screens of different pixel densities. There is also a percentage unit (<code>%</code>), which can be used to define the size of an element to be a percentage of its available size. For the odd case where you need to specify the exact amount of pixels you want an element to occupy, we have the pixel (<code>px</code>) unit. Note however that when using this unit of measurement, elements will have different sizes on different screen densities.</p>
+<p>You can specify the unit of a number by appending either pt, px or % (note that we don't need to specify <code>pt</code> as that becomes the unit if we only specify the number):</p>
+<pre><code class="language-xml">&lt;Panel Width=&quot;50%&quot; Heigh=&quot;100px&quot; /&gt;
+</code></pre>
+<h3 id="using-images-in-responsive-layout">Using images in responsive layout</h3>
+<p>When using images in Fuse apps, you should try to make them match the intended target size on screen. Scaling the image up or down significantly will likely result in visible aliasing artefacts. You should use <code>MultiDensityImageSource</code> to supply several versions of the same image for use on screens of different pixel densities. This lets us avoid up-/downscaling in the cases where the image would otherwise not match its intended size on screen as a result of changes in pixel density between screens.</p>
+<h3 id="basic-building-blocks">Basic building blocks</h3>
+<p>Fuse comes with an extremly powerful layout system that lets you create UIs that fit on many different screen sizes and aspect ratios. UIs in Fuse are created by a hierarchy of various <code>Panel</code> types, as well as other primitives like <code>Rectangle</code>, <code>Circle</code> and <code>Image</code>. The various <code>Panel</code> types, like <code>StackPanel</code>, <code>Grid</code> and <code>DockPanel</code>, are used to position and size multiple elements relative to each other as well as relative to the available space.</p>
+<h3 id="available-space-concept">Available space concept</h3>
+<p>Let's start with the concept of <strong>available space</strong>. As you might expect, when you have an empty application, the available space is the whole screen of the mobile device, including the area behind status and action bars:</p>
+<pre><code class="language-xml">&lt;App&gt;
+&lt;/App&gt;
+</code></pre>
+<p>Now, most of the visual elements placed inside of the app tag will by default try to be as big as possible and fill up all available space (there are exceptions, such as <code>StackPanel</code>):</p>
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;Panel&gt;
+    &lt;/Panel&gt;
+&lt;/App&gt;
+</code></pre>
+<p>However, sometimes we don't want our elements to occupy all available space, but instead subdivide that space and distribute it amongst several elements:</p>
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;DockPanel&gt;
+        &lt;Panel Dock=&quot;Top&quot; Height=&quot;56&quot; Color=&quot;Blue&quot; /&gt;
+        &lt;Panel Dock=&quot;Bottom&quot; Height=&quot;56&quot; Color=&quot;Green&quot; /&gt;
+        &lt;Panel Color=&quot;Yellow&quot;&gt;
+        &lt;/Panel&gt;
+    &lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p>In this example, the <code>DockPanel</code> fills up all available space, then inside it is a 56pt tall blue <code>Panel</code> that is docked to the top edge. The green <code>Panel</code> is also 56pt high, but it is docked to the bottom edge. Since there are no horizontal constraints on the two panels (like the <code>Width</code> property for example), they stretch to fill the full width of the available space, which in this case is the full width of the screen.</p>
+<p>The yellow <code>Panel</code> automatically takes up the <strong>remaining available space</strong>, which is now the whole area between the blue and green panels.</p>
+<p>Assigning a <code>Dock</code> property to an element within a <code>DockPanel</code> ensures it takes up as little space as possible either vertically (when docked to the top or bottom) or horizontally (when docked to the left of right).</p>
+<h3 id="alignment-affects-layout">Alignment affects layout</h3>
+<p>With the <strong>available space</strong> concept settled firmly, let's move on and throw <code>Alignment</code> into the mix!</p>
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;DockPanel&gt;
+        &lt;Panel Dock=&quot;Top&quot; Height=&quot;56&quot; Color=&quot;Blue&quot; /&gt;
+        &lt;Panel Dock=&quot;Bottom&quot; Height=&quot;56&quot; Color=&quot;Green&quot; /&gt;
+        &lt;Panel Color=&quot;Yellow&quot;&gt;
+        	&lt;Panel Color=&quot;Red&quot; Alignment=&quot;Top&quot; Height=&quot;16&quot; /&gt;
+        &lt;/Panel&gt;
+    &lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/alignment_affects_layout_1.png" alt="alignment_example_1"></p>
+<p>In this case, the nested red <code>Panel</code> with <code>Alignment=&quot;Top&quot;</code> set will take up only 16pt vertically, and be aligned to the top of the yellow <code>Panel</code>. When we assign an <code>Alignment</code> to an element, it tries to stick to the particular side of its parent and take up as little space in the respective direction as possible. The red <code>Panel</code> still stretches to fill the full width of the available space since there are no horizontal constraints set on it.</p>
+<blockquote class="callout-info">
+<p>At this point you might wonder what the difference between &quot;docking&quot; something in a <code>DockPanel</code> and aligning something is. Although the two have similar effects, <strong>the most important difference is that aligning something does not subdivide its parents available space.</strong> What we mean by this is that the red <code>Panel</code> in the previous example does not &quot;spend&quot; its parent available space (as was done by the blue and green panels), it is instead just a way of declaring where panel should appear in the case where it is smaller (or bigger) than its parent in one or more dimensions.</p>
+</blockquote>
+<p>If we remove the explicit <code>Height</code> on the red <code>Panel</code> and add some child elements with non-zero dimensions inside of it, the children will push the parent dimensions to accommodate the tallest child, the 200pt high maroon <code>Panel</code> in this case:</p>
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;DockPanel&gt;
+        &lt;Panel Dock=&quot;Top&quot; Height=&quot;56&quot; Color=&quot;Blue&quot; /&gt;
+        &lt;Panel Dock=&quot;Bottom&quot; Height=&quot;56&quot; Color=&quot;Green&quot; /&gt;
+        &lt;Panel Color=&quot;Yellow&quot;&gt;
+        	&lt;Panel Color=&quot;Red&quot; Alignment=&quot;Top&quot;&gt;
+        		&lt;Panel Color=&quot;Teal&quot; Height=&quot;20&quot; /&gt;
+        		&lt;Panel Color=&quot;Maroon&quot; Height=&quot;200&quot; /&gt;
+        	&lt;/Panel&gt;
+        &lt;/Panel&gt;
+    &lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/alignment_affects_layout_2.png" alt="alignment_example_2"></p>
+<hr>
+<p>Other <code>Panel</code> types behave slightly differently. For example, let's take a look at <code>StackPanel</code>:</p>
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;DockPanel&gt;
+        &lt;Panel Dock=&quot;Top&quot; Height=&quot;56&quot; Color=&quot;Blue&quot; /&gt;
+        &lt;Panel Dock=&quot;Bottom&quot; Height=&quot;56&quot; Color=&quot;Green&quot; /&gt;
+        &lt;Panel Color=&quot;Yellow&quot;&gt;
+        	&lt;StackPanel Color=&quot;Red&quot; Alignment=&quot;Top&quot;&gt;
+        		&lt;Panel Color=&quot;Teal&quot; Height=&quot;20&quot; /&gt;
+        		&lt;Panel Color=&quot;Maroon&quot; Height=&quot;200&quot; /&gt;
+        	&lt;/StackPanel&gt;
+        &lt;/Panel&gt;
+    &lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/alignment_affects_layout_3.png" alt="alignment_example_3"></p>
+<p>A vertical <code>StackPanel</code> stacks its children one after the other, and stretches to accommodate the combined height of all children. The red <code>StackPanel</code> in the example above is now 220 points high and aligned to the top of the yellow <code>Panel</code>. You can find more details on <code>StackPanel</code> behaviour in <a href="https://fuse-x.com/docs/fuse/controls/stackpanel">StackPanel docs</a>.</p>
+<p>It's worth noting that aside from <code>Alignment</code>, other visual properties have an effect on the layout calculation too. These include <code>Width</code>, <code>Height</code>, <code>MinWidth</code>, <code>MinHeight</code>, <code>MaxWidth</code>, <code>MaxHeight</code>, <code>X</code>, <code>Y</code>, <code>Margin</code>, <code>Padding</code> and a few more. When setting such properties, be sure to always test how your layout looks on different target devices.</p>
+<h3 id="list-of-commonly-used-layout-controls">List of commonly used layout controls</h3>
+<h4 id="dockpanel">DockPanel</h4>
+<p><code>DockPanel</code> is one of the most frequently used layout containers. It lets us dock elements to its sides, consuming that space in the process so that the next item being docked only considers the remaining space. See the <a href="https://fuse-x.com/docs/fuse/controls/dockpanel">DockPanel docs</a> for more details.</p>
+<p><img src="../media/responsive-layout/dockpanel_docking_explanation.png" alt="dockpanel_example"></p>
+<pre><code class="language-xml">&lt;DockPanel&gt;
+	&lt;Rect Dock=&quot;Left&quot; Color=&quot;Red&quot; Width=&quot;50&quot; /&gt;
+	&lt;Rect Dock=&quot;Top&quot; Color=&quot;Blue&quot; Height=&quot;100&quot; /&gt;
+	&lt;Rect Dock=&quot;Right&quot; Color=&quot;Green&quot; Width=&quot;100&quot; /&gt;
+	&lt;Rect Color=&quot;Yellow&quot; /&gt;
+&lt;/DockPanel&gt;
+</code></pre>
+<h4 id="stackpanel">StackPanel</h4>
+<p>As the name suggests, you want to use a <code>StackPanel</code> for stacking items. This is very useful when creating lists of items, but it's applicable in any situation when you need to stack elements either vertically or horizontally. We often use <code>StackPanel</code> when we don't know exactly how many items we need to display. The <code>StackPanel</code> can just grow to fit as many children as it is given (unlike the <code>DockPanel</code> for example). Because of this, a <code>StackPanel</code> can grow to become larger than its parent, overflowing its available size. See the <a href="https://fuse-x.com/docs/fuse/controls/stackpanel">StackPanel docs</a> for more details.</p>
+<pre><code class="language-xml">&lt;StackPanel Alignment=&quot;Top&quot; Margin=&quot;8&quot; ItemSpacing=&quot;4&quot;&gt;
+	&lt;Each Count=&quot;4&quot;&gt;
+		&lt;Panel Height=&quot;56&quot;&gt;
+			&lt;Text Value=&quot;The title of an item&quot; Alignment=&quot;Center&quot; Color=&quot;#fff&quot; /&gt;
+			&lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#18f&quot; CornerRadius=&quot;2&quot; /&gt;
+		&lt;/Panel&gt;
+	&lt;/Each&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/stackpanel_ex.png" alt="stackpanel_example"></p>
+<h4 id="grid">Grid</h4>
+<p><code>Grid</code> comes in handy when you need to build a responsive layout with flexible row or column sizes. By default, elements in a <code>Grid</code> are placed in the order they appear in UX, from left to right, top to bottom. However, you have full control over how a <code>Grid</code> behaves by using its properties <code>RowCount</code> and <code>ColumnCount</code>, or <code>Rows</code> and <code>Columns</code>. You can also explicitly tell each child to which row and column it should attach itself by using the <code>Row</code>, <code>Column</code>, <code>RowSpan</code> and <code>ColumnSpan</code> properties. See the <a href="https://fuse-x.com/docs/fuse/controls/grid">Grid docs</a> for more details.</p>
+<pre><code class="language-xml">&lt;Grid RowCount=&quot;2&quot; Columns=&quot;1*,2*&quot;&gt;
+	&lt;Panel Color=&quot;#18f&quot;&gt;
+		&lt;Text Value=&quot;Top 1/3&quot; Alignment=&quot;Center&quot; Color=&quot;#fff&quot; /&gt;
+	&lt;/Panel&gt;
+	&lt;Panel Color=&quot;#f81&quot;&gt;
+		&lt;Text Value=&quot;Top 2/3&quot; Alignment=&quot;Center&quot; Color=&quot;#fff&quot; /&gt;
+    &lt;/Panel&gt;
+	&lt;Panel ColumnSpan=&quot;2&quot; Color=&quot;#1f8&quot;&gt;
+		&lt;Text Value=&quot;Bottom half&quot; Alignment=&quot;Center&quot; /&gt;
+	&lt;/Panel&gt;
+&lt;/Grid&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/grid_ex.png" alt="grid_example"></p>
+<h4 id="wrappanel">WrapPanel</h4>
+<p>The <code>WrapPanel</code> is used when you need to lay out children one after another in a given orientation, and wrap around whenever you reach the end of the available space in a particular direction. By default it lays its children out horizontally, and wraps around vertically. See the <a href="https://fuse-x.com/docs/fuse/controls/wrappanel">WrapPanel docs</a> for more details.</p>
+<pre><code class="language-xml">&lt;App&gt;
+	&lt;WrapPanel&gt;
+		&lt;Panel Width=&quot;128&quot; Height=&quot;56&quot; Margin=&quot;4&quot; Color=&quot;#18f&quot; /&gt;
+		&lt;Panel Width=&quot;160&quot; Height=&quot;56&quot; Margin=&quot;4&quot; Color=&quot;#18f&quot; /&gt;
+		&lt;Panel Width=&quot;48&quot; Height=&quot;56&quot; Margin=&quot;4&quot; Color=&quot;#18f&quot; /&gt;
+		&lt;Panel Width=&quot;48&quot; Height=&quot;56&quot; Margin=&quot;4&quot; Color=&quot;#18f&quot; /&gt;
+		&lt;Panel Width=&quot;128&quot; Height=&quot;56&quot; Margin=&quot;4&quot; Color=&quot;#18f&quot; /&gt;
+	&lt;/WrapPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/wrappanel_ex.png" alt="wrappanel_example"></p>
+<h4 id="panel">Panel</h4>
+<p>A <code>Panel</code> is arguably the simplest container in Fuse. You want to use <code>Panel</code> when you want to position its children in the same area of available space without subdividing it like for example <code>DockPanel</code> does. Details can be found <a href="https://fuse-x.com/docs/fuse/controls/panel">here</a>.</p>
+<pre><code class="language-xml">&lt;Panel Height=&quot;56&quot; Margin=&quot;24,0&quot;&gt;
+	&lt;TextInput Value=&quot;Some text&quot; TextColor=&quot;#fff&quot; Margin=&quot;10&quot; /&gt;
+	&lt;Rectangle Color=&quot;#18f&quot; CornerRadius=&quot;2&quot; /&gt;
+&lt;/Panel&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/panel_ex.png" alt="panel_example"></p>
+<h4 id="scrollview">ScrollView</h4>
+<p>A <code>ScrollView</code> is generally used to display content that is bigger than the screen of the device. A prominent example are lists of items. Note that a <code>ScrollView</code> can only have a single visual child. Since <code>ScrollView</code> by default occupies the whole available space, we usually place a <code>StackPanel</code> inside it in order to make a scrollable list.</p>
+<pre><code class="language-xml">&lt;ScrollView&gt;
+	&lt;StackPanel Margin=&quot;8&quot; ItemSpacing=&quot;4&quot;&gt;
+		&lt;Each Count=&quot;24&quot;&gt;
+			&lt;Panel Height=&quot;56&quot;&gt;
+				&lt;Text Value=&quot;The title of an item&quot; Alignment=&quot;Center&quot; Color=&quot;#fff&quot; /&gt;
+				&lt;Rectangle Color=&quot;#18f&quot; CornerRadius=&quot;2&quot; /&gt;
+			&lt;/Panel&gt;
+		&lt;/Each&gt;
+	&lt;/StackPanel&gt;
+&lt;/ScrollView&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/scrollview_ex.png" alt="scrollview_example"></p>
+<h3 id="adapting-to-different-screen-sizes-and-orientations">Adapting to different screen sizes and orientations</h3>
+<p>When we're making cross-platform applications that target a broad range of device models, it makes sense to use the additional screen real estate you get when running on larger devices, such as tablets. It is also wise to adapt certain views to whether it is displayed in the portrait or landscape device orientation. Fuse has a set of triggers to handle this: <code>WhileWindowPortrait</code>, <code>WhileWindowLandscape</code> and <code>WhileWindowSize</code>. These can be combined to describe very detailed use cases. We will show you how in the next section!</p>
+<h3 id="hands-on">Hands-on</h3>
+<p>It's time we use what we've learnt so far and replicate a real-world app design in Fuse. As a popular example, let's take a look at how the Google Docs application behaves on different screens. There are of course many subtle details that change, but here we will replicate the basic structure of the app layout.</p>
+<p>On iPhone 6, it has two items in a row while in portrait, and changes that to 3 items when rotated to landscape.
+<img src="../media/responsive-layout/responsive-layout-iphone.png" alt="iPhone"></p>
+<p>On iPad, it has three items in a row while in portrait, and changes that to 5 items when rotated to landscape.
+<img src="../media/responsive-layout/responsive-layout-ipad.png" alt="iPad portrait"></p>
+<p>Let's start with the basic app structure. The first things we take care of are the status and bottom bars - we do not want our app content to be drawn behind them, so we put a <code>DockPanel</code> in the app and dock a <code>StatusBarBackground</code> and <code>BottomBarBackground</code> to its top and bottom. Further more, we set the background color of the status bar to the blue tone that's going to be used for the whole top section of the app.</p>
+<pre><code class="language-xml">&lt;App Background=&quot;#eee&quot;&gt;
+
+	&lt;!-- iOS specific status bar styling --&gt;
+	&lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
+	
+	&lt;DockPanel&gt;
+		&lt;StatusBarBackground Dock=&quot;Top&quot; Background=&quot;#4285f4&quot; /&gt;
+		&lt;BottomBarBackground Dock=&quot;Bottom&quot; /&gt;
+	&lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p>Next we add the blue top bar itself that holds our action buttons. Since we already have our parent <code>DockPanel</code>, we only need to specify <code>Dock=&quot;Top&quot;</code> on the element and give it a height, and it gets aligned to the very top of the available space, right below <code>StatusBarBackground</code>. We won't add any icons for now, but note that we conveniently made the element a <code>DockPanel</code> so you can easily dock things inside of it later.</p>
+<p>Then we add another empty <code>Panel</code> which automatically fills the remaining available space, and is the container that we will put the rest of our content in.</p>
+<pre><code class="language-xml">&lt;App Background=&quot;#eee&quot;&gt;
+
+	&lt;!-- iOS specific status bar styling --&gt;
+	&lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
+	
+	&lt;DockPanel&gt;
+		&lt;StatusBarBackground Dock=&quot;Top&quot; Background=&quot;#4285f4&quot; /&gt;
+		&lt;BottomBarBackground Dock=&quot;Bottom&quot; /&gt;
+
+		&lt;DockPanel Dock=&quot;Top&quot; Height=&quot;56&quot; Color=&quot;#4285f4&quot;&gt;
+			&lt;!-- this is the blue top bar that will hold the icons --&gt;
+		&lt;/DockPanel&gt;
+
+		&lt;Panel&gt;
+			&lt;!-- this fills the remaining available space --&gt;
+		&lt;/Panel&gt;
+
+	&lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/hand_on_1.png" alt="hands on 1"></p>
+<p>Looking back at the app screenshots, we see that the content area is scrollable, which means that we will have to use a <code>ScrollView</code>. However, there is this red &quot;plus&quot; button that should stay on top of the <code>ScrollView</code>, and <strong>not</strong> move with it as it scrolls. Because of that, we use a <code>Panel</code> as the parent of the content area, because it allows us to put its children on top of each other:</p>
+<pre><code class="language-xml">&lt;Panel&gt;
+	&lt;Circle Width=&quot;56&quot; Height=&quot;56&quot; Margin=&quot;16&quot; Color=&quot;#db4437&quot; Alignment=&quot;BottomRight&quot;&gt;
+		&lt;Shadow /&gt;
+	&lt;/Circle&gt;
+	&lt;ScrollView&gt;
+	&lt;/ScrollView&gt;
+&lt;/Panel&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/hand_on_2.png" alt="hands on 2"></p>
+<p>The scrollable content in the screenshots appears to be arranged in a grid formation with equally sized columns. It makes sense to use a <code>Grid</code> here, since that allows us to change the number of columns our content is going to be put into, and the <code>Grid</code> will adjust as necessary. As we outlined at the top, the number of columns will depend on the screen size of the device the app runs on.</p>
+<p>First we need to reserve some space on top of the <code>Grid</code> for a title and an ordering toggle that you can add later. To do that, we first put a <code>StackPanel</code> inside of the <code>ScrollView</code>. In the <code>StackPanel</code>, we put a 56 points tall <code>Panel</code> and the <code>Grid</code> that will hold the items. We specify our <code>Grid</code> to have 2 equally sized columns by default (using the <code>ColumnCount</code> property), and give it a <code>ux:Name</code> so we can refer to it later.</p>
+<pre><code class="language-xml">&lt;Panel&gt;
+
+	&lt;Circle Width=&quot;56&quot; Height=&quot;56&quot; Margin=&quot;16&quot; Color=&quot;#db4437&quot; Alignment=&quot;BottomRight&quot;&gt;
+		&lt;Shadow /&gt;
+	&lt;/Circle&gt;
+
+	&lt;ScrollView&gt;
+		&lt;StackPanel&gt;
+			&lt;Panel Height=&quot;56&quot; /&gt;
+			&lt;Grid ux:Name=&quot;itemGrid&quot; ColumnCount=&quot;2&quot; Margin=&quot;4&quot; CellSpacing=&quot;4&quot;&gt;
+			&lt;/Grid&gt;
+		&lt;/StackPanel&gt;
+	&lt;/ScrollView&gt;
+	
+&lt;/Panel&gt;
+</code></pre>
+<p>The next thing we want to do is to add some placeholder content for the items so that we can style them. To achieve that, we use the <code>Each</code> class. <code>Each</code> is most frequently used for data-binding to arrays of data, but in our case we'll use it as a tool to repeat the same UX multiple times using its <code>Count</code> property.</p>
+<p>Inside the <code>Each</code>, we want to define how a single &quot;box&quot;, that represents an item, looks like. The <code>Each</code> object will take care of creating 20 instances of it for us. What's tricky about the list items is that their size should adapt to the varying number of columns in the parent <code>Grid</code> as the screen size or orientation changes. This means that we can't set explicit <code>Width</code> or <code>Height</code> on them. Luckily, there's one thing that is certain: we know they need to stay square. We can achieve this by setting <code>BoxSizing=&quot;FillAspect&quot;</code> and <code>Aspect=&quot;1&quot;</code> on the item. This will stretch the item to fill the available space within the <code>Grid</code> cell that it gets assigned to.</p>
+<pre><code class="language-xml">&lt;Grid ux:Name=&quot;itemGrid&quot; ColumnCount=&quot;2&quot; Margin=&quot;4&quot; CellSpacing=&quot;4&quot;&gt;
+	&lt;Each Count=&quot;20&quot;&gt;
+		&lt;DockPanel BoxSizing=&quot;FillAspect&quot; Aspect=&quot;1&quot;&gt;
+		&lt;/DockPanel&gt;
+	&lt;/Each&gt;
+&lt;/Grid&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/hand_on_3.png" alt="hands on 3"></p>
+<p>Finally we add some content to the grid items. Note how we set <code>Layer=&quot;Background&quot;</code> on the <code>Rectangle</code> that serves as the white background of the item - this ensures that it is sent to the background and does not participate in the layout calculation done by its parent <code>DockPanel</code>.</p>
+<pre><code class="language-xml">&lt;Grid ux:Name=&quot;itemGrid&quot; ColumnCount=&quot;2&quot; Margin=&quot;4&quot; CellSpacing=&quot;4&quot;&gt;
+	&lt;Each Count=&quot;20&quot;&gt;
+		&lt;DockPanel BoxSizing=&quot;FillAspect&quot; Aspect=&quot;1&quot;&gt;
+			&lt;Panel Dock=&quot;Bottom&quot; Height=&quot;40&quot; Color=&quot;#fafafa&quot; Margin=&quot;1&quot;&gt;
+				&lt;Text Value=&quot;Title&quot; Alignment=&quot;CenterLeft&quot; Margin=&quot;8,0&quot; /&gt;
+			&lt;/Panel&gt;
+			&lt;Text Value=&quot;preview&quot; Alignment=&quot;Center&quot; TextColor=&quot;#bbb&quot; /&gt;
+			&lt;Rectangle Color=&quot;#fff&quot; Layer=&quot;Background&quot;&gt;
+				&lt;Stroke Width=&quot;1&quot; Color=&quot;#eaeaea&quot; /&gt;
+			&lt;/Rectangle&gt;
+		&lt;/DockPanel&gt;
+	&lt;/Each&gt;
+&lt;/Grid&gt;
+</code></pre>
+<p><img src="../media/responsive-layout/hand_on_4.png" alt="hands on 4"></p>
+<p>To make the basic app structure complete, we need to make the <code>Grid</code> adapt to various screen sizes and device orientations. Here we want to use the general approach of describing varying states as deviations from the rest state. Our rest state in this case is a phone in portrait orientation that has two items on each row in the <code>Grid</code>.</p>
+<p>The deviations we need to describe then are &quot;phone in landscape&quot;, &quot;tablet in portrait&quot; and &quot;tablet in landscape&quot;. We start by creating a new <code>WhileTablet</code> trigger that is going to evaluate to true when the screen size in any direction is larger than or equal to 600 points. We chose the number so that it matches <a href="https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints">Material design guidelines</a>.</p>
+<p>Then we couple the new <code>WhileTablet</code> trigger with <code>WhileWindowPortait</code> and <code>WhileWindowLandscape</code> to describe the &quot;how many items per row&quot; rules we set out at the top of the Hands-on section.</p>
+<pre><code class="language-xml">&lt;WhileWindowSize ux:Class=&quot;WhileTablet&quot; GreaterThan=&quot;599,1&quot; /&gt;
+
+&lt;WhileWindowPortrait&gt;
+	&lt;WhileTablet&gt;
+		&lt;Change itemGrid.ColumnCount=&quot;3&quot; /&gt;
+	&lt;/WhileTablet&gt;
+&lt;/WhileWindowPortrait&gt;
+
+&lt;WhileWindowLandscape&gt;
+	&lt;WhileTablet&gt;
+		&lt;Change itemGrid.ColumnCount=&quot;5&quot; /&gt;
+	&lt;/WhileTablet&gt;
+	&lt;WhileTablet Invert=&quot;true&quot;&gt;
+		&lt;Change itemGrid.ColumnCount=&quot;3&quot; /&gt;
+	&lt;/WhileTablet&gt;
+&lt;/WhileWindowLandscape&gt;
+</code></pre>
+<p>With that, our Google Docs app mockup is done. Take a look at the full code below, give it a go and see how it works on different devices!</p>
+<p><img src="../media/responsive-layout/hand_on_5.png" alt="hands on 5"></p>
+<pre><code class="language-xml">&lt;App Background=&quot;#eee&quot;&gt;
+	&lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
+
+	&lt;DockPanel&gt;
+
+		&lt;StatusBarBackground Dock=&quot;Top&quot; Background=&quot;#4285f4&quot; /&gt;
+		&lt;BottomBarBackground Dock=&quot;Bottom&quot; /&gt;
+
+		&lt;DockPanel Dock=&quot;Top&quot; Height=&quot;56&quot; Color=&quot;#4285f4&quot;&gt;
+			&lt;!-- this is the blue top bar that will hold the icons --&gt;
+		&lt;/DockPanel&gt;
+
+		&lt;Panel&gt;
+
+			&lt;Circle Width=&quot;56&quot; Height=&quot;56&quot; Margin=&quot;16&quot; Color=&quot;#db4437&quot; Alignment=&quot;BottomRight&quot;&gt;
+				&lt;Shadow /&gt;
+			&lt;/Circle&gt;
+
+			&lt;ScrollView&gt;
+				&lt;StackPanel&gt;
+					&lt;Panel Height=&quot;56&quot; /&gt;
+					&lt;Grid ux:Name=&quot;itemGrid&quot; ColumnCount=&quot;2&quot; Margin=&quot;4&quot; CellSpacing=&quot;4&quot;&gt;
+						&lt;Each Count=&quot;20&quot;&gt;
+							&lt;DockPanel BoxSizing=&quot;FillAspect&quot; Aspect=&quot;1&quot;&gt;
+								&lt;Panel Dock=&quot;Bottom&quot; Height=&quot;40&quot; Color=&quot;#fafafa&quot; Margin=&quot;1&quot;&gt;
+									&lt;Text Value=&quot;Title&quot; Alignment=&quot;CenterLeft&quot; Margin=&quot;8,0&quot; /&gt;
+								&lt;/Panel&gt;
+								&lt;Text Value=&quot;preview&quot; Alignment=&quot;Center&quot; TextColor=&quot;#bbb&quot; /&gt;
+								&lt;Rectangle Color=&quot;#fff&quot; Layer=&quot;Background&quot;&gt;
+									&lt;Stroke Width=&quot;1&quot; Color=&quot;#eaeaea&quot; /&gt;
+								&lt;/Rectangle&gt;
+							&lt;/DockPanel&gt;
+						&lt;/Each&gt;
+					&lt;/Grid&gt;
+				&lt;/StackPanel&gt;
+			&lt;/ScrollView&gt;
+			
+		&lt;/Panel&gt;
+
+		&lt;WhileWindowSize ux:Class=&quot;WhileTablet&quot; GreaterThan=&quot;599,1&quot; /&gt;
+
+		&lt;WhileWindowPortrait&gt;
+			&lt;WhileTablet&gt;
+				&lt;Change itemGrid.ColumnCount=&quot;3&quot; /&gt;
+			&lt;/WhileTablet&gt;
+		&lt;/WhileWindowPortrait&gt;
+
+		&lt;WhileWindowLandscape&gt;
+			&lt;WhileTablet&gt;
+				&lt;Change itemGrid.ColumnCount=&quot;5&quot; /&gt;
+			&lt;/WhileTablet&gt;
+			&lt;WhileTablet Invert=&quot;true&quot;&gt;
+				&lt;Change itemGrid.ColumnCount=&quot;3&quot; /&gt;
+			&lt;/WhileTablet&gt;
+		&lt;/WhileWindowLandscape&gt;
+
+	&lt;/DockPanel&gt;
+&lt;/App&gt;
+</code></pre>
+
+            </div>
+            <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
+              <nav id="toc" data-toggle="toc">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
+  </body>
+</html>
