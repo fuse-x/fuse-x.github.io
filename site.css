@@ -471,6 +471,11 @@ code:not([class]) {
     color: #ccc;
 }
 
+/* Keep sticky header sticky */
+html, body {
+    height: auto;
+}
+
 /*
  * Block quote styling for callouts
  */
