@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -737,8 +737,7 @@ fuse preview
 <pre><code class="language-json">  &quot;Includes&quot;: [
     &quot;*&quot;,
     &quot;**.js:FuseJS&quot;
-  ]
-</code></pre>
+  ]</code></pre>
 <p>The above basically means that all files in this folder and all its subfolders ending with <code>.js</code>, should be interpreted by FuseJS as files containing ES6 code, and should participate in automatic change detection (more on this a bit later).</p>
 <p>At this point, we're ready to add some code to our project.</p>
 <p>Lets start by adding a new <code>.js</code> file which, for now, we'll include all our apps logic in. Lets call it <code>App.js</code>, and put in the root folder of our project. We also export a class called <code>App</code>, with a single field called <code>name</code>, by adding the following code:</p>

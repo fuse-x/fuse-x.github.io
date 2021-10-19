@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -843,15 +843,14 @@ var CLIENT_ID = &quot;YOUR_CLIENT_ID_GOES_HERE&quot;;
 
 // Launches the authentication dialog in the system browser
 function authenticate() {
-	var authUri = &quot;https://auth.example.com/auth_dialog&quot;
-		+ &quot;?redirect_uri=&quot; + encodeURIComponent(REDIRECT_URI)
-		+ &quot;&amp;client_id=&quot; + encodeURIComponent(CLIENT_ID)
-		+ &quot;&amp;scope=email&quot;
-		+ &quot;&amp;response_type=token&quot;;
+    var authUri = &quot;https://auth.example.com/auth_dialog&quot;
+        + &quot;?redirect_uri=&quot; + encodeURIComponent(REDIRECT_URI)
+        + &quot;&amp;client_id=&quot; + encodeURIComponent(CLIENT_ID)
+        + &quot;&amp;scope=email&quot;
+        + &quot;&amp;response_type=token&quot;;
 
-	InterApp.launchUri(authUri);
-}
-</code></pre>
+    InterApp.launchUri(authUri);
+}</code></pre>
 <p>When the user has successfully authorized, the fragment identifier containing the access token is appended to the original <em>redirect URI</em>, and the user is redirected there.
 In the case of this example, it will look something like the following:</p>
 <pre><code>my-app:oauth-callback#access_token=0123456789abcdef&amp;token_type=bearer

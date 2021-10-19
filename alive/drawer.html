@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -715,8 +715,7 @@ Show advanced things
                 &lt;Page ux:Name=&quot;page2&quot; /&gt;
             &lt;/Navigator&gt;
         &lt;/Alive.Drawer&gt;
-    &lt;/App&gt;
-</code></pre>
+    &lt;/App&gt;</code></pre>
 <p>Drawer can be opened and closed from JavaScript using the <code>open()</code> and <code>close()</code> methods.</p>
 <pre><code class="language-xml">    &lt;JavaScript&gt;
         exports.openDrawer = function() {
@@ -730,14 +729,12 @@ Show advanced things
 
     &lt;Alive.Drawer ux:Name=&quot;drawer&quot;&gt;
         &lt;Panel ux:Binding=&quot;Menu&quot; /&gt;
-    &lt;/Alive.Drawer&gt;
-</code></pre>
+    &lt;/Alive.Drawer&gt;</code></pre>
 <p>Drawer displays a floating button above its content that opens the Drawer.
 This can be disabled using the <code>HideButton</code> property.</p>
-<pre><code class="language-xml">    &lt;Alive.Drawer HideButton=&quot;true&quot;&gt;
-        &lt;Panel ux:Binding=&quot;Menu&quot; /&gt;
-    &lt;/Alive.Drawer /&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Alive.Drawer HideButton=&quot;true&quot;&gt;
+    &lt;Panel ux:Binding=&quot;Menu&quot; /&gt;
+&lt;/Alive.Drawer /&gt;</code></pre>
 <p>You can combine this property with <code>WhileActive</code> to hide the button for certain pages.
 In the example below, the button is hidden while inside <code>SecondPage</code>.</p>
 <pre><code class="language-xml">    &lt;App&gt;
@@ -761,8 +758,7 @@ In the example below, the button is hidden while inside <code>SecondPage</code>.
                 &lt;Change drawer.HideButton=&quot;true&quot; /&gt;
             &lt;/WhileActive&gt;
         &lt;/Page&gt;
-    &lt;/App&gt;
-</code></pre>
+    &lt;/App&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -692,15 +692,14 @@ Show advanced things
 <p>This continues playing from where the video or timeline was paused (or from the start if <code>Stop</code> was called).</p>
 <p>A timeline will play either forward or backward, depending on the last play direction.</p>
 <h4 id="video-example">Video Example</h4>
-<pre><code class="language-xml">    &lt;Grid Rows=&quot;3*,1*&quot; &gt;
-        &lt;Video ux:Name=&quot;video&quot; Url=&quot;http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4&quot; StretchMode=&quot;Uniform&quot; /&gt;
-        &lt;Button Text=&quot;Play&quot;&gt;
-            &lt;Clicked&gt;
-                &lt;Play Target=&quot;video&quot; /&gt;
-            &lt;/Clicked&gt;
-        &lt;/Button&gt;
-    &lt;/Grid&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Grid Rows=&quot;3*,1*&quot; &gt;
+    &lt;Video ux:Name=&quot;video&quot; Url=&quot;http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4&quot; StretchMode=&quot;Uniform&quot; /&gt;
+    &lt;Button Text=&quot;Play&quot;&gt;
+        &lt;Clicked&gt;
+            &lt;Play Target=&quot;video&quot; /&gt;
+        &lt;/Clicked&gt;
+    &lt;/Button&gt;
+&lt;/Grid&gt;</code></pre>
 <h4 id="timeline-example">Timeline Example</h4>
 <pre><code class="language-xml">    &lt;StackPanel&gt;
         &lt;Rectangle Width=&quot;150&quot; Height=&quot;150&quot; Margin=&quot;60&quot; ux:Name=&quot;rect&quot; CornerRadius=&quot;10&quot; &gt;
@@ -740,8 +739,7 @@ Show advanced things
                 &lt;Stop Target=&quot;timeline&quot; /&gt;
             &lt;/Clicked&gt;
         &lt;/Button&gt;
-    &lt;/StackPanel&gt;
-</code></pre>
+    &lt;/StackPanel&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

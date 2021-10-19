@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -695,14 +695,13 @@ All images are temporary &quot;scratch images&quot; until storage has been speci
 <p>You need to add a reference to <code>&quot;Fuse.Camera&quot;</code> in your project file to use this feature.</p>
 <p>On Android using this API will request the CAMERA and WRITE_EXTERNAL_STORAGE permissions.</p>
 <h4 id="example">Example</h4>
-<pre><code class="language-javascript">    var camera = require('FuseJS/Camera');
-    camera.takePicture(640,480).then(function(image)
-    {
-        //Do things with image here
-    }).catch(function(error) {
-        //Something went wrong, see error for details
-    });
-</code></pre>
+<pre><code class="language-javascript">var camera = require('FuseJS/Camera');
+camera.takePicture(640,480).then(function(image)
+{
+    //Do things with image here
+}).catch(function(error) {
+    //Something went wrong, see error for details
+});</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

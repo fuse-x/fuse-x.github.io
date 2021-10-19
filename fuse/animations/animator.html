@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -693,13 +693,12 @@ Show advanced things
 There are three pairs of properties which are important for controlling the exact result of an animation.</p>
 <h4 id="example">Example</h4>
 <p>Examples of animator types are <a href="../../fuse/animations/change_1.html">Change</a> and <a href="../../fuse/animations/move.html">Move</a>, as used in this example:</p>
-<pre><code class="language-xml">    &lt;Panel ux:Name=&quot;panel1&quot; Color=&quot;Blue&quot;&gt;
-        &lt;WhilePressed&gt;
-            &lt;Change panel1.Color=&quot;#0f0&quot; Duration=&quot;1&quot; /&gt;
-            &lt;Move X=&quot;100&quot; Delay=&quot;1&quot; Duration=&quot;1&quot; /&gt;
-        &lt;/WhilePressed&gt;
-    &lt;/Panel&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Panel ux:Name=&quot;panel1&quot; Color=&quot;Blue&quot;&gt;
+    &lt;WhilePressed&gt;
+        &lt;Change panel1.Color=&quot;#0f0&quot; Duration=&quot;1&quot; /&gt;
+        &lt;Move X=&quot;100&quot; Delay=&quot;1&quot; Duration=&quot;1&quot; /&gt;
+    &lt;/WhilePressed&gt;
+&lt;/Panel&gt;</code></pre>
 <p>When the <a href="../../fuse/gestures/whilepressed.html">WhilePressed</a> trigger above is activated when a pointer is pressed on the panel,
 the animators are played according to their <code>Delays</code> and other properties.</p>
 <h4 id="duration-durationback">Duration/DurationBack</h4>
@@ -839,12 +838,11 @@ Spin
 </h5>
 <div class="table-of-contents-item-brief">
 <p>Continuously rotates an element, given a <code>Frequency</code> measured in full rotations per second.</p>
-<pre><code class="language-xml">    &lt;Panel&gt;
-        &lt;WhilePressed&gt;
-            &lt;Spin Frequency=&quot;2&quot; /&gt;
-        &lt;/WhilePressed&gt;
-    &lt;/Panel&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Panel&gt;
+    &lt;WhilePressed&gt;
+        &lt;Spin Frequency=&quot;2&quot; /&gt;
+    &lt;/WhilePressed&gt;
+&lt;/Panel&gt;</code></pre>
 <p>As with <a href="../../fuse/animations/cycle_1.html">Cycle</a>, you may also specify a <code>Duration</code> to control the length of the animation.</p>
 
 </div>

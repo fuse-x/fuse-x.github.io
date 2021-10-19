@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -706,8 +706,7 @@ This entity is experimental and might be changed or removed in a future release.
         &lt;/StackPanel&gt;
 
         &lt;ScrollViewPager Each=&quot;theEach&quot; ReachedEnd=&quot;{loadMore}&quot;/&gt;
-    &lt;/ScrollView&gt;
-</code></pre>
+    &lt;/ScrollView&gt;</code></pre>
 <p>It's required to use <code>LayoutMode=&quot;PreserveVisual&quot;</code>, otherwise the scrolling will not function correctly. <code>Reuse=&quot;Frame&quot;</code> is optional but recommended: it improves performance by reusing objects.</p>
 <p><code>ReachedEnd</code> is called when the true end of the list is reached and more data is required. It's actually called somewhat before the end is reached, thus allowing the loading process to start before the user reaches the end. There is also a <code>RechedStart</code> to allow loading when scrolling the opposite direction.  Neither of these callbacks are mandatory; <code>ScrollViewPager</code> is also helpful for displaying large static lists.</p>
 

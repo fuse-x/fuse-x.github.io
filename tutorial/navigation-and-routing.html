@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -811,25 +811,23 @@
 	&lt;EditHikePage ux:Template=&quot;editHike&quot; router=&quot;router&quot; /&gt;
 </code></pre>
 <p>Easy enough! Let's save these files, and then we'll head back to <code>EditHikePage.ux</code> and create a simple back button at the bottom, like so:</p>
-<pre><code class="language-xml">			...
+<pre><code class="language-xml">            ...
 
-			&lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+            &lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
 
-			&lt;Button Text=&quot;Back&quot; /&gt;
-		&lt;/StackPanel&gt;
-	&lt;/ScrollView&gt;
-&lt;/Page&gt;
-</code></pre>
+            &lt;Button Text=&quot;Back&quot; /&gt;
+        &lt;/StackPanel&gt;
+    &lt;/ScrollView&gt;
+&lt;/Page&gt;</code></pre>
 <p>Let's also add a <code>Clicked</code> handler while we're at it, even though we haven't created the function it will refer to yet (we'll do that right after):</p>
-<pre><code class="language-xml">			...
+<pre><code class="language-xml">            ...
 
-			&lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+            &lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
 
-			&lt;Button Text=&quot;Back&quot; Clicked=&quot;{goBack}&quot; /&gt;
-		&lt;/StackPanel&gt;
-	&lt;/ScrollView&gt;
-&lt;/Page&gt;
-</code></pre>
+            &lt;Button Text=&quot;Back&quot; Clicked=&quot;{goBack}&quot; /&gt;
+        &lt;/StackPanel&gt;
+    &lt;/ScrollView&gt;
+&lt;/Page&gt;</code></pre>
 <p>Our handler will be called <code>goBack</code>. Let's go to <code>EditHikePage.js</code>, create this function, and add it to our exports:</p>
 <pre><code class="language-js">...
 

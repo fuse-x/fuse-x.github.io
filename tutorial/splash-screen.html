@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -680,12 +680,11 @@
 </code></pre>
 <p>Notice how we're using <code>Page</code> as a base class instead of the <code>hikr.Page</code> component we built last chapter. This is because we'll eventually add a video background to this page, so we'll just want app's background color for a background for now.</p>
 <p>Now that we've got our <code>SplashPage</code>, let's add a template for it in our app's <a href="../fuse/controls/navigator.html">Navigator</a> in <code>MainView.ux</code>. We'll also make this the default template as it's the first screen we'll want to show in our app:</p>
-<pre><code class="language-xml">		&lt;Navigator DefaultPath=&quot;splash&quot;&gt;
-			&lt;SplashPage ux:Template=&quot;splash&quot; /&gt;
-			&lt;HomePage ux:Template=&quot;home&quot; router=&quot;router&quot; /&gt;
-			&lt;EditHikePage ux:Template=&quot;editHike&quot; router=&quot;router&quot; /&gt;
-		&lt;/Navigator&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Navigator DefaultPath=&quot;splash&quot;&gt;
+    &lt;SplashPage ux:Template=&quot;splash&quot; /&gt;
+    &lt;HomePage ux:Template=&quot;home&quot; router=&quot;router&quot; /&gt;
+    &lt;EditHikePage ux:Template=&quot;editHike&quot; router=&quot;router&quot; /&gt;
+&lt;/Navigator&gt;</code></pre>
 <p>With this saved, we should now see our blank <code>SplashPage</code> on screen!</p>
 <blockquote>
 <p>Note: We may have to restart our preview, as Fuse will cache which route we've navigated to between reloads. Restarting preview will clear this cache, ensuring our <code>SplashPage</code> is shown.</p>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -755,8 +755,7 @@ your app so you can recover from any kind of shutdown.</p>
         &lt;Text TextWrapping=&quot;Wrap&quot;&gt;Open the Fuse Monitor to see the logs&lt;/Text&gt;
         &lt;Text&gt;Current lifecycle state:&lt;/Text&gt;
         &lt;Text Value=&quot;{lifecycleState}&quot; /&gt;
-    &lt;/StackPanel&gt;
-</code></pre>
+    &lt;/StackPanel&gt;</code></pre>
 <p>In the above example we're using the <a href="../fusejs/eventemitter.html">EventEmitter</a> <code>on</code> method to listen to the different events.
 We're also using the <a href="../fusejs/eventemitter.html">EventEmitter</a> <code>observe</code> method on the <code>&quot;stateChanged&quot;</code> event to get an <a href="../fusejs/observable.html">Observable</a> containing the current state.</p>
 
@@ -839,8 +838,7 @@ int
 </h5>
 <div class="table-of-contents-item-brief">
 <p>Will give you the current state as an integer</p>
-<pre><code class="language-js">    var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/getcurrentstate.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-</code></pre>
+<pre><code class="language-js">var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/getcurrentstate.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
 
 </div>
 </article>
@@ -865,8 +863,7 @@ enteringBackground
 </h5>
 <div class="table-of-contents-item-brief">
 <p>Triggered when the app is leaving the running state and is about to be suspended.</p>
-<pre><code class="language-js">    var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onenteringbackground_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-</code></pre>
+<pre><code class="language-js">var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onenteringbackground_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
 
 </div>
 </article>
@@ -882,8 +879,7 @@ enteringForeground
 <div class="table-of-contents-item-brief">
 <p>Triggered when the app has left the suspended state and now is running.
 You will receive this event when the app starts.</p>
-<pre><code class="language-js">    var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onenteringforeground_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-</code></pre>
+<pre><code class="language-js">var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onenteringforeground_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
 
 </div>
 </article>
@@ -898,8 +894,7 @@ enteringInteractive
 </h5>
 <div class="table-of-contents-item-brief">
 <p>Triggered when the app is entering a state where it is fully focused and receiving events.</p>
-<pre><code class="language-js">    var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onenteringinteractive_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-</code></pre>
+<pre><code class="language-js">var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onenteringinteractive_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
 
 </div>
 </article>
@@ -914,8 +909,7 @@ exitedInteractive
 </h5>
 <div class="table-of-contents-item-brief">
 <p>Triggered when the app is partially obscured or is no longer the focus (e.g. when you drag open the notification bar)</p>
-<pre><code class="language-js">    var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onexitedinteractive_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-</code></pre>
+<pre><code class="language-js">var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onexitedinteractive_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
 
 </div>
 </article>
@@ -930,8 +924,7 @@ stateChanged
 </h5>
 <div class="table-of-contents-item-brief">
 <p>Triggered when the app's lifecycle state has changed.</p>
-<pre><code class="language-js">    var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onstatechanged_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-</code></pre>
+<pre><code class="language-js">var Lifecycle = require(&quot;FuseJS/Lifecycle&quot;); &lt;a href=&quot;../fusejs/lifecycle/onstatechanged_1c7eb6b7.html&quot; class=&quot;table-of-contents-item-has-more&quot; title=&quot;There is more information available for this entry&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
 
 </div>
 </article>

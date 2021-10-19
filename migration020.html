@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -734,10 +734,9 @@ var bar = require('./../bar'); // requires bar.js in the folder above the curren
 <li>As <code>TextInput</code> is invisible by default, we can use the new <code>TextBox</code> to get a decorated text input (easier while prototyping).</li>
 </ul>
 <p>We can now style <code>TextInput</code> by putting elements inside it. It behaves like a <code>DockPanel</code> where remaining space is the actual editor:</p>
-<pre><code class="language-xml">	&lt;TextInput&gt;
-		&lt;Rectangle Dock=&quot;Bottom&quot; Height=&quot;2&quot; Color=&quot;Blue&quot; Margin=&quot;4&quot; /&gt;
-	&lt;/TextInput&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;TextInput&gt;
+    &lt;Rectangle Dock=&quot;Bottom&quot; Height=&quot;2&quot; Color=&quot;Blue&quot; Margin=&quot;4&quot; /&gt;
+&lt;/TextInput&gt;</code></pre>
 <h4 id="changes-bugfixes-to-ux-element-ordering-semantics">Changes (bugfixes) to UX element ordering semantics</h4>
 <ul>
 <li><code>Element</code>s placed inside <code>Trigger</code>s will now be placed at the same location in the children list as their containing <code>Trigger</code>.</li>
@@ -784,13 +783,11 @@ var bar = require('./../bar'); // requires bar.js in the folder above the curren
 </li>
 </ul>
 <p>If you need to use a custom <code>Easing</code> and <code>Duration</code>, rewrite</p>
-<pre><code class="language-xml">	&lt;LinearNavigation Easing=&quot;CubicOut&quot; Duration=&quot;0.3&quot; /&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;LinearNavigation Easing=&quot;CubicOut&quot; Duration=&quot;0.3&quot; /&gt;</code></pre>
 <p>To this:</p>
-<pre><code class="language-xml">	&lt;LinearNavigation&gt;
-		&lt;NavigationMotion Easing=&quot;CubicOut&quot; Duration=&quot;0.3&quot; /&gt;
-	&lt;/LinearNavigation&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;LinearNavigation&gt;
+    &lt;NavigationMotion Easing=&quot;CubicOut&quot; Duration=&quot;0.3&quot; /&gt;
+&lt;/LinearNavigation&gt;</code></pre>
 <h4 id="uno-api-changes">Uno API Changes</h4>
 <p>These changes are only relevant if you have custom <code>.uno</code> code in your projects.</p>
 <ul>

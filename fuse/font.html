@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -690,17 +690,14 @@ Show advanced things
 </section>
 <p>Represents a specific typeface.</p>
 <p>Global resource fonts can be specified directly on <a href="../fuse/controls/text.html">Text</a> and <a href="../fuse/controls/textinput.html">TextInput</a> objects:</p>
-<pre><code class="language-xml">    &lt;Text Font=&quot;PlatformDefault&quot; /&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Text Font=&quot;PlatformDefault&quot; /&gt;</code></pre>
 <p>Or inline based on an <code>.otf</code> or <code>.ttf</code> file:</p>
-<pre><code class="language-xml">    &lt;Text Value=&quot;Hello!&quot;&gt;
-        &lt;Font File=&quot;arial.ttf&quot; /&gt;
-    &lt;/Text&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Text Value=&quot;Hello!&quot;&gt;
+    &lt;Font File=&quot;arial.ttf&quot; /&gt;
+&lt;/Text&gt;</code></pre>
 <p>To create a global resource font from a file, use the <code>ux:Global</code> attribute:</p>
-<pre><code class="language-xml">    &lt;Font File=&quot;arial.ttf&quot; ux:Global=&quot;MyDefaultFont&quot; /&gt;
-    &lt;Text Font=&quot;MyDefaultFont&quot; /&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Font File=&quot;arial.ttf&quot; ux:Global=&quot;MyDefaultFont&quot; /&gt;
+&lt;Text Font=&quot;MyDefaultFont&quot; /&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

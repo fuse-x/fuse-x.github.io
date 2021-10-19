@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -705,13 +705,11 @@ You can handle this event using the Alive.SwipeActionConfirmed trigger.</p>
     &lt;Alive.SwipeActionPanel&gt;
         &lt;Alive.SwipeActionConfirmed Handler=&quot;{onConfirmed}&quot; /&gt;
 
-    &lt;/Alive.SwipeActionPanel&gt;
-</code></pre>
+    &lt;/Alive.SwipeActionPanel&gt;</code></pre>
 <p>The button has a red color by default, and fades into yellow following the confirmation animation.
 You can customize this gradient using the GradientStartColor and GradientEndColor properties.</p>
 <p>Tip: Alive provides a set of default gradients, as seen in the example below.</p>
-<pre><code class="language-xml">    &lt;Alive.SwipeActionPanel GradientStartColor=&quot;Alive.Gradient1.StartColor&quot; GradientEndColor=&quot;Alive.Gradient1.EndColor&quot;&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Alive.SwipeActionPanel GradientStartColor=&quot;Alive.Gradient1.StartColor&quot; GradientEndColor=&quot;Alive.Gradient1.EndColor&quot;&gt;</code></pre>
 <p>By default, the confirmation message is hidden after a short duration.
 This behavior can be disabled using the StayOpen property.
 It is useful for preventing the confirmation animation from playing at the same time as a RemovingAnimation,
@@ -724,8 +722,7 @@ for cases where the button causes its containing element to be removed from a li
         &lt;RemovingAnimation&gt;
             &lt;Scale Factor=&quot;0&quot; Duration=&quot;.4&quot; /&gt;
         &lt;/RemovingAnimation&gt;
-    &lt;/Panel&gt;
-</code></pre>
+    &lt;/Panel&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

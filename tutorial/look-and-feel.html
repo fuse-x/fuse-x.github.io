@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -1001,24 +1001,22 @@
 &lt;/Panel&gt;
 </code></pre>
 <p>And finally, we'll style our <code>Cancel</code> button as well. In this case, all we have to do is replace <code>Button</code> with <code>hikr.Button</code>:</p>
-<pre><code class="language-xml">	&lt;Text&gt;Comments:&lt;/Text&gt;
-	&lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+<pre><code class="language-xml">    &lt;Text&gt;Comments:&lt;/Text&gt;
+    &lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
 
-	&lt;hikr.Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
-	&lt;hikr.Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
-&lt;/StackPanel&gt;
-</code></pre>
+    &lt;hikr.Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
+    &lt;hikr.Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
+&lt;/StackPanel&gt;</code></pre>
 <p>And with that, we now have a reusable <code>hikr.Button</code> component and two great-looking buttons! Now, it's time to make sure they're placed in the correct area of the screen according to our design. In particular, we'll want to place the two buttons side-by-side at the very bottom of the screen.</p>
 <p>To place the buttons side-by-side, we'll place them in a <a href="../fuse/controls/grid.html">Grid</a>. A <code>Grid</code> is a <code>Panel</code> that will divide up its available space based on a specified number of <em>rows</em> and <em>columns</em>, and place its children in the resulting <em>cells</em>. By default, these rows and columns will have equal sizes. So, if we specify a <code>Grid</code> with a single row and two columns, we should get the perfect container for our two buttons:</p>
-<pre><code class="language-xml">	&lt;Text&gt;Comments:&lt;/Text&gt;
-	&lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+<pre><code class="language-xml">    &lt;Text&gt;Comments:&lt;/Text&gt;
+    &lt;TextView Value=&quot;{comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
 
-	&lt;Grid ColumnCount=&quot;2&quot;&gt;
-		&lt;hikr.Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
-		&lt;hikr.Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
-	&lt;/Grid&gt;
-&lt;/StackPanel&gt;
-</code></pre>
+    &lt;Grid ColumnCount=&quot;2&quot;&gt;
+        &lt;hikr.Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
+        &lt;hikr.Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
+    &lt;/Grid&gt;
+&lt;/StackPanel&gt;</code></pre>
 <p>Here, we specify a <code>ColumnCount</code> of <code>2</code>, which tells our <code>Grid</code> it will need two columns. We don't need to specify how many rows it will need in this case, since we only need one anyway. This places our buttons side-by-side, but let's swap the order of the buttons to match our design:</p>
 <pre><code class="language-xml">&lt;Grid ColumnCount=&quot;2&quot;&gt;
 	&lt;hikr.Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;

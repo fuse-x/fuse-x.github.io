@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -765,8 +765,7 @@
     &lt;Text Value=&quot;World&quot; /&gt;  &lt;--------------- self closing tag
  &lt;/StackPanel&gt;
        ^
-        \___________________________________ Closing tag
-</code></pre>
+        \___________________________________ Closing tag</code></pre>
 <p>But you may be looking at those opening and self closing tags above and wondering why they have extra stuff in them. If you are then well spotted! Those are called <code>Properties</code>.</p>
 <p>If we have an apple in real life and you were asked about its properties, you might say &quot;it's round&quot; or &quot;it's ripe&quot; or something like that. Properties in this case gives us extra information about the nature of the apple. The exact same it true for Properties in UX.</p>
 <p>Let's look back at the example above:</p>
@@ -780,21 +779,19 @@
  &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
  &lt;/StackPanel&gt;
            ^
-		   We are not allowed to set properties here!
-</code></pre>
+           We are not allowed to set properties here!</code></pre>
 <p>And given that we are talking about small details: <em>objects</em> that are inside other <em>objects</em> are called <em>children</em>. The <em>object</em> that contains them is called the <em>parent object</em>.</p>
 <p>Before we wrap up this part lets annotate our UX again with what we have learned</p>
-<pre><code class="language-xml">	   _______________ Opening tag (named StackPanel). Parent to two objects.
-	  /            ___________________ Has an Orientation Property
-	 /            /
-	v            v
+<pre><code class="language-xml">       _______________ Opening tag (named StackPanel). Parent to two objects.
+      /            ___________________ Has an Orientation Property
+     /            /
+    v            v
 &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
    &lt;Text Value=&quot;Hello Jim!&quot; /&gt; &lt;----------- Child object / self closing tag / Has a Value Property
    &lt;Text Value=&quot;World&quot; /&gt;  &lt;--------------- Another child / self closing tag / Has a Value Property
 &lt;/StackPanel&gt;
-	  ^
-	   \__________________ Closing tag
-</code></pre>
+      ^
+       \__________________ Closing tag</code></pre>
 <h3 id="classes">Classes</h3>
 <p>A class defines a <em>recipe</em> for an <em>object</em>. Fuse has lots of useful objects defined for you but very soon you will want to define your own.</p>
 <p>Luckily all we have to do is make something we like and then tell Fuse that this is a recipe for making <em>objects</em> just like it.</p>

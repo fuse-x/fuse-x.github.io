@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -692,11 +692,10 @@ Show advanced things
 <h4 id="example">Example</h4>
 <p>The following example changes the color of <code>myRect</code> from black to white
 while the device is in landscape.</p>
-<pre><code class="language-xml">    &lt;Rectangle ux:Name=&quot;myRect&quot; Color=&quot;#000&quot; /&gt;
-    &lt;WhileWindowLandscape&gt;
-        &lt;Change myRect.Color=&quot;#fff&quot; Duration=&quot;0.5&quot; /&gt;
-    &lt;/WhileWindowLandscape&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Rectangle ux:Name=&quot;myRect&quot; Color=&quot;#000&quot; /&gt;
+&lt;WhileWindowLandscape&gt;
+    &lt;Change myRect.Color=&quot;#fff&quot; Duration=&quot;0.5&quot; /&gt;
+&lt;/WhileWindowLandscape&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

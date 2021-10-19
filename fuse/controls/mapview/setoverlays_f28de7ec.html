@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -676,21 +676,20 @@ MapView.setOverlays(overlays) Method (JS)
 </header>
 <p>Replaces the MapView's overlays.</p>
 <p>The following format is used for describing map markers:</p>
-<pre><code class="language-json">    {
-        lineWidth: 2,
-        strokeColor: '#348',
-        fillColor: '#348',
-        overlayType: 'polygon', // or polyline
-        startCap: 'round', // available round, butt, square
-        endCap: 'round,' // available round, butt, square
-        lineJoin: 'miter', // available round, bevel, miter
-        coordinates: [
-            { latitude: 59.911567, longitude: 10.741030 },
-            { latitude: 60.011567, longitude: 10.941030 },
-            { latitude: 60.111567, longitude: 11.001030 },
-        ]
-    }
-</code></pre>
+<pre><code class="language-json">{
+    lineWidth: 2,
+    strokeColor: '#348',
+    fillColor: '#348',
+    overlayType: 'polygon', // or polyline
+    startCap: 'round', // available round, butt, square
+    endCap: 'round,' // available round, butt, square
+    lineJoin: 'miter', // available round, bevel, miter
+    coordinates: [
+        { latitude: 59.911567, longitude: 10.741030 },
+        { latitude: 60.011567, longitude: 10.941030 },
+        { latitude: 60.111567, longitude: 11.001030 },
+    ]
+}</code></pre>
 <h4 id="example">Example</h4>
 <p>The following example places a map overlay</p>
 <pre><code class="language-xml">    &lt;NativeViewHost&gt;
@@ -711,8 +710,7 @@ MapView.setOverlays(overlays) Method (JS)
                 ]
             }
         ]);
-    &lt;/JavaScript&gt;
-</code></pre>
+    &lt;/JavaScript&gt;</code></pre>
 
 <section class="type-location type-location-leaf">
 <h3 id="section-location">Location</h3>

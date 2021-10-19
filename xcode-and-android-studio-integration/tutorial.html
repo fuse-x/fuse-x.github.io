@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?3">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -955,7 +955,7 @@ usersListView.setCallback(&quot;user_clicked&quot;, new ICallback() {
         ViewHandle videoView = ExportedViews.instantiate(&quot;VideoView&quot;);
         android.view.View nativeView = videoView.getView();
 
-	videoView.setDataJson(&quot;{ \&quot;users\&quot; : [...] }&quot;);
+    videoView.setDataJson(&quot;{ \&quot;users\&quot; : [...] }&quot;);
         videoView.setCallback(&quot;user_clicked&quot;, new ICallback() {
             @Override
             public void invoke(IArguments iArguments) { ... }
@@ -965,8 +965,7 @@ usersListView.setCallback(&quot;user_clicked&quot;, new ICallback() {
         relativeLayout.addView(nativeView);
 
         return relativeLayout;
-    }
-</code></pre>
+    }</code></pre>
 
             </div>
             <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">

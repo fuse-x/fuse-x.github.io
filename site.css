@@ -471,6 +471,22 @@ code:not([class]) {
     color: #ccc;
 }
 
+h1:first-child {
+    margin-top: 1rem;
+}
+
+h2:first-child {
+    margin-top: 1rem;
+}
+
+h2 code {
+    font-size: 2rem !important;
+}
+
+h3 code {
+    font-size: 1.6rem !important;
+}
+
 /* Keep sticky header sticky */
 html, body {
     height: auto;
