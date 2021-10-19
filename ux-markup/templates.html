@@ -683,12 +683,12 @@
 <h2 id="the-ux-name-of-the-template-instance">The <code>ux:Name</code> of the template instance</h2>
 <p>Inside node marked <code>ux:Template</code>, the current copy (instance) of the current template can be refered to by the <code>template_name</code>, the same way as if it was named the same way using <code>ux:Name</code>.</p>
 <p>For example, in a contained <code>&lt;JavaScript&gt;</code> tag, we can refer to the template instance by name:</p>
-<pre><code class="language-xml">Page ux:Template=&quot;homePage&quot;&gt;
-&lt;JavaScript&gt;
-    homePage.Parameter.onValueChanged(module, function() { ...</code></pre>
+<pre><code class="language-xml">&lt;Page ux:Template=&quot;homePage&quot;&gt;
+    &lt;JavaScript&gt;
+        homePage.Parameter.onValueChanged(module, function() { ...</code></pre>
 <p>Also, in UX markup in general, we can use the page name in expressions:</p>
-<pre><code class="language-xml">Page ux:Template=&quot;homePage&quot;&gt;
-&lt;Rectangle LayoutMaster=&quot;homePage&quot; ... /&gt;</code></pre>
+<pre><code class="language-xml">&lt;Page ux:Template=&quot;homePage&quot;&gt;
+    &lt;Rectangle LayoutMaster=&quot;homePage&quot; ... /&gt;</code></pre>
 <h2 id="using-templates-for-component-customizability">Using templates for component customizability</h2>
 <p>Templates can be used to increase the customizability of a component by allowing it to take custom elements to be used for its appearance. An example of this in action is the <a href="../fuse/controls/pageindicator.html">PageIndicator</a> element, which spawns an element from a template for each page in a <code>PageControl</code>. An element is made a template by setting the <code>ux:Template</code> property to a key you want to identify that template by. This key is used by template accepting elements when looking for appropriate templates to draw.</p>
 <p>Templates are drawn using <code>Each</code>. <code>Each</code> has a property called <code>TemplateSource</code>, which specifies the element from which <code>Each</code> gets its template. As mentioned before, templates identify themselves using a key. The key <code>Each</code> will look for a template with is specified using the <code>TemplateKey</code> property.</p>

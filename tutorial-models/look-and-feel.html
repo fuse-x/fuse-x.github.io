@@ -819,10 +819,10 @@
     &lt;/ScrollView&gt;
 &lt;/DockPanel&gt;</code></pre>
 <p>Then, we'll add a <code>Text</code> element for our &quot;Recent Hikes&quot; text that we'll dock to the top of the <code>DockPanel</code>:</p>
-<pre><code class="language-xml">DockPanel&gt;
-&lt;Text Color=&quot;White&quot; FontSize=&quot;30&quot; TextAlignment=&quot;Center&quot; Dock=&quot;Top&quot; Margin=&quot;0,50&quot;&gt;Recent Hikes&lt;/Text&gt;
+<pre><code class="language-xml">&lt;DockPanel&gt;
+    &lt;Text Color=&quot;White&quot; FontSize=&quot;30&quot; TextAlignment=&quot;Center&quot; Dock=&quot;Top&quot; Margin=&quot;0,50&quot;&gt;Recent Hikes&lt;/Text&gt;
 
-&lt;ScrollView&gt;</code></pre>
+    &lt;ScrollView&gt;</code></pre>
 <p>Great! That was easy. Looking at the code, however, we've got two different <code>Text</code> elements already in this file where we're specifying <code>Color=&quot;White&quot;</code>. Since our app has a dark background, this is probably something we're going to want to use quite a bit, and not just for this one page. So, let's make a reusable component for this!</p>
 <p>Since we'll want our reusable component to be used throughout the app, we probably don't want to specify it in this file. Instead, we'll want to place it in its own file. In the root of our project dir, let's create a folder called <code>Components</code>:</p>
 <pre><code class="language-s">.
@@ -937,14 +937,14 @@
 &lt;Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;</code></pre>
 <p>The next thing we'll want to do is move the hardcoded <code>&quot;Save&quot;</code> text out of the component and onto our instance. However, if we simply wrote <code>Text=&quot;Save&quot;</code> on our <code>hikr.Button</code>, this would fail to compile, because our <code>hikr.Button</code> class has no such property. This is easy to fix though, as Fuse provides a mechanism called <code>ux:Property</code> that allows us to define our own properties for a component using only UX.</p>
 <p>To create a <code>Text</code> property for our <code>hikr.Button</code> component, all we need to do is add a <code>string</code> instance (since <code>Text</code> will contain a string of text) to our class with a <code>ux:Property</code> attribute that defines the name for our property:</p>
-<pre><code class="language-xml">Panel ux:Class=&quot;hikr.Button&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
-&lt;string ux:Property=&quot;Text&quot; /&gt;
+<pre><code class="language-xml">&lt;Panel ux:Class=&quot;hikr.Button&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
+    &lt;string ux:Property=&quot;Text&quot; /&gt;
 
-&lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#125F63&quot; CornerRadius=&quot;4&quot;&gt;
-    &lt;DropShadow Angle=&quot;90&quot; Distance=&quot;1&quot; Spread=&quot;0.2&quot; Size=&quot;2&quot; Color=&quot;#00000060&quot; /&gt;
-&lt;/Rectangle&gt;
+    &lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#125F63&quot; CornerRadius=&quot;4&quot;&gt;
+        &lt;DropShadow Angle=&quot;90&quot; Distance=&quot;1&quot; Spread=&quot;0.2&quot; Size=&quot;2&quot; Color=&quot;#00000060&quot; /&gt;
+    &lt;/Rectangle&gt;
 
-&lt;hikr.Text Value=&quot;Save&quot; FontSize=&quot;16&quot; TextAlignment=&quot;Center&quot; /&gt;</code></pre>
+    &lt;hikr.Text Value=&quot;Save&quot; FontSize=&quot;16&quot; TextAlignment=&quot;Center&quot; /&gt;</code></pre>
 <p>And with that, we've got our property. However, the <code>hikr.Text</code> instance in the class is still displaying the hardcoded string <code>&quot;Save&quot;</code>. We want it to display the value of the <code>Text</code> property we just created instead, and we can do this through <em>property binding</em>. Property binding is similar to data binding like we've used before to bind values in UX to values from JavaScript, and its syntax is almost the same. To bind our button's text to the <code>Text</code> property, we'll change our <code>hikr.Text</code> instance's <code>Value</code> like so:</p>
 <pre><code class="language-xml">&lt;hikr.Text Value=&quot;{ReadProperty Text}&quot; FontSize=&quot;16&quot; TextAlignment=&quot;Center&quot; /&gt;</code></pre>
 <p>Here, we can see binding to a <code>ux:Property</code> looks almost identical to binding to JS data, but we've added <code>ReadProperty</code> to the front of it. This is how Fuse tells the difference between different binding types.</p>
@@ -1029,9 +1029,9 @@
 <p>Now, let's dig in and tweak the look/feel of the various value editors on the <code>EditHikePage</code>. To refresh our memory, let's take another look at the design for this page:</p>
 <p><img src="../media/hikr/tutorial/edit-hike.png" alt="Edit hike page"></p>
 <p>First of all, our current implementation has an extra <code>Text</code> element displaying the hike name. Since we already have an editor for this, we can go ahead and just remove that:</p>
-<pre><code class="language-xml">StackPanel&gt;
-&lt;Text&gt;Name:&lt;/Text&gt;
-&lt;TextBox Value=&quot;{hike.name}&quot; /&gt;</code></pre>
+<pre><code class="language-xml">&lt;StackPanel&gt;
+    &lt;Text&gt;Name:&lt;/Text&gt;
+    &lt;TextBox Value=&quot;{hike.name}&quot; /&gt;</code></pre>
 <p>Next, let's tweak the title text for all of our editors. We'll start by simply replacing the <code>Name</code> field's <code>Text</code> element with a <code>hikr.Text</code> element:</p>
 <pre><code class="language-xml">&lt;hikr.Text&gt;Name:&lt;/hikr.Text&gt;
 &lt;TextBox Value=&quot;{hike.name}&quot; /&gt;</code></pre>
@@ -1066,8 +1066,8 @@
     &lt;TextView Value=&quot;{hike.comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
 &lt;/StackPanel&gt;</code></pre>
 <p>Nice and easy! Next, we'll tweak the spacing around the various editors/titles. The first thing we can do is apply some padding to the <a href="../fuse/controls/stackpanel.html">StackPanel</a> that contains the editors to space them out a bit from the borders of the <code>StackPanel</code>:</p>
-<pre><code class="language-xml">StackPanel Padding=&quot;10&quot;&gt;
-&lt;hikr.Text ux:Class=&quot;TitleText&quot; Opacity=&quot;.6&quot; Margin=&quot;0,0,0,5&quot; /&gt;</code></pre>
+<pre><code class="language-xml">&lt;StackPanel Padding=&quot;10&quot;&gt;
+    &lt;hikr.Text ux:Class=&quot;TitleText&quot; Opacity=&quot;.6&quot; Margin=&quot;0,0,0,5&quot; /&gt;</code></pre>
 <p>This helps with the spacing between the editors and the borders of the <code>Page</code>, but not between the various different elements. Let's add some <a href="../fuse/controls/stackpanel/itemspacing.html">ItemSpacing</a> as well to the <code>StackPanel</code>, which (as the name implies) should add some space between the different items in the <code>StackPanel</code>:</p>
 <pre><code class="language-xml">&lt;StackPanel ItemSpacing=&quot;10&quot; Padding=&quot;10&quot;&gt;</code></pre>
 <p>Almost; now we've got spacing between our elements, but we also have more spacing than we'd like between our titles and editors as well. To fix this, we'll go ahead and wrap each of our title/editor pairs in their own <code>StackPanel</code>. This way, the <code>ItemSpacing</code> of the surrounding <code>StackPanel</code> will only be applied between title/editor pairs, and the titles and editors will be properly spaced in relation to each other. That will look something like this:</p>
@@ -1107,30 +1107,30 @@
     &lt;TextBox TextColor=&quot;White&quot; CaretColor=&quot;White&quot; Padding=&quot;10,10,0,10&quot; Value=&quot;{hike.name}&quot; /&gt;
 &lt;/StackPanel&gt;</code></pre>
 <p>Looking good! Now, let's extract it into a reusable component called <code>hikr.TextBox</code>, and apply the styling to all the other <code>TextBox</code>-based editors by replacing them with <code>hikr.TextBox</code> instances (but leaving their bindings and <code>InputHint</code>s where applicable):</p>
-<pre><code class="language-xml">StackPanel ItemSpacing=&quot;10&quot; Padding=&quot;10&quot;&gt;
-&lt;hikr.Text ux:Class=&quot;TitleText&quot; Opacity=&quot;.6&quot; Margin=&quot;0,0,0,5&quot; /&gt;
+<pre><code class="language-xml">&lt;StackPanel ItemSpacing=&quot;10&quot; Padding=&quot;10&quot;&gt;
+    &lt;hikr.Text ux:Class=&quot;TitleText&quot; Opacity=&quot;.6&quot; Margin=&quot;0,0,0,5&quot; /&gt;
 
-&lt;TextBox ux:Class=&quot;hikr.TextBox&quot; TextColor=&quot;White&quot; CaretColor=&quot;White&quot; Padding=&quot;10,10,0,10&quot; /&gt;
+    &lt;TextBox ux:Class=&quot;hikr.TextBox&quot; TextColor=&quot;White&quot; CaretColor=&quot;White&quot; Padding=&quot;10,10,0,10&quot; /&gt;
 
-&lt;StackPanel&gt;
-    &lt;TitleText&gt;Name:&lt;/TitleText&gt;
-    &lt;hikr.TextBox Value=&quot;{hike.name}&quot; /&gt;
-&lt;/StackPanel&gt;
+    &lt;StackPanel&gt;
+        &lt;TitleText&gt;Name:&lt;/TitleText&gt;
+        &lt;hikr.TextBox Value=&quot;{hike.name}&quot; /&gt;
+    &lt;/StackPanel&gt;
 
-&lt;StackPanel&gt;
-    &lt;TitleText&gt;Location:&lt;/TitleText&gt;
-    &lt;hikr.TextBox Value=&quot;{hike.location}&quot; /&gt;
-&lt;/StackPanel&gt;
+    &lt;StackPanel&gt;
+        &lt;TitleText&gt;Location:&lt;/TitleText&gt;
+        &lt;hikr.TextBox Value=&quot;{hike.location}&quot; /&gt;
+    &lt;/StackPanel&gt;
 
-&lt;StackPanel&gt;
-    &lt;TitleText&gt;Distance (km):&lt;/TitleText&gt;
-    &lt;hikr.TextBox Value=&quot;{hike.distance}&quot; InputHint=&quot;Decimal&quot; /&gt;
-&lt;/StackPanel&gt;
+    &lt;StackPanel&gt;
+        &lt;TitleText&gt;Distance (km):&lt;/TitleText&gt;
+        &lt;hikr.TextBox Value=&quot;{hike.distance}&quot; InputHint=&quot;Decimal&quot; /&gt;
+    &lt;/StackPanel&gt;
 
-&lt;StackPanel&gt;
-    &lt;TitleText&gt;Rating:&lt;/TitleText&gt;
-    &lt;hikr.TextBox Value=&quot;{hike.rating}&quot; InputHint=&quot;Integer&quot; /&gt;
-&lt;/StackPanel&gt;</code></pre>
+    &lt;StackPanel&gt;
+        &lt;TitleText&gt;Rating:&lt;/TitleText&gt;
+        &lt;hikr.TextBox Value=&quot;{hike.rating}&quot; InputHint=&quot;Integer&quot; /&gt;
+    &lt;/StackPanel&gt;</code></pre>
 <p>And finally, we can move this component into our <code>Components</code> directory, as we may wish to use it later for other screens in our app. So, we'll move the <code>ux:Class</code> to a new <code>TextBox.ux</code> file in the <code>Components</code> dir:</p>
 <pre><code class="language-xml">&lt;TextBox ux:Class=&quot;hikr.TextBox&quot; TextColor=&quot;White&quot; CaretColor=&quot;White&quot; Padding=&quot;10,10,0,10&quot; /&gt;
 </code></pre>
