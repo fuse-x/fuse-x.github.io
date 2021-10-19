@@ -948,24 +948,23 @@ usersListView.setCallback(&quot;user_clicked&quot;, new ICallback() {
 </code></pre>
 <h5 id="fragment-support">Fragment support</h5>
 <p>The full workaround when using <code>Fragment</code></p>
-<pre><code class="language-csharp">
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RelativeLayout relativeLayout = new RelativeLayout(getContext());
-        ViewHandle videoView = ExportedViews.instantiate(&quot;VideoView&quot;);
-        android.view.View nativeView = videoView.getView();
+<pre><code class="language-csharp">    @Override
+   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+       RelativeLayout relativeLayout = new RelativeLayout(getContext());
+       ViewHandle videoView = ExportedViews.instantiate(&quot;VideoView&quot;);
+       android.view.View nativeView = videoView.getView();
 
-    videoView.setDataJson(&quot;{ \&quot;users\&quot; : [...] }&quot;);
-        videoView.setCallback(&quot;user_clicked&quot;, new ICallback() {
-            @Override
-            public void invoke(IArguments iArguments) { ... }
-        });
+   videoView.setDataJson(&quot;{ \&quot;users\&quot; : [...] }&quot;);
+       videoView.setCallback(&quot;user_clicked&quot;, new ICallback() {
+           @Override
+           public void invoke(IArguments iArguments) { ... }
+       });
 
-        nativeView.setLayoutParams(new android.widget.RelativeLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT));
-        relativeLayout.addView(nativeView);
+       nativeView.setLayoutParams(new android.widget.RelativeLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT));
+       relativeLayout.addView(nativeView);
 
-        return relativeLayout;
-    }</code></pre>
+       return relativeLayout;
+   }</code></pre>
 
             </div>
             <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">

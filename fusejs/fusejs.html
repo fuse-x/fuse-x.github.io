@@ -699,9 +699,9 @@
 <h3 id="importing-modules">Importing modules</h3>
 <p>Each code file (or inline snippet) is a module.</p>
 <p>To make a module available to other modules through <code>require</code>, you have to place it in a separate <code>.js</code> file make sure it is included in the <code>:Bundle</code> in your <code>.unoproj</code>, for example like this:</p>
-<pre><code class="language-json">&quot;Includes&quot;: [
-    &quot;MyLibrary/SomeModule.js:Bundle&quot;,
-    ...</code></pre>
+<pre><code class="language-json">t;Includes&quot;: [
+&quot;MyLibrary/SomeModule.js:Bundle&quot;,
+...</code></pre>
 <p>We can then access this module in any other module in the same project like this:</p>
 <pre><code class="language-js">var myModule = require('MyLibrary/SomeModule');</code></pre>
 <blockquote>

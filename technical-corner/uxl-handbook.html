@@ -1016,9 +1016,9 @@ class Test3
 <p>Here is the simplest possible example of a <code>TargetSpecificType</code>:</p>
 <pre><code class="language-csharp">[TargetSpecificType]
 public extern(ANDROID) struct UJObject {}</code></pre>
-<pre><code class="language-xml">&lt;Type Name=&quot;UJObject&quot; Condition=&quot;ANDROID&quot;
-    TypeName=&quot;jobject&quot;
-    Include=&quot;jni.h&quot; /&gt;</code></pre>
+<pre><code class="language-xml">Type Name=&quot;UJObject&quot; Condition=&quot;ANDROID&quot;
+TypeName=&quot;jobject&quot;
+Include=&quot;jni.h&quot; /&gt;</code></pre>
 <p>Here we are defining an Uno type that will stand in for the JNI <code>jobject</code> type. Some things to know:</p>
 <ul>
 <li><code>TargetSpecificType</code>s must be struct's. We used to allow them to be classes, but this is deprecated.</li>

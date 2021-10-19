@@ -820,12 +820,12 @@
 &lt;/Page&gt;
 </code></pre>
 <p>Then, we'll add a <code>hikr.Text</code> component docked to the bottom of the <code>DockPanel</code>:</p>
-<pre><code class="language-xml">&lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
-    &lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
-        &lt;Blur Radius=&quot;4.75&quot; /&gt;
-    &lt;/Video&gt;
+<pre><code class="language-xml">DockPanel ClipToBounds=&quot;true&quot;&gt;
+&lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
+    &lt;Blur Radius=&quot;4.75&quot; /&gt;
+&lt;/Video&gt;
 
-    &lt;hikr.Text Dock=&quot;Bottom&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;</code></pre>
+&lt;hikr.Text Dock=&quot;Bottom&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;</code></pre>
 <p>Let's also align it to the center of the screen horizontally and add some margin so it's not quite touching the bottom edge:</p>
 <pre><code class="language-xml">&lt;hikr.Text Dock=&quot;Bottom&quot; Margin=&quot;10&quot; TextAlignment=&quot;Center&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;</code></pre>
 <p>Then, we'll make the font a bit smaller and adjust its <code>Opacity</code> so it doesn't stand out so much:</p>
@@ -833,10 +833,10 @@
 <p>And with that, we've got our content attributed properly and looking great!</p>
 <h2 id="finishing-touches">Finishing touches</h2>
 <p>Now that our <code>SplashScreen</code> is basically finished, we can add a couple finishing touches to our app to seal the deal. For example, if we navigate to the <code>HomePage</code>, and we look at the left edge of the screen, we can see what looks like a small bit of our <a href="../fuse/controls/video.html">Video</a> from the <code>SplashScreen</code> is visible. This is because the <a href="../fuse/effects/blur.html">Blur</a> effect will add a bit of space around the element it's applied on so that the edges of the element are blurred smoothly. However, in our case, this means that parts of the edge of the video are visible in other pages of our app, which is not desirable. To fix this, we have to make sure that the content of our <code>SplashPage</code> is clipped to the bounds of the page, and never drawn outside of it. In our case, in <code>SplashPage.ux</code>, we can simply add <code>ClipToBounds=&quot;true&quot;</code> to our <a href="../fuse/controls/dockpanel.html">DockPanel</a> (which contains the <code>Video</code> background):</p>
-<pre><code class="language-xml">&lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
-    &lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
-        &lt;Blur Radius=&quot;4.75&quot; /&gt;
-    &lt;/Video&gt;</code></pre>
+<pre><code class="language-xml">DockPanel ClipToBounds=&quot;true&quot;&gt;
+&lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
+    &lt;Blur Radius=&quot;4.75&quot; /&gt;
+&lt;/Video&gt;</code></pre>
 <p>Now, the video is only displayed within the bounds of the <code>SplashPage</code>. Easy! And that's everything! Now, our <code>SplashPage</code> is complete.</p>
 <h2 id="our-progress">Our progress</h2>
 <p>Looks like we've made it to the end! Our hikr concept app is completely finished. Awesome!</p>
