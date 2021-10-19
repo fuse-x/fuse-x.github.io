@@ -672,7 +672,10 @@
               <h1 id="installation-and-quickstart">Installation and Quickstart</h1>
 <p>This is a step-by-step tutorial that takes you through setting up Fuse and creating your first project. Should you happen to run into problems during installation, please <a href="https://forums.fusetools.com/c/bug-reports">let us know</a>!</p>
 <h2 id="installation">Installation</h2>
-<p>The latest version of Fuse can always be downloaded from the <a target="_blank" href="https://fuse-x.com/download">downloads page</a>. Download the installer for your operating system and open it to start the installation procedure.</p>
+<p>The latest version of Fuse can always be downloaded from the <a href="https://fuse-x.com/download">downloads page</a>. Download the installer for your operating system and open it to start the installation procedure.</p>
+<blockquote class="callout-info">
+<p><a target="_blank" href="https://nodejs.org/en/download/">Node.js</a> is required to install this software.</p>
+</blockquote>
 <blockquote class="callout-info">
 <p>Both the Windows and macOS installers require an internet connection in order to complete.</p>
 </blockquote>
@@ -680,16 +683,19 @@
 <p><strong>Windows:</strong> You may have to log out and in again (or simply reboot) to make sure the path for fuse is properly updated.</p>
 </blockquote>
 <blockquote class="callout-info">
-<p><strong>macOS:</strong> If for any reason you need to remove all of the Fuse components, you can use <a href="https://gist.github.com/Tapped/daa78c08882f33b0c7c3">this uninstall script</a>.</p>
+<p><strong>macOS:</strong> If for any reason you need to remove all of the Fuse components, you can use <a href="https://gist.github.com/mortend/cc84b044c8cd4feed65d31195fe5bf54">this uninstall script</a>.</p>
 </blockquote>
 <h3 id="macos-requirements">macOS Requirements</h3>
 <ul>
-<li>A modern Mac running macOS Yosemite or later</li>
+<li>macOS 10.10 Yosemite or newer</li>
+<li>Intel processor</li>
+<li><a target="_blank" href="https://www.mono-project.com/download/stable/">Mono v6.10+</a></li>
+<li><a target="_blank" href="https://nodejs.org/en/download/">Node.js v12+</a></li>
 </ul>
 <h3 id="windows-requirements">Windows Requirements</h3>
 <ul>
-<li>Window 7 or newer</li>
-<li>OpenGL 2.1-capable GPU (Very basic on-board/shared resource GPUs such as the Intel GMA-series are not sufficient!!).</li>
+<li>Windows 10 or newer</li>
+<li><a target="_blank" href="https://nodejs.org/en/download/">Node.js v12+</a></li>
 </ul>
 <h2 id="finding-a-text-editor">Finding a text editor</h2>
 <p>Fuse requires an external text editor in order to make changes to the UX markup in our app. To streamline your experience with Fuse, we provide plugins for some of the more popular text editors which provide code completion, error lists, output logs and the ability to launch Fuse apps from within the text editor.</p>
