@@ -687,14 +687,14 @@
     };
 &lt;/JavaScript&gt;</code></pre>
 <p>Failing to export from modules will make it impossible to reach defined data inside the module:</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        var data = [1, 2, 3];
-        var invisible = &quot;I'm invisible&quot;;
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    var data = [1, 2, 3];
+    var invisible = &quot;I'm invisible&quot;;
 
-        module.exports = {
-            data: data
-        };
-    &lt;/JavaScript&gt;</code></pre>
+    module.exports = {
+        data: data
+    };
+&lt;/JavaScript&gt;</code></pre>
 <p>This is good for hiding implementation details from other calling JavaScript modules and UX code.</p>
 <h3 id="importing-modules">Importing modules</h3>
 <p>Each code file (or inline snippet) is a module.</p>

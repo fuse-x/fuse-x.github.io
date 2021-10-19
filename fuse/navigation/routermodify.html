@@ -716,44 +716,44 @@ and <code>Style</code> properties on <code>RouterModify</code>. This pushes anot
 <pre><code class="language-xml">&lt;RouterModify How=&quot;Push&quot; Transition=&quot;Bypass&quot; Bookmark=&quot;myBookmark&quot; /&gt;</code></pre>
 <p>We can use the <code>Style</code> property to refer to specific <code>Transition</code> triggers on target pages, allowing us
 to trigger different transitions for separate use cases:</p>
-<pre><code class="language-xml">    &lt;Router ux:Name=&quot;router&quot; /&gt;
-    ...
-    &lt;JavaScript&gt;
-        router.bookmark({
-            name: &quot;myBookmark&quot;,
-            path: [&quot;secondPage&quot;, {}]
-        });
-    &lt;/JavaScript&gt;
-    ...
-    &lt;Navigator DefaultPath=&quot;firstPage&quot;&gt;
-        &lt;StackPanel ux:Template=&quot;firstPage&quot;&gt;
-            &lt;Panel&gt;
-                &lt;Clicked&gt;
-                    &lt;RouterModify How=&quot;Push&quot; Bookmark=&quot;myBookmark&quot; Style=&quot;fromTop&quot; /&gt;
-                &lt;/Clicked&gt;
-                &lt;Text Value=&quot;Transition from top&quot; /&gt;
-            &lt;/Panel&gt;
-            &lt;Panel&gt;
-                &lt;Clicked&gt;
-                    &lt;RouterModify How=&quot;Push&quot; Bookmark=&quot;myBookmark&quot; Style=&quot;fromBottom&quot; /&gt;
-                &lt;/Clicked&gt;
-                &lt;Text Value=&quot;Transition from bottom&quot; /&gt;
-            &lt;/Panel&gt;
-        &lt;/StackPanel&gt;
-
-        &lt;Panel ux:Template=&quot;secondPage&quot;&gt;
-            &lt;Transition Style=&quot;fromTop&quot;&gt;
-                &lt;Move Y=&quot;-1&quot; RelativeTo=&quot;ParentSize&quot; Duration=&quot;0.4&quot; Easing=&quot;SinusoidalInOut&quot; /&gt;
-            &lt;/Transition&gt;
-            &lt;Transition Style=&quot;fromBottom&quot;&gt;
-                &lt;Move Y=&quot;1&quot; RelativeTo=&quot;ParentSize&quot; Duration=&quot;0.4&quot; Easing=&quot;SinusoidalInOut&quot; /&gt;
-            &lt;/Transition&gt;
+<pre><code class="language-xml">&lt;Router ux:Name=&quot;router&quot; /&gt;
+...
+&lt;JavaScript&gt;
+    router.bookmark({
+        name: &quot;myBookmark&quot;,
+        path: [&quot;secondPage&quot;, {}]
+    });
+&lt;/JavaScript&gt;
+...
+&lt;Navigator DefaultPath=&quot;firstPage&quot;&gt;
+    &lt;StackPanel ux:Template=&quot;firstPage&quot;&gt;
+        &lt;Panel&gt;
             &lt;Clicked&gt;
-                &lt;RouterModify How=&quot;GoBack&quot; /&gt;
+                &lt;RouterModify How=&quot;Push&quot; Bookmark=&quot;myBookmark&quot; Style=&quot;fromTop&quot; /&gt;
             &lt;/Clicked&gt;
-            &lt;Text Value=&quot;Go back&quot; /&gt;
+            &lt;Text Value=&quot;Transition from top&quot; /&gt;
         &lt;/Panel&gt;
-    &lt;/Navigator&gt;</code></pre>
+        &lt;Panel&gt;
+            &lt;Clicked&gt;
+                &lt;RouterModify How=&quot;Push&quot; Bookmark=&quot;myBookmark&quot; Style=&quot;fromBottom&quot; /&gt;
+            &lt;/Clicked&gt;
+            &lt;Text Value=&quot;Transition from bottom&quot; /&gt;
+        &lt;/Panel&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;Panel ux:Template=&quot;secondPage&quot;&gt;
+        &lt;Transition Style=&quot;fromTop&quot;&gt;
+            &lt;Move Y=&quot;-1&quot; RelativeTo=&quot;ParentSize&quot; Duration=&quot;0.4&quot; Easing=&quot;SinusoidalInOut&quot; /&gt;
+        &lt;/Transition&gt;
+        &lt;Transition Style=&quot;fromBottom&quot;&gt;
+            &lt;Move Y=&quot;1&quot; RelativeTo=&quot;ParentSize&quot; Duration=&quot;0.4&quot; Easing=&quot;SinusoidalInOut&quot; /&gt;
+        &lt;/Transition&gt;
+        &lt;Clicked&gt;
+            &lt;RouterModify How=&quot;GoBack&quot; /&gt;
+        &lt;/Clicked&gt;
+        &lt;Text Value=&quot;Go back&quot; /&gt;
+    &lt;/Panel&gt;
+&lt;/Navigator&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

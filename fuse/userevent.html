@@ -713,23 +713,23 @@ Where we place our <a href="../fuse/userevent.html">UserEvent</a> is important, 
 </code></pre>
 </blockquote>
 <p>We can now use <a href="../fuse/triggers/actions/raiseuserevent.html">RaiseUserEvent</a> to raise the event from UX.</p>
-<pre><code class="language-xml">    &lt;Panel ux:Class=&quot;MyComponent&quot;&gt;
-        &lt;UserEvent ux:Name=&quot;myEvent&quot; /&gt;
+<pre><code class="language-xml">&lt;Panel ux:Class=&quot;MyComponent&quot;&gt;
+    &lt;UserEvent ux:Name=&quot;myEvent&quot; /&gt;
 
-        &lt;Clicked&gt;
-            &lt;RaiseUserEvent EventName=&quot;myEvent&quot; /&gt;
-        &lt;/Clicked&gt;
-    &lt;/Panel&gt;</code></pre>
+    &lt;Clicked&gt;
+        &lt;RaiseUserEvent EventName=&quot;myEvent&quot; /&gt;
+    &lt;/Clicked&gt;
+&lt;/Panel&gt;</code></pre>
 <p>Or we can raise it from JavaScript.</p>
-<pre><code class="language-xml">    &lt;Panel ux:Class=&quot;MyComponent&quot;&gt;
-        &lt;UserEvent ux:Name=&quot;myEvent&quot; /&gt;
+<pre><code class="language-xml">&lt;Panel ux:Class=&quot;MyComponent&quot;&gt;
+    &lt;UserEvent ux:Name=&quot;myEvent&quot; /&gt;
 
-        &lt;JavaScript&gt;
-            setTimeout(function() {
-                myEvent.raise();
-            }, 5000);
-        &lt;/JavaScript&gt;
-    &lt;/Panel&gt;</code></pre>
+    &lt;JavaScript&gt;
+        setTimeout(function() {
+            myEvent.raise();
+        }, 5000);
+    &lt;/JavaScript&gt;
+&lt;/Panel&gt;</code></pre>
 <p>When we instantiate our component, we can respond to its events using the OnUserEvent trigger.</p>
 <pre><code class="language-xml">&lt;MyComponent&gt;
     &lt;OnUserEvent EventName=&quot;myEvent&quot;&gt;
@@ -740,17 +740,17 @@ Where we place our <a href="../fuse/userevent.html">UserEvent</a> is important, 
 We can do this because <code>EventName</code> refers to the <code>Name</code> of the event. Setting <code>ux:Name</code> also sets <code>Name</code>, which means that in this example, the <code>Name</code> will be <code>myEvent</code>.
 The actual instance of <a href="../fuse/userevent.html">UserEvent</a> will be resolved at runtime.</p>
 <p>We can also handle events in JavaScript.</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        function eventHandler() {
-            //do something
-        }
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    function eventHandler() {
+        //do something
+    }
 
-        module.exports = { eventHandler: eventHandler };
-    &lt;/JavaScript&gt;
+    module.exports = { eventHandler: eventHandler };
+&lt;/JavaScript&gt;
 
-    &lt;MyComponent&gt;
-        &lt;OnUserEvent EventName=&quot;myEvent&quot; Handler=&quot;{eventHandler}&quot;/&gt;
-    &lt;/MyComponent&gt;</code></pre>
+&lt;MyComponent&gt;
+    &lt;OnUserEvent EventName=&quot;myEvent&quot; Handler=&quot;{eventHandler}&quot;/&gt;
+&lt;/MyComponent&gt;</code></pre>
 <p>We can pass arguments when raising an event.</p>
 <pre><code class="language-xml">myEvent.raise({
     userName: &quot;james&quot;,
@@ -762,15 +762,15 @@ The actual instance of <a href="../fuse/userevent.html">UserEvent</a> will be re
     &lt;UserEventArg Name=&quot;isAdmin&quot; BoolValue=&quot;false&quot; /&gt;
 &lt;/RaiseUserEvent&gt;</code></pre>
 <p>The arguments are then passed to the event handler.</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        function eventHandler(args) {
-            console.log(&quot;Username: &quot; + args.userName + &quot;, Is admin: &quot; + args.isAdmin);
-        }
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    function eventHandler(args) {
+        console.log(&quot;Username: &quot; + args.userName + &quot;, Is admin: &quot; + args.isAdmin);
+    }
 
-        module.exports = { eventHandler: eventHandler };
-    &lt;/JavaScript&gt;
+    module.exports = { eventHandler: eventHandler };
+&lt;/JavaScript&gt;
 
-    &lt;OnUserEvent EventName=&quot;myEvent&quot; Handler=&quot;{eventHandler}&quot; /&gt;</code></pre>
+&lt;OnUserEvent EventName=&quot;myEvent&quot; Handler=&quot;{eventHandler}&quot; /&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

@@ -693,22 +693,22 @@ Show advanced things
 This is the main image that will be displayed above the rest of the content.
 Note that we use <code>ux:Binding</code> here instead of <code>ux:Template</code>.
 This is because <code>Media</code> is a <a href="../ux-markup/dependencies.html">dependency</a>, and must always be provided.</p>
-<pre><code class="language-xml">    &lt;Alive.MediaScroller&gt;
-        &lt;Image ux:Binding=&quot;Media&quot; File=&quot;image.jpg&quot; Height=&quot;250&quot; /&gt;
+<pre><code class="language-xml">&lt;Alive.MediaScroller&gt;
+    &lt;Image ux:Binding=&quot;Media&quot; File=&quot;image.jpg&quot; Height=&quot;250&quot; /&gt;
 
-        &lt;!-- content goes here --&gt;
-    &lt;/Alive.MediaScroller&gt;</code></pre>
+    &lt;!-- content goes here --&gt;
+&lt;/Alive.MediaScroller&gt;</code></pre>
 <p>Any element that is not a <code>ux:Template</code> or <code>ux:Dependency</code> is placed in a <a href="../fuse/controls/stackpanel.html">StackPanel</a> that serves
 as the main content of the inner <a href="../fuse/controls/scrollview.html">ScrollView</a>.</p>
-<pre><code class="language-xml">    &lt;Alive.MediaScroller&gt;
-        &lt;Image ux:Binding=&quot;Media&quot; File=&quot;image.jpg&quot; Height=&quot;250&quot; /&gt;
+<pre><code class="language-xml">&lt;Alive.MediaScroller&gt;
+    &lt;Image ux:Binding=&quot;Media&quot; File=&quot;image.jpg&quot; Height=&quot;250&quot; /&gt;
 
-        &lt;Alive.Body Value=&quot;children&quot; /&gt;
-        &lt;Alive.Body Value=&quot;will&quot; /&gt;
-        &lt;Alive.Body Value=&quot;be&quot; /&gt;
-        &lt;Alive.Body Value=&quot;stacked&quot; /&gt;
-        &lt;Alive.Body Value=&quot;vertically&quot; /&gt;
-    &lt;/Alive.MediaScroller&gt;</code></pre>
+    &lt;Alive.Body Value=&quot;children&quot; /&gt;
+    &lt;Alive.Body Value=&quot;will&quot; /&gt;
+    &lt;Alive.Body Value=&quot;be&quot; /&gt;
+    &lt;Alive.Body Value=&quot;stacked&quot; /&gt;
+    &lt;Alive.Body Value=&quot;vertically&quot; /&gt;
+&lt;/Alive.MediaScroller&gt;</code></pre>
 <p>When the user scrolls downwards, the <code>Media</code> element shrinks with the scrolling motion,
 until it has the same height as <code>TopBar</code>.</p>
 <pre><code class="language-xml">&lt;Alive.MediaScroller&gt;

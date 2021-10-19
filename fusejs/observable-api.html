@@ -682,11 +682,11 @@ someString.value = &quot;barfoo&quot;; // sets the value, notifies subscribers.<
 <h4 id="observable-lists">Observable lists</h4>
 <p>If we want to use the observable as a list of values, we manipulate it using methods like <code>.add(item)</code> and <code>.remove(item)</code>.
 We can also query the number of values in the list through the <code>.length</code> property:</p>
-<pre><code class="language-js">    var friends = Observable(&quot;Jake&quot;, &quot;Jane&quot;, &quot;Joe&quot;);
-    console.log(friends.length); // prints 3
+<pre><code class="language-js">var friends = Observable(&quot;Jake&quot;, &quot;Jane&quot;, &quot;Joe&quot;);
+console.log(friends.length); // prints 3
 
-    friends.add(&quot;Gina&quot;);
-    console.log(friends.length); // prints 4</code></pre>
+friends.add(&quot;Gina&quot;);
+console.log(friends.length); // prints 4</code></pre>
 <p>See the full list of members to see what's possible with observable lists.</p>
 <h4 id="data-types-with-observables">Data types with Observables</h4>
 <p>Observables can be used to supply all the basic types; number, string, boolean, as well as vector types. Number, string and boolean are created using their usual JavaScript literals:</p>
@@ -704,12 +704,12 @@ of the observable is computed by evaluating the function.</p>
 <p>Reactive dependencies are automatically generated with all other observables touched while
 evaluating the function.</p>
 <p>Example:</p>
-<pre><code class="language-js">    var firstName = Observable(&quot;John&quot;);
-    var lastName = Observable(&quot;Doe&quot;);
+<pre><code class="language-js">var firstName = Observable(&quot;John&quot;);
+var lastName = Observable(&quot;Doe&quot;);
 
-    var fullName = Observable(function() {
-        return firstName.value + &quot; &quot; + lastName.value;
-    })</code></pre>
+var fullName = Observable(function() {
+    return firstName.value + &quot; &quot; + lastName.value;
+})</code></pre>
 <p>If the <code>firstName</code> or <code>lastName</code> changes, the <code>fullName</code> will now update automatically.</p>
 <p>Yes, it's magic.</p>
 <h3 id="state-observables-and-derived-observables">State Observables and derived Observables</h3>
@@ -752,11 +752,11 @@ var obsArray = obs.toArray(); //obsArray == [1,2,3]</code></pre>
 colors.add(&quot;Blue&quot;);</code></pre>
 <h4 id="addall-items">addAll(items)</h4>
 <p>Appends the array <code>items</code> to the end of the observable.</p>
-<pre><code class="language-js">    var val = new Observable(1, 2, 3);
+<pre><code class="language-js">var val = new Observable(1, 2, 3);
 
-    val.addAll([4, 5, 6]);
-    
-    //val = Observable(1, 2, 3, 4, 5, 6);</code></pre>
+val.addAll([4, 5, 6]);
+
+//val = Observable(1, 2, 3, 4, 5, 6);</code></pre>
 <h4 id="clear">clear()</h4>
 <p>Removes all values from the <a href="../fusejs/observable.html">Observable</a>.</p>
 <pre><code class="language-js">var colors = Observable(&quot;Red&quot;, &quot;Green&quot;);
@@ -897,17 +897,17 @@ var hasCar = veichles.any(function(x) { return x.type === &quot;car&quot;; }) //
 <h4 id="combine-obs-func">combine([obs, ...], func)</h4>
 <p>Invokes <code>func</code> every time the current observable or any of the <code>obs</code> observables (collectively &quot;the dependencies&quot;) change.</p>
 <p>The arguments will hold the current <code>.value</code> of each of the dependencies, with <code>this.value</code> as the first argument, followed by the value of each successive observable in order.</p>
-<pre><code class="language-js">    var foo = Observable(1);
-    var boo = Observable(2);
-    var moo = Observable(3);
+<pre><code class="language-js">var foo = Observable(1);
+var boo = Observable(2);
+var moo = Observable(3);
 
-    var res = foo.combine(boo, moo, function(f, b, m) {
-        // f holds the current .value of foo
-        // b holds the current .value of boo
-        // m holds the current .value of moo
+var res = foo.combine(boo, moo, function(f, b, m) {
+    // f holds the current .value of foo
+    // b holds the current .value of boo
+    // m holds the current .value of moo
 
-        return f+b+m; // the resulting observable will yield the value 6
-    })</code></pre>
+    return f+b+m; // the resulting observable will yield the value 6
+})</code></pre>
 <p>If the <code>func</code> provided to <code>combine</code> returns a value, that value will replace the <code>.value</code> of the resulting observable. If the function returns nothing (<code>undefined</code>),
 the <code>func</code> is expected to take care of updating the resulting observable by modifying the <code>this</code> parameter in the <code>func</code>.</p>
 <p>Note that <code>combine</code> fires on every change, even if no value is available for each of the dependencies. To avoid that, see <code>combineLatest</code>.</p>
@@ -917,17 +917,17 @@ of the dependencies that, see <code>.combineArrays</code>.</p>
 <p>Same as <code>combine</code>, but does not fire <code>func</code> until at least one value is available (<code>.length &gt; 0</code>) for all of the dependencies.</p>
 <h3 id="combinearrays-obs-func">combineArrays([obs, ...], func)</h3>
 <p>Same as <code>combine</code>, but provides an array for each dependency with all the values of each of the observable instead of just the first value of each observable.</p>
-<pre><code class="language-js">    var foo = Observable(1);
-    var boo = Observable(&quot;a&quot;, &quot;b&quot;, c);
-    var moo = Observable(3);
+<pre><code class="language-js">var foo = Observable(1);
+var boo = Observable(&quot;a&quot;, &quot;b&quot;, c);
+var moo = Observable(3);
 
-    var res = foo.combineArrays(boo, moo, function(f, b, m) {
-        // f holds [1]
-        // b holds [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
-        // m holds [3]
+var res = foo.combineArrays(boo, moo, function(f, b, m) {
+    // f holds [1]
+    // b holds [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+    // m holds [3]
 
-        return [f[0], m[0], b.length]; // the resulting observable will hold the values (1, 3, 3)
-    })</code></pre>
+    return [f[0], m[0], b.length]; // the resulting observable will hold the values (1, 3, 3)
+})</code></pre>
 <p>If the <code>func</code> provided to <code>combineArrays</code> returns an array, the elements from the array will replace all elements in the resulting observable. If the function returns nothing (<code>undefined</code>),
 the <code>func</code> is expected to take care of updating the resulting observable by modifying the <code>this</code> parameter in the <code>func</code>.</p>
 <h4 id="count">count()</h4>
@@ -1057,17 +1057,17 @@ var bar = foo.slice(1,2) // bar = Observable[2, 3]</code></pre>
 If <code>condition</code> is a function, it will return a new <a href="../fusejs/observable.html">Observable</a> with only the values for which <code>condition</code> returns true.
 However, if <code>condition</code> is an object, it will return a new <a href="../fusejs/observable.html">Observable</a> with only the values where parameters match parameters in <code>condition</code>, checked using strict equality (<code>===</code>).</p>
 <p>The new <a href="../fusejs/observable.html">Observable</a> observes the old <a href="../fusejs/observable.html">Observable</a>, and will therefore update whenever a value changes in the original observable.</p>
-<pre><code class="language-js">    fruits = Observable(
-        { name: &quot;Apple&quot; , color: &quot;red&quot;    },
-        { name: &quot;Lemon&quot; , color: &quot;yellow&quot; },
-        { name: &quot;Pear&quot;  , color: &quot;green&quot;  },
-        { name: &quot;Banana&quot;, color: &quot;yellow&quot; });
+<pre><code class="language-js">fruits = Observable(
+    { name: &quot;Apple&quot; , color: &quot;red&quot;    },
+    { name: &quot;Lemon&quot; , color: &quot;yellow&quot; },
+    { name: &quot;Pear&quot;  , color: &quot;green&quot;  },
+    { name: &quot;Banana&quot;, color: &quot;yellow&quot; });
 
-    goodFruits = fruits.where({color: &quot;yellow&quot;});
-    
-    goodFruits = fruits.where(function(e){
-        return e.color === &quot;yellow&quot;;
-    });</code></pre>
+goodFruits = fruits.where({color: &quot;yellow&quot;});
+
+goodFruits = fruits.where(function(e){
+    return e.color === &quot;yellow&quot;;
+});</code></pre>
 <blockquote>
 <p>Note! You used to be able to return an Observable function with the .where operator in order to make the condition itself observable.
 This is no longer allowed. The best practice for achieving the same effect is to instead use <a href="#flatmap-func-item">flatMap()</a>.</p>

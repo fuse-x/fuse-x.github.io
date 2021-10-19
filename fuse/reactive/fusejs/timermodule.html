@@ -689,15 +689,15 @@ Show advanced things
 </ul>
 </section>
 <p>The Timer API lets you schedule functions to be executed after a given time.</p>
-<pre><code class="language-js">    var Timer = require(&quot;FuseJS/Timer&quot;);
+<pre><code class="language-js">var Timer = require(&quot;FuseJS/Timer&quot;);
 
-    Timer.create(function() {
-        console.log(&quot;This will run once, after 3 seconds&quot;);
-    }, 3000, false);
+Timer.create(function() {
+    console.log(&quot;This will run once, after 3 seconds&quot;);
+}, 3000, false);
 
-    Timer.create(function() {
-        console.log(&quot;This will run every 10 seconds until forever&quot;);
-    }, 10000, true);</code></pre>
+Timer.create(function() {
+    console.log(&quot;This will run every 10 seconds until forever&quot;);
+}, 10000, true);</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

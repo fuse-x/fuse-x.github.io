@@ -680,12 +680,12 @@
 <p>This creates an event named <code>myEvent</code>, specific to the <code>MyComponent</code> class</p>
 <h2 id="app-global-events">App-global events</h2>
 <p>To make a <a href="../fuse/userevent.html">UserEvent</a> that can be raised or handled from anywhere in the app, we simply make the event part of the App-component, by declaring it on the root <a href="../fuse/app.html">App</a> node, like this:</p>
-<pre><code class="language-xml">    &lt;App&gt;
-         &lt;UserEvent ux:Name=&quot;myGlobalEvent&quot; /&gt;
+<pre><code class="language-xml">&lt;App&gt;
+     &lt;UserEvent ux:Name=&quot;myGlobalEvent&quot; /&gt;
 
-         &lt;!-- The rest of our app goes here --&gt;
+     &lt;!-- The rest of our app goes here --&gt;
 
-    &lt;/App&gt;</code></pre>
+&lt;/App&gt;</code></pre>
 <h2 id="raising-events">Raising events</h2>
 <p>We can raise events from JavaScript using the <code>.raise()</code> method on the <code>UserEvent</code> object:</p>
 <pre><code class="language-xml">&lt;Panel ux:Class=&quot;MyComponent&quot;&gt;

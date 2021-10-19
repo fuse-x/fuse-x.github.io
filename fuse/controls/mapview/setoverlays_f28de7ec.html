@@ -692,25 +692,25 @@ MapView.setOverlays(overlays) Method (JS)
 }</code></pre>
 <h4 id="example">Example</h4>
 <p>The following example places a map overlay</p>
-<pre><code class="language-xml">    &lt;NativeViewHost&gt;
-        &lt;MapView ux:Name=&quot;myMapView&quot; /&gt;
-    &lt;/NativeViewHost&gt;
+<pre><code class="language-xml">&lt;NativeViewHost&gt;
+    &lt;MapView ux:Name=&quot;myMapView&quot; /&gt;
+&lt;/NativeViewHost&gt;
 
-    &lt;JavaScript&gt;
-        myMapView.setOverlays([
-            {
-                lineWidth: 2,
-                strokeColor: '#348',
-                fillColor: '#348',
-                overlayType: 'polygon',
-                coordinates: [
-                    { latitude: 59.911567, longitude: 10.741030 },
-                    { latitude: 60.011567, longitude: 10.941030 },
-                    { latitude: 60.111567, longitude: 11.001030 },
-                ]
-            }
-        ]);
-    &lt;/JavaScript&gt;</code></pre>
+&lt;JavaScript&gt;
+    myMapView.setOverlays([
+        {
+            lineWidth: 2,
+            strokeColor: '#348',
+            fillColor: '#348',
+            overlayType: 'polygon',
+            coordinates: [
+                { latitude: 59.911567, longitude: 10.741030 },
+                { latitude: 60.011567, longitude: 10.941030 },
+                { latitude: 60.111567, longitude: 11.001030 },
+            ]
+        }
+    ]);
+&lt;/JavaScript&gt;</code></pre>
 
 <section class="type-location type-location-leaf">
 <h3 id="section-location">Location</h3>

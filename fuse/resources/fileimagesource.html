@@ -704,15 +704,15 @@ Thus, we need to explicitly specify it as a <a href="../../assets/bundle.html">b
     &quot;assets/kitten.jpg:Bundle&quot;
 ]</code></pre>
 <p>We can now use JavaScript to specify the path to the image:</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        module.exports = {
-            image: &quot;assets/kitten.jpg&quot;
-        }
-    &lt;/JavaScript&gt;
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    module.exports = {
+        image: &quot;assets/kitten.jpg&quot;
+    }
+&lt;/JavaScript&gt;
 
-    &lt;Image&gt;
-        &lt;FileImageSource File=&quot;{image}&quot; /&gt;
-    &lt;/Image&gt;</code></pre>
+&lt;Image&gt;
+    &lt;FileImageSource File=&quot;{image}&quot; /&gt;
+&lt;/Image&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

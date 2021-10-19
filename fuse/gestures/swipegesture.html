@@ -717,16 +717,16 @@ so it must be referenced explicitly. All swipe-related triggers share this prope
 </blockquote>
 <p>We also want to respond when the swipe has completed, which is achieved using the
 <a href="../../fuse/gestures/swiped.html">Swiped</a> trigger. Let's extend our previous example a bit.</p>
-<pre><code class="language-xml">    &lt;Panel Width=&quot;100&quot; Height=&quot;100&quot; Background=&quot;Black&quot;&gt;
-        &lt;SwipeGesture ux:Name=&quot;swipe&quot; Direction=&quot;Right&quot; Length=&quot;200&quot; /&gt;
-        &lt;SwipingAnimation Source=&quot;swipe&quot;&gt;
-            &lt;Move X=&quot;200&quot; /&gt;
-        &lt;/SwipingAnimation&gt;
+<pre><code class="language-xml">&lt;Panel Width=&quot;100&quot; Height=&quot;100&quot; Background=&quot;Black&quot;&gt;
+    &lt;SwipeGesture ux:Name=&quot;swipe&quot; Direction=&quot;Right&quot; Length=&quot;200&quot; /&gt;
+    &lt;SwipingAnimation Source=&quot;swipe&quot;&gt;
+        &lt;Move X=&quot;200&quot; /&gt;
+    &lt;/SwipingAnimation&gt;
 
-        &lt;Swiped&gt;
-            &lt;DebugAction Message=&quot;Swiped!&quot; /&gt;
-        &lt;/Swiped&gt;
-    &lt;/Panel&gt;</code></pre>
+    &lt;Swiped&gt;
+        &lt;DebugAction Message=&quot;Swiped!&quot; /&gt;
+    &lt;/Swiped&gt;
+&lt;/Panel&gt;</code></pre>
 <p>For illustrative purposes, we are using <a href="../../fuse/triggers/actions/debugaction.html">DebugAction</a> to log a message
 to the console when the swipe has completed.</p>
 <h3 id="swipe-types">Swipe types</h3>
@@ -766,16 +766,16 @@ begin at.</p>
 we can supply an <a href="../../fuse/elements/element.html">Element</a> to be measured via the <code>LengthNode</code> property.</p>
 <p>This is a powerful feature, as it allows us to create swipe-based controls that work regardless of their size.</p>
 <p>Below is an example of a size-independent switch control implemented using SwipeGesture.</p>
-<pre><code class="language-xml">    &lt;Panel Height=&quot;50&quot;&gt;
-        &lt;Circle Width=&quot;50&quot; Height=&quot;50&quot; Color=&quot;#000&quot; Alignment=&quot;Left&quot;&gt;
-            &lt;SwipeGesture ux:Name=&quot;swipe&quot; LengthNode=&quot;track&quot; Direction=&quot;Right&quot; Type=&quot;Active&quot; /&gt;
-            &lt;SwipingAnimation Source=&quot;swipe&quot;&gt;
-                &lt;Move X=&quot;1&quot; RelativeTo=&quot;Size&quot; RelativeNode=&quot;track&quot; /&gt;
-            &lt;/SwipingAnimation&gt;
-        &lt;/Circle&gt;
+<pre><code class="language-xml">&lt;Panel Height=&quot;50&quot;&gt;
+    &lt;Circle Width=&quot;50&quot; Height=&quot;50&quot; Color=&quot;#000&quot; Alignment=&quot;Left&quot;&gt;
+        &lt;SwipeGesture ux:Name=&quot;swipe&quot; LengthNode=&quot;track&quot; Direction=&quot;Right&quot; Type=&quot;Active&quot; /&gt;
+        &lt;SwipingAnimation Source=&quot;swipe&quot;&gt;
+            &lt;Move X=&quot;1&quot; RelativeTo=&quot;Size&quot; RelativeNode=&quot;track&quot; /&gt;
+        &lt;/SwipingAnimation&gt;
+    &lt;/Circle&gt;
 
-        &lt;Rectangle ux:Name=&quot;track&quot; Height=&quot;15&quot; Color=&quot;#0003&quot; Margin=&quot;25,0&quot; CornerRadius=&quot;15&quot; /&gt;
-    &lt;/Panel&gt;</code></pre>
+    &lt;Rectangle ux:Name=&quot;track&quot; Height=&quot;15&quot; Color=&quot;#0003&quot; Margin=&quot;25,0&quot; CornerRadius=&quot;15&quot; /&gt;
+&lt;/Panel&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

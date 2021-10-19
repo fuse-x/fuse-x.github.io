@@ -687,17 +687,17 @@
 <p>The <code>ux:Global</code> attribute can be used to define global defaults for resource keys. If a resource key is not resolved in the UX tree scope, a global resource mathing the resource binding key will be used instead.</p>
 <h3 id="example">Example</h3>
 <p>The following example defines a <code>ux:Global</code> default value for the <code>MyApp.ThemeColor</code> resource key, which then applies for all parts of the app tree where nothing else is specified.</p>
-<pre><code class="language-xml">    &lt;App&gt;
-        &lt;float4 ux:Global=&quot;MyApp.ThemeColor&quot; ux:Value=&quot;Green&quot; /&gt;
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;float4 ux:Global=&quot;MyApp.ThemeColor&quot; ux:Value=&quot;Green&quot; /&gt;
 
-        &lt;Navigator&gt;
-            &lt;HomePage ux:Template=&quot;homePage&quot; /&gt;
-            &lt;ProfilePage ux:Template=&quot;profilePage&quot; /&gt;
-            &lt;SettingsPage ux:Template=&quot;settingsPage&quot;&gt;
-                &lt;float4 ux:Key=&quot;MyApp.ThemeColor&quot; ux:Value=&quot;Blue&quot; /&gt;
-            &lt;/SettingsPage&gt;
-        &lt;/Navigator&gt;
-    &lt;/App&gt;</code></pre>
+    &lt;Navigator&gt;
+        &lt;HomePage ux:Template=&quot;homePage&quot; /&gt;
+        &lt;ProfilePage ux:Template=&quot;profilePage&quot; /&gt;
+        &lt;SettingsPage ux:Template=&quot;settingsPage&quot;&gt;
+            &lt;float4 ux:Key=&quot;MyApp.ThemeColor&quot; ux:Value=&quot;Blue&quot; /&gt;
+        &lt;/SettingsPage&gt;
+    &lt;/Navigator&gt;
+&lt;/App&gt;</code></pre>
 <p>On the <code>SettingsPage</code>, we override the resource key using the <code>ux:Key</code> attribute, to <code>Blue</code> instead of <code>Green</code>. This means any use of <code>{Resource MyApp.ThemeColor}</code> whithin the settings page will be <code>Blue</code> instead of <code>Green</code>, unless overridden even deeper down the tree.</p>
 
             </div>

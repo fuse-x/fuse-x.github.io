@@ -692,13 +692,13 @@ Show advanced things
 <p>This module is an <a href="../../../fusejs/eventemitter.html">EventEmitter</a>, so the methods from <a href="../../../fusejs/eventemitter.html">EventEmitter</a> can be used to listen to events.</p>
 <p>You need to add a reference to <code>&quot;Fuse.Launcher&quot;</code> in your project file to use this feature.</p>
 <h4 id="example">Example</h4>
-<pre><code class="language-javascript">    var InterApp = require(&quot;FuseJS/InterApp&quot;);
+<pre><code class="language-javascript">var InterApp = require(&quot;FuseJS/InterApp&quot;);
 
-    InterApp.on(&quot;receivedUri&quot;, function(uri) {
-        console.log(&quot;Launched with URI&quot;, uri);
-    });
+InterApp.on(&quot;receivedUri&quot;, function(uri) {
+    console.log(&quot;Launched with URI&quot;, uri);
+});
 
-    InterApp.launchUri(&quot;https://fuseopen.com/&quot;);</code></pre>
+InterApp.launchUri(&quot;https://fuseopen.com/&quot;);</code></pre>
 <p>In the above example we're using the <a href="../../../fusejs/eventemitter.html">EventEmitter</a> <code>on</code> method to listen to the <code>&quot;receivedUri&quot;</code> event.</p>
 <p>For the <a href="../../../fuse/reactive/fusejs/interapp/onreceiveduri_968f99a6.html">receivedUri</a> event to be triggered, you need register a custom URI scheme for your app, as shown <a href="../../../basics/uno-projects.html#mobile-urischeme">here</a>.</p>
 <h4 id="deep-links-universal-and-app-links">Deep Links - Universal and App Links</h4>

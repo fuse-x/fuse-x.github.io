@@ -714,25 +714,25 @@ is clicked:</p>
 &lt;/Panel&gt;</code></pre>
 <p>This example illustrates how you can read the arguments that were
 passed with the event from a JavaScript handler.</p>
-<pre><code class="language-xml">    &lt;UserEvent ux:Name=&quot;myEvent&quot; /&gt;
+<pre><code class="language-xml">&lt;UserEvent ux:Name=&quot;myEvent&quot; /&gt;
 
-    &lt;Panel Color=&quot;#123&quot;&gt;
-        &lt;Clicked&gt;
-            &lt;RaiseUserEvent EventName=&quot;myEvent&quot;&gt;
-                &lt;UserEventArg Name=&quot;myArgument&quot; StringValue=&quot;Some value&quot; /&gt;
-            &lt;/RaiseUserEvent&gt;
-        &lt;/Clicked&gt;
-    &lt;/Panel&gt;
+&lt;Panel Color=&quot;#123&quot;&gt;
+    &lt;Clicked&gt;
+        &lt;RaiseUserEvent EventName=&quot;myEvent&quot;&gt;
+            &lt;UserEventArg Name=&quot;myArgument&quot; StringValue=&quot;Some value&quot; /&gt;
+        &lt;/RaiseUserEvent&gt;
+    &lt;/Clicked&gt;
+&lt;/Panel&gt;
 
-    &lt;OnUserEvent EventName=&quot;myEvent&quot; Handler=&quot;{eventHandler}&quot; /&gt;
+&lt;OnUserEvent EventName=&quot;myEvent&quot; Handler=&quot;{eventHandler}&quot; /&gt;
 
-    &lt;JavaScript&gt;
-        function eventHandler(args) {
-            console.log(&quot;myEvent raised with argument 'myArgument': &quot; + args.myArgument);
-        }
+&lt;JavaScript&gt;
+    function eventHandler(args) {
+        console.log(&quot;myEvent raised with argument 'myArgument': &quot; + args.myArgument);
+    }
 
-        module.exports = { eventHandler: eventHandler };
-    &lt;/JavaScript&gt;</code></pre>
+    module.exports = { eventHandler: eventHandler };
+&lt;/JavaScript&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

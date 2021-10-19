@@ -742,21 +742,21 @@ If you don't yet have a project set up please see the <a href="#android-setup">A
 <p>You must then register for push notifications by calling <code>register()</code> from JS. This option is useful as when the notifications are registered the OS may ask the user for permission to use push notifications and this may be undesirable on launch.</p>
 <h4 id="using-the-api-from-javascript">Using the API from JavaScript</h4>
 <p>Integrating with notifications from JavaScript is simple. Here is an example that just logs when the callbacks fire:</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        var push = require(&quot;FuseJS/Push&quot;);
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    var push = require(&quot;FuseJS/Push&quot;);
 
-        push.on(&quot;registrationSucceeded&quot;, function(regID) {
-            console.log(&quot;Reg Succeeded: &quot; + regID);
-        });
+    push.on(&quot;registrationSucceeded&quot;, function(regID) {
+        console.log(&quot;Reg Succeeded: &quot; + regID);
+    });
 
-        push.on(&quot;error&quot;, function(reason) {
-            console.log(&quot;Reg Failed: &quot; + reason);
-        });
+    push.on(&quot;error&quot;, function(reason) {
+        console.log(&quot;Reg Failed: &quot; + reason);
+    });
 
-        push.on(&quot;receivedMessage&quot;, function(payload) {
-            console.log(&quot;Recieved Push Notification: &quot; + payload);
-        });
-    &lt;/JavaScript&gt;</code></pre>
+    push.on(&quot;receivedMessage&quot;, function(payload) {
+        console.log(&quot;Recieved Push Notification: &quot; + payload);
+    });
+&lt;/JavaScript&gt;</code></pre>
 <p>Here we're using the <a href="../../fusejs/eventemitter.html">EventEmitter</a> <code>on</code> method to register our functions with the different events.
 In a real app we should send our <code>registration ID</code> to our server when <code>registrationSucceeded</code> is triggered.</p>
 <h4 id="server-side">Server Side</h4>
@@ -878,19 +878,19 @@ In a real app we should send our <code>registration ID</code> to our server when
     }
 },</code></pre>
 <p>Notification Channel Importance - Values - urgent | high | medium | low | none</p>
-<pre><code class="language-json">    'notification': {
-        alert: {
-            'title': 'Well would ya look at that!',
-            'body': 'Hello from the server',
-            'notificationChannelGroupId': 'sports',
-            'notificationChannelGroupName': 'Sports',
-            'notificationChannelId': 'sports_basketball_highlights',
-            'notificationChannelName': 'Basketball Highlights',
-            'notificationChannelDescription': 'Video commentary once a week',
-            'notificationChannelImportance': 'urgent',
+<pre><code class="language-json">'notification': {
+    alert: {
+        'title': 'Well would ya look at that!',
+        'body': 'Hello from the server',
+        'notificationChannelGroupId': 'sports',
+        'notificationChannelGroupName': 'Sports',
+        'notificationChannelId': 'sports_basketball_highlights',
+        'notificationChannelName': 'Basketball Highlights',
+        'notificationChannelDescription': 'Video commentary once a week',
+        'notificationChannelImportance': 'urgent',
 
-        }
-    },</code></pre>
+    }
+},</code></pre>
 <p>Notification Channel Lockscreen Visibility - Values - public | secret | private</p>
 <pre><code class="language-json">'notification': {
     alert: {
@@ -933,13 +933,13 @@ In a real app we should send our <code>registration ID</code> to our server when
 },</code></pre>
 <h6 id="notification-badge">Notification Badge</h6>
 <p>Notification Channel Badge Number</p>
-<pre><code class="language-json">   'notification': {
-        alert: {
-            'title': 'Well would ya look at that!',
-            'body': 'Hello from the server',
-            'notificationBadgeNumber': '23'
-        }
-    },</code></pre>
+<pre><code class="language-json">'notification': {
+     alert: {
+         'title': 'Well would ya look at that!',
+         'body': 'Hello from the server',
+         'notificationBadgeNumber': '23'
+     }
+ },</code></pre>
 <p>Notification Channel Badge Icon Type - Values - none | small | large</p>
 <pre><code class="language-json">'notification': {
     alert: {
@@ -1019,36 +1019,36 @@ See the example below for an example of how to send messages to a Fuse app.</p>
 This, along with your FCM Server key, are the details that is needed to send that app a notification.</p>
 <p>Your server key can be found under the &quot;Cloud Messaging&quot; tab of the Project Settings page (where you obtained your Sender ID).</p>
 <p>Here some example Fuse code for sending your app a notification.</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        var API_ACCESS_KEY = '----HARDCODED API KEY----';
-        var regID = '----HARDCODED REG ID FROM THE APP YOU ARE SENDING TO----';
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    var API_ACCESS_KEY = '----HARDCODED API KEY----';
+    var regID = '----HARDCODED REG ID FROM THE APP YOU ARE SENDING TO----';
 
-        module.exports.send = function() {
-            fetch('https://android.googleapis.com/gcm/send', {
-                method: 'post',
-                headers: {
-                    'Authorization': 'key=' + API_ACCESS_KEY,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    registration_ids: [regID],
-                    data: {
-                        notification: {
-                            alert: {
-                                title: 'Well would ya look at that!',
-                                body: 'Hello from some other app'
-                            }
-                        },
-                        payload: 'anything you like'
-                    }
-                })
-            }).then(function(response) {
-                console.log(JSON.stringify(response));
-            }, function(error) {
-                console.log(error);
-            });
-        }
-    &lt;/JavaScript&gt;</code></pre>
+    module.exports.send = function() {
+        fetch('https://android.googleapis.com/gcm/send', {
+            method: 'post',
+            headers: {
+                'Authorization': 'key=' + API_ACCESS_KEY,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                registration_ids: [regID],
+                data: {
+                    notification: {
+                        alert: {
+                            title: 'Well would ya look at that!',
+                            body: 'Hello from some other app'
+                        }
+                    },
+                    payload: 'anything you like'
+                }
+            })
+        }).then(function(response) {
+            console.log(JSON.stringify(response));
+        }, function(error) {
+            console.log(error);
+        });
+    }
+&lt;/JavaScript&gt;</code></pre>
 <p>Whilst hardcoding the RegID is clearly not a good idea, it serves the purpose for this simple test.</p>
 <h4 id="ios-setup">iOS setup</h4>
 <p>This section covers how to set up a iOS Push Notifications to the point that you can send messages to a Fuse App.</p>

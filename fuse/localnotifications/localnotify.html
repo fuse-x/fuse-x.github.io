@@ -701,39 +701,39 @@ Show advanced things
 <p>This is enough to start using this feature in your apps. Let's look at that now.</p>
 <h4 id="app-example">App Example</h4>
 <p>This is a full Fuse app that uses Local Notifications:</p>
-<pre><code class="language-xml">    &lt;App&gt;
-        &lt;JavaScript&gt;
-            var LocalNotify = require(&quot;FuseJS/LocalNotifications&quot;);
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;JavaScript&gt;
+        var LocalNotify = require(&quot;FuseJS/LocalNotifications&quot;);
 
-            LocalNotify.on(&quot;receivedMessage&quot;, function(payload) {
-                console.log(&quot;Received Local Notification: &quot; + payload);
-                LocalNotify.clearAllNotifications();
-            });
+        LocalNotify.on(&quot;receivedMessage&quot;, function(payload) {
+            console.log(&quot;Received Local Notification: &quot; + payload);
+            LocalNotify.clearAllNotifications();
+        });
 
-            function sendLater() {
-                LocalNotify.later(4, &quot;Finally!&quot;, &quot;4 seconds is a long time&quot;, &quot;hmm?&quot;, true);
-            }
+        function sendLater() {
+            LocalNotify.later(4, &quot;Finally!&quot;, &quot;4 seconds is a long time&quot;, &quot;hmm?&quot;, true);
+        }
 
-            function sendNow() {
-                LocalNotify.now(&quot;Boom!&quot;, &quot;Just like that&quot;, &quot;payload&quot;, true);
-            }
+        function sendNow() {
+            LocalNotify.now(&quot;Boom!&quot;, &quot;Just like that&quot;, &quot;payload&quot;, true);
+        }
 
-            module.exports = {
-                sendNow: sendNow,
-                sendLater: sendLater
-            };
-        &lt;/JavaScript&gt;
-        &lt;DockPanel&gt;
-            &lt;TopFrameBackground DockPanel.Dock=&quot;Top&quot; /&gt;
-            &lt;ScrollView&gt;
-                &lt;StackPanel&gt;
-                    &lt;Button Clicked=&quot;{sendNow}&quot; Text=&quot;Send notification now&quot; Height=&quot;60&quot;/&gt;
-                    &lt;Button Clicked=&quot;{sendLater}&quot; Text=&quot;Send notification in 4 seconds&quot; Height=&quot;60&quot;/&gt;
-                &lt;/StackPanel&gt;
-            &lt;/ScrollView&gt;
-            &lt;BottomBarBackground DockPanel.Dock=&quot;Bottom&quot; /&gt;
-        &lt;/DockPanel&gt;
-    &lt;/App&gt;</code></pre>
+        module.exports = {
+            sendNow: sendNow,
+            sendLater: sendLater
+        };
+    &lt;/JavaScript&gt;
+    &lt;DockPanel&gt;
+        &lt;TopFrameBackground DockPanel.Dock=&quot;Top&quot; /&gt;
+        &lt;ScrollView&gt;
+            &lt;StackPanel&gt;
+                &lt;Button Clicked=&quot;{sendNow}&quot; Text=&quot;Send notification now&quot; Height=&quot;60&quot;/&gt;
+                &lt;Button Clicked=&quot;{sendLater}&quot; Text=&quot;Send notification in 4 seconds&quot; Height=&quot;60&quot;/&gt;
+            &lt;/StackPanel&gt;
+        &lt;/ScrollView&gt;
+        &lt;BottomBarBackground DockPanel.Dock=&quot;Bottom&quot; /&gt;
+    &lt;/DockPanel&gt;
+&lt;/App&gt;</code></pre>
 <p>Let's break down what is happening here.</p>
 <h4 id="how-it-works">How it works</h4>
 <p>We will skip the <code>module.exports</code> and stuff inside the <code>DockPanel</code>, as that is better explained in other guides. Let's instead go through the JS.</p>

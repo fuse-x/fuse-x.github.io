@@ -728,27 +728,27 @@
 <p>Note that the syntax is <code>if defined(CONDITION)</code> and not <code>if (defined(CONDITION))</code>. This by design to highlight the difference of <em>when</em> this is being evaluated.</p>
 <h2 id="extern-quot-quot"><code>extern &quot;&quot;</code></h2>
 <p><code>extern &quot;&quot;</code> (pronounced 'extern string') is a way of writing expressions in the native target language inline in your uno code. For example:</p>
-<pre><code class="language-csharp">    public class Test
+<pre><code class="language-csharp">public class Test
+{
+    // note that the extern can go before the access modifiers
+    extern(MOBILE) // MOBILE is equivalent to (IOS||ANDROID)
+    public void SomeMethod()
     {
-        // note that the extern can go before the access modifiers
-        extern(MOBILE) // MOBILE is equivalent to (IOS||ANDROID)
-        public void SomeMethod()
-        {
-            extern &quot;Xli::Console::WriteLine(\&quot;I can has null deref exceptions\&quot;)&quot;;
-        }
+        extern &quot;Xli::Console::WriteLine(\&quot;I can has null deref exceptions\&quot;)&quot;;
+    }
 
-        extern(JAVASCRIPT)
-        public void SomeMethod()
-        {
-            extern &quot;Console.log(\&quot;I can has Ï€\&quot;)&quot;;
-        }
+    extern(JAVASCRIPT)
+    public void SomeMethod()
+    {
+        extern &quot;Console.log(\&quot;I can has Ï€\&quot;)&quot;;
+    }
 
-        extern(!(MOBILE||JAVASCRIPT))
-        public void SomeMethod()
-        {
-            debug_log &quot;why not do this in the first place?!&quot;
-        }
-    }</code></pre>
+    extern(!(MOBILE||JAVASCRIPT))
+    public void SomeMethod()
+    {
+        debug_log &quot;why not do this in the first place?!&quot;
+    }
+}</code></pre>
 <p>Any time you use <code>extern &quot;&quot;</code> make sure it gets used only in the correct backend. For example in the above code we know the MOBILE platforms imply C++.</p>
 <p><code>extern &quot;&quot;</code> is awesome and should be used for all places you need native code unless it makes things too complicated; in those cases we will fall back to target-specific UXL files, but that will discussed in a later section.</p>
 <p><code>extern &quot;&quot;</code> can return values:</p>
@@ -799,60 +799,60 @@ public int AddIntAndFloat(long x, float y)
 </ul>
 <h4 id="refer-to-static-field-in-uxl">Refer to static field in UXL</h4>
 <p>We can access a static field of type easily from UXL. Below we show how to access the <code>_name</code> field of the <code>Test0</code> class:</p>
-<pre><code class="language-csharp">    public class Test0 {
-        public static string _name = &quot;Jeff&quot;;
-    }
+<pre><code class="language-csharp">public class Test0 {
+    public static string _name = &quot;Jeff&quot;;
+}
 
-    public class Test1 {
-        public string getTest0Name()
-        {
-            extern &quot;@{string} tmp = @{Test0._name}&quot;;
-            return extern&lt;string&gt;&quot;tmp&quot;;
-        }
-    }</code></pre>
+public class Test1 {
+    public string getTest0Name()
+    {
+        extern &quot;@{string} tmp = @{Test0._name}&quot;;
+        return extern&lt;string&gt;&quot;tmp&quot;;
+    }
+}</code></pre>
 <p>As you can see, the <code>@{type}</code> syntax works for classes too.</p>
 <h4 id="refer-to-a-field-on-an-instance-of-a-type-using-the-of-macro">Refer to a field on an instance of a type using the <code>:Of</code> macro</h4>
 <p>UXL cannot infer the type of a C++ variable, so when we need access to instance data we have to tell UXL the type. We use the <code>:Of</code> macro for this:</p>
-<pre><code class="language-csharp">    public class Test0 {
-        public string _instanceName = &quot;Jeff&quot;;
-    }
+<pre><code class="language-csharp">public class Test0 {
+    public string _instanceName = &quot;Jeff&quot;;
+}
 
-    public class Test1 {
-        public string getTest0Name(Test0 x)
-        {
-            extern(x) &quot;@{Test0} tmp = @0&quot;;
-            extern&quot;@{string} tmp2 = @{Test0:Of(tmp)._instanceName}&quot;
-            return extern&lt;string&gt;&quot;tmp2&quot;;
-        }
-    }</code></pre>
+public class Test1 {
+    public string getTest0Name(Test0 x)
+    {
+        extern(x) &quot;@{Test0} tmp = @0&quot;;
+        extern&quot;@{string} tmp2 = @{Test0:Of(tmp)._instanceName}&quot;
+        return extern&lt;string&gt;&quot;tmp2&quot;;
+    }
+}</code></pre>
 <p>This is a somewhat convoluted example but should show the point. Of course, if you really need the value of a field in UXL, then you should pass it in from Uno using:</p>
 <pre><code>extern(x._instanceName)&quot;..some code using $0 here&quot;;
 </code></pre>
 <h4 id="call-a-static-method-using-uxl-with-the-call-macro">Call a static method using UXL with the <code>:Call</code> macro</h4>
-<pre><code class="language-csharp">    public class Test0 {
-        public static string AgeJeff(int x) { return &quot;Jeff is &quot; + x;  }
-    }
+<pre><code class="language-csharp">public class Test0 {
+    public static string AgeJeff(int x) { return &quot;Jeff is &quot; + x;  }
+}
 
-    public class Test1 {
-        public string getTest0Name()
-        {
-            return extern&lt;string&gt;&quot;@{Test0.AgeJeff(int):Call(253)}&quot;;
-        }
-    }</code></pre>
+public class Test1 {
+    public string getTest0Name()
+    {
+        return extern&lt;string&gt;&quot;@{Test0.AgeJeff(int):Call(253)}&quot;;
+    }
+}</code></pre>
 <p>To accurately specify the method to call we need to provide the signature (only the types are needed).</p>
 <p>Then in the <code>Call</code> we provide the actual arguments.</p>
 <h4 id="call-an-instance-method-using-uxl">Call an instance method using UXL</h4>
 <p>As you could guess, you use the <code>:Of</code> macro in the same way as we did for fields:</p>
-<pre><code class="language-csharp">    public class Test0 {
-        public string AgeJeff(int x) { return &quot;Jeff is &quot; + x;  }
-    }
+<pre><code class="language-csharp">public class Test0 {
+    public string AgeJeff(int x) { return &quot;Jeff is &quot; + x;  }
+}
 
-    public class Test1 {
-        public string getTest0Name(Test0 x)
-        {
-            return extern&lt;string&gt;(x)&quot;@{Test0:Of($0).AgeJeff(int):Call(253)}&quot;;
-        }
-    }</code></pre>
+public class Test1 {
+    public string getTest0Name(Test0 x)
+    {
+        return extern&lt;string&gt;(x)&quot;@{Test0:Of($0).AgeJeff(int):Call(253)}&quot;;
+    }
+}</code></pre>
 <h4 id="notes-on-access-modifiers">Notes on access modifiers</h4>
 <p>UXL sees all (with caveats): it doesn't obey access modifers. If native can reference it, it can. Obviously the converse is also true, so when compiling to C# you most likely can't access everything.</p>
 <h4 id="make-a-new-instance-of-a-class-from-uxl-using-the-new-macro">Make a new instance of a class from UXL using the <code>:New</code> macro</h4>
@@ -883,28 +883,28 @@ Even now, there are many cases where these files are neccesary.</p>
 <p>To tell Uno that a given type has a native implementation we use the <code>[TargetSpecificImplementation]</code> attribute.</p>
 <p>We also use the attribute on any method we want to implement in native code.</p>
 <p>Here is an example class:</p>
-<pre><code class="language-csharp">    [TargetSpecificImplementation]
-    class Test3
+<pre><code class="language-csharp">[TargetSpecificImplementation]
+class Test3
+{
+    [TargetSpecificImplementation]
+    public extern float FirstMethod(int a);
+
+    [TargetSpecificImplementation]
+    public extern float SecondMethod(int a) // SecondMethod has a default implementation
     {
-        [TargetSpecificImplementation]
-        public extern float FirstMethod(int a);
+        return 0f;
+    }
 
-        [TargetSpecificImplementation]
-        public extern float SecondMethod(int a) // SecondMethod has a default implementation
-        {
-            return 0f;
-        }
+    public static float Helper(int a)
+    {
+        return (float)a*a;
+    }
 
-        public static float Helper(int a)
-        {
-            return (float)a*a;
-        }
-
-        public float NonStaticHelper(int a)
-        {
-            return (float)a*a;
-        }
-    }</code></pre>
+    public float NonStaticHelper(int a)
+    {
+        return (float)a*a;
+    }
+}</code></pre>
 <p>There are some things to be aware of here:</p>
 <ul>
 <li>Each method that needs a native implementation has the extern modifier</li>
@@ -922,21 +922,21 @@ Even now, there are many cases where these files are neccesary.</p>
 </ul>
 <p>The compiler doesn't enforce this, though.</p>
 <p>Here is a possible UXL file for the <code>Test3</code> class we saw above:</p>
-<pre><code class="language-xml">    &lt;Extensions Backend=&quot;CPlusPlus&quot;&gt;
-        &lt;Type Name=&quot;Test3&quot;&gt;
-            &lt;Method Signature=&quot;FirstMethod(int):float&quot;&gt;
-                &lt;Expression&gt;((@{float})$0)&lt;/Expression&gt;
-            &lt;/Method&gt;
+<pre><code class="language-xml">&lt;Extensions Backend=&quot;CPlusPlus&quot;&gt;
+    &lt;Type Name=&quot;Test3&quot;&gt;
+        &lt;Method Signature=&quot;FirstMethod(int):float&quot;&gt;
+            &lt;Expression&gt;((@{float})$0)&lt;/Expression&gt;
+        &lt;/Method&gt;
 
-            &lt;Method Signature=&quot;SecondMethod(int):float&quot;&gt;
-                &lt;Require Entity=&quot;Test3.NonStaticHelper(int)&quot; /&gt;
-                &lt;Body&gt;&lt;![CDATA[
-                    @{float} tmp = @{Test3.Helper(int):Call($0)};
-                    return tmp + @{Test3:Of($$).NonStaticHelper(int):Call($0)};
-                ]]&gt;&lt;/Body&gt;
-            &lt;/Method&gt;
-        &lt;/Type&gt;
-    &lt;/Extensions&gt;</code></pre>
+        &lt;Method Signature=&quot;SecondMethod(int):float&quot;&gt;
+            &lt;Require Entity=&quot;Test3.NonStaticHelper(int)&quot; /&gt;
+            &lt;Body&gt;&lt;![CDATA[
+                @{float} tmp = @{Test3.Helper(int):Call($0)};
+                return tmp + @{Test3:Of($$).NonStaticHelper(int):Call($0)};
+            ]]&gt;&lt;/Body&gt;
+        &lt;/Method&gt;
+    &lt;/Type&gt;
+&lt;/Extensions&gt;</code></pre>
 <p>Here we can see some macros we will recognize, and some we may not.</p>
 <p>The <code>$$</code> macro is the <code>this</code> variable of the instance.</p>
 <p>The <code>Extensions</code> tag specific what backend the contents are valid for.</p>

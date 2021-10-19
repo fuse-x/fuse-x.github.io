@@ -717,11 +717,11 @@ If our page has other dependencies, we can declare them the same way.</p>
 <p>Let's give the <code>LoginPage</code> a button:</p>
 <pre><code class="language-xml">&lt;Button Text=&quot;Login&quot; Clicked=&quot;{loginClicked}&quot; /&gt;</code></pre>
 <p>Hook its <code>Clicked</code> event up to this function in <code>LoginPage.js</code>:</p>
-<pre><code class="language-js">    function loginClicked() {
-        // TODO: validate login credentials
+<pre><code class="language-js">function loginClicked() {
+    // TODO: validate login credentials
 
-        router.goto(&quot;home&quot;);
-    }</code></pre>
+    router.goto(&quot;home&quot;);
+}</code></pre>
 <p>This will do what you expect, the navigator will animate the login screen out, and bam! We're on the <code>home</code> page.</p>
 <blockquote>
 <p>Remember to add <code>loginClicked</code> to your <code>module.exports</code>.</p>

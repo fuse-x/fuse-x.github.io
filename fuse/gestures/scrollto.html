@@ -702,22 +702,22 @@ For instance, a <code>RelativePosition</code> of <code>1, 1</code> will scroll t
 <pre><code class="language-xml">&lt;ScrollTo Target=&quot;myScrollView&quot; RelativePosition=&quot;0, 0.5&quot; /&gt;</code></pre>
 <p>When triggered, the above will scroll <code>myScrollView</code> to the vertical center of its scrollable area.</p>
 <h4 id="example">Example</h4>
-<pre><code class="language-xml">    &lt;DockPanel&gt;
-        &lt;Button Dock=&quot;Top&quot; Text=&quot;Scroll to top&quot; Margin=&quot;20&quot;&gt;
-            &lt;Clicked&gt;
-                &lt;ScrollTo Target=&quot;myScrollView&quot; Position=&quot;0,0&quot; /&gt;
-            &lt;/Clicked&gt;
-        &lt;/Button&gt;
+<pre><code class="language-xml">&lt;DockPanel&gt;
+    &lt;Button Dock=&quot;Top&quot; Text=&quot;Scroll to top&quot; Margin=&quot;20&quot;&gt;
+        &lt;Clicked&gt;
+            &lt;ScrollTo Target=&quot;myScrollView&quot; Position=&quot;0,0&quot; /&gt;
+        &lt;/Clicked&gt;
+    &lt;/Button&gt;
 
-        &lt;ScrollView ux:Name=&quot;myScrollView&quot;&gt;
-            &lt;Rectangle Height=&quot;2000&quot;&gt;
-                &lt;LinearGradient&gt;
-                    &lt;GradientStop Offset=&quot;0&quot; Color=&quot;Red&quot; /&gt;
-                    &lt;GradientStop Offset=&quot;1&quot; Color=&quot;Blue&quot; /&gt;
-                &lt;/LinearGradient&gt;
-            &lt;/Rectangle&gt;
-        &lt;/ScrollView&gt;
-    &lt;/DockPanel&gt;</code></pre>
+    &lt;ScrollView ux:Name=&quot;myScrollView&quot;&gt;
+        &lt;Rectangle Height=&quot;2000&quot;&gt;
+            &lt;LinearGradient&gt;
+                &lt;GradientStop Offset=&quot;0&quot; Color=&quot;Red&quot; /&gt;
+                &lt;GradientStop Offset=&quot;1&quot; Color=&quot;Blue&quot; /&gt;
+            &lt;/LinearGradient&gt;
+        &lt;/Rectangle&gt;
+    &lt;/ScrollView&gt;
+&lt;/DockPanel&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

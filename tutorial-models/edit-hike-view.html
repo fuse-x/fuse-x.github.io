@@ -734,10 +734,10 @@ fuse preview
 }
 </code></pre>
 <p>It is a file consisting of pure JSON, and describes various properties about our project. Under the <code>&quot;includes&quot;</code> field, you'll see a single <code>*</code> inside a pair of square brackets. This basically means that we let Fuse include all files it recognizes by default. This does not include JavaScript files however, so we'll have to instruct Fuse on how we want those files inluded. Change the <code>includes</code> part to the following:</p>
-<pre><code class="language-json">  &quot;Includes&quot;: [
-    &quot;*&quot;,
-    &quot;**.js:FuseJS&quot;
-  ]</code></pre>
+<pre><code class="language-json">&quot;Includes&quot;: [
+  &quot;*&quot;,
+  &quot;**.js:FuseJS&quot;
+]</code></pre>
 <p>The above basically means that all files in this folder and all its subfolders ending with <code>.js</code>, should be interpreted by FuseJS as files containing ES6 code, and should participate in automatic change detection (more on this a bit later).</p>
 <p>At this point, we're ready to add some code to our project.</p>
 <p>Lets start by adding a new <code>.js</code> file which, for now, we'll include all our apps logic in. Lets call it <code>App.js</code>, and put in the root folder of our project. We also export a class called <code>App</code>, with a single field called <code>name</code>, by adding the following code:</p>

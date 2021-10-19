@@ -1019,43 +1019,43 @@ IListener
     &lt;Text Value=&quot;{greeting}&quot; /&gt;
 &lt;/App&gt;</code></pre>
 <p>Similarly, you can bind to collections:</p>
-<pre><code class="language-xml">    &lt;App&gt;
-        &lt;JavaScript&gt;
-            var data = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;];
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;JavaScript&gt;
+        var data = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;];
 
-            module.exports = {
-                data: data
-            };
-        &lt;/JavaScript&gt;
-        &lt;StackPanel&gt;
-            &lt;Each Items=&quot;{data}&quot;&gt;
-                &lt;Text Value=&quot;{= data () }&quot; /&gt;
-            &lt;/Each&gt;
-        &lt;/StackPanel&gt;
-    &lt;/App&gt;</code></pre>
+        module.exports = {
+            data: data
+        };
+    &lt;/JavaScript&gt;
+    &lt;StackPanel&gt;
+        &lt;Each Items=&quot;{data}&quot;&gt;
+            &lt;Text Value=&quot;{= data () }&quot; /&gt;
+        &lt;/Each&gt;
+    &lt;/StackPanel&gt;
+&lt;/App&gt;</code></pre>
 <p>This will predictably list out the text strings 1, 2 and 3. When binding the <code>Text Value</code> <code>{= data()}</code> means <em>the prime data context</em>, in this case the enumerated item from <code>Each</code>. Typically, you will bind to more complex data sources, so each element will have something interesting to bind to:</p>
-<pre><code class="language-xml">    &lt;App&gt;
-        &lt;JavaScript&gt;
-            var Observable = require(&quot;FuseJS/Observable&quot;);
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;JavaScript&gt;
+        var Observable = require(&quot;FuseJS/Observable&quot;);
 
-            var data = Observable(
-                {name: &quot;Hubert Cumberdale&quot;, age: 12},
-                {name: &quot;Marjory Stewart-Baxter&quot;, age: 43},
-                {name: &quot;Jeremy Fisher&quot;, age: 25});
+        var data = Observable(
+            {name: &quot;Hubert Cumberdale&quot;, age: 12},
+            {name: &quot;Marjory Stewart-Baxter&quot;, age: 43},
+            {name: &quot;Jeremy Fisher&quot;, age: 25});
 
-            module.exports = {
-                data: data
-            };
-        &lt;/JavaScript&gt;
-        &lt;StackPanel&gt;
-            &lt;Each Items=&quot;{data}&quot;&gt;
-                &lt;DockPanel&gt;
-                    &lt;Text Dock=&quot;Right&quot; Value=&quot;{age}&quot; /&gt;
-                    &lt;Text Value=&quot;{name}&quot; /&gt;
-                &lt;/DockPanel&gt;
-            &lt;/Each&gt;
-        &lt;/StackPanel&gt;
-    &lt;/App&gt;</code></pre>
+        module.exports = {
+            data: data
+        };
+    &lt;/JavaScript&gt;
+    &lt;StackPanel&gt;
+        &lt;Each Items=&quot;{data}&quot;&gt;
+            &lt;DockPanel&gt;
+                &lt;Text Dock=&quot;Right&quot; Value=&quot;{age}&quot; /&gt;
+                &lt;Text Value=&quot;{name}&quot; /&gt;
+            &lt;/DockPanel&gt;
+        &lt;/Each&gt;
+    &lt;/StackPanel&gt;
+&lt;/App&gt;</code></pre>
 <p>In this case, we have also made the data source Observable. This means that it supports propagating changes to the data source at runtime. In this case, the collection itself is <code>Observable</code>, but the items are not. You can bind to the children, but if they were to change, these changes would not be reflected in the UI. If you wanted to make the children also propagate their changes to the UI, you would make them <code>Observable</code> also:</p>
 <pre><code class="language-xml">&lt;JavaScript&gt;
     var Observable = require(&quot;FuseJS/Observable&quot;);

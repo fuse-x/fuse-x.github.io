@@ -745,21 +745,21 @@ If the path is omitted, it will be created as a subdirectory of your current dir
 <p>Fuse lets you use JavaScript to add logic to your app. By combining UX markup and scripting you have everything you need to implement apps, from look and feel to data models, logic and backend integration.</p>
 <p>However, in this first example we'll simply create a counter which increases when the button is clicked.</p>
 <p>First add the following JavaScript snippet inside the DockPanel:</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        var Observable = require('FuseJS/Observable');
-        var buttonText = Observable('Button');
-        var clickCount = 0;
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    var Observable = require('FuseJS/Observable');
+    var buttonText = Observable('Button');
+    var clickCount = 0;
 
-        function onClick() {
-            clickCount += 1;
-            buttonText.value = 'Clicks: ' + clickCount;
-        }
+    function onClick() {
+        clickCount += 1;
+        buttonText.value = 'Clicks: ' + clickCount;
+    }
 
-        module.exports = {
-            buttonText: buttonText,
-            onClick: onClick
-        }
-    &lt;/JavaScript&gt;</code></pre>
+    module.exports = {
+        buttonText: buttonText,
+        onClick: onClick
+    }
+&lt;/JavaScript&gt;</code></pre>
 <p>and then bind the <code>onClick</code> handler and <code>buttonText</code> variable to the <a href="../fuse/controls/button.html">Button</a> that already exists in the .ux</p>
 <pre><code class="language-xml">&lt;Button Text=&quot;{buttonText}&quot; Clicked=&quot;{onClick}&quot; /&gt;</code></pre>
 <p>Just like when changing UX markup, changes to JavaScript will also instantly update in all preview sessions when making changes.</p>

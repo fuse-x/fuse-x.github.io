@@ -742,14 +742,14 @@
 &lt;/StackPanel&gt;</code></pre>
 <p>And that's it; our title and slogan text are taken care of!</p>
 <p>Next, we'll add our &quot;Get Started&quot; button. Because of the <code>hikr.Button</code> component we made in the previous chapter, this will be pretty easy. We'll start by creating an instance beneath our <code>StackPanel</code>, so it will occupy the lower cell in the <code>Grid</code>:</p>
-<pre><code class="language-xml">    &lt;Grid RowCount=&quot;2&quot;&gt;
-        &lt;StackPanel Alignment=&quot;VerticalCenter&quot;&gt;
-            &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;70&quot;&gt;hikr&lt;/hikr.Text&gt;
-            &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; Opacity=&quot;.5&quot;&gt;get out there&lt;/hikr.Text&gt;
-        &lt;/StackPanel&gt;
+<pre><code class="language-xml">&lt;Grid RowCount=&quot;2&quot;&gt;
+    &lt;StackPanel Alignment=&quot;VerticalCenter&quot;&gt;
+        &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;70&quot;&gt;hikr&lt;/hikr.Text&gt;
+        &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; Opacity=&quot;.5&quot;&gt;get out there&lt;/hikr.Text&gt;
+    &lt;/StackPanel&gt;
 
-        &lt;hikr.Button Text=&quot;Get Started&quot; /&gt;
-    &lt;/Grid&gt;</code></pre>
+    &lt;hikr.Button Text=&quot;Get Started&quot; /&gt;
+&lt;/Grid&gt;</code></pre>
 <p>Let's center our button vertically and add some margin on the left/right to give it some space:</p>
 <pre><code class="language-xml">&lt;hikr.Button Text=&quot;Get Started&quot; Margin=&quot;50,0&quot; Alignment=&quot;VerticalCenter&quot; /&gt;</code></pre>
 <p>This looks good, but the font looks a little small. Let's increase its <code>FontSize</code> a bit as well:</p>
@@ -820,12 +820,12 @@
 &lt;/Page&gt;
 </code></pre>
 <p>Then, we'll add a <code>hikr.Text</code> component docked to the bottom of the <code>DockPanel</code>:</p>
-<pre><code class="language-xml">    &lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
-        &lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
-            &lt;Blur Radius=&quot;4.75&quot; /&gt;
-        &lt;/Video&gt;
+<pre><code class="language-xml">&lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
+    &lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
+        &lt;Blur Radius=&quot;4.75&quot; /&gt;
+    &lt;/Video&gt;
 
-        &lt;hikr.Text Dock=&quot;Bottom&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;</code></pre>
+    &lt;hikr.Text Dock=&quot;Bottom&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;</code></pre>
 <p>Let's also align it to the center of the screen horizontally and add some margin so it's not quite touching the bottom edge:</p>
 <pre><code class="language-xml">&lt;hikr.Text Dock=&quot;Bottom&quot; Margin=&quot;10&quot; TextAlignment=&quot;Center&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;</code></pre>
 <p>Then, we'll make the font a bit smaller and adjust its <code>Opacity</code> so it doesn't stand out so much:</p>

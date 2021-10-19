@@ -731,31 +731,31 @@ your app so you can recover from any kind of shutdown.</p>
 <p>Given that we are not meant to use it, we have opted not to expose the event.</p>
 <p>This module is an <a href="../fusejs/eventemitter.html">EventEmitter</a>, so the methods from <a href="../fusejs/eventemitter.html">EventEmitter</a> can be used to listen to events.</p>
 <h4 id="example">Example</h4>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        var Lifecycle = require('FuseJS/Lifecycle');
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    var Lifecycle = require('FuseJS/Lifecycle');
 
-        Lifecycle.on(&quot;enteringForeground&quot;, function() {
-            console.log(&quot;on enteringForeground&quot;);
-        });
-        Lifecycle.on(&quot;enteringInteractive&quot;, function() {
-            console.log(&quot;on enteringInteractive&quot;);
-        });
-        Lifecycle.on(&quot;exitedInteractive&quot;, function() {
-            console.log(&quot;on exitedInteractive&quot;);
-        });
-        Lifecycle.on(&quot;enteringBackground&quot;, function() {
-            console.log(&quot;on enteringBackground&quot;);
-        });
-        Lifecycle.on(&quot;stateChanged&quot;, function(newState) {
-            console.log(&quot;on stateChanged &quot; + newState);
-        });
-        module.exports = { lifecycleState: Lifecycle.observe(&quot;stateChanged&quot;) }
-    &lt;/JavaScript&gt;
-    &lt;StackPanel&gt;
-        &lt;Text TextWrapping=&quot;Wrap&quot;&gt;Open the Fuse Monitor to see the logs&lt;/Text&gt;
-        &lt;Text&gt;Current lifecycle state:&lt;/Text&gt;
-        &lt;Text Value=&quot;{lifecycleState}&quot; /&gt;
-    &lt;/StackPanel&gt;</code></pre>
+    Lifecycle.on(&quot;enteringForeground&quot;, function() {
+        console.log(&quot;on enteringForeground&quot;);
+    });
+    Lifecycle.on(&quot;enteringInteractive&quot;, function() {
+        console.log(&quot;on enteringInteractive&quot;);
+    });
+    Lifecycle.on(&quot;exitedInteractive&quot;, function() {
+        console.log(&quot;on exitedInteractive&quot;);
+    });
+    Lifecycle.on(&quot;enteringBackground&quot;, function() {
+        console.log(&quot;on enteringBackground&quot;);
+    });
+    Lifecycle.on(&quot;stateChanged&quot;, function(newState) {
+        console.log(&quot;on stateChanged &quot; + newState);
+    });
+    module.exports = { lifecycleState: Lifecycle.observe(&quot;stateChanged&quot;) }
+&lt;/JavaScript&gt;
+&lt;StackPanel&gt;
+    &lt;Text TextWrapping=&quot;Wrap&quot;&gt;Open the Fuse Monitor to see the logs&lt;/Text&gt;
+    &lt;Text&gt;Current lifecycle state:&lt;/Text&gt;
+    &lt;Text Value=&quot;{lifecycleState}&quot; /&gt;
+&lt;/StackPanel&gt;</code></pre>
 <p>In the above example we're using the <a href="../fusejs/eventemitter.html">EventEmitter</a> <code>on</code> method to listen to the different events.
 We're also using the <a href="../fusejs/eventemitter.html">EventEmitter</a> <code>observe</code> method on the <code>&quot;stateChanged&quot;</code> event to get an <a href="../fusejs/observable.html">Observable</a> containing the current state.</p>
 

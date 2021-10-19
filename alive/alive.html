@@ -703,17 +703,17 @@ This sets up default theme colors and makes sure we always have one of the theme
 </code></pre>
 <p><strong>Note:</strong> Alive.FallbackTheme is explicitly a <a href="../alive/lighttheme.html">LightTheme</a>.
 To make the entire app be <a href="../alive/darktheme.html">DarkTheme</a>, enclose it within a <a href="../fuse/controls/panel.html">Panel</a> together with the rest of the app's content.</p>
-<pre><code class="language-xml">    &lt;App&gt;
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;Panel&gt;
+        &lt;Alive.FallbackTheme /&gt;
+
         &lt;Panel&gt;
-            &lt;Alive.FallbackTheme /&gt;
+            &lt;Alive.DarkTheme /&gt;
 
-            &lt;Panel&gt;
-                &lt;Alive.DarkTheme /&gt;
-
-                &lt;!-- app content --&gt;
-            &lt;/Panel&gt;
+            &lt;!-- app content --&gt;
         &lt;/Panel&gt;
-    &lt;/App&gt;</code></pre>
+    &lt;/Panel&gt;
+&lt;/App&gt;</code></pre>
 <p>See <a href="themes.html">themes</a> for more info on how to work with themes.</p>
 <p>Also see <a href="textstyles.html">text styles</a> for a list of included text styles.</p>
 <h2 id="what-now">What now?</h2>

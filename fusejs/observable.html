@@ -690,13 +690,13 @@
 <p>Start off by importing the observable module, which returns a function:</p>
 <pre><code class="language-js">var Observable = require(&quot;FuseJS/Observable&quot;);</code></pre>
 <p>Observables are created by calling the <code>Observable</code> function directly with zero or more initial values.</p>
-<pre><code class="language-js">    var emptyObservable = Observable();
-    var singleValueObservable = Observable(true);
-    var listObservable = Observable(1,2,3,4);
+<pre><code class="language-js">var emptyObservable = Observable();
+var singleValueObservable = Observable(true);
+var listObservable = Observable(1,2,3,4);
 
-    var singleValueObservable = Observable(10); //now has .value == 10
-    singleValueObservable.value = 20; //now has .value == 20
-    var theValue = singleValueObservable.value; //theValue is now == 20</code></pre>
+var singleValueObservable = Observable(10); //now has .value == 10
+singleValueObservable.value = 20; //now has .value == 20
+var theValue = singleValueObservable.value; //theValue is now == 20</code></pre>
 <p>When using an observable as a list, we can add and remove items using the <code>.add</code> and <code>.remove</code> methods.</p>
 <pre><code class="language-js">var multiValueObservable = Observable(1,2);
 multiValueObservable.add(5); //now contains 1,2,5

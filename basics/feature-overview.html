@@ -695,28 +695,28 @@
 </blockquote>
 <h2 id="scripting-and-data-contexts">Scripting and data contexts</h2>
 <p>Business logic in Fuse apps is done using script components such as the <a href="../fuse/reactive/javascript.html">JavaScript</a> class. These can be placed at any level in the app tree.</p>
-<pre><code class="language-xml">    &lt;App&gt;
-        &lt;JavaScript&gt;
-            console.log(&quot;Hello, World!&quot;);
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;JavaScript&gt;
+        console.log(&quot;Hello, World!&quot;);
 
-            module.exports = {
-                items: [
-                    { color: &quot;#f00&quot; },
-                    { color: &quot;#0f0&quot; },
-                    { color: &quot;#00f&quot; }
-                ]
-            }
-        &lt;/JavaScript&gt;
-        &lt;StackPanel&gt;
-            &lt;Each Items=&quot;{items}&quot;&gt;
-                &lt;Panel Color=&quot;{color}&quot; Height=&quot;40&quot; Margin=&quot;10&quot;&gt;
-                    &lt;JavaScript&gt;
-                        console.log(&quot;hello!&quot;);
-                    &lt;/JavaScript&gt;
-                &lt;/Panel&gt;
-            &lt;/Each&gt;
-        &lt;/StackPanel&gt;
-    &lt;/App&gt;</code></pre>
+        module.exports = {
+            items: [
+                { color: &quot;#f00&quot; },
+                { color: &quot;#0f0&quot; },
+                { color: &quot;#00f&quot; }
+            ]
+        }
+    &lt;/JavaScript&gt;
+    &lt;StackPanel&gt;
+        &lt;Each Items=&quot;{items}&quot;&gt;
+            &lt;Panel Color=&quot;{color}&quot; Height=&quot;40&quot; Margin=&quot;10&quot;&gt;
+                &lt;JavaScript&gt;
+                    console.log(&quot;hello!&quot;);
+                &lt;/JavaScript&gt;
+            &lt;/Panel&gt;
+        &lt;/Each&gt;
+    &lt;/StackPanel&gt;
+&lt;/App&gt;</code></pre>
 <p>Scripts will execute once for each instance of the containing node. For the first <a href="../fuse/reactive/javascript.html">JavaScript</a> in the above example, that means just once for the entire app. However, the <a href="../fuse/reactive/javascript.html">JavaScript</a> inside the <code>Each</code> will execute once for each instance of the Panel. In the above example, <code>hello!</code> is logged to the console three times.</p>
 <p>The resulting <code>module.exports</code> from each script will become <em>data context</em> for the subtree. We can use <em>data binding</em> with the curly brace <code>{binding}</code> syntax against the data context to populate the view with data.</p>
 <p>Data contexts cascade. This means at any node, you have access to all data contexts in the outer tree. If names clash, the closest one upwards in the tree takes precedence.</p>

@@ -697,21 +697,21 @@ Show advanced things
 &lt;/PageControl&gt;</code></pre>
 <p><code>PageControl</code> is a router outlet, meaning that it can be controlled by a <a href="../../fuse/navigation/router.html">Router</a>.
 You can disable this behavior by setting the IsRouterOutlet property to <code>false</code>.</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        module.exports = {
-            gotoPage1: function() { router.goto(&quot;page1&quot;); },
-            gotoPage2: function() { router.goto(&quot;page2&quot;); },
-            gotoPage3: function() { router.goto(&quot;page3&quot;); }
-        };
-    &lt;/JavaScript&gt;
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    module.exports = {
+        gotoPage1: function() { router.goto(&quot;page1&quot;); },
+        gotoPage2: function() { router.goto(&quot;page2&quot;); },
+        gotoPage3: function() { router.goto(&quot;page3&quot;); }
+    };
+&lt;/JavaScript&gt;
 
-    &lt;Router ux:Name=&quot;router&quot; /&gt;
+&lt;Router ux:Name=&quot;router&quot; /&gt;
 
-    &lt;PageControl&gt;
-        &lt;Panel ux:Name=&quot;page1&quot; Color=&quot;#e74c3c&quot; Clicked=&quot;{gotoPage2}&quot; /&gt;
-        &lt;Panel ux:Name=&quot;page2&quot; Color=&quot;#2ecc71&quot; Clicked=&quot;{gotoPage3}&quot; /&gt;
-        &lt;Panel ux:Name=&quot;page3&quot; Color=&quot;#3498db&quot; Clicked=&quot;{gotoPage1}&quot; /&gt;
-    &lt;/PageControl&gt;</code></pre>
+&lt;PageControl&gt;
+    &lt;Panel ux:Name=&quot;page1&quot; Color=&quot;#e74c3c&quot; Clicked=&quot;{gotoPage2}&quot; /&gt;
+    &lt;Panel ux:Name=&quot;page2&quot; Color=&quot;#2ecc71&quot; Clicked=&quot;{gotoPage3}&quot; /&gt;
+    &lt;Panel ux:Name=&quot;page3&quot; Color=&quot;#3498db&quot; Clicked=&quot;{gotoPage1}&quot; /&gt;
+&lt;/PageControl&gt;</code></pre>
 <p>By using data binding, you can set the currently active page by <code>Name</code> using the <code>Active</code> property.
 In the following example, We have three pages and a button that returns the user to the first page.</p>
 <pre><code class="language-xml">&lt;DockPanel&gt;

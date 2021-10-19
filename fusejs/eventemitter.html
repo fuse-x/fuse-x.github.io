@@ -680,13 +680,13 @@ operations on the events that the module defines.</p>
 <h3 id="basic-use">Basic use</h3>
 <p>The following code creates an <code>EventEmitter</code> with two events, adds a listener to
 one of the events, and subsequently emits that event.</p>
-<pre><code class="language-js">    var myEmitter = new EventEmitter(&quot;myEvent1&quot;, &quot;myEvent2&quot;);
+<pre><code class="language-js">var myEmitter = new EventEmitter(&quot;myEvent1&quot;, &quot;myEvent2&quot;);
 
-    myEmitter.on(&quot;myEvent1&quot;, function(arg) {
-        console.log(&quot;myEvent1 fired with &quot; + arg);
-    });
+myEmitter.on(&quot;myEvent1&quot;, function(arg) {
+    console.log(&quot;myEvent1 fired with &quot; + arg);
+});
 
-    myEmitter.emit(&quot;myEvent1&quot;, &quot;an arg&quot;);</code></pre>
+myEmitter.emit(&quot;myEvent1&quot;, &quot;an arg&quot;);</code></pre>
 <p>This code will print <code>&quot;myEvent1 fired with an arg&quot;</code>.</p>
 <h4 id="creating-observables-from-events">Creating Observables from events</h4>
 <p>Sometimes events represent values that change over time. When this is the case
@@ -733,26 +733,26 @@ listener.</p>
 });</code></pre>
 <h4 id="removelistener-eventname-func-eventargs">removeListener(eventName, func([...eventArgs]))</h4>
 <p>Removes <code>func</code> from the listeners of <code>eventName</code>.</p>
-<pre><code class="language-js">    var listener = function() { console.log(&quot;Hello&quot;); };
+<pre><code class="language-js">var listener = function() { console.log(&quot;Hello&quot;); };
 
-    myEmitter.on(&quot;anEventName&quot;, listener);
-    // listener will be called on &quot;anEventName&quot; here
-    myEmitter.removeListener(&quot;anEventName&quot;, listener);
-    // listener will no longer be called on &quot;anEventName&quot;</code></pre>
+myEmitter.on(&quot;anEventName&quot;, listener);
+// listener will be called on &quot;anEventName&quot; here
+myEmitter.removeListener(&quot;anEventName&quot;, listener);
+// listener will no longer be called on &quot;anEventName&quot;</code></pre>
 <h4 id="emit-eventname-eventargs">emit(eventName, [...eventArgs])</h4>
 <p>Triggers <code>eventName</code>, calling all its listeners with <code>eventArgs</code>.</p>
-<pre><code class="language-js">    myEmitter.on(&quot;anEvent&quot;, function(arg) {
-        console.log(&quot;anEvent fired with &quot; + arg);
-    });
+<pre><code class="language-js">myEmitter.on(&quot;anEvent&quot;, function(arg) {
+    console.log(&quot;anEvent fired with &quot; + arg);
+});
 
-    myEmitter.emit(&quot;anEvent&quot;, &quot;an arg&quot;);</code></pre>
+myEmitter.emit(&quot;anEvent&quot;, &quot;an arg&quot;);</code></pre>
 <h4 id="eventnames">eventNames()</h4>
 <p>Returns an array of all the permitted event names that this <code>EventEmitter</code>
 supports, including built-ins.</p>
-<pre><code class="language-js">    var myEmitter = new EventEmitter(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
-    var eventNames = myEmitter.eventNames();
+<pre><code class="language-js">var myEmitter = new EventEmitter(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
+var eventNames = myEmitter.eventNames();
 
-    // eventNames contains &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;error&quot;, &quot;newListener&quot;, and &quot;removeListener&quot;</code></pre>
+// eventNames contains &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;error&quot;, &quot;newListener&quot;, and &quot;removeListener&quot;</code></pre>
 <h4 id="observe-eventname">observe(eventName)</h4>
 <p>Creates an observable that listens to <code>eventName</code>.</p>
 <pre><code class="language-js">var obs = myEmitter.observe(&quot;anEvent&quot;);</code></pre>

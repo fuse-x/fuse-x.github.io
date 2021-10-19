@@ -707,16 +707,16 @@ In this case, it is recommended to subclass <a href="../../fuse/controls/panel.h
 Since you can attach a <code>Clicked</code> handler to any element, using a <a href="../../fuse/controls/panel.html">Panel</a> as the base class offers a
 great deal of flexibility, while removing a lot of the unnecessary complexity of the actual Button class.</p>
 <p>Below is an example of creating your own button control with <a href="../../fuse/controls/panel.html">Panel</a>:</p>
-<pre><code class="language-xml">    &lt;Panel ux:Class=&quot;MyButton&quot; HitTestMode=&quot;LocalBounds&quot; Margin=&quot;4&quot; Color=&quot;#25a&quot;&gt;
-        &lt;string ux:Property=&quot;Text&quot; /&gt;
-        &lt;Text Value=&quot;{ReadProperty Text}&quot; Color=&quot;#fff&quot; Alignment=&quot;Center&quot; Margin=&quot;30,15&quot; /&gt;
+<pre><code class="language-xml">&lt;Panel ux:Class=&quot;MyButton&quot; HitTestMode=&quot;LocalBounds&quot; Margin=&quot;4&quot; Color=&quot;#25a&quot;&gt;
+    &lt;string ux:Property=&quot;Text&quot; /&gt;
+    &lt;Text Value=&quot;{ReadProperty Text}&quot; Color=&quot;#fff&quot; Alignment=&quot;Center&quot; Margin=&quot;30,15&quot; /&gt;
 
-        &lt;WhilePressed&gt;
-            &lt;Change this.Color=&quot;#138&quot; Duration=&quot;0.05&quot; DurationBack=&quot;.2&quot; /&gt;
-        &lt;/WhilePressed&gt;
-    &lt;/Panel&gt;
+    &lt;WhilePressed&gt;
+        &lt;Change this.Color=&quot;#138&quot; Duration=&quot;0.05&quot; DurationBack=&quot;.2&quot; /&gt;
+    &lt;/WhilePressed&gt;
+&lt;/Panel&gt;
 
-    &lt;MyButton Text=&quot;Click me&quot; /&gt;</code></pre>
+&lt;MyButton Text=&quot;Click me&quot; /&gt;</code></pre>
 <p>However, if you want a <em>platform native button</em> that falls back to a custom look on non-mobile devices,
 you have to subclass <code>Button</code>.</p>
 <pre><code class="language-xml">&lt;Button ux:Class=&quot;MyNativeButtonWithFallback&quot; Margin=&quot;2&quot;&gt;

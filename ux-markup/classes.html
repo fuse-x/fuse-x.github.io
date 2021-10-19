@@ -677,25 +677,25 @@
 <p>Where <code>base_class</code> is any <code>class</code> accesible to UX Markup, and <code>class_name</code> is a fully qualified class name (including namespace path, if desired, separated by <code>.</code>).</p>
 <h2 id="example">Example</h2>
 <p>The following example defines a new class <code>MyCheckBox</code> which is blue while unchecked, and red while checked. Tapping the checkbox changes the state.</p>
-<pre><code class="language-xml">    &lt;Panel ux:Class=&quot;MyCheckBox&quot; Color=&quot;Blue&quot;&gt;
-        &lt;bool ux:Property=&quot;Value&quot; /&gt;
-        &lt;JavaScript&gt;
+<pre><code class="language-xml">&lt;Panel ux:Class=&quot;MyCheckBox&quot; Color=&quot;Blue&quot;&gt;
+    &lt;bool ux:Property=&quot;Value&quot; /&gt;
+    &lt;JavaScript&gt;
 
-            function toggle() {
-                this.Value.value = !this.Value.value;
-            }
+        function toggle() {
+            this.Value.value = !this.Value.value;
+        }
 
-            module.exports = { toggle: toggle };
-            
-        &lt;/JavaScript&gt;
+        module.exports = { toggle: toggle };
+        
+    &lt;/JavaScript&gt;
 
-        &lt;WhileTrue Value=&quot;{Property Value}&quot; /&gt;
-            &lt;Change this.Color=&quot;Red&quot; Duration=&quot;0.2&quot; /&gt;
-        &lt;/WhileTrue&gt;
-        &lt;Tapped&gt;
-            &lt;Callback Handler=&quot;{toggle}&quot; /&gt;
-        &lt;/Tapped&gt;
-    &lt;/Panel&gt;</code></pre>
+    &lt;WhileTrue Value=&quot;{Property Value}&quot; /&gt;
+        &lt;Change this.Color=&quot;Red&quot; Duration=&quot;0.2&quot; /&gt;
+    &lt;/WhileTrue&gt;
+    &lt;Tapped&gt;
+        &lt;Callback Handler=&quot;{toggle}&quot; /&gt;
+    &lt;/Tapped&gt;
+&lt;/Panel&gt;</code></pre>
 <h2 id="why-use-classes">Why use classes?</h2>
 <p>Fuse encourages breaking your app into components (classes) for several reasons:</p>
 <ul>

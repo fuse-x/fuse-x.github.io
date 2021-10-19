@@ -673,22 +673,22 @@
 <p>Capabilities are App Services which need special declarations in the Xcode project.</p>
 <p>Fuse allows you to configure these through the <code>unoproj</code> file under the <code>iOS → SystemCapabilities</code> section.</p>
 <p>The available Capabilities and example values are as follows:</p>
-<pre><code class="language-json">  &quot;iOS&quot;: {
-    &quot;SystemCapabilities&quot;: {
-      &quot;ApplicationGroups&quot;: [&quot;group.A&quot;, &quot;group.B&quot;],
-      &quot;DataProtection&quot;: true,
-      &quot;GameCenter&quot;: true,
-      &quot;HealthKit&quot;: true,
-      &quot;HomeKit&quot;: true,
-      &quot;InAppPurchase&quot;: true,
-      &quot;InterAppAudio&quot;: true,
-      &quot;KeychainSharing&quot;: [&quot;AAA&quot;, &quot;BBB&quot;],
-      &quot;Push&quot;: true,
-      &quot;AssociatedDomains&quot;: [&quot;CCC&quot;, &quot;DDD&quot;],
-      &quot;PersonalVPN&quot;: true,
-      &quot;WirelessAccessoryConfiguration&quot;: true
-    }
-  },</code></pre>
+<pre><code class="language-json">&quot;iOS&quot;: {
+  &quot;SystemCapabilities&quot;: {
+    &quot;ApplicationGroups&quot;: [&quot;group.A&quot;, &quot;group.B&quot;],
+    &quot;DataProtection&quot;: true,
+    &quot;GameCenter&quot;: true,
+    &quot;HealthKit&quot;: true,
+    &quot;HomeKit&quot;: true,
+    &quot;InAppPurchase&quot;: true,
+    &quot;InterAppAudio&quot;: true,
+    &quot;KeychainSharing&quot;: [&quot;AAA&quot;, &quot;BBB&quot;],
+    &quot;Push&quot;: true,
+    &quot;AssociatedDomains&quot;: [&quot;CCC&quot;, &quot;DDD&quot;],
+    &quot;PersonalVPN&quot;: true,
+    &quot;WirelessAccessoryConfiguration&quot;: true
+  }
+},</code></pre>
 <p>For more info on the valid values for <code>AssociatedDomains</code>, <code>KeychainSharing</code> &amp; <code>ApplicationGroups</code> please see the <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html">Apple documentation</a></p>
 <p>Entitlements are described in the Apple Documentation as:</p>
 <blockquote>

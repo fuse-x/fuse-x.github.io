@@ -701,9 +701,9 @@
 
 </code></pre>
 <p>As you can see, there's not much to it; basically just some simple info about our project. The section we're particularly interested in is the <code>&quot;Includes&quot;</code> section. Currently, it has one entry:</p>
-<pre><code class="language-json">  &quot;Includes&quot;: [
-    &quot;*&quot;
-  ]</code></pre>
+<pre><code class="language-json">&quot;Includes&quot;: [
+  &quot;*&quot;
+]</code></pre>
 <p>This basically means that the Fuse project should include a lot of the files commonly associated with Fuse projects. This covers .ux files, .uno files, and a few others. However, it does <em>not</em> include JavaScript files, so we'll have to add our <code>hikes.js</code> file explicitly. To do this, we'll add another item to this list:</p>
 <pre><code class="language-json">{
   &quot;Packages&quot;: [

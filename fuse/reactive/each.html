@@ -732,32 +732,32 @@ You can, however, access nodes declared outside the <code>Each</code> from the i
 &lt;/CoolRepeater&gt;</code></pre>
 <p>Notice that if you remove the &quot;Hello, world!&quot; text that is our custom template, the <code>Each</code> will fall back to using the child as the template.</p>
 <p>If you want the ability to control the template on a per-item basis, the similar <code>MatchKey</code>-property can be used:</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        var Observable = require(&quot;FuseJS/Observable&quot;);
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    var Observable = require(&quot;FuseJS/Observable&quot;);
 
-        module.exports.posts = Observable(
-            {postType: &quot;text&quot;, body: &quot;Lorem ipsum&quot;, title: &quot;Hello, world&quot;},
-            {postType: &quot;quote&quot;, quote: &quot;Stuff&quot;, title: &quot;A quote&quot;}
-        );
-    &lt;/JavaScript&gt;
+    module.exports.posts = Observable(
+        {postType: &quot;text&quot;, body: &quot;Lorem ipsum&quot;, title: &quot;Hello, world&quot;},
+        {postType: &quot;quote&quot;, quote: &quot;Stuff&quot;, title: &quot;A quote&quot;}
+    );
+&lt;/JavaScript&gt;
 
-    &lt;ScrollView&gt;
-        &lt;StackPanel&gt;
-            &lt;Each Items=&quot;{posts}&quot; MatchKey=&quot;postType&quot;&gt;
-                &lt;StackPanel ux:Template=&quot;text&quot; Height=&quot;100&quot; Color=&quot;#FFF&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
-                    &lt;Shadow Distance=&quot;3&quot; /&gt;
-                    &lt;Text FontSize=&quot;25&quot; Value=&quot;{title}&quot; /&gt;
-                    &lt;Text FontSize=&quot;15&quot; Value=&quot;{body}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
-                &lt;/StackPanel&gt;
-                &lt;DockPanel ux:Template=&quot;quote&quot; Height=&quot;200&quot; Color=&quot;#FFF&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
-                    &lt;Shadow Distance=&quot;3&quot; /&gt;
-                    &lt;Text FontSize=&quot;25&quot; Value=&quot;{title}&quot; Dock=&quot;Top&quot; /&gt;
-                    &lt;Text FontSize=&quot;50&quot; Value=&quot;”&quot; Dock=&quot;Left&quot; /&gt;
-                    &lt;Text FontSize=&quot;15&quot; Margin=&quot;10&quot; Value=&quot;{quote}&quot; /&gt;
-                &lt;/DockPanel&gt;
-            &lt;/Each&gt;
-        &lt;/StackPanel&gt;
-    &lt;/ScrollView&gt;</code></pre>
+&lt;ScrollView&gt;
+    &lt;StackPanel&gt;
+        &lt;Each Items=&quot;{posts}&quot; MatchKey=&quot;postType&quot;&gt;
+            &lt;StackPanel ux:Template=&quot;text&quot; Height=&quot;100&quot; Color=&quot;#FFF&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
+                &lt;Shadow Distance=&quot;3&quot; /&gt;
+                &lt;Text FontSize=&quot;25&quot; Value=&quot;{title}&quot; /&gt;
+                &lt;Text FontSize=&quot;15&quot; Value=&quot;{body}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+            &lt;/StackPanel&gt;
+            &lt;DockPanel ux:Template=&quot;quote&quot; Height=&quot;200&quot; Color=&quot;#FFF&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
+                &lt;Shadow Distance=&quot;3&quot; /&gt;
+                &lt;Text FontSize=&quot;25&quot; Value=&quot;{title}&quot; Dock=&quot;Top&quot; /&gt;
+                &lt;Text FontSize=&quot;50&quot; Value=&quot;”&quot; Dock=&quot;Left&quot; /&gt;
+                &lt;Text FontSize=&quot;15&quot; Margin=&quot;10&quot; Value=&quot;{quote}&quot; /&gt;
+            &lt;/DockPanel&gt;
+        &lt;/Each&gt;
+    &lt;/StackPanel&gt;
+&lt;/ScrollView&gt;</code></pre>
 <p><code>MatchKey</code> works by looking for a property in the data context of each item from <code>Items</code>.
 The value of this property is then used to determine the template to use for the current item.
 In the above example, we store the template we want to use in the property <code>postType</code>, which will appear in the data context of each item being iterated.</p>

@@ -711,14 +711,14 @@ the basic functionality required for creating native mobile apps, as well as the
     };
 &lt;/JavaScript&gt;</code></pre>
 <p>Failing to export from modules will make it impossible to reach defined data inside the module:</p>
-<pre><code class="language-xml">    &lt;JavaScript&gt;
-        var data = [1, 2, 3];
-        var invisible = &quot;I'm invisible&quot;;
+<pre><code class="language-xml">&lt;JavaScript&gt;
+    var data = [1, 2, 3];
+    var invisible = &quot;I'm invisible&quot;;
 
-        module.exports = {
-            data: data
-        };
-    &lt;/JavaScript&gt;</code></pre>
+    module.exports = {
+        data: data
+    };
+&lt;/JavaScript&gt;</code></pre>
 <p>This is good for hiding implementation details from other calling JavaScript modules and UX code.</p>
 <h4 id="importing-modules">Importing modules</h4>
 <p>Each code file (or inline snippet) defines a module.</p>
@@ -746,17 +746,17 @@ var relativeToRootOrGlobalModule = require('SomeOtherComponent.js');</code></pre
 <h5 id="cleaning-up-after-modules">Cleaning up after modules</h5>
 <p>In Fuse, a JavaScript module can correspond to multiple module instances that get created and destroyed on the fly. If your module allocates resources that need manual cleanup, such as creating explicit <code>Observable</code> subscriptions, you can assign a handler to <code>module.disposed</code> and clean up after yourself there.</p>
 <p>Example:</p>
-<pre><code class="language-js">    var foo = getSomeGlobalObservable();
+<pre><code class="language-js">var foo = getSomeGlobalObservable();
 
-    function fooChanged() { ... }
+function fooChanged() { ... }
 
-    foo.addSubscriber(fooChanged);
+foo.addSubscriber(fooChanged);
 
-    ...
+...
 
-    module.disposed = function () {
-        foo.removeSubscriber(fooChanged)
-    }</code></pre>
+module.disposed = function () {
+    foo.removeSubscriber(fooChanged)
+}</code></pre>
 <h4 id="design-and-motivation">Design and motivation</h4>
 <p>The key design goal of FuseJS is to keep your JavaScript code small, clean and only concerned with the practical functions of your application. Meanwhile
 all things related to UX, such as layout, data presentation, animation and gesture response, is left to declarative UX markup and native UI components.</p>
