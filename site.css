@@ -1,7 +1,7 @@
 /*
  * Base styling
  */
- body {
+body {
     color: #aaa;
 }
 
@@ -447,14 +447,27 @@ h6.anchor-header .anchor-header-link {
  * Block quote styling for callouts
  */
 blockquote {
-    background-color: #d7ffe4;
+    background-color: #17b179;
     padding: 1em;
     border-left-style: solid;
     border-left-width: 15px;
     border-right-style: solid;
-    border-right-width: 2px;
-    border-left-color: #bffbd3;
-    border-right-color: #bffbd3;
+    border-right-width: 0px;
+    border-left-color: #197a56;
+    border-right-color: #17b179;
+}
+
+blockquote p {
+    color: #ffffff;
+}
+
+blockquote p a {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+blockquote p a:hover {
+    color: #ffffff !important;
 }
 
 blockquote p:last-child {
@@ -462,27 +475,27 @@ blockquote p:last-child {
 }
 
 blockquote.callout-warn {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
+    color: #ffffff;
+    background-color: #ed9120;
+    border-color: #a46920;
 }
 
 blockquote.callout-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    color: #ffffff;
+    background-color: #17b179;
+    border-color: #17b179;
 }
 
 blockquote.callout-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
+    color: #ffffff;
+    background-color: #df352e;
+    border-color: #962c27;
 }
 
 blockquote.callout-info {
-    color: #004085;
-    background-color: #cce5ff;
-    border-color: #b8daff;
+    color: #ffffff;
+    background-color: #3588cb;
+    border-color: #2e76b0;
 }
 
 blockquote.callout-light {
@@ -495,21 +508,6 @@ blockquote.callout-dark {
     color: #1b1e21;
     background-color: #d6d8d9;
     border-color: #c6c8ca;
-}
-
-#menu-wrapper {
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-    margin-bottom: -5px;
-}
-
-#menu-iframe {
-    border: none;
-    overflow: hidden;
-    width: 100%;
-    height: 56px;
-    background-color: #31343a;
 }
 
 .sticky {
@@ -530,10 +528,20 @@ blockquote.callout-dark {
     z-index: 1;
     background-color: #292b30;
 }
+
 .advance-items {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
+
 .advance-items-label {
     font-size: 0.9rem;
     margin-left: 0.5rem;
-  }
+}
+
+#toc a {
+    color: #cccccc !important;
+}
+
+#toc a:hover {
+    color: #cccccc !important;
+}
