@@ -442,32 +442,60 @@ h6.anchor-header .anchor-header-link {
     margin-bottom: 0;
 }
 
+#toc a {
+    color: #aaa !important;
+}
+
+#toc a:hover {
+    color: #aaa !important;
+}
+
+.main-content a {
+    color: #eee !important;
+}
+
+.main-content a:hover {
+    color: #eee !important;
+}
+
+.anchor-header {
+    color: #ddd !important;
+}
+
+pre code {
+    color: #ccc !important;
+}
+
+code:not([class]) {
+    background: #2d2d2d;
+    color: #ccc;
+}
 
 /*
  * Block quote styling for callouts
  */
 blockquote {
-    background-color: #17b179;
+    background-color: #197a56;
     padding: 1em;
     border-left-style: solid;
     border-left-width: 15px;
     border-right-style: solid;
     border-right-width: 0px;
-    border-left-color: #197a56;
-    border-right-color: #17b179;
+    border-left-color: #17b179;
+    border-right-color: #197a56;
 }
 
 blockquote p {
-    color: #ffffff;
+    color: #ddd;
 }
 
-blockquote p a {
-    color: #ffffff !important;
+.main-content blockquote a {
+    color: #fff !important;
     text-decoration: underline;
 }
 
-blockquote p a:hover {
-    color: #ffffff !important;
+.main-content blockquote a:hover {
+    color: #fff !important;
 }
 
 blockquote p:last-child {
@@ -475,27 +503,27 @@ blockquote p:last-child {
 }
 
 blockquote.callout-warn {
-    color: #ffffff;
-    background-color: #ed9120;
-    border-color: #a46920;
+    color: #ddd;
+    background-color: #a46920;
+    border-color: #ed9120;
 }
 
 blockquote.callout-success {
-    color: #ffffff;
-    background-color: #17b179;
+    color: #ddd;
+    background-color: #197a56;
     border-color: #17b179;
 }
 
 blockquote.callout-danger {
-    color: #ffffff;
-    background-color: #df352e;
-    border-color: #962c27;
+    color: #ddd;
+    background-color: #962c27;
+    border-color: #df352e;
 }
 
 blockquote.callout-info {
-    color: #ffffff;
-    background-color: #3588cb;
-    border-color: #2e76b0;
+    color: #ddd;
+    background-color: #2e76b0;
+    border-color: #3588cb;
 }
 
 blockquote.callout-light {
@@ -536,12 +564,4 @@ blockquote.callout-dark {
 .advance-items-label {
     font-size: 0.9rem;
     margin-left: 0.5rem;
-}
-
-#toc a {
-    color: #cccccc !important;
-}
-
-#toc a:hover {
-    color: #cccccc !important;
 }
