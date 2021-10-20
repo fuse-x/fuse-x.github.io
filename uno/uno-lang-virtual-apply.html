@@ -708,9 +708,7 @@ public class BatchingRenderer: Renderer
 
         draw DefaultShading, Mesh, virtual Material, virtual dc.Pass;
     }
-   }
-   
-</code></pre>
+   }</code></pre>
 <p>In this case, the compiler will generate code that inspects the types of Material and dc.Pass, and performs the corresponding draw-calls based on the combined meta properties. Note that Mesh is not applied virtually, and hence the meta properties from the compile-time type will always be used, even if Mesh happened to have subclasses.</p>
 <h2 id="important-output-size-considerations">Important output size considerations</h2>
 <p>As there may be multiple sub-classes of both Material and dc.Pass, the compiler might have to generate a large amount of different code paths, only to select a few of them at run time. In the above example, each draw statement in each Renderer will generate 3 x 4 = 12 code paths, potentially with 12 different shaders.</p>

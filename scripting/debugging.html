@@ -694,8 +694,7 @@ which is available both for macOS and Windows.</p>
 done using <code>adb</code>, which is bundled with Fuse and can be invoked using <code>uno adb</code>.
 Using a standard Fuse installation and with a single Android device
 connected, run (in a terminal or command prompt):</p>
-<pre><code class="language-s">uno adb forward tcp:5858 tcp:5858
-</code></pre>
+<pre><code class="language-s">uno adb forward tcp:5858 tcp:5858</code></pre>
 <p>It's likely that you will have to re-run this command every time you
 reconnect your device. Also remember to remove the forwarding using e.g.
 <code>uno adb forward --remove-all</code> if you want to debug another target after you
@@ -721,22 +720,18 @@ start of your JavaScript code, like the following:</p>
 <pre><code class="language-js">&lt;JavaScript&gt;
   debugger;
   ... more code
-&lt;/JavaScript&gt;
-</code></pre>
+&lt;/JavaScript&gt;</code></pre>
 <p>It can also be useful to break when some event is triggered:</p>
 <pre><code class="language-js">function someEvent() {
   debugger;
   ... more code
-}
-</code></pre>
+}</code></pre>
 </li>
 <li>
 <p>Build and run your app with <code>-DDEBUG_V8</code>. For example, run</p>
-<pre><code class="language-s">fuse preview . -DDEBUG_V8
-</code></pre>
+<pre><code class="language-s">fuse preview . -DDEBUG_V8</code></pre>
 <p>to preview the project in the current working directory locally or</p>
-<pre><code class="language-s">uno build android --run -DDEBUG_V8
-</code></pre>
+<pre><code class="language-s">uno build android --run -DDEBUG_V8</code></pre>
 <p>to build and run on Android.</p>
 </li>
 <li>

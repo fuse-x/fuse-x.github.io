@@ -1008,8 +1008,7 @@ class Test3
 <p>Note that in the last case you should define where the file will be put in the output build directory of the project.</p>
 <h4 id="copying-a-file-without-expanding-any-macros-using-the-copyfile-tag">Copying a file without expanding any macros using the <code>CopyFile</code> tag</h4>
 <p>Much like <code>ProcessFile</code>, this copies a file into the build output, but by not having to parse for UXL macros, it is much faster. Use this wherever possible.</p>
-<pre><code class="language-xml">&lt;CopyFile Name=&quot;Camera.java&quot; TargetName=&quot;src/com/fuse/Native/Camera.java&quot; /&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;CopyFile Name=&quot;Camera.java&quot; TargetName=&quot;src/com/fuse/Native/Camera.java&quot; /&gt;</code></pre>
 <h2 id="targetspecifictype-s"><code>TargetSpecificType</code>'s</h2>
 <p>Whilst the name is quite similar to <code>TargetSpecificImplementation</code>, the purpose of <code>TargetSpecificType</code>'s is very different.</p>
 <p><code>TargetSpecificType</code>'s allow you to pass a native type around in Uno in a type-safe way. You can write Uno methods that operate on that type, and generally use it in a convenient way. You don't get extra overhead either as the final type definition is that of the native type you are wrapping.</p>
@@ -1071,8 +1070,7 @@ public extern(ANDROID) struct AndroidNativeView
     {
         return extern&lt;bool&gt; &quot;$0 == $1&quot;;
     }
-}
-</code></pre>
+}</code></pre>
 <pre><code class="language-xml">&lt;Type Name=&quot;AndroidNativeView&quot; Condition=&quot;Android&quot;
     TypeName=&quot;jobject&quot;
     Include=&quot;jni.h&quot;&gt;
@@ -1087,8 +1085,7 @@ public extern(ANDROID) struct AndroidNativeView
             jni-&gt;IsSameObject($0, $1);
         &lt;/Body&gt;
     &lt;/Method&gt;
-&lt;/Type&gt;
-</code></pre>
+&lt;/Type&gt;</code></pre>
 <h2 id="what-values-are-available-in-uxl">What values are available in UXL</h2>
 <p>This section is coming soon.</p>
 <h2 id="templates">Templates</h2>
@@ -1136,8 +1133,7 @@ In file included from include/iOSCanvasTexture.h:5:
 In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h:5:
 In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:8:
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSZone.h:8:1: error: expected unqualified-id
-@class NSString;
-</code></pre>
+@class NSString;</code></pre>
 <h4 id="answer">Answer:</h4>
 <p>You are using Objective C in a file that is being compiled as 'regular' C++. For this to work, you need the file extension to be <code>.mm</code>. Add the following to your UXL file:</p>
 <pre><code class="language-xml">&lt;Set Source.FileExtension=&quot;mm&quot; /&gt;</code></pre>

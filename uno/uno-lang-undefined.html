@@ -679,12 +679,10 @@ float SomeMetaProperty: 1.0f;
 ...
 
 // &quot;Undefines&quot; the meta property. Any subsequent draw statements will not see the above definition, however its type will still be visible.
-SomeMetaProperty: undefined;
-</code></pre>
+SomeMetaProperty: undefined;</code></pre>
 <p>The undefined keyword can also be used to &quot;conditionally&quot; undefine meta properties:</p>
 <pre><code class="language-csharp">// Undefines SomeMetaProperty if DiffuseMap is defined as texture2D, otherwise keep previous definition.
-SomeMetaProperty: req(DiffuseMap as texture2D) undefined, prev;
-</code></pre>
+SomeMetaProperty: req(DiffuseMap as texture2D) undefined, prev;</code></pre>
 
             </div>
             <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">

@@ -698,16 +698,14 @@ To achieve this, you can add <a href="../../fuse/animations/trackanimator/keyfra
 <pre><code class="language-xml">&lt;Timeline&gt;
     &lt;Change rect.Opacity=&quot;1&quot; Delay=&quot;0.0&quot; Duration=&quot;0.5&quot; /&gt;
     &lt;Change rect.Opacity=&quot;0&quot; Delay=&quot;0.5&quot; Duration=&quot;0.5&quot; /&gt;
-&lt;/Timeline&gt;
-</code></pre>
+&lt;/Timeline&gt;</code></pre>
 <p><em>Correct:</em></p>
 <pre><code class="language-xml">&lt;Timeline&gt;
     &lt;Change Target=&quot;rect.Opacity&quot;&gt;
         &lt;Keyframe Value=&quot;1&quot; Time=&quot;0.5&quot; /&gt;
         &lt;Keyframe Value=&quot;0&quot; Time=&quot;1.0&quot; /&gt;
     &lt;/Change&gt;
-&lt;/Timeline&gt;
-</code></pre>
+&lt;/Timeline&gt;</code></pre>
 </blockquote>
 <h4 id="example">Example</h4>
 <p>Here is an example of how we can use a timeline to animate several properties on a rectangle (its width and color), and then play between the start and end of this <code>Timeline</code> by clicking two buttons.</p>

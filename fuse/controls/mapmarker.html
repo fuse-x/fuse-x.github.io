@@ -695,8 +695,7 @@ Show advanced things
     &lt;MapView&gt;
         &lt;MapMarker Label=&quot;Fuse HQ&quot; Latitude=&quot;59.9115573&quot; Longitude=&quot;10.73888&quot; /&gt;
     &lt;/MapView&gt;
-&lt;/NativeViewHost&gt;
-</code></pre>
+&lt;/NativeViewHost&gt;</code></pre>
 <p>If you need to generate MapMarkers dynamically from JS, data binding and <a href="../../fuse/reactive/each.html">Each</a> are your friends. While we're scripting we might as well hook into the MapMarker's <code>Tapped</code> event to detect when the user has selected a marker.</p>
 <pre><code class="language-HTML">&lt;JavaScript&gt;
     var Observable = require(&quot;FuseJS/Observable&quot;);
@@ -714,8 +713,7 @@ Show advanced things
             &lt;MapMarker Latitude=&quot;{latitude}&quot; Longitude=&quot;{longitude}&quot; Label=&quot;{label}&quot; Tapped={onMarkerTapped} /&gt;
         &lt;/Each&gt;
     &lt;/MapView&gt;
-&lt;/NativeViewHost&gt;
-</code></pre>
+&lt;/NativeViewHost&gt;</code></pre>
 
 <section class="type-location">
 <h3 id="section-location">Location</h3>

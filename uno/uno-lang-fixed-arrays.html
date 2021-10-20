@@ -687,9 +687,7 @@ fixed float FixedArrayMetaProperty[]: fixed [] { 0.0f, 1.0f, 2.0f };</code></pre
 <pre><code class="language-csharp">for (var x = 0; x &lt; FixedArrayField.Length; x++)
     FixedArrayField[x] = 1337.0f;
 
-var f = FixedArrayField[3];
-
-</code></pre>
+var f = FixedArrayField[3];</code></pre>
 <h3 id="remarks">Remarks</h3>
 <p>Fixed arrays are similar to structs in the sense that they are typically stack-allocated, inlined in the containing data structure, or allocated in a static memory region, depending on context. On platforms that don't support this, the compiler will still make the array behave as if it did.</p>
 <p>Note that when using fixed arrays for passing uniform data to shaders, there are quite strict limitations on how much uniform data we can pass into a single shader, typically max 4 KB per draw call if targeting WebGL or OpenGL ES 2.0 based platforms. The Uno compiler will tell you when you exceed this limit.</p>

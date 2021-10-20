@@ -678,8 +678,7 @@
 <p>If we take a quick look at the design for one of the screens for our app (the edit hike page in this case):</p>
 <p><img src="../media/hikr/tutorial/edit-hike.png" alt="Edit Hike Page"></p>
 <p>Here we can see that generally, the app has a dark green-ish blue tint throughout its design. So, we'll use that as a guide to pick our background color and start there. To change the background color of our app, all we have to do is set the <a href="../fuse/appbase/background.html">Background</a> property of our app's <a href="../fuse/app.html">App</a> class. In our case, we'll do that inside <code>MainView.ux</code>. Let's set this color to hex <code>#022328</code>:</p>
-<pre><code class="language-xml">&lt;App Model=&quot;Models/App&quot; Background=&quot;#022328&quot;&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;App Model=&quot;Models/App&quot; Background=&quot;#022328&quot;&gt;</code></pre>
 <p>Our app now looks something like this:</p>
 <p><img src="../media/hikr/chapter-6/background-color.png" alt="Background color"></p>
 <p>And with that, we're off to a great start! However, quite a lot of our UI components now look pretty out-of-place. So, let's just go through our screens and fix them up piece by piece.</p>
@@ -829,11 +828,9 @@
 |- MainView.ux
 |- Components
 |- Services
-|- Pages
-</code></pre>
+|- Pages</code></pre>
 <p>This <code>Components</code> directory will be a perfect place to put our various reusable components. Since we'll want our white text component to be used throughout the app, we'll call it <code>hikr.Text</code>, to signify that this component is a <code>Text</code> element that's specific to our <code>hikr</code> app. We usually do not include the app name prefix (<code>hikr</code> in this case) in the file name though; only in the class name. To create the component, we'll create a file called <code>Text.ux</code> inside our <code>Components</code> directory that contains the following text:</p>
-<pre><code class="language-xml">&lt;Text ux:Class=&quot;hikr.Text&quot; Color=&quot;White&quot; /&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Text ux:Class=&quot;hikr.Text&quot; Color=&quot;White&quot; /&gt;</code></pre>
 <p>We'll go ahead and save that, and the component will be available for use in our project. Going back to our <code>HomePage</code>, let's use <code>hikr.Text</code> instead of <code>Text Color=&quot;White&quot;</code> where applicable. Don't forget to also update the closing tag for our &quot;Recent Hikes&quot; text!</p>
 <pre><code class="language-xml">&lt;DockPanel&gt;
     &lt;hikr.Text FontSize=&quot;30&quot; TextAlignment=&quot;Center&quot; Dock=&quot;Top&quot; Margin=&quot;0,50&quot;&gt;Recent Hikes&lt;/hikr.Text&gt;
@@ -957,19 +954,18 @@
 </blockquote>
 <p>Let's go ahead and move our new component into its own file in our <code>Components</code> dir called <code>Button.ux</code>:</p>
 <pre><code class="language-xml">&lt;Panel ux:Class=&quot;hikr.Button&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
-	&lt;string ux:Property=&quot;Text&quot; /&gt;
+    &lt;string ux:Property=&quot;Text&quot; /&gt;
 
-	&lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#125F63&quot; CornerRadius=&quot;4&quot;&gt;
-		&lt;DropShadow Angle=&quot;90&quot; Distance=&quot;1&quot; Spread=&quot;0.2&quot; Size=&quot;2&quot; Color=&quot;#00000060&quot; /&gt;
-	&lt;/Rectangle&gt;
+    &lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#125F63&quot; CornerRadius=&quot;4&quot;&gt;
+        &lt;DropShadow Angle=&quot;90&quot; Distance=&quot;1&quot; Spread=&quot;0.2&quot; Size=&quot;2&quot; Color=&quot;#00000060&quot; /&gt;
+    &lt;/Rectangle&gt;
 
-	&lt;hikr.Text Value=&quot;{ReadProperty Text}&quot; FontSize=&quot;16&quot; TextAlignment=&quot;Center&quot; /&gt;
+    &lt;hikr.Text Value=&quot;{ReadProperty Text}&quot; FontSize=&quot;16&quot; TextAlignment=&quot;Center&quot; /&gt;
 
-	&lt;WhilePressed&gt;
-		&lt;Scale Factor=&quot;.95&quot; Duration=&quot;.08&quot; Easing=&quot;QuadraticOut&quot; /&gt;
-	&lt;/WhilePressed&gt;
-&lt;/Panel&gt;
-</code></pre>
+    &lt;WhilePressed&gt;
+        &lt;Scale Factor=&quot;.95&quot; Duration=&quot;.08&quot; Easing=&quot;QuadraticOut&quot; /&gt;
+    &lt;/WhilePressed&gt;
+&lt;/Panel&gt;</code></pre>
 <p>And finally, we'll style our <code>Cancel</code> button as well. In this case, all we have to do is replace <code>Button</code> with <code>hikr.Button</code>:</p>
 <pre><code class="language-xml">    &lt;Text&gt;Comments:&lt;/Text&gt;
     &lt;TextView Value=&quot;{hike.comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
@@ -995,35 +991,34 @@
 <p>Perfect! Here we can see that the <code>Grid</code> will place its child elements in the order they're specified, starting with the top-left cell in the <code>Grid</code>. To change which cells our child elements occupy, all we have to do is specify them in a different order. Nice and easy!</p>
 <p>Finally, let's place this <code>Grid</code> at the very bottom of the <code>Page</code>. For this, we'll place all of the current contents of the <code>Page</code> into a <a href="../fuse/controls/dockpanel.html">DockPanel</a>, and we'll dock our <code>Grid</code> to the bottom of that <code>DockPanel</code> using <code>Dock=&quot;Bottom&quot;</code>. Altogether, our <code>EditHikePage.ux</code> file will look like this:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;EditHikePage&quot;&gt;
-	&lt;DockPanel&gt;
-		&lt;Grid ColumnCount=&quot;2&quot; Dock=&quot;Bottom&quot;&gt;
-			&lt;hikr.Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
-			&lt;hikr.Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
-		&lt;/Grid&gt;
+    &lt;DockPanel&gt;
+        &lt;Grid ColumnCount=&quot;2&quot; Dock=&quot;Bottom&quot;&gt;
+            &lt;hikr.Button Text=&quot;Cancel&quot; Clicked=&quot;{cancel}&quot; /&gt;
+            &lt;hikr.Button Text=&quot;Save&quot; Clicked=&quot;{save}&quot; /&gt;
+        &lt;/Grid&gt;
 
-		&lt;ScrollView&gt;
-			&lt;StackPanel&gt;
-				&lt;Text Value=&quot;{hike.name}&quot; /&gt;
+        &lt;ScrollView&gt;
+            &lt;StackPanel&gt;
+                &lt;Text Value=&quot;{hike.name}&quot; /&gt;
 
-				&lt;Text&gt;Name:&lt;/Text&gt;
-				&lt;TextBox Value=&quot;{hike.name}&quot; /&gt;
+                &lt;Text&gt;Name:&lt;/Text&gt;
+                &lt;TextBox Value=&quot;{hike.name}&quot; /&gt;
 
-				&lt;Text&gt;Location:&lt;/Text&gt;
-				&lt;TextBox Value=&quot;{hike.location}&quot; /&gt;
+                &lt;Text&gt;Location:&lt;/Text&gt;
+                &lt;TextBox Value=&quot;{hike.location}&quot; /&gt;
 
-				&lt;Text&gt;Distance (km):&lt;/Text&gt;
-				&lt;TextBox Value=&quot;{hike.distance}&quot; InputHint=&quot;Decimal&quot; /&gt;
+                &lt;Text&gt;Distance (km):&lt;/Text&gt;
+                &lt;TextBox Value=&quot;{hike.distance}&quot; InputHint=&quot;Decimal&quot; /&gt;
 
-				&lt;Text&gt;Rating:&lt;/Text&gt;
-				&lt;TextBox Value=&quot;{hike.rating}&quot; InputHint=&quot;Integer&quot; /&gt;
+                &lt;Text&gt;Rating:&lt;/Text&gt;
+                &lt;TextBox Value=&quot;{hike.rating}&quot; InputHint=&quot;Integer&quot; /&gt;
 
-				&lt;Text&gt;Comments:&lt;/Text&gt;
-				&lt;TextView Value=&quot;{hike.comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
-			&lt;/StackPanel&gt;
-		&lt;/ScrollView&gt;
-	&lt;/DockPanel&gt;
-&lt;/Page&gt;
-</code></pre>
+                &lt;Text&gt;Comments:&lt;/Text&gt;
+                &lt;TextView Value=&quot;{hike.comments}&quot; TextWrapping=&quot;Wrap&quot; /&gt;
+            &lt;/StackPanel&gt;
+        &lt;/ScrollView&gt;
+    &lt;/DockPanel&gt;
+&lt;/Page&gt;</code></pre>
 <p>And with that, we've finished customizing both the look and feel and placement of our <code>Cancel</code> and <code>Save</code> buttons!</p>
 <h3 id="tweaking-the-editors">Tweaking the editors</h3>
 <p>Now, let's dig in and tweak the look/feel of the various value editors on the <code>EditHikePage</code>. To refresh our memory, let's take another look at the design for this page:</p>
@@ -1132,8 +1127,7 @@
         &lt;hikr.TextBox Value=&quot;{hike.rating}&quot; InputHint=&quot;Integer&quot; /&gt;
     &lt;/StackPanel&gt;</code></pre>
 <p>And finally, we can move this component into our <code>Components</code> directory, as we may wish to use it later for other screens in our app. So, we'll move the <code>ux:Class</code> to a new <code>TextBox.ux</code> file in the <code>Components</code> dir:</p>
-<pre><code class="language-xml">&lt;TextBox ux:Class=&quot;hikr.TextBox&quot; TextColor=&quot;White&quot; CaretColor=&quot;White&quot; Padding=&quot;10,10,0,10&quot; /&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;TextBox ux:Class=&quot;hikr.TextBox&quot; TextColor=&quot;White&quot; CaretColor=&quot;White&quot; Padding=&quot;10,10,0,10&quot; /&gt;</code></pre>
 <p>Now, before we wrap this page's content up, it's time to tackle the <code>Comments</code> editor. Because this is a <code>TextView</code> that can display multiple lines, we'll want to apply some different styling than what we had for the <code>TextBox</code>es before. However, we'll start with basically the same process by applying some <code>TextColor</code>, <code>CaretColor</code>, and <code>Padding</code> to the editor:</p>
 <pre><code class="language-xml">&lt;StackPanel&gt;
     &lt;TitleText&gt;Comments:&lt;/TitleText&gt;
@@ -1149,9 +1143,8 @@
 <p>Looking good! At this point, we don't really have to split this styled <code>TextView</code> into its own component like we have with the others, as it's only being used for this one instance. However, for good measure, let's go ahead and do so. Just like before, we'll create a file in our <code>Components</code> directory called <code>hikr.TextView.ux</code>, and place our styled <code>TextView</code> code in there, adding a <code>ux:Class</code> definition. Then, we'll update our <code>EditHikePage</code> to use this <code>hikr.TextView</code> for the <code>Comments</code> editor. Be sure to leave the <code>TextWrapping=&quot;Wrap&quot;</code> and <code>Value</code> binding on the <em>instance</em> instead of putting them in the component, as these are properties that we would very likely want to set ourselves when using the component:</p>
 <p><code>TextView.ux</code>:</p>
 <pre><code class="language-xml">&lt;TextView ux:Class=&quot;hikr.TextView&quot; TextColor=&quot;White&quot; CaretColor=&quot;White&quot; Padding=&quot;5&quot;&gt;
-	&lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#fff2&quot; CornerRadius=&quot;4&quot; /&gt;
-&lt;/TextView&gt;
-</code></pre>
+    &lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#fff2&quot; CornerRadius=&quot;4&quot; /&gt;
+&lt;/TextView&gt;</code></pre>
 <p><code>EditHikePage.ux</code>:</p>
 <pre><code class="language-xml">&lt;StackPanel&gt;
     &lt;TitleText&gt;Comments:&lt;/TitleText&gt;
@@ -1165,16 +1158,14 @@
 |- Assets
 |- Components
 |- Services
-|- Pages
-</code></pre>
+|- Pages</code></pre>
 <p>Next, let's download the background image we need. This is the background image we'll be using:</p>
 <p><img src="../media/hikr/chapter-6/background.jpg" alt="Background image"></p>
 <p>Go ahead and save that image into the <code>Assets</code> directory as <code>background.jpg</code>.</p>
 <p>Now that we've got the image in our project folder, we'll want to use it in our app. Per our design, we'll want to use this image as the background of our <code>HomePage</code> and our <code>EditHikePage</code>. We <em>could</em> apply it to our entire app, but applying it to each <code>Page</code> ensures that transitions that occur on the <code>Page</code> will also apply to the background image, which I happen to prefer design-wise. So, let's apply it to each <code>Page</code>, starting with our <code>HomePage</code>.</p>
 <p>In <code>HomePage.ux</code>, we'll apply this image as the background of our <code>Page</code> similarly to how we added rounded <code>Rectangle</code>s to our components before, by adding an <a href="../fuse/controls/image.html">Image</a> element with <code>Layer=&quot;Background&quot;</code> set:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;HomePage&quot;&gt;
-	&lt;Image Layer=&quot;Background&quot; File=&quot;../Assets/background.jpg&quot; /&gt;
-</code></pre>
+    &lt;Image Layer=&quot;Background&quot; File=&quot;../Assets/background.jpg&quot; /&gt;</code></pre>
 <p>Note how the value in the <code>File</code> property is relative to our <code>HomePage.ux</code> file. With this set, we now have the image in the background, but the image content doesn't quite fill the entire space of the <code>Page</code> as we might expect. This is because by default, an <code>Image</code> element will squeeze or stretch its content to fit into the available space without changing the content's aspect ratio, and since our image file has a slightly different aspect than our <code>Page</code>, it will be shrunk slightly. To fix this, we can specify <code>StretchMode=&quot;UniformToFill&quot;</code> for our <code>Image</code> element, which will ensure the content will always fill the whole available space, and still maintain its aspect ratio:</p>
 <pre><code class="language-xml">&lt;Image Layer=&quot;Background&quot; File=&quot;../Assets/background.jpg&quot; StretchMode=&quot;Fill&quot; /&gt;</code></pre>
 <blockquote>
@@ -1185,32 +1176,27 @@
 <p>Great! Now we have our background image properly applied to our <code>HomePage</code>, so let's apply it to our <code>EditHikePage</code> as well. You can probably guess how we'll do this - we'll first make a reusable <code>hikr.Page</code> component that has this background image applied, and then we'll make our <code>HomePage</code> and <code>EditHikePage</code> components derive from that class instead of <code>Page</code> directly.</p>
 <p>So, just like before, we'll create a new file in our <code>Components</code> directory called <code>Page.ux</code>, containing the following:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;hikr.Page&quot;&gt;
-	&lt;Image Layer=&quot;Background&quot; File=&quot;../Assets/background.jpg&quot; StretchMode=&quot;Fill&quot; Opacity=&quot;.7&quot; /&gt;
-&lt;/Page&gt;
-</code></pre>
+    &lt;Image Layer=&quot;Background&quot; File=&quot;../Assets/background.jpg&quot; StretchMode=&quot;Fill&quot; Opacity=&quot;.7&quot; /&gt;
+&lt;/Page&gt;</code></pre>
 <p>Then, we'll update our code in <code>Pages/HomePage.ux</code> and <code>Pages/EditHikePage.ux</code>. Don't forget to update both the opening and closing tags; these ones are easy to miss:</p>
 <p><code>HomePage.ux</code></p>
 <pre><code class="language-xml">&lt;hikr.Page ux:Class=&quot;HomePage&quot;&gt;
-	...
-&lt;/hikr.Page&gt;
-</code></pre>
+    ...
+&lt;/hikr.Page&gt;</code></pre>
 <p><code>EditHikePage.ux</code></p>
 <pre><code class="language-xml">&lt;hikr.Page ux:Class=&quot;EditHikePage&quot;&gt;
-	...
-&lt;/hikr.Page&gt;
-</code></pre>
+    ...
+&lt;/hikr.Page&gt;</code></pre>
 <p>Cool, now our <code>Page</code>s are completely finished and look great!</p>
 <h2 id="tweaking-the-status-bars">Tweaking the status bars</h2>
 <p>We're almost done now with the full look and feel of our app! There's just one more thing we need to take a look at, and that's our app's status bars. If we run the app on our devices, we'll be looking pretty good, but our status bars don't really fit the theme. In particular, because of our dark background, the status bar text and icons on iOS will be too dark to read, and the background color of the status bar on Android will simply be the wrong color!</p>
 <p>To solve these problems, Fuse provides the <a href="../fuse/ios/statusbarconfig.html">iOS.StatusBarConfig</a> and <a href="../fuse/android/statusbarconfig.html">Android.StatusBarConfig</a> classes, which can be used to customize the status bar for iOS and Android respectively. To use these, all we have to do is add an instance of each one at the top of our <code>App</code> tag in <code>MainView.ux</code>, and set the appropriate properties for each platform. We'll start with iOS, where we'll specify <code>Style=&quot;Light&quot;</code> to tell Fuse we want a status bar with light text and icons instead of dark ones:</p>
 <pre><code class="language-xml">&lt;App Model=&quot;Models/App&quot; Background=&quot;#022328&quot;&gt;
-	&lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
-</code></pre>
+    &lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;</code></pre>
 <p>Next, we'll take care of the Android status bar. In this case, we'll specify a background color that matches our app's background color:</p>
 <pre><code class="language-xml">&lt;App Model=&quot;Models/App&quot; Background=&quot;#022328&quot;&gt;
-	&lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
-	&lt;Android.StatusBarConfig Color=&quot;#022328&quot; /&gt;
-</code></pre>
+    &lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
+    &lt;Android.StatusBarConfig Color=&quot;#022328&quot; /&gt;</code></pre>
 <p>And with that, our app looks great on our devices as well!</p>
 <blockquote>
 <p>Note: It's important to have at most only one of each instance of the <code>StatusBarConfig</code> classes for each platform, or else they may not behave properly. For more information on the status bars and similar configuration, check out our <a href="https://www.youtube.com/watch?v=EBopndSkk5c">Status Bar Basics</a> video.</p>

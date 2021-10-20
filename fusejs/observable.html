@@ -673,18 +673,16 @@
 <p>Observables are a key concept to understand in order to be effective with Fuse. Observables let us automatically update the UI whenever there are changes to the data-model. They are also extremely useful for describing view-models; which means mapping the data-model into a view friendly format. When <a href="../fuse/reactive/databinding.html">data-binding</a> to an <code>Observable</code> using the curly brace syntax (<code>{&lt;some_observable&gt;}</code>), a subscription is automatically created that will update the UI whenever the <code>Observable</code> changes. This article is a quick introduction to understanding and using the FuseJS/Observable API.</p>
 <p>Here is a tiny example to give you an idea of what we'll be looking at:</p>
 <pre><code class="language-xml">&lt;App&gt;
-	&lt;JavaScript&gt;
-		var Observable = require(&quot;FuseJS/Observable&quot;);
-		module.exports.myValue = Observable(1);
-	&lt;/JavaScript&gt;
-	
-	&lt;Text Value=&quot;{myValue}&quot; /&gt;
-&lt;/App&gt;
-</code></pre>
+    &lt;JavaScript&gt;
+        var Observable = require(&quot;FuseJS/Observable&quot;);
+        module.exports.myValue = Observable(1);
+    &lt;/JavaScript&gt;
+    
+    &lt;Text Value=&quot;{myValue}&quot; /&gt;
+&lt;/App&gt;</code></pre>
 <h2 id="video-tutorial">Video tutorial</h2>
 <p>For a nice introduction to working with observables, take a look at this video:</p>
-<pre><code class="language-xml">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bB9P4mTGtVU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bB9P4mTGtVU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
 <h2 id="using-observables">Using observables</h2>
 <p>An <code>Observable</code> can hold a single value, or be treated as a list of values with 0 or more elements. When the value(s) of the <code>Observable</code> changes, all <em>subscribers</em> are automatically notified. The concept of subscribers/subscriptions is discussed in detail later in this article.</p>
 <p>Start off by importing the observable module, which returns a function:</p>
@@ -725,9 +723,8 @@ console.log(&quot;SquaredNumbers length: &quot; + someNumbersSquared.length); //
 <p>In some cases, we're interested in running some imperative code in response to an <code>Observable</code> changing. We can do this by subscribing using the <code>.onValueChanged(module, func(item))</code> function, which fires the function <code>func</code> every time the value of a single value Observable changes. The module parameter lets us connect the lifetime of this subscription to the lifetime of a module. In most cases we just pass the module we're currently in:</p>
 <pre><code class="language-js">var myObservable = Observable(1);
 myObservable.onValueChanged(module, function(item) {
-	//do something
-});
-</code></pre>
+    //do something
+});</code></pre>
 <h3 id="-addsubscriber-func">.addSubscriber(func)</h3>
 <p>We can also explicitly add subscriptions by using the <code>.addSubscriber(func(item))</code> method. The drawback of using <code>.addSubscriber</code> is that we manually have to remove the subscription when we no longer need it using <code>.removeSubscriber</code>. Always prefer using <code>.onValueChanged</code> unless we're defining custom reactive operators. We mention it here only for completeness.</p>
 <h3 id="-subscribe-module">.subscribe(module)</h3>
@@ -741,28 +738,26 @@ myObservable.onValueChanged(module, function(item) {
 <pre><code class="language-js">var source = Observable(2);
 
 var destination = source.map(function(x) {
-	return x * x;
+    return x * x;
 }).where(function(x) {
-	return x &lt; 50;
-});
-</code></pre>
+    return x &lt; 50;
+});</code></pre>
 <p>In the code above, we create a source <code>Observable</code> with a single initial value; the number 2. We then use the reactive operator <code>.map</code> to transform the value with a &quot;mapping-function&quot; that squares the number. Lastly, we use the reactive operator <code>.where</code> to filter the observable so that only values that are below 50 will be propagated further. The <code>.where</code> operator is expected to return either <code>true</code> or <code>false</code>; <code>true</code> if we allow the value to propagate, <code>false</code> if not.</p>
 <h2 id="passing-observables-through-properties">Passing observables through properties</h2>
 <p>Observables can also be passed into custom made components using Properties. We can add a property which accepts Observables by making an <code>object</code> property:</p>
 <pre><code class="language-xml">&lt;Panel ux:Class=&quot;CoolPanel&quot;&gt;
-	&lt;object ux:Property=&quot;ObservableProperty&quot; /&gt;
-	&lt;JavaScript&gt;
-		var passedInObservable = this.ObservableProperty.inner();
-	&lt;/JavaScript&gt;
+    &lt;object ux:Property=&quot;ObservableProperty&quot; /&gt;
+    &lt;JavaScript&gt;
+        var passedInObservable = this.ObservableProperty.inner();
+    &lt;/JavaScript&gt;
 &lt;/Panel&gt;
 &lt;JavaScript&gt;
-	var Observable = require(&quot;FuseJS/Observable&quot;);
-	module.exports = {
-		valueToPass: Observable(&quot;123&quot;)
-	};
+    var Observable = require(&quot;FuseJS/Observable&quot;);
+    module.exports = {
+        valueToPass: Observable(&quot;123&quot;)
+    };
 &lt;/JavaScript&gt;
-&lt;CoolPanel ObservableProperty=&quot;{valueToPass}&quot; /&gt;
-</code></pre>
+&lt;CoolPanel ObservableProperty=&quot;{valueToPass}&quot; /&gt;</code></pre>
 <p>In most cases you'll want to use <code>inner()</code> when fetching an Observable passed in through properties. This is because the javascript value <code>this.Propertyname</code> is an observable with whatever <code>Propertyname</code> contains. If we pass an Observable in, <code>this.Propertyname</code> will contain an observable with the observable we passed through.</p>
 
             </div>

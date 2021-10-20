@@ -676,12 +676,10 @@
 <h2 id="building-our-splash-screen">Building our splash screen</h2>
 <p>The first thing we'll to do for our splash screen is to create a new <a href="../fuse/controls/page.html">Page</a>. In the <code>Pages</code> directory in our project, let's make a new file called <code>SplashPage.ux</code> with the following contents:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;SplashPage&quot;&gt;
-&lt;/Page&gt;
-</code></pre>
+&lt;/Page&gt;</code></pre>
 <p>Notice how we're using <code>Page</code> as a base class instead of the <code>hikr.Page</code> component we built last chapter. This is because we'll eventually add a video background to this page, so we'll just want app's background color for a background for now.</p>
 <p>Lets also add a <code>SplashPage.js</code> to our <code>Pages</code> folder, and export an empty class with the same name:</p>
-<pre><code class="language-js">export default class SplashPage { }
-</code></pre>
+<pre><code class="language-js">export default class SplashPage { }</code></pre>
 <p>Now that we've got our <code>SplashPage</code>, let's add a template for it in our app's <a href="../fuse/controls/navigator.html">Navigator</a> in <code>MainView.ux</code>:</p>
 <pre><code class="language-xml">&lt;Navigator Pages=&quot;{pages}&quot;&gt;
     &lt;SplashPage ux:Template=&quot;SplashPage&quot; /&gt;
@@ -698,16 +696,14 @@
     });
 }</code></pre>
 <p>Also make sure you add an import statement to the top of <code>Models/App.js</code>:</p>
-<pre><code class="language-js">import SplashPage from 'Pages/SplashPage';
-</code></pre>
+<pre><code class="language-js">import SplashPage from 'Pages/SplashPage';</code></pre>
 <p>With this saved, we should now see our blank <code>SplashPage</code> on screen! Now that we've got our <code>SplashPage</code> showing, let's look at its design:</p>
 <p><img src="../media/hikr/tutorial/splash.png" alt="Splash Page"></p>
 <p>Here we can see there's two major parts - the title text and slogan, and the &quot;Get Started&quot; button. Both of these parts are placed in the center of the top/bottom halves of the screen, respectively. So, the first thing we'll do is create a <a href="../fuse/controls/grid.html">Grid</a> which will split the screen up into these two cells in <code>SplashScreen.ux</code>:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;SplashPage&quot;&gt;
-	&lt;Grid RowCount=&quot;2&quot;&gt;
-	&lt;/Grid&gt;
-&lt;/Page&gt;
-</code></pre>
+    &lt;Grid RowCount=&quot;2&quot;&gt;
+    &lt;/Grid&gt;
+&lt;/Page&gt;</code></pre>
 <p>The first child of this <code>Grid</code> will represent the contents of the top cell of the <code>Grid</code>. For our title text and slogan, we'll create a <a href="../fuse/controls/stackpanel.html">StackPanel</a>:</p>
 <pre><code class="language-xml">&lt;Grid RowCount=&quot;2&quot;&gt;
     &lt;StackPanel&gt;
@@ -757,20 +753,17 @@
 <p>Ah, but wait! Our <code>hikr.Button</code> component, because it was built from a <a href="../fuse/controls/panel.html">Panel</a>, doesn't actually have a <code>FontSize</code> property. But this is no problem, we can just build it ourselves!</p>
 <p>In our <code>Components/Button.ux</code> file, let's first add the <code>FontSize</code> property by creating a <a href="../uno/float.html">float</a> instance (since a font size should be a numeric value) with <code>ux:Property</code> specified:</p>
 <pre><code class="language-xml">&lt;Panel ux:Class=&quot;hikr.Button&quot; Margin=&quot;10&quot; Padding=&quot;10&quot;&gt;
-	&lt;string ux:Property=&quot;Text&quot; /&gt;
-	&lt;float ux:Property=&quot;FontSize&quot; /&gt;
-</code></pre>
+    &lt;string ux:Property=&quot;Text&quot; /&gt;
+    &lt;float ux:Property=&quot;FontSize&quot; /&gt;</code></pre>
 <p>This takes care of creating the property; now let's make sure the component actually uses it. In the <code>hikr.Text</code> instance in the component, we can bind the currently-hardcoded <code>FontSize</code> to our property, just like we did with its <code>Value</code> previously:</p>
 <pre><code class="language-xml">&lt;hikr.Text Value=&quot;{ReadProperty Text}&quot; FontSize=&quot;{ReadProperty FontSize}&quot; TextAlignment=&quot;Center&quot; /&gt;</code></pre>
 <p>Now, we could stop here, but remember, this component is used elsewhere in our app, and we didn't specify the <code>FontSize</code> property for those instances. So, we should make sure this property has a default value in our component, so those instances will still look the same. To specify a default value for a property, all we have to do is set the property in the component definition like we would if we were setting it for an instance. In <code>hikr.Button.ux</code>, this looks like this:</p>
-<pre><code class="language-xml">&lt;Panel ux:Class=&quot;hikr.Button&quot; Margin=&quot;10&quot; Padding=&quot;10&quot; FontSize=&quot;16&quot;&gt;
-</code></pre>
+<pre><code class="language-xml">&lt;Panel ux:Class=&quot;hikr.Button&quot; Margin=&quot;10&quot; Padding=&quot;10&quot; FontSize=&quot;16&quot;&gt;</code></pre>
 <p>This way, unless otherwise specifed, the value of our <code>FontSize</code> property will be 16 like it was before. Awesome!</p>
 <p>Now, let's make our button navigate to the <code>HomePage</code>. We start by adding a function to <code>App.js</code> called <code>goToHomePage</code>. All it does it replace the top most value with an instance of <code>HomePage</code>.</p>
 <pre><code class="language-js">goToHomePage() {
     this.pages = [new HomePage()]
-}
-</code></pre>
+}</code></pre>
 <p>Then we need to bind our newly created function to our buttons <code>Clicked</code> event:</p>
 <pre><code class="language-xml">&lt;hikr.Button Text=&quot;Get Started&quot; FontSize=&quot;18&quot; Margin=&quot;50,0&quot; Alignment=&quot;VerticalCenter&quot; Clicked=&quot;{goToHomePage}&quot; /&gt;</code></pre>
 <p>And that's all it takes. If we save all our files, and click the &quot;Get started&quot; button, our app navigates to the <code>HomePage</code>. Since we set the <code>pages</code> array to a new array with one element, we do not get any navigation history, which means we cannot use the back button to navigate back to the splash page. This is by design.</p>
@@ -803,22 +796,21 @@
 &lt;/Video&gt;</code></pre>
 <p>And with that, our video looks great! Now, let's add attribution to the original artist like our license required. A small bit of text like &quot;original video by Graham Uhelski&quot; at the bottom of the screen should do quite nicely. So, let's first place all of the content of our <code>SplashPage</code> component into a <a href="../fuse/controls/dockpanel.html">DockPanel</a>:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;SplashPage&quot;&gt;
-	&lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
-		&lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
-			&lt;Blur Radius=&quot;4.75&quot; /&gt;
-		&lt;/Video&gt;
+    &lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
+        &lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
+            &lt;Blur Radius=&quot;4.75&quot; /&gt;
+        &lt;/Video&gt;
 
-		&lt;Grid RowCount=&quot;2&quot;&gt;
-			&lt;StackPanel Alignment=&quot;VerticalCenter&quot;&gt;
-				&lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;70&quot;&gt;hikr&lt;/hikr.Text&gt;
-				&lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; Opacity=&quot;.5&quot;&gt;get out there&lt;/hikr.Text&gt;
-			&lt;/StackPanel&gt;
+        &lt;Grid RowCount=&quot;2&quot;&gt;
+            &lt;StackPanel Alignment=&quot;VerticalCenter&quot;&gt;
+                &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;70&quot;&gt;hikr&lt;/hikr.Text&gt;
+                &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; Opacity=&quot;.5&quot;&gt;get out there&lt;/hikr.Text&gt;
+            &lt;/StackPanel&gt;
 
-			&lt;hikr.Button Text=&quot;Get Started&quot; FontSize=&quot;18&quot; Margin=&quot;50,0&quot; Alignment=&quot;VerticalCenter&quot; Clicked=&quot;{goToHomePage}&quot; /&gt;
-		&lt;/Grid&gt;
-	&lt;/DockPanel&gt;
-&lt;/Page&gt;
-</code></pre>
+            &lt;hikr.Button Text=&quot;Get Started&quot; FontSize=&quot;18&quot; Margin=&quot;50,0&quot; Alignment=&quot;VerticalCenter&quot; Clicked=&quot;{goToHomePage}&quot; /&gt;
+        &lt;/Grid&gt;
+    &lt;/DockPanel&gt;
+&lt;/Page&gt;</code></pre>
 <p>Then, we'll add a <code>hikr.Text</code> component docked to the bottom of the <code>DockPanel</code>:</p>
 <pre><code class="language-xml">&lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
     &lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
@@ -845,58 +837,53 @@
 <p>And these are the code files we changed in this chapter:</p>
 <p><code>Components/hikr.Button.ux</code>:</p>
 <pre><code class="language-xml">&lt;Panel ux:Class=&quot;hikr.Button&quot; Margin=&quot;10&quot; Padding=&quot;10&quot; FontSize=&quot;16&quot;&gt;
-	&lt;string ux:Property=&quot;Text&quot; /&gt;
-	&lt;float ux:Property=&quot;FontSize&quot; /&gt;
-	
-	&lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#125F63&quot; CornerRadius=&quot;4&quot;&gt;
-		&lt;DropShadow Angle=&quot;90&quot; Distance=&quot;1&quot; Spread=&quot;0.2&quot; Size=&quot;2&quot; Color=&quot;#00000060&quot; /&gt;
-	&lt;/Rectangle&gt;
+    &lt;string ux:Property=&quot;Text&quot; /&gt;
+    &lt;float ux:Property=&quot;FontSize&quot; /&gt;
+    
+    &lt;Rectangle Layer=&quot;Background&quot; Color=&quot;#125F63&quot; CornerRadius=&quot;4&quot;&gt;
+        &lt;DropShadow Angle=&quot;90&quot; Distance=&quot;1&quot; Spread=&quot;0.2&quot; Size=&quot;2&quot; Color=&quot;#00000060&quot; /&gt;
+    &lt;/Rectangle&gt;
 
-	&lt;hikr.Text Value=&quot;{ReadProperty Text}&quot; FontSize=&quot;{ReadProperty FontSize}&quot; TextAlignment=&quot;Center&quot; /&gt;
+    &lt;hikr.Text Value=&quot;{ReadProperty Text}&quot; FontSize=&quot;{ReadProperty FontSize}&quot; TextAlignment=&quot;Center&quot; /&gt;
 
-	&lt;WhilePressed&gt;
-		&lt;Scale Factor=&quot;.95&quot; Duration=&quot;.08&quot; Easing=&quot;QuadraticOut&quot; /&gt;
-	&lt;/WhilePressed&gt;
-&lt;/Panel&gt;
-</code></pre>
+    &lt;WhilePressed&gt;
+        &lt;Scale Factor=&quot;.95&quot; Duration=&quot;.08&quot; Easing=&quot;QuadraticOut&quot; /&gt;
+    &lt;/WhilePressed&gt;
+&lt;/Panel&gt;</code></pre>
 <p><code>MainView.ux</code>:</p>
 <pre><code class="language-xml">&lt;App Model=&quot;Models/App&quot; Background=&quot;#022328&quot;&gt;
-	&lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
-	&lt;Android.StatusBarConfig Color=&quot;#022328&quot; /&gt;
-	
-	&lt;ClientPanel&gt;
-		&lt;Navigator Pages=&quot;{pages}&quot;&gt;
-			&lt;SplashPage ux:Template=&quot;SplashPage&quot; /&gt;
-			&lt;HomePage ux:Template=&quot;HomePage&quot; /&gt;
-			&lt;EditHikePage ux:Template=&quot;EditHikePage&quot; /&gt;
-		&lt;/Navigator&gt;
-	&lt;/ClientPanel&gt;
-&lt;/App&gt;
-
-</code></pre>
+    &lt;iOS.StatusBarConfig Style=&quot;Light&quot; /&gt;
+    &lt;Android.StatusBarConfig Color=&quot;#022328&quot; /&gt;
+    
+    &lt;ClientPanel&gt;
+        &lt;Navigator Pages=&quot;{pages}&quot;&gt;
+            &lt;SplashPage ux:Template=&quot;SplashPage&quot; /&gt;
+            &lt;HomePage ux:Template=&quot;HomePage&quot; /&gt;
+            &lt;EditHikePage ux:Template=&quot;EditHikePage&quot; /&gt;
+        &lt;/Navigator&gt;
+    &lt;/ClientPanel&gt;
+&lt;/App&gt;</code></pre>
 <p><code>Pages/SplashPage.ux</code>:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;SplashPage&quot;&gt;
-	&lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
-		&lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
-			&lt;Blur Radius=&quot;4.75&quot; /&gt;
-		&lt;/Video&gt;
+    &lt;DockPanel ClipToBounds=&quot;true&quot;&gt;
+        &lt;Video Layer=&quot;Background&quot; File=&quot;../Assets/nature.mp4&quot; IsLooping=&quot;true&quot; AutoPlay=&quot;true&quot; StretchMode=&quot;UniformToFill&quot; Opacity=&quot;0.5&quot;&gt;
+            &lt;Blur Radius=&quot;4.75&quot; /&gt;
+        &lt;/Video&gt;
 
-		&lt;hikr.Text Dock=&quot;Bottom&quot; Margin=&quot;10&quot; Opacity=&quot;.5&quot; TextAlignment=&quot;Center&quot; FontSize=&quot;12&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;
+        &lt;hikr.Text Dock=&quot;Bottom&quot; Margin=&quot;10&quot; Opacity=&quot;.5&quot; TextAlignment=&quot;Center&quot; FontSize=&quot;12&quot;&gt;original video by Graham Uhelski&lt;/hikr.Text&gt;
 
-		&lt;Grid RowCount=&quot;2&quot;&gt;
-			&lt;StackPanel Alignment=&quot;VerticalCenter&quot;&gt;
-				&lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;70&quot;&gt;hikr&lt;/hikr.Text&gt;
-				&lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; Opacity=&quot;.5&quot;&gt;get out there&lt;/hikr.Text&gt;
-			&lt;/StackPanel&gt;
+        &lt;Grid RowCount=&quot;2&quot;&gt;
+            &lt;StackPanel Alignment=&quot;VerticalCenter&quot;&gt;
+                &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; FontSize=&quot;70&quot;&gt;hikr&lt;/hikr.Text&gt;
+                &lt;hikr.Text Alignment=&quot;HorizontalCenter&quot; Opacity=&quot;.5&quot;&gt;get out there&lt;/hikr.Text&gt;
+            &lt;/StackPanel&gt;
 
-			&lt;hikr.Button Text=&quot;Get Started&quot; FontSize=&quot;18&quot; Margin=&quot;50,0&quot; Alignment=&quot;VerticalCenter&quot; Clicked=&quot;{goToHomePage}&quot; /&gt;
-		&lt;/Grid&gt;
-	&lt;/DockPanel&gt;
-&lt;/Page&gt;
-</code></pre>
+            &lt;hikr.Button Text=&quot;Get Started&quot; FontSize=&quot;18&quot; Margin=&quot;50,0&quot; Alignment=&quot;VerticalCenter&quot; Clicked=&quot;{goToHomePage}&quot; /&gt;
+        &lt;/Grid&gt;
+    &lt;/DockPanel&gt;
+&lt;/Page&gt;</code></pre>
 <p><code>Pages/SplashPage.js</code>:</p>
-<pre><code class="language-js">export default class SplashPage { }
-</code></pre>
+<pre><code class="language-js">export default class SplashPage { }</code></pre>
 <p><code>Models/App.js</code>:</p>
 <pre><code class="language-js">import HomePage from 'Pages/HomePage';
 import EditHikePage from 'Pages/EditHikePage';
@@ -904,35 +891,34 @@ import SplashPage from 'Pages/SplashPage';
 import MockBackend from 'Services/MockBackend';
 
 class Hike {
-	constructor(id, name, location, distance, rating, comments) {
-		this.id = id;
-		this.name = name;
-		this.location = location;
-		this.distance = distance;
-		this.rating = rating;
-		this.comments = comments;
-	}
+    constructor(id, name, location, distance, rating, comments) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.distance = distance;
+        this.rating = rating;
+        this.comments = comments;
+    }
 }
 
 export default class App {
-	constructor() {
-		this.mockBackend = new MockBackend();
-		this.pages = [new SplashPage()];
-		this.hikes = [];
-		this.mockBackend.getHikes().then(hikes =&gt; {
-			this.hikes = hikes;
-		});
-	}
+    constructor() {
+        this.mockBackend = new MockBackend();
+        this.pages = [new SplashPage()];
+        this.hikes = [];
+        this.mockBackend.getHikes().then(hikes =&gt; {
+            this.hikes = hikes;
+        });
+    }
 
-	goToHike(arg) {
-		this.pages.push(new EditHikePage(arg.data, this.pages, this.mockBackend));
-	}
-	
-	goToHomePage() {
-		this.pages = [new HomePage()]
-	}
-}
-</code></pre>
+    goToHike(arg) {
+        this.pages.push(new EditHikePage(arg.data, this.pages, this.mockBackend));
+    }
+    
+    goToHomePage() {
+        this.pages = [new HomePage()]
+    }
+}</code></pre>
 <h2 id="what-s-next">What's next</h2>
 <p>Now that our app is finished, we've already covered many of the core concepts of Fuse, but there's always more to learn. The <a href="final-thoughts.html">final chapter</a> will be a quick wrap up about what we've learned and where we can go next to improve our Fuse skills. So let's <a href="final-thoughts.html">check it out</a>!</p>
 <!-- todo: update code -->

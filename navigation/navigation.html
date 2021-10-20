@@ -756,12 +756,11 @@ module.exports = {
 <p>Make a note of the fact that <code>this.Parameter</code> is an <a href="../fusejs/observable.html">Observable</a>, which means that its value is not necessarily available when the module is being evaluated.
 Make sure you either expose it using an observable operator (like in the example above), or add a handler to it using the <code>onValueChanged</code> function:</p>
 <pre><code class="language-js">this.Parameter.onValueChanged(module, function(param) {
-	//At this point we know then new parameter value.
-	
-	//module is used to connect the lifetime of the
-	//subscription to the lifetime of the module
-});
-</code></pre>
+    //At this point we know then new parameter value.
+    
+    //module is used to connect the lifetime of the
+    //subscription to the lifetime of the module
+});</code></pre>
 <p>Note that <code>this</code> in the root scope of <code>UserPage.js</code> refers to the current instance of the <code>UserPage</code> class.</p>
 <blockquote>
 <p>Be aware that in JavaScript, the meaning of the <code>this</code> keyword varies with function scope. Make sure you grab the reference to the right instance in the root of your module.</p>

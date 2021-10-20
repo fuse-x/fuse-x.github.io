@@ -672,16 +672,13 @@
               <h1 id="assert">assert</h1>
 <p>The assert keyword checks a condition and emits an error message when it is false.</p>
 <pre><code class="language-csharp">var a = 1;
-assert a&gt;5;
-</code></pre>
+assert a&gt;5;</code></pre>
 <p>Results in the runtime message:</p>
-<pre><code class="language-s">Assertion Failed: 'a &gt; 5' in /Path/MyApplication/App.uno(14)
-</code></pre>
+<pre><code class="language-s">Assertion Failed: 'a &gt; 5' in /Path/MyApplication/App.uno(14)</code></pre>
 <p>A failed condition does not stop program flow, it only records an error message in the debug output.</p>
 <h2 id="assertion-handler">Assertion Handler</h2>
 <p>If you wish to intercept assertion statements, you can install an assertion handler. Use SetAssertionHandler in Uno.Diagnostics.Debug.</p>
-<pre><code class="language-csharp">Debug.SetAssertionHandler( MyAssert );
-</code></pre>
+<pre><code class="language-csharp">Debug.SetAssertionHandler( MyAssert );</code></pre>
 <p>This handler records a message and raises an exception:</p>
 <pre><code class="language-csharp">void MyAssert(bool value, string expression, string filename, int line, params object[] operands)
 {
@@ -691,8 +688,7 @@ assert a&gt;5;
     var msg = &quot;Assertion failed: &quot; + filename + &quot;:&quot; + line + &quot;: &quot; + expression;
     debug_log msg;
     throw new Exception( msg );
-}
-</code></pre>
+}</code></pre>
 
             </div>
             <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">

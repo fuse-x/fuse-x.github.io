@@ -677,8 +677,7 @@
 </ul>
 <p>An empty app now looks like this:</p>
 <pre><code class="language-xml">&lt;App&gt;
-&lt;/App&gt;
-</code></pre>
+&lt;/App&gt;</code></pre>
 <p>Note that all semantic controls (<code>Button</code>, <code>Switch</code>, <code>Slider</code> and <code>TextInput</code>) will no longer get the <code>Basic</code> theme apperance, but instead a much more plain generic look/no look at all. To keep the old appearance, prefix all uses of those controls with <code>Basic.</code>, e.g. <code>&lt;Basic.Button /&gt;</code>. Remember to add a reference to <code>Fuse.BasicTheme</code> in your <code>.unoproj</code> if you want access to this (not default).</p>
 <p>The long deprecated <code>&lt;Style&gt;</code> tag is now finally removed. Rewrite to use <code>ux:Class</code> instead, which is a much nicer and much more performant way of doing consistent styling.</p>
 <p>Some users have a legacy habit of using <code>&lt;Style ux:Class=&quot;MyStyle&quot;&gt;</code> as a dummy-container for a collection of classes. In this case, we can simply replace <code>&lt;Style ..</code> with <code>&lt;Panel ..</code> or any other dummy to keep this pattern.</p>
@@ -706,8 +705,7 @@
   &quot;Includes&quot;: [
     &quot;*&quot;
   ]
-}
-</code></pre>
+}</code></pre>
 <p>If you have references to <code>Uno.*</code> packages, whether you need to keep them around depends on whether you have <code>.uno</code> code depending on those packages.</p>
 <p>If you want to use the <code>Basic.</code> controls, add a reference to <code>Fuse.BasicTheme</code>. These are now not included by default to avoid bloat in your generated app if you are not using it.</p>
 <p>You need to keep references to third party packages that you depend on in either UX, Uno or JS.</p>
@@ -717,12 +715,10 @@
 <pre><code class="language-json">&quot;Includes&quot;: [
     &quot;*&quot;,
     &quot;*.js:Bundle&quot;
-]
-</code></pre>
+]</code></pre>
 <p>and then use require with the filename instead:</p>
 <pre><code class="language-js">var foo = require('foo'); // requires foo.js in the project root
-var bar = require('./../bar'); // requires bar.js in the folder above the current file
-</code></pre>
+var bar = require('./../bar'); // requires bar.js in the folder above the current file</code></pre>
 <p>Check out <a href="fusejs/fusejs.html#importing-modules-by-file-name">the detailed docs</a> for more info.</p>
 <h4 id="changes-to-textinput-and-textedit-apis">Changes to TextInput and TextEdit APIs</h4>
 <p><code>TextEdit</code> is now removed. <code>TextInput</code> now gives an undecorated text input control. If you want a decorated text input, we can get the old <code>Basic</code> style by using <code>Basic.TextInput</code>.</p>
@@ -743,27 +739,24 @@ var bar = require('./../bar'); // requires bar.js in the folder above the curren
 </ul>
 <p>Here is an example where this matters:</p>
 <pre><code class="language-xml">&lt;Panel&gt;
-	&lt;Each Count=&quot;2&quot;&gt;
-		&lt;ElemOne/&gt;
-	&lt;/Each&gt;
-	&lt;ElemTwo/&gt;
-&lt;/Panel&gt;
-</code></pre>
+    &lt;Each Count=&quot;2&quot;&gt;
+        &lt;ElemOne/&gt;
+    &lt;/Each&gt;
+    &lt;ElemTwo/&gt;
+&lt;/Panel&gt;</code></pre>
 <p>The previous behavior turned the above UX into the following equivalent:</p>
 <pre><code class="language-xml">&lt;Panel&gt;
-	&lt;ElemTwo/&gt;
-	&lt;ElemOne/&gt;
-	&lt;ElemOne/&gt;
-&lt;/Panel&gt;
-</code></pre>
+    &lt;ElemTwo/&gt;
+    &lt;ElemOne/&gt;
+    &lt;ElemOne/&gt;
+&lt;/Panel&gt;</code></pre>
 <p>Notice that the element inside the <code>Each</code> are placed after element outside it.</p>
 <p>The new behavior works like this:</p>
 <pre><code class="language-xml">&lt;Panel&gt;
-	&lt;ElemOne/&gt;
-	&lt;ElemOne/&gt;
-	&lt;ElemTwo/&gt;
-&lt;/Panel&gt;
-</code></pre>
+    &lt;ElemOne/&gt;
+    &lt;ElemOne/&gt;
+    &lt;ElemTwo/&gt;
+&lt;/Panel&gt;</code></pre>
 <p>The elements are now placed where you'd intuitively expect them to be.</p>
 <h4 id="consolidated-ux-template-and-ux-factory-concepts">Consolidated ux:Template and ux:Factory concepts</h4>
 <p>In UX markup, the concept of Factory has been renamed to Template. The old Template concept is removed (was used in Styles, which are now removed).</p>
@@ -802,11 +795,9 @@ var bar = require('./../bar'); // requires bar.js in the folder above the curren
 For example, in the<code>WhileLoaded</code> trigger:</p>
 </li>
 </ul>
-<pre><code class="language-csharp">public static void SetState(Node n, bool loaded)
-</code></pre>
+<pre><code class="language-csharp">public static void SetState(Node n, bool loaded)</code></pre>
 <p>has become</p>
-<pre><code class="language-csharp">public static void SetState(Visual v, bool loading)
-</code></pre>
+<pre><code class="language-csharp">public static void SetState(Visual v, bool loading)</code></pre>
 <p>For further details, please see the <a href="https://fuse-x.com/download">change log</a>.</p>
 
             </div>

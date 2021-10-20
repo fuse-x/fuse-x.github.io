@@ -726,8 +726,7 @@ use.</p>
 [extern(iOS) Require(&quot;IncludeDirectory&quot;, &quot;@('typicalLibrary/include':Path)&quot;)]
 [extern(iOS) Require(&quot;LinkLibrary&quot;, &quot;typicalLibrary&quot;)]
 [extern(iOS) Require(&quot;Source.Include&quot;, &quot;typicalLibrary.h&quot;)]
-class AClassThatNeedsTypicalLibrary { }
-</code></pre>
+class AClassThatNeedsTypicalLibrary { }</code></pre>
 <p>Here we're assuming that <code>typicalLibrary</code> has a header called
 <code>typicalLibrary.h</code> under <code>typicalLibrary/include</code> (in the directory of our
 <code>unoproj</code>) and that there is a <code>libtypicalLibrary.a</code> file under
@@ -743,8 +742,7 @@ iOS.</p>
         &quot;typicalLibrary/include/typicalLibrary.h:File&quot;,
         &quot;typicalLibrary/lib/libtypicalLibrary.a:File&quot;,
     ]
-}
-</code></pre>
+}</code></pre>
 <p>Here we use the <code>File</code> filetype, which indicates that Uno shouldn't do anything
 special with the files. We do this since we're including the files manually by
 using attributes.</p>
