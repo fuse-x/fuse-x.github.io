@@ -676,7 +676,7 @@
 <li><em>Export</em> - The final version of your app, which can be shipped to app stores or used for private testing.</li>
 </ul>
 <p>When developing your app, you typically work in preview all the time, to be able to iterate quickly. Then you export when you want to deploy it. Note that in some scenarios, preview performance can be a bit slower than in export.</p>
-<h2 id="fuse-preview-app">Fuse Preview app</h2>
+<h2 id="fuse-x-preview-app">Fuse X Preview app</h2>
 <p>This stand-alone app is by far the simplest way of previewing your projects and <em>does not require the installation of Xcode or the Android SDKs</em>. It also lets you preview on iOS devices while developing on a Windows computer.</p>
 <p>You can use the preview app as long as your project only contains UX markup, JavaScript and the standard Fuse packages (including Pro features / Premium libs), but excluding <code>Fuse.PushNotifications</code>.</p>
 <p>If your project contains <code>.uno</code> files or custom / 3rd party packages then you must instead build your own <a href="./preview-and-export.html#export-and-custom-preview">custom preview</a>.</p>
@@ -684,7 +684,7 @@
 <p>You can download the app <a href="https://play.google.com/store/apps/details?id=com.fuse.preview">for Android from Google Play</a> and <a href="https://apps.apple.com/no/app/fuse-x-preview/id1549637259">for iOS from the Apple App Store</a>.</p>
 <p>To run a preview <em>first make sure your test device and development computer are on the same wifi</em>.
 Then open your project in Fuse and click the <em>&quot;Devices&quot;</em> button in the upper right corner. This will open a window containing the necessary information for connecting the preview. Follow the instructions inside the app to <em>either</em> scan the QR code <em>or</em> manually enter the IP and code.</p>
-<p>Check out this video to see how it's done! <a href="https://www.youtube.com/watch?v=KJYHUHpMmto">fuse preview app</a></p>
+<p>Check out this video to see how it's done! <a href="https://www.youtube.com/watch?v=KJYHUHpMmto">Fuse X Preview app</a></p>
 <h2 id="export-and-custom-preview">Export and custom preview</h2>
 <h3 id="android-setup">Android setup</h3>
 <p>To be able to preview or export to Android, you need to install the required SDK components.
@@ -700,7 +700,7 @@ Pull up your terminal and run the following:</p>
 <p><img src="../media/preview-and-export-xcode-add-apple-id.jpg" alt="Add Apple ID to Xcode"></p>
 <h2 id="custom-preview">Custom Preview</h2>
 <p>We can easily preview apps both locally and on Android/iOS devices while getting immediate feedback on changes to the UX markup and JavaScript.
-These are the instructions for building your own custom preview. If your app project does not contain <code>.uno</code> files or custom packages you can use the <a href="./preview-and-export.html#fuse-preview-app">Fuse Preview app</a> instead (without having to install Xcode or Android SDKs).</p>
+These are the instructions for building your own custom preview. If your app project does not contain <code>.uno</code> files or custom packages you can use the <a href="./preview-and-export.html#fuse-preview-app">Fuse X Preview app</a> instead (without having to install Xcode or Android SDKs).</p>
 <blockquote>
 <p><strong>Note:</strong> When running preview for iOS, Fuse doesn't run your app directly, but will open the project in Xcode.
 From there, press the &quot;play&quot; button to run the preview session.</p>

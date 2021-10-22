@@ -690,6 +690,22 @@ Show advanced things
 </section>
 <p>A colored circle, generally used to communicate category.</p>
 <pre><code class="language-xml">&lt;Alive.Donut StrokeColor=&quot;{Resource Alive.Red}&quot; /&gt;</code></pre>
+<p>Possible usage</p>
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;Alive.FallbackTheme /&gt;
+    &lt;ClientPanel&gt;
+        &lt;StackPanel ItemSpacing=&quot;10&quot; Alignment=&quot;Center&quot;&gt;
+            &lt;Text Value=&quot;Categories list:&quot; Color=&quot;White&quot;/&gt;
+            &lt;Each Count=&quot;5&quot;&gt;
+                &lt;StackPanel Orientation=&quot;Horizontal&quot; ItemSpacing=&quot;10&quot; Margin=&quot;25,0&quot;&gt;
+                    &lt;Alive.Donut StrokeColor=&quot;{Resource Alive.Red}&quot; /&gt;
+                    &lt;Text Value=&quot;Catigory - {index()}&quot; Color=&quot;White&quot;/&gt;
+                &lt;/StackPanel&gt;
+            &lt;/Each&gt;
+        &lt;/StackPanel&gt;
+    &lt;/ClientPanel&gt;
+&lt;/App&gt;</code></pre>
+<p><img src="../../docs/media/alive/donut.png" alt="actionButton"></p>
 <p>See also <a href="../alive/colorbadge.html">ColorBadge</a></p>
 
 <section class="type-location">

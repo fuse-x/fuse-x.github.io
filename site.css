@@ -73,7 +73,6 @@ nav[data-toggle=toc] .nav .nav>li>a {
 
 #toc > .nav-link {
     text-decoration: unset !important;
-
 }
 
 /*
@@ -445,7 +444,6 @@ h6.anchor-header .anchor-header-link {
 #toc a {
     color: #aaa !important;
 }
-
 #toc a:hover {
     color: #aaa !important;
 }
@@ -453,7 +451,6 @@ h6.anchor-header .anchor-header-link {
 .main-content a {
     color: #eee !important;
 }
-
 .main-content a:hover {
     color: #eee !important;
 }
@@ -474,17 +471,18 @@ code:not([class]) {
 h1:first-child {
     margin-top: 1rem;
 }
-
 h2:first-child {
     margin-top: 1rem;
 }
 
 h2 code {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
 }
-
 h3 code {
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
+}
+h4 code {
+    font-size: 1.3rem !important;
 }
 
 /* Keep sticky header sticky */

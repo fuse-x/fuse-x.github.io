@@ -734,7 +734,7 @@ updateItem(...)
 
 ...</code></pre>
 <p>The next thing we'll do is make sure Fuse knows about our modules in this directory. Previously, when we added our <code>hikes.js</code> file to the project, we added a reference to it in our project file (<code>hikr.unoproj</code>) so it would be bundled with our app. Now that we've created our <code>Modules</code> folder, we'll replace that entry with one that will include every JavaScript file in the <code>Modules</code> directory as a bundle instead:</p>
-<pre><code class="language-json">...
+<pre><code class="language-js">...
 
   &quot;Includes&quot;: [
     &quot;*&quot;,
@@ -1168,7 +1168,7 @@ module.exports = {
     save: save
 };</code></pre>
 <p><code>hikr.unoproj</code>:</p>
-<pre><code class="language-json">{
+<pre><code class="language-js">{
   &quot;Packages&quot;: [
     &quot;Fuse&quot;,
     &quot;FuseJS&quot;

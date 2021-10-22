@@ -690,6 +690,25 @@ Show advanced things
 </section>
 <p>A horizontal rectangle, generally used to communicate category using color.</p>
 <pre><code class="language-xml">&lt;Alive.ColorBadge Color=&quot;{Resource Alive.Blue}&quot; /&gt;</code></pre>
+<p>Possible usage</p>
+<pre><code class="language-xml">&lt;App&gt;
+    &lt;Alive.FallbackTheme /&gt;
+    &lt;ClientPanel&gt;
+        &lt;StackPanel ItemSpacing=&quot;10&quot; Alignment=&quot;Center&quot;&gt;
+            &lt;Text Value=&quot;Categories list:&quot; Color=&quot;White&quot;/&gt;
+            &lt;Each Count=&quot;5&quot;&gt;
+                &lt;StackPanel Orientation=&quot;Horizontal&quot; ItemSpacing=&quot;10&quot; Margin=&quot;25,0&quot;&gt;
+                    &lt;Alive.ColorBadge /&gt;
+                    &lt;Text Value=&quot;Catigory - {index()}&quot; Color=&quot;White&quot;/&gt;
+                &lt;/StackPanel&gt;
+            &lt;/Each&gt;
+        &lt;/StackPanel&gt;
+    &lt;/ClientPanel&gt;
+&lt;/App&gt;</code></pre>
+<p><img src="../../docs/media/alive/colorbadge.png" alt="actionButton"></p>
+<blockquote>
+<p><strong>Note</strong> Color can be changed only by overriding an AccentColor of the Theme</p>
+</blockquote>
 <p>See also <a href="../alive/donut.html">Donut</a>.</p>
 
 <section class="type-location">
