@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Supported platforms | fuse X</title>
+    <title>Visual Studio Code extension installation | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
@@ -60,15 +60,15 @@
                 <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
               </form>
             </div>
-            <ul class="list-unstyled outline-nav  outline-nav-level-0 show">
+            <ul class="list-unstyled outline-nav  outline-nav-level-0">
 	<li>
 		<a href="https://docs.fuse-x.com/index.html" data-menu="index"><span>Fuse</span></a>
-	<ul class="list-unstyled outline-nav  outline-nav-level-1 show">
+	<ul class="list-unstyled outline-nav  outline-nav-level-1">
 		<li>
 			<a href="#start" data-toggle="collapse"><span>Getting Started</span></a>
-		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2 show">
+		<ul id="start" class="list-unstyled outline-nav collapse outline-nav-level-2">
 			<li>
-				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms" class="active"><span>Supported platforms</span></a>
+				<a href="https://docs.fuse-x.com/basics/supported-platforms.html" data-menu="supported-platforms"><span>Supported platforms</span></a>
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/basics/installation-and-quickstart.html" data-menu="installation-and-quickstart"><span>Installation and quickstart</span></a>
@@ -669,29 +669,20 @@
         <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
-              <h1 id="supported-platforms">Supported platforms</h1>
-<h2 id="operating-system">Operating system</h2>
-<ul>
-<li>macOS 10.10 (<em>Yosemite</em>) and newer, but macOS 11.x (<em>Big Sur</em>) is recommended</li>
-<li>Windows 7 and newer, but Windows 10 is recommended</li>
-</ul>
-<p>Please note that beta versions of both macOS and Windows are currently not officially supported.</p>
-<blockquote>
-<p>See the <a href="installation/setup-install-mac.html">installation guide for macOS</a>.</p>
+              <h1 id="visual-studio-code-extension-installation">Visual Studio Code extension installation</h1>
+<blockquote class="callout-info">
+<p>We also provide plugins for <a href="atom-plugin.html">Atom</a> and <a href="sublime-plugin.html">Sublime Text 3</a>.</p>
 </blockquote>
-<blockquote>
-<p>See the <a href="installation/setup-install-win.html">installation guide for Windows</a>.</p>
+<blockquote class="callout-info">
+<p>The source code for this extension can be found on <a href="https://github.com/fuse-open/vscode-extension">GitHub</a>.</p>
 </blockquote>
-<h2 id="hardware">Hardware</h2>
-<p>An OpenGL 2.1-capable GPU is required. Intel GMA is an example of a GPU that is <em>not</em> sufficient.</p>
-<p>Please note that some computers have multiple GPUs, and that <a href="http://support.displaylink.com/forums/287786-displaylink-feature-suggestions/suggestions/15869604-fix-some-applications-not-running-on-laptop-gpu">a problem with Windows</a> might cause it to pick the wrong one. If this happens to you, please try to disable the low end GPU, as described in the linked article.</p>
-<h2 id="export-targets">Export targets</h2>
-<p><strong>Fuse currently exports to:</strong></p>
-<ul>
-<li>Android 4.1 (<em>Jelly Bean</em>, API level 16) and newer.</li>
-<li>iOS 9.0 and newer.</li>
-</ul>
-<p>In addition, Fuse apps can be exported to Linux, macOS and Windows (Native or .NET).</p>
+<h2 id="from-visual-studio-code">From Visual Studio Code</h2>
+<p>The <strong>Fuse Open</strong> extension can be installed from the <strong>Extensions</strong> tab:</p>
+<p><img src="../../media/installation_quickstart/installing_vs_code_plugin.png" alt="vs code installation"></p>
+<h2 id="from-the-command-line">From the command line</h2>
+<p>Run the following command:</p>
+<pre><code class="language-s">fuse install vscode-extension</code></pre>
+<p>That's it! You're now ready to start using Visual Studio Code with Fuse.</p>
 
             </div>
             <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
