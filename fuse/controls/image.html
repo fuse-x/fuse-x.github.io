@@ -8,7 +8,7 @@
     <title>Image Class | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?932">
     <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?933">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -718,12 +718,12 @@ Show advanced things
 &lt;/StackPanel&gt;</code></pre>
 <h4 id="displaying-an-image-from-a-file-specified-from-javascript">Displaying an image from a file specified from JavaScript</h4>
 <p>Uno cannot automatically bundle images when their path is defined in JavaScript. Because of this, you have to manually bundle those by manually importing them in your unproj file. You can either bundle one file like this:</p>
-<pre><code class="language-js">&quot;Includes&quot;: [
+<pre><code class="language-json">&quot;Includes&quot;: [
     &quot;*&quot;,
     &quot;image.jpg:Bundle&quot;
 ]</code></pre>
 <p>Or bundle an entire folder, or all files of a specific type, using wildcards:</p>
-<pre><code class="language-js">&quot;Includes&quot;: [
+<pre><code class="language-json">&quot;Includes&quot;: [
     &quot;*.jpg:Bundle&quot;
 ]</code></pre>
 <p>You can read more on bundling files with your project <a href="/docs/assets/bundle">here.</a>.</p>
