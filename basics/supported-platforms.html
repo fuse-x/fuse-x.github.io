@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1628171394">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism-tomorrow.css">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?9">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?12">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -670,28 +670,50 @@
           <div class="row">
             <div class="col-12 col-sm-12 col-md-9 col-xl-9 main-content">
               <h1 id="supported-platforms">Supported platforms</h1>
+<p>This page describes what is needed in order to use Fuse on your computer.</p>
 <h2 id="operating-system">Operating system</h2>
-<ul>
-<li>macOS 10.10 (<em>Yosemite</em>) and newer, but macOS 11.x (<em>Big Sur</em>) is recommended</li>
-<li>Windows 7 and newer, but Windows 10 is recommended</li>
-</ul>
-<p>Please note that beta versions of both macOS and Windows are currently not officially supported.</p>
-<blockquote>
-<p>See the <a href="installation/setup-install-mac.html">installation guide for macOS</a>.</p>
+<blockquote class="callout-info">
+<p>Please note that beta versions of both macOS and Windows are not officially supported.</p>
 </blockquote>
+<h3 id="macos-requirements">macOS Requirements</h3>
+<ul>
+<li>OS X 10.10 Yosemite or newer</li>
+<li>macOS 11.2 Big Sur (or latest) is recommended</li>
+<li>Intel processor (M1 support is planned)</li>
+<li><a target="_blank" href="https://www.mono-project.com/download/stable/">Mono</a> 6.10 or newer</li>
+<li><a target="_blank" href="https://nodejs.org/en/download/">Node.js</a> 12 or newer</li>
+</ul>
 <blockquote>
-<p>See the <a href="installation/setup-install-win.html">installation guide for Windows</a>.</p>
+<p>Read the <a href="installation/setup-install-mac.html">step-by-step guide for macOS</a>.</p>
+</blockquote>
+<h3 id="windows-requirements">Windows Requirements</h3>
+<ul>
+<li>Windows 7 or newer</li>
+<li>Windows 10 is recommended</li>
+<li><a target="_blank" href="https://nodejs.org/en/download/">Node.js</a> 12 or newer</li>
+</ul>
+<blockquote>
+<p>Read the <a href="installation/setup-install-win.html">step-by-step guide for Windows</a>.</p>
+</blockquote>
+<h3 id="linux-requirements">Linux Requirements</h3>
+<blockquote class="callout-info">
+<p>Linux users can use the <a target="_blank" href="https://www.npmjs.com/package/fuse-sdk">Fuse SDK</a>. Fuse X is not available for Linux.</p>
 </blockquote>
 <h2 id="hardware">Hardware</h2>
-<p>An OpenGL 2.1-capable GPU is required. Intel GMA is an example of a GPU that is <em>not</em> sufficient.</p>
-<p>Please note that some computers have multiple GPUs, and that <a href="http://support.displaylink.com/forums/287786-displaylink-feature-suggestions/suggestions/15869604-fix-some-applications-not-running-on-laptop-gpu">a problem with Windows</a> might cause it to pick the wrong one. If this happens to you, please try to disable the low end GPU, as described in the linked article.</p>
-<h2 id="export-targets">Export targets</h2>
-<p><strong>Fuse currently exports to:</strong></p>
 <ul>
-<li>Android 4.1 (<em>Jelly Bean</em>, API level 16) and newer.</li>
-<li>iOS 9.0 and newer.</li>
+<li>OpenGL 2.1-capable GPU is required. Intel GMA is an example of a GPU that is <em>not</em> sufficient.</li>
 </ul>
-<p>In addition, Fuse apps can be exported to Linux, macOS and Windows (Native or .NET).</p>
+<blockquote class="callout-info">
+<p>Please note that some computers have multiple GPUs, and that <a href="http://support.displaylink.com/forums/287786-displaylink-feature-suggestions/suggestions/15869604-fix-some-applications-not-running-on-laptop-gpu">a problem with Windows</a> might cause it to pick the wrong one. If this happens to you, please try to disable the low end GPU, as described in the linked article.</p>
+</blockquote>
+<h2 id="export-targets">Export targets</h2>
+<ul>
+<li>Android 4.1 (Jelly Bean, API 16) and newer</li>
+<li>iOS 9.0 and newer</li>
+</ul>
+<blockquote class="callout-info">
+<p>Fuse apps can also be exported to Linux, macOS and Windows via the <code>native</code> or <code>dotnet</code> build targets.</p>
+</blockquote>
 
             </div>
             <div class="d-none d-sm-block col-md-3 d-xl-3 toc-content">
