@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
     <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?932">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?932">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?933">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -758,20 +758,20 @@ This feature is used to implement many of the top-level properties, such as <a h
 	</thead>
 	<tbody>
 		<tr>
-			<td>`*`</td>
-			<td>Matches all files</td>
+			<td>```*```</td>
+			<td>Matches all files</td>		
 		</tr>
 		<tr>
-			<td>`*.foo`</td>
-			<td>Matches all files whose name ends in `.foo`</td>
+			<td>```*.foo```</td>
+			<td>Matches all files whose name ends in ```.foo```</td>
 		</tr>
 		<tr>
-			<td>`*.+(bar|foo)`</td>
-			<td>Matches all files whose name ends in either `.bar` or `.foo`</td>
+			<td>```*.+(bar|foo)```</td>
+			<td>Matches all files whose name ends in either ```.bar``` or ```.foo```</td>
 		</tr>
 		<tr>
-			<td>`foobar`</td>
-			<td>Matches all files named `foobar`</td>
+			<td>```foobar```</td>
+			<td>Matches all files named ```foobar```</td>
 		</tr>
 	</tbody>
 </table>
@@ -785,12 +785,12 @@ This feature is used to implement many of the top-level properties, such as <a h
 	</thead>
 	<tbody>
 		<tr>
-			<td>`/*.png`</td>
+			<td>```/*.png```</td>
 			<td>Matches all PNG files found directly in the project directory</td>
 		</tr>
 		<tr>
-			<td>`Foo/*.png`</td>
-			<td>Matches all PNG files found directly in the `Foo` directory</td>
+			<td>```Foo/*.png```</td>
+			<td>Matches all PNG files found directly in the ```Foo``` directory</td>
 		</tr>
 	</tbody>
 </table>
@@ -804,8 +804,8 @@ This feature is used to implement many of the top-level properties, such as <a h
 	</thead>
 	<tbody>
 		<tr>
-			<td>`Foo/**/*.uno`</td>
-			<td>Matches all Uno files in the `Foo` directory and its subdirectories</td>
+			<td>```Foo/**/*.uno```</td>
+			<td>Matches all Uno files in the ```Foo``` directory and its subdirectories</td>
 		</tr>
 	</tbody>
 </table>
