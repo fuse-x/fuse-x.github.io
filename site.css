@@ -502,6 +502,22 @@ h6.anchor-header .anchor-header-link {
     color: #eee !important;
 }
 
+.main-content a.navlink {
+    color: #707aff !important;
+}
+.main-content a.navlink:hover {
+    color: #707aff !important;
+    text-decoration: underline;
+}
+
+.main-content a.navlink.disabled {
+    color: #bbb !important;
+}
+.main-content a.navlink.disabled:hover {
+    color: #bbb !important;
+    text-decoration: underline;
+}
+
 .anchor-header {
     color: #ddd !important;
 }
@@ -638,7 +654,6 @@ blockquote.callout-dark {
 /**
  * Prism overrides
  */
-
 .language-css .token.string, .style .token.string, .token.attr-name, .token.attr-value, .token.char, .token.entity, .token.inserted, .token.operator, .token.string, .token.url, .token.variable,
 .language-json .token.property {
     color: #cfb046 !important
