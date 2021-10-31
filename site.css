@@ -502,10 +502,10 @@ h6.anchor-header .anchor-header-link {
     color: #eee !important;
 }
 
-.main-content a.navlink {
+.main-content a.nav-link {
     color: #707aff !important;
 }
-.main-content a.navlink:hover {
+.main-content a.nav-link:hover {
     color: #707aff !important;
     text-decoration: underline;
 }
