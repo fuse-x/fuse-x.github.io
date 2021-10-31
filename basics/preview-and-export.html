@@ -730,8 +730,10 @@ From there, press the &quot;play&quot; button to run the preview session.</p>
 <p><img src="../media/preview-and-export-device-preview-atom-command-palette.png" alt="Atom preview from command palette"></p>
 <h3 id="preview-from-command-line">Preview from command line</h3>
 <p>In your terminal, <code>cd</code> to the your project's directory, and run the command that corresponds to your build target.</p>
-<pre><code class="language-s">fuse preview android
+<pre><code class="language-sh">fuse preview android
+fuse preview android-emu
 fuse preview ios
+fuse preview ios-sim
 fuse preview            # Start local preview</code></pre>
 <p>We can get further documentation on <code>fuse preview</code> by running <code>fuse help preview</code>.</p>
 <h2 id="export">Export</h2>
@@ -741,6 +743,9 @@ fuse preview            # Start local preview</code></pre>
 <p>In the project root, run the following command in your shell:</p>
 <pre><code class="language-s">uno build android --run</code></pre>
 <p>This will deploy and start the project on your connected Android device.</p>
+<p>To run in <strong>Emulator (x86_64)</strong> instead, run:</p>
+<pre><code class="language-s">uno build android-emu --run</code></pre>
+<p>Please make sure the emulator is started first. It doesn't start automatically.</p>
 <p>To make a <strong>release build</strong>, run:</p>
 <pre><code class="language-s">uno build android --configuration=Release</code></pre>
 <blockquote>

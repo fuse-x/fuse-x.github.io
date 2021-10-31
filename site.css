@@ -510,12 +510,12 @@ h6.anchor-header .anchor-header-link {
     text-decoration: underline;
 }
 
-.main-content a.navlink.disabled {
+.main-content a.disabled {
     color: #bbb !important;
 }
-.main-content a.navlink.disabled:hover {
+.main-content a.disabled:hover {
     color: #bbb !important;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .anchor-header {
