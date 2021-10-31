@@ -8,8 +8,8 @@
     <title>Preview and Export | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?932">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?937">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?934">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?938">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -706,7 +706,7 @@ Pull up your terminal and run the following:</p>
 <blockquote class="callout-info">
 <p>It can also be useful to install the following dependencies if you want to launch apps straight from Terminal.</p>
 </blockquote>
-<pre><code class="language-sh">npm install ios-deploy -g
+<pre><code class="language-bash">npm install ios-deploy -g
 npm install ios-sim -g</code></pre>
 <h2 id="custom-preview">Custom Preview</h2>
 <p>We can easily preview apps both locally and on Android/iOS devices while getting immediate feedback on changes to the UX markup and JavaScript.
@@ -730,7 +730,7 @@ From there, press the &quot;play&quot; button to run the preview session.</p>
 <p><img src="../media/preview-and-export-device-preview-atom-command-palette.png" alt="Atom preview from command palette"></p>
 <h3 id="preview-from-command-line">Preview from command line</h3>
 <p>In your terminal, <code>cd</code> to the your project's directory, and run the command that corresponds to your build target.</p>
-<pre><code class="language-sh">fuse preview android
+<pre><code class="language-bash">fuse preview android
 fuse preview android-emu
 fuse preview ios
 fuse preview ios-sim
@@ -755,7 +755,7 @@ fuse preview            # Start local preview</code></pre>
 <p>In the project root, run the following command in your shell:</p>
 <pre><code class="language-s">uno build ios --debug</code></pre>
 <p>This will generate an Xcode project and open it in <strong>Xcode</strong> (required for provisioning profiles). You can start your app from Xcode.</p>
-<p>To run your app using <strong>iOS Simulator</strong>, without going via Xcode, run:</p>
+<p>To run your app directly <strong>iOS Simulator</strong>, without going via Xcode first, run:</p>
 <pre><code class="language-s">uno build ios-sim --run</code></pre>
 <blockquote>
 <p>To export your app to the App Store, you need to <a href="../preview-and-export/signing.html">sign it first</a>. You can also do this from Xcode.</p>
@@ -776,7 +776,7 @@ fuse preview            # Start local preview</code></pre>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js"></script>
+    <script type="text/javascript" src="https://docs.fuse-x.com/prism.js?1"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
     <script type="text/javascript" src="https://docs.fuse-x.com/site.js"></script>
