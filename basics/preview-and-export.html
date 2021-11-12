@@ -8,8 +8,8 @@
     <title>Preview and Export | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?934">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?938">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?935">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?939">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -81,6 +81,9 @@
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-sdk/fuse-sdk.html" data-menu="fuse-sdk"><span>Introduction to Fuse SDK</span></a>
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse X</span></a>
@@ -695,7 +698,7 @@ Then open your project in Fuse and click the <em>&quot;Devices&quot;</em> button
 <h3 id="android-setup">Android setup</h3>
 <p>To be able to preview or export to Android, you need to install the required SDK components.
 Pull up your terminal and run the following:</p>
-<pre><code class="language-s">fuse install android</code></pre>
+<pre><code class="language-shell">fuse install android</code></pre>
 <blockquote>
 <p>You should <em>not</em> use <code>sudo</code> here.</p>
 </blockquote>
@@ -712,7 +715,7 @@ Pull up your terminal and run the following:</p>
 <blockquote class="callout-info">
 <p>It can also be useful to install the following dependencies if you want to launch apps straight from Terminal.</p>
 </blockquote>
-<pre><code class="language-bash">npm install ios-deploy -g
+<pre><code class="language-shell">npm install ios-deploy -g
 npm install ios-sim -g</code></pre>
 <h2 id="custom-preview">Custom Preview</h2>
 <p>We can easily preview apps both locally and on Android/iOS devices while getting immediate feedback on changes to the UX markup and JavaScript.
@@ -736,7 +739,7 @@ From there, press the &quot;play&quot; button to run the preview session.</p>
 <p><img src="../media/preview-and-export-device-preview-atom-command-palette.png" alt="Atom preview from command palette"></p>
 <h3 id="preview-from-command-line">Preview from command line</h3>
 <p>In your terminal, <code>cd</code> to the your project's directory, and run the command that corresponds to your build target.</p>
-<pre><code class="language-bash">fuse preview android
+<pre><code class="language-shell">fuse preview android
 fuse preview android-emu
 fuse preview ios
 fuse preview ios-sim
@@ -747,22 +750,25 @@ fuse preview            # Start local preview</code></pre>
 <p>The simplest way to export is to use the &quot;Export&quot; menu in Fuse. However, the command line provides more options.</p>
 <h3 id="android">Android</h3>
 <p>In the project root, run the following command in your shell:</p>
-<pre><code class="language-s">uno build android --run</code></pre>
+<pre><code class="language-shell">uno build android --run</code></pre>
 <p>This will deploy and start the project on your connected Android device.</p>
 <p>To run in <strong>Emulator (x86_64)</strong> instead, run:</p>
-<pre><code class="language-s">uno build android-emu --run</code></pre>
+<pre><code class="language-shell">uno build android-emu --run</code></pre>
 <p>Please make sure the emulator is started first. It doesn't start automatically.</p>
 <p>To make a <strong>release build</strong>, run:</p>
-<pre><code class="language-s">uno build android --configuration=Release</code></pre>
+<pre><code class="language-shell">uno build android-emu --run</code></pre>
+<p>Please make sure the emulator is started first. It doesn't start automatically.</p>
+<p>To make a <strong>release build</strong>, run:</p>
+<pre><code class="language-shell">uno build android --configuration=Release</code></pre>
 <blockquote>
 <p>To export your app to the Google Play Store, you need to <a href="../preview-and-export/signing.html">sign it first</a>.</p>
 </blockquote>
 <h3 id="ios">iOS</h3>
 <p>In the project root, run the following command in your shell:</p>
-<pre><code class="language-s">uno build ios --debug</code></pre>
+<pre><code class="language-shell">uno build ios --debug</code></pre>
 <p>This will generate an Xcode project and open it in <strong>Xcode</strong> (required for provisioning profiles). You can start your app from Xcode.</p>
-<p>To run your app directly <strong>iOS Simulator</strong>, without going via Xcode first, run:</p>
-<pre><code class="language-s">uno build ios-sim --run</code></pre>
+<p>To run your app directly in <strong>iOS Simulator</strong>, without going via Xcode first, run:</p>
+<pre><code class="language-shell">uno build ios-sim --run</code></pre>
 <blockquote>
 <p>To export your app to the App Store, you need to <a href="../preview-and-export/signing.html">sign it first</a>. You can also do this from Xcode.</p>
 </blockquote>

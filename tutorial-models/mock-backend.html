@@ -8,8 +8,8 @@
     <title>Introduction | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?934">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?938">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?935">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?939">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -81,6 +81,9 @@
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-sdk/fuse-sdk.html" data-menu="fuse-sdk"><span>Introduction to Fuse SDK</span></a>
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse X</span></a>
@@ -732,7 +735,7 @@ MockBackend.updateItem(...)
 </blockquote>
 <p>Before we start implementing our mock backend, we'll want to talk about how we'll organize our JavaScript moving forward. Currently, we have all of our JavaScript, besides the page models, in the <code>App.js</code> file. As we start adding more functionality of different kinds, it is a good idea to start splitting things up into new classes and to group simlar type of functionality together. In Fuse, as with many other front end systems, we like to separate between models and services. Our models typically model the state of our app, be it which hikes we are displaying or the navigation flow we've defined. The model is however not concerned with talking to backends, interacting with native functionality or other types of services. This is why we usually group these bits of logic in a folder called services, which is functionality that in theory could be useful to any part of our app.</p>
 <p>Lets start by creating a folder called <code>Services</code>, which is where we will put our mock backend code. We also create a new JS file called <code>MockBackend.js</code>.</p>
-<pre><code class="language-bash">|- MainView.ux
+<pre><code class="language-shell">|- MainView.ux
 |- App.js
 |- Pages
     |- ...
@@ -740,7 +743,7 @@ MockBackend.updateItem(...)
     |- MockBackend.js
 ...</code></pre>
 <p>While we're at it, lets also create a <code>Models</code> folder, and move the <code>App.js</code> to it.</p>
-<pre><code class="language-bash">|- MainView.ux
+<pre><code class="language-shell">|- MainView.ux
 |- Models
     |- App.js
 |- Pages

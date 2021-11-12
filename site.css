@@ -539,16 +539,16 @@ h2:first-child {
 }
 
 h1 code {
-    font-size: 2.0rem !important;
+    font-size: 2.2rem !important;
 }
 h2 code {
-    font-size: 1.7rem !important;
+    font-size: 1.9rem !important;
 }
 h3 code {
-    font-size: 1.5rem !important;
+    font-size: 1.7rem !important;
 }
 h4 code {
-    font-size: 1.3rem !important;
+    font-size: 1.5rem !important;
 }
 
 /* Keep sticky header sticky */

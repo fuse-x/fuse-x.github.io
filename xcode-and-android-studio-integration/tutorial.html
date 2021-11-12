@@ -8,8 +8,8 @@
     <title>Xcode and Android Studio Integration | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?934">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?938">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?935">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?939">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -81,6 +81,9 @@
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-sdk/fuse-sdk.html" data-menu="fuse-sdk"><span>Introduction to Fuse SDK</span></a>
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse X</span></a>
@@ -681,14 +684,14 @@
 <p>In your <code>.unoproj</code>, add a package reference to <code>Fuse.Views</code>.
 It should look something like the following.</p>
 <pre><code class="language-json">{
-    &quot;Packages&quot;: [
-        &quot;Fuse&quot;,
-        &quot;FuseJS&quot;,
-        &quot;Fuse.Views&quot;
-    ],
-    &quot;Includes&quot;: [
-        &quot;*&quot;
-    ]
+ &quot;Packages&quot;: [
+  &quot;Fuse&quot;,
+  &quot;FuseJS&quot;,
+  &quot;Fuse.Views&quot;
+ ],
+ &quot;Includes&quot;: [
+  &quot;*&quot;
+ ]
 }</code></pre>
 <h2 id="step-1-exporting-views">Step 1: Exporting Views</h2>
 <p>In Fuse Views you must explicitly specify which views you want to be able to instantiate from Swift, Objective-C and Java. You can export any UX component, except for non-UI elements (like Triggers and Animations) and <a href="../ux-markup/classes.html">UX Classes</a> that have <a href="../ux-markup/dependencies.html">dependencies</a>.</p>
@@ -708,7 +711,7 @@ It should look something like the following.</p>
     &lt;/ExportedViews&gt;
 &lt;/App&gt;</code></pre>
 <p>Export an <a href="https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WhatAreFrameworks.html">Xcode Framework</a> or an <a href="https://developer.android.com/studio/projects/android-library.html">Android aar</a> by compiling with <code>-DLIBRARY</code> set.</p>
-<pre><code class="language-s">uno build ios -DLIBRARY
+<pre><code class="language-shell">uno build ios -DLIBRARY
 uno build android -DLIBRARY</code></pre>
 <p>Now you will find the Xcode framework and the Android aar under the following paths:</p>
 <ul>
@@ -782,10 +785,10 @@ android:configChanges=&quot;orientation|keyboardHidden|screenSize|smallestScreen
 <p>In your <code>Activity</code> init FuseViewsFragment on your <code>onCreate()</code> method just before the <code>setContentView()</code></p>
 <pre><code class="language-java">@Override
 protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    FuseViewsFragment.init(this, savedInstanceState);
-    setContentView(R.layout.activity_main);
-    ...
+ super.onCreate(savedInstanceState);
+ FuseViewsFragment.init(this, savedInstanceState);
+ setContentView(R.layout.activity_main);
+ ...
 }</code></pre>
 <h2 id="step-4-instantiating-a-view">Step 4: Instantiating a View</h2>
 <p>You are now ready to instantiate your exported views.
@@ -877,7 +880,7 @@ parent.addView(nativeView);</code></pre>
 @property (readonly) NSString* dataJson;
 
 @end</code></pre>
-<pre><code class="language-java">public interface IArguments {
+<pre><code class="language-objectivec">public interface IArguments {
     HashMap&lt;String,String&gt; getArgs();
     String getDataJson();
 }</code></pre>
@@ -925,7 +928,7 @@ usersListView.setCallback(&quot;user_clicked&quot;, new ICallback() {
        ViewHandle videoView = ExportedViews.instantiate(&quot;VideoView&quot;);
        android.view.View nativeView = videoView.getView();
 
-   videoView.setDataJson(&quot;{ \&quot;users\&quot; : [...] }&quot;);
+       videoView.setDataJson(&quot;{ \&quot;users\&quot; : [...] }&quot;);
        videoView.setCallback(&quot;user_clicked&quot;, new ICallback() {
            @Override
            public void invoke(IArguments iArguments) { ... }

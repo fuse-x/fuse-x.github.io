@@ -8,8 +8,8 @@
     <title>assert | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?934">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?938">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?935">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?939">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -81,6 +81,9 @@
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-sdk/fuse-sdk.html" data-menu="fuse-sdk"><span>Introduction to Fuse SDK</span></a>
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse X</span></a>
@@ -680,7 +683,7 @@
 <pre><code class="language-csharp">var a = 1;
 assert a&gt;5;</code></pre>
 <p>Results in the runtime message:</p>
-<pre><code class="language-s">Assertion Failed: 'a &gt; 5' in /Path/MyApplication/App.uno(14)</code></pre>
+<pre><code class="language-shell">Assertion Failed: 'a &gt; 5' in /Path/MyApplication/App.uno(14)</code></pre>
 <p>A failed condition does not stop program flow, it only records an error message in the debug output.</p>
 <h2 id="assertion-handler">Assertion Handler</h2>
 <p>If you wish to intercept assertion statements, you can install an assertion handler. Use SetAssertionHandler in Uno.Diagnostics.Debug.</p>

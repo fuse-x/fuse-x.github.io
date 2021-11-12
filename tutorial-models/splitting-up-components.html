@@ -8,8 +8,8 @@
     <title>Introduction | fuse X</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fuse-x.com/style.css?1635266413">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?934">
-    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?938">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/prism.css?935">
+    <link rel="stylesheet" href="https://docs.fuse-x.com/site.css?939">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
     <link rel="icon" href="https://fuse-x.com/favicon.ico?1602518038">
@@ -81,6 +81,9 @@
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/basics/introduction-to-fuse.html" data-menu="introduction-to-fuse"><span>Introduction to Fuse</span></a>
+			</li>
+			<li>
+				<a href="https://docs.fuse-x.com/fuse-sdk/fuse-sdk.html" data-menu="fuse-sdk"><span>Introduction to Fuse SDK</span></a>
 			</li>
 			<li>
 				<a href="https://docs.fuse-x.com/fuse-studio/fuse-studio.html" data-menu="fuse-studio"><span>Introduction to Fuse X</span></a>
@@ -682,7 +685,7 @@
 <p>The final code for this chapter is available <a href="https://github.com/fuse-open/hikr/tree/models-chapter-3">here</a>.</p>
 <h2 id="transforming-the-edit-hike-view-into-a-component">Transforming the Edit Hike view into a component</h2>
 <p>At this point it is a good idea to move our components into their own files so that we eventually can design a navigation flow between them. We'll do this in small steps. First, we'll want to create a new folder in our project called <code>Pages</code>:</p>
-<pre><code class="language-bash">$ tree
+<pre><code class="language-shell">$ tree
 .
 |- MainView.ux
 |- App.js
@@ -691,7 +694,7 @@
 <p>Inside this new folder, we'll create a new file called <code>EditHikePage.ux</code>. Inside there, we'll place the following code:</p>
 <pre><code class="language-xml">&lt;Page ux:Class=&quot;EditHikePage&quot;&gt;&lt;/Page&gt;</code></pre>
 <p>Our directory tree should now look a bit like this:</p>
-<pre><code class="language-bash">$ tree
+<pre><code class="language-shell">$ tree
 .
 |- MainView.ux
 |- App.js
